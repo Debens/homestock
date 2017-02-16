@@ -1,1 +1,7 @@
 .vs/**
+
+HomeStock/bin/HomeStockLibrary
+HomeStock/obj/Debug/**
+
+HomeStockAPI/bin/HomeStockLibrary
+HomeStockAPI/obj/Debug/**
