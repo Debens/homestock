@@ -3,3 +3,8 @@ E:\HomeStock\HomeStockLibrary\bin\Debug\HomeStockLibrary.pdb
 E:\HomeStock\HomeStockLibrary\obj\Debug\HomeStockLibrary.csprojResolveAssemblyReference.cache
 E:\HomeStock\HomeStockLibrary\obj\Debug\HomeStockLibrary.dll
 E:\HomeStock\HomeStockLibrary\obj\Debug\HomeStockLibrary.pdb
+C:\Users\Sven\Documents\GitHub\HomeStock\HomeStockLibrary\bin\Debug\HomeStockLibrary.dll
+C:\Users\Sven\Documents\GitHub\HomeStock\HomeStockLibrary\bin\Debug\HomeStockLibrary.pdb
+C:\Users\Sven\Documents\GitHub\HomeStock\HomeStockLibrary\obj\Debug\HomeStockLibrary.csprojResolveAssemblyReference.cache
+C:\Users\Sven\Documents\GitHub\HomeStock\HomeStockLibrary\obj\Debug\HomeStockLibrary.dll
+C:\Users\Sven\Documents\GitHub\HomeStock\HomeStockLibrary\obj\Debug\HomeStockLibrary.pdb
