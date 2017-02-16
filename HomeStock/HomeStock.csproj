@@ -185,7 +185,7 @@
   <ItemGroup>
     <Content Include="scripts\ai.0.15.0-build58334.js" />
     <Content Include="scripts\ai.0.15.0-build58334.min.js" />
-    <Content Include="Testing\Library\Controls\Buttons.aspx" />
+    <Content Include="Development\Library\Controls\Buttons.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -197,11 +197,11 @@
     <Compile Include="Site.Master.designer.cs">
       <DependentUpon>Site.Master</DependentUpon>
     </Compile>
-    <Compile Include="Testing\Library\Controls\Buttons.aspx.cs">
+    <Compile Include="Development\Library\Controls\Buttons.aspx.cs">
       <DependentUpon>Buttons.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Testing\Library\Controls\Buttons.aspx.designer.cs">
+    <Compile Include="Development\Library\Controls\Buttons.aspx.designer.cs">
       <DependentUpon>Buttons.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
