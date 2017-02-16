@@ -1,11 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Express 14 for Web
-VisualStudioVersion = 14.0.25123.0
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HomeStockAPI", "HomeStockAPI\HomeStockAPI.csproj", "{2F5CF398-4268-4553-806F-D94F003158A9}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HomeStock_old", "HomeStock\HomeStock_old.csproj", "{BF970A66-649A-4CB4-998E-ADEC4C639273}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HomeStockLibrary", "HomeStockLibrary\HomeStockLibrary.csproj", "{7055EB6B-452E-4127-B032-DB510659172C}"
 EndProject
@@ -23,10 +21,6 @@ Global
 		{2F5CF398-4268-4553-806F-D94F003158A9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2F5CF398-4268-4553-806F-D94F003158A9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2F5CF398-4268-4553-806F-D94F003158A9}.Release|Any CPU.Build.0 = Release|Any CPU
-		{BF970A66-649A-4CB4-998E-ADEC4C639273}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{BF970A66-649A-4CB4-998E-ADEC4C639273}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{BF970A66-649A-4CB4-998E-ADEC4C639273}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{BF970A66-649A-4CB4-998E-ADEC4C639273}.Release|Any CPU.Build.0 = Release|Any CPU
 		{7055EB6B-452E-4127-B032-DB510659172C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{7055EB6B-452E-4127-B032-DB510659172C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7055EB6B-452E-4127-B032-DB510659172C}.Release|Any CPU.ActiveCfg = Release|Any CPU
