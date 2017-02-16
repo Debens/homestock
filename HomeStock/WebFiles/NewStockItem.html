@@ -1,0 +1,37 @@
+<!DocType html>
+<html>
+<head>
+  <link rel="Stylesheet" type="text/css" href="CSS/NewStockItem.css" />
+  <link rel="Stylesheet" type="text/css" href="CSS/NewStockForm.css" />
+  <link rel="stylesheet" href="CSS/MainBody.css">
+</head>
+<body>
+    <div class="form">
+        <form>
+            <fieldset>
+                <legend><span class="number">1</span>Basic Info</legend>
+                <input type="text" name="field1" placeholder="Name *" data-bind="value: Item().name, valueUpdate: 'afterkeydown'">
+                <input type="Date" id="expiryDate" data-bind="value: Item().expiry, valueUpdate: 'afterkeydown'">
+            </fieldset>
+            <fieldset>
+                <legend><span class="number">2</span><span data-bind="text: Item().formattedTags"></span></legend>
+                <div class="container-tags">
+                    <div class="descriptive-tag-box" data-bind="click: pushTag">Some Tag</div>
+                    <div class="descriptive-tag-box" data-bind="click: pushTag">Some Tag</div>
+                    <div class="descriptive-tag-box" data-bind="click: pushTag">Some Tag</div>
+                </div>
+            </fieldset>
+            <fieldset>
+                <legend><span class="number">3</span>Additional Info</legend>
+                <textarea name="description" placeholder="Additional Info" data-bind="value: Item().detail, valueUpdate: 'afterkeydown'"></textarea>
+            </fieldset>
+            <input type="submit" value="Save" />
+        </form>
+    </div>
+    <script type="text/javascript" src="JavaScript/Unmanaged/Lib/jquery-3.1.1.js"></script>
+    <script type="text/javascript" src="JavaScript/Unmanaged/Lib/knockout-3.4.1.min.js"></script>
+    <script type="text/javascript" src="JavaScript/Business/ModelObjects/Stock.js"></script>
+    <script type="text/javascript" src="JavaScript/Core/ViewModel/EditItemViewModel.js"></script>
+    <script type="text/javascript" src="JavaScript/Utility/UriHelper.js"></script>
+</body>
+</html>

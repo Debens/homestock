@@ -1,0 +1,92 @@
+:root {
+  --light-grey: #dbdbdb;
+  --grey: #babbbc;
+  --active: #00acc1;
+  --active-accent: #4dd0e1;
+}
+
+table {
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-collapse: collapse;
+}
+
+tbody {
+	border: none;
+}
+
+tr {
+	border: none;
+}
+
+td{
+	padding: 0;
+	margin: 0;
+	border: none;
+}
+
+.bars-container {
+    display: inline-block;
+    cursor: pointer;
+    margin: 0 auto;
+    margin-left: 8px;
+}
+
+.bar1, .bar2, .bar3 {
+    width: 35px;
+    height: 5px;
+    background-color: #666666;
+    margin: 6px 0;
+    transition: 0.4s;
+}
+
+.change .bar1 {
+    -webkit-transform: rotate(-45deg) translate(-9px, 6px) ;
+    transform: rotate(-45deg) translate(-9px, 6px) ;
+}
+
+.change .bar2 {opacity: 0;}
+
+.change .bar3 {
+    -webkit-transform: rotate(45deg) translate(-8px, -8px) ;
+    transform: rotate(45deg) translate(-8px, -8px) ;
+}
+
+h1.side-title {
+	float: left;
+	writing-mode: tb-rl;
+	filter: flipv fliph;
+	padding-right: 2%;
+	padding-top: 20px;
+	color: #666666;
+	font-size: 3em;
+	margin-left: 4px;
+}
+
+h1.side-plus {
+    color: #666666;
+    font-size: 4em;
+    margin-left: 10px;
+    position: fixed;
+    bottom: 1px;
+    transition: text-shadow .2s ease-in-out;
+}
+
+h1.side-plus:hover{
+    cursor: pointer;
+    transition: text-shadow .2s ease-in-out;
+    text-shadow: 1px 1px 2px; #4d4d4d;
+}
+
+.side-ribbon {
+	width: 10%;
+	height: 100%;
+    position: relative;
+}
+
+iframe.main-content {
+width: 100%;
+height: 100%;
+border: none;
+}
