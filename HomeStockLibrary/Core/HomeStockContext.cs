@@ -7,24 +7,24 @@ namespace HomeStockLibrary.Core
 {
     internal class HomeStockContext : IHomeStockContext
     {
-        protected HttpContext Context
+        public static HttpContext Currnet
         {
             get { return HttpContext.Current; }
         }
 
         public IDictionary Items
         {
-            get { return Context.Items; }
+            get { return Currnet.Items; }
         }
 
         public IHttpHandler Handler
         {
-            get { return Context.Handler; }
+            get { return Currnet.Handler; }
         }
 
         public string MapPath(string path)
         {
-            return Context.Server.MapPath(path);
+            return Currnet.Server.MapPath(path);
         }
 
         public string ToAbsolutePath(string path)
@@ -34,7 +34,7 @@ namespace HomeStockLibrary.Core
 
         public string UrlPathEncode(string urlPath)
         {
-            return Context.Server.UrlPathEncode(urlPath);
+            return Currnet.Server.UrlPathEncode(urlPath);
         }
     }
 }

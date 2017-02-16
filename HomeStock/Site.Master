@@ -1,5 +1,7 @@
 ﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="HomeStock.Site" %>
 
+<%@ Register Assembly="HomeStockLibrary" Namespace="HomeStockLibrary.Controls" TagPrefix="Control" %>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -93,5 +95,6 @@
             $(".plus").toggleClass("open");
         });
     </script>
+    <Control:HomeStockScriptAssistant runat="server" ID="SiteMasterScriptAssistant" />
 </body>
 </html>

@@ -10,6 +10,11 @@ namespace HomeStockLibrary.Core
 {
     public class HomeStockPage : Page
     {
+        public Control FindControl(string ID)
+        {
+
+        }
+
         protected override void OnPreInit(EventArgs e)
         {
             base.OnPreInit(e);
