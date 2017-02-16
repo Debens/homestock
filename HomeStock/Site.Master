@@ -5,10 +5,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <link rel="stylesheet" href="WebFiles/CSS/font-awesome.css">
-    <link rel="stylesheet" href="WebFiles/CSS/style.css">
-    <link rel="stylesheet" href="WebFiles/CSS/Main.css">
-    <link rel="stylesheet" href="WebFiles/CSS/MainBody.css">
+    <link rel="stylesheet" href="/WebFiles/CSS/font-awesome.css">
+    <link rel="stylesheet" href="/WebFiles/CSS/style.css">
+    <link rel="stylesheet" href="/WebFiles/CSS/Main.css">
+    <link rel="stylesheet" href="/WebFiles/CSS/MainBody.css">
+    <link rel="stylesheet" href="/WebFiles/CSS/HomeStock.css">
 </head>
 <body>
     <div id="o-wrapper" class="o-wrapper">
@@ -28,9 +29,13 @@
                             </div>
                         </td>
                         <td style="background-color: #f4f7f8">
-
-                            <asp:ContentPlaceHolder runat="server" ID="MainViewContent" />
-
+                            <div style="padding: 5%">
+                                
+                                
+                                <asp:ContentPlaceHolder runat="server" ID="MainViewContent" />
+                           
+                                
+                            </div>
                         </td>
                     </tr>
                 </table>
@@ -52,9 +57,9 @@
         </ul>
     </nav>
     <div id="c-mask" class="c-mask"></div>
-    <script src="WebFiles/JavaScript/Unmanaged/dist/menu.js"></script>
-    <script src="WebFiles/JavaScript/Unmanaged/Lib/jquery-3.1.1.js"></script>
-    <script src="WebFiles/JavaScript/Unmanaged/Lib/knockout-3.4.1.min.js"></script>
+    <script src="/WebFiles/JavaScript/Unmanaged/dist/menu.js"></script>
+    <script src="/WebFiles/JavaScript/Unmanaged/Lib/jquery-3.1.1.js"></script>
+    <script src="/WebFiles/JavaScript/Unmanaged/Lib/knockout-3.4.1.min.js"></script>
     <script>
         /**
          * Push left instantiation and action.

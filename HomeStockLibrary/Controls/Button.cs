@@ -6,12 +6,17 @@ namespace HomeStockLibrary.Controls
     [ToolboxData("<{0}:Button runat=\"server\"></{0}:Button>")]
     public class Button : ButtonBase
     {
-        public string href { get; set; }
+        public string Url { get; set; }
+
+        public bool OpenTab { get; set; }
 
         public override void RenderButtonAttributes(HtmlTextWriter writer)
         {
-            if (!string.IsNullOrEmpty(href))
-                writer.AddAttribute("href", href);
+            if (!string.IsNullOrEmpty(Url))
+                writer.AddAttribute("href", Url);
+
+            if (OpenTab)
+                writer.AddAttribute("target", "_blank");
         }
     }
 }

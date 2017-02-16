@@ -14,12 +14,13 @@ namespace HomeStockLibrary.Controls.Base.Button
         public override void RenderControl(HtmlTextWriter writer)
         {
             writer.AddAttribute("ID", ID);
-            writer.AddAttribute("style", "text-decoration : none; color : #000000;");
-            
+            writer.AddAttribute("class", "hs-button");
+
             RenderButtonAttributes(writer);
             writer.RenderBeginTag("a");
 
             writer.InnerWriter.Write(string.Format("{0}", Text));
+            
             writer.RenderEndTag();
         }
 

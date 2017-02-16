@@ -100,12 +100,87 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Site.Master" />
+    <Content Include="WebFiles\CSS\font-awesome.css" />
+    <Content Include="WebFiles\CSS\font-awesome.min.css" />
+    <Content Include="WebFiles\CSS\HomeStock.css" />
+    <Content Include="WebFiles\CSS\ListView.css" />
+    <Content Include="WebFiles\CSS\Main.css" />
+    <Content Include="WebFiles\CSS\MainBody.css" />
+    <Content Include="WebFiles\CSS\NewStockForm.css" />
+    <Content Include="WebFiles\CSS\NewStockItem.css" />
+    <Content Include="WebFiles\CSS\style.css" />
+    <Content Include="WebFiles\CSS\style.min.css" />
+    <Content Include="WebFiles\fonts\font-awesome\fontawesome-webfont.svg" />
+    <Content Include="WebFiles\fonts\oxygen\oxygen-v5-latin-300.svg" />
+    <Content Include="WebFiles\fonts\oxygen\oxygen-v5-latin-700.svg" />
+    <Content Include="WebFiles\fonts\oxygen\oxygen-v5-latin-regular.svg" />
+    <Content Include="WebFiles\Inventory.html" />
+    <Content Include="WebFiles\JavaScript\business\Manager\ContainerManager.js" />
+    <Content Include="WebFiles\JavaScript\business\Manager\HomeManager.js" />
+    <Content Include="WebFiles\JavaScript\business\Manager\OwnerManager.js" />
+    <Content Include="WebFiles\JavaScript\business\Manager\StockManager.js" />
+    <Content Include="WebFiles\JavaScript\business\ModelObjects\Container.js" />
+    <Content Include="WebFiles\JavaScript\business\ModelObjects\Home.js" />
+    <Content Include="WebFiles\JavaScript\business\ModelObjects\Owner.js" />
+    <Content Include="WebFiles\JavaScript\business\ModelObjects\Stock.js" />
+    <Content Include="WebFiles\JavaScript\business\Repository\Base\AjaxHelper.js" />
+    <Content Include="WebFiles\JavaScript\business\Repository\ContainerRepository.js" />
+    <Content Include="WebFiles\JavaScript\business\Repository\HomeRepository.js" />
+    <Content Include="WebFiles\JavaScript\business\Repository\HSRepository.js" />
+    <Content Include="WebFiles\JavaScript\business\Repository\OwnerRepsoitory.js" />
+    <Content Include="WebFiles\JavaScript\business\Repository\StockRepository.js" />
+    <Content Include="WebFiles\JavaScript\Core\Config\ApplicationSettings.js" />
+    <Content Include="WebFiles\JavaScript\Core\Config\HomeStock.js" />
+    <Content Include="WebFiles\JavaScript\Core\Config\PageInitializer.js" />
+    <Content Include="WebFiles\JavaScript\Core\ViewModel\EditItemViewModel.js" />
+    <Content Include="WebFiles\JavaScript\Core\ViewModel\InventoryViewModel.js" />
+    <Content Include="WebFiles\JavaScript\Core\ViewModel\MainViewModel.js" />
+    <Content Include="WebFiles\JavaScript\Unmanaged\dist\carbonAd.js" />
+    <Content Include="WebFiles\JavaScript\Unmanaged\dist\githubIcons.js" />
+    <Content Include="WebFiles\JavaScript\Unmanaged\dist\menu.js" />
+    <Content Include="WebFiles\JavaScript\Unmanaged\dist\menu.min.js" />
+    <Content Include="WebFiles\JavaScript\Unmanaged\Lib\jquery-3.1.1.js" />
+    <Content Include="WebFiles\JavaScript\Unmanaged\Lib\knockout-3.4.1.min.js" />
+    <Content Include="WebFiles\JavaScript\Unmanaged\src\menu.js" />
+    <Content Include="WebFiles\JavaScript\Utility\HomeStockIFramPageNavigator.js" />
+    <Content Include="WebFiles\JavaScript\Utility\UriHelper.js" />
+    <Content Include="WebFiles\NewStockItem.html" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
     <None Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
+    <Content Include="WebFiles\fonts\font-awesome\fontawesome-webfont.eot" />
+    <Content Include="WebFiles\fonts\font-awesome\fontawesome-webfont.ttf" />
+    <Content Include="WebFiles\fonts\font-awesome\fontawesome-webfont.woff" />
+    <Content Include="WebFiles\fonts\font-awesome\fontawesome-webfont.woff2" />
+    <Content Include="WebFiles\fonts\font-awesome\FontAwesome.otf" />
+    <Content Include="WebFiles\fonts\oxygen\oxygen-v5-latin-300.eot" />
+    <Content Include="WebFiles\fonts\oxygen\oxygen-v5-latin-300.ttf" />
+    <Content Include="WebFiles\fonts\oxygen\oxygen-v5-latin-300.woff" />
+    <Content Include="WebFiles\fonts\oxygen\oxygen-v5-latin-300.woff2" />
+    <Content Include="WebFiles\fonts\oxygen\oxygen-v5-latin-700.eot" />
+    <Content Include="WebFiles\fonts\oxygen\oxygen-v5-latin-700.ttf" />
+    <Content Include="WebFiles\fonts\oxygen\oxygen-v5-latin-700.woff" />
+    <Content Include="WebFiles\fonts\oxygen\oxygen-v5-latin-700.woff2" />
+    <Content Include="WebFiles\fonts\oxygen\oxygen-v5-latin-regular.eot" />
+    <Content Include="WebFiles\fonts\oxygen\oxygen-v5-latin-regular.ttf" />
+    <Content Include="WebFiles\fonts\oxygen\oxygen-v5-latin-regular.woff" />
+    <Content Include="WebFiles\fonts\oxygen\oxygen-v5-latin-regular.woff2" />
+    <Content Include="WebFiles\sass\style.scss" />
+    <Content Include="WebFiles\sass\_components.buttons.scss" />
+    <Content Include="WebFiles\sass\_components.carbonad.scss" />
+    <Content Include="WebFiles\sass\_components.mask.scss" />
+    <Content Include="WebFiles\sass\_components.menus.scss" />
+    <Content Include="WebFiles\sass\_config.variables.scss" />
+    <Content Include="WebFiles\sass\_elements.headings.scss" />
+    <Content Include="WebFiles\sass\_elements.media.scss" />
+    <Content Include="WebFiles\sass\_elements.root.scss" />
+    <Content Include="WebFiles\sass\_elements.text.scss" />
+    <Content Include="WebFiles\sass\_generic.boxsizing.scss" />
+    <Content Include="WebFiles\sass\_generic.fonts.scss" />
+    <Content Include="WebFiles\sass\_objects.layout.scss" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="scripts\ai.0.15.0-build58334.js" />
