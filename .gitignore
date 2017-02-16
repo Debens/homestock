@@ -1,19 +1,10 @@
 .vs/**
 
-HomeStock/bin/HomeStockLibrary.dll
-HomeStock/bin/HomeStockLibrary.pdb
-HomeStock/bin/HomeStock.Business.dll
-HomeStock/bin/HomeStock.Business.pdb
+HomeStock/bin/**
 HomeStock/obj/Debug/**
 
-HomeStockAPI/bin/HomeStock.dll
-HomeStockAPI/bin/HomeStock.pdb
-HomeStockAPI/bin/HomeStockLibrary.dll
-HomeStockAPI/bin/HomeStockLibrary.pdb
-HomeStockAPI/bin/HomeStock.Business.dll
-HomeStockAPI/bin/HomeStock.Business.pdb
+HomeStockAPI/bin/**
 HomeStockAPI/obj/Debug/**
 
-homeStock.Business/bin/HomeStockLibrary.dll
-homeStock.Business/bin/HomeStockLibrary.pdb
+homeStock.Business/bin/**
 homeStockAPI/obj/Debug/**
