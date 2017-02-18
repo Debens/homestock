@@ -7,4 +7,9 @@ HomeStockAPI/bin/**
 HomeStockAPI/obj/Debug/**
 
 homeStock.Business/bin/**
-homeStockAPI/obj/Debug/**
+homeStock.Business/obj/Debug/**
+HomeStock.Business/bin/**
+HomeStock.Business/obj/Debug/**
+
+HomeStockLibrary/bin/**
+HomeStockLibrary/obj/Debug/**
