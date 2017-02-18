@@ -10,11 +10,11 @@ using System.Web.UI;
 
 namespace HomeStockLibrary.Util
 {
-    public class HomeStockScriptRenderer
+    public class HomeStockScriptAssistant
     {
         public static void RenderScript(HomeStockScript script)
         {
-            HomeStockScriptAssistant assistant = new HomeStockControlAssistant().FindPageControl("SiteMasterScriptAssistant") as HomeStockScriptAssistant;
+            Controls.HomeStockScriptControl assistant = new Core.HomeStockControlAssistant().FindPageControl((c => c.ID == "SiteMasterScriptAssistant")) as Controls.HomeStockScriptControl;
 
             if (assistant != null)
             {
