@@ -95,6 +95,6 @@
             $(".plus").toggleClass("open");
         });
     </script>
-    <Control:HomeStockScriptAssistant runat="server" ID="SiteMasterScriptAssistant" />
+    <Control:HomeStockScriptControl runat="server" ID="SiteMasterScriptAssistant" />
 </body>
 </html>
