@@ -9,11 +9,11 @@ using HomeStockLibrary.Core;
 
 namespace HomeStockLibrary.Controls
 {
-    public class HomeStockScriptAssistant : HomeStockControlBase
+    public class HomeStockScriptControl : HomeStockControlBase
     {
         private List<HomeStockScript> scripts;
 
-        public HomeStockScriptAssistant()
+        public HomeStockScriptControl()
         {
             scripts = new List<HomeStockScript>();
         }
