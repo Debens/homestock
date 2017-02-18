@@ -1,9 +1,5 @@
 ﻿using HomeStockLibrary.Controls.Base;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Web.UI;
 using HomeStockLibrary.Core;
 
@@ -24,16 +20,20 @@ namespace HomeStockLibrary.Controls
 
             foreach (HomeStockScript script in scripts)
             {
+                writer.InnerWriter.Write("\n");
                 writer.InnerWriter.Write(script.Description);
                 writer.InnerWriter.Write(script.Script());
             }
 
+            writer.InnerWriter.Write("\n");
+
             writer.RenderEndTag();
         }
 
-        public void AddScript (HomeStockScript script)
+        public void AddScript (HomeStockScript script, bool renderAtTop = false)
         {
-            scripts.Add(script);
+            int insertIndex = renderAtTop ? 0 : scripts.Count;
+            scripts.Insert(insertIndex, script);
         }
     }
 }
