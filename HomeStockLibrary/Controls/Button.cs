@@ -12,8 +12,9 @@ namespace HomeStockLibrary.Controls
 
         public override void RenderButtonAttributes(HtmlTextWriter writer)
         {
-            if (!string.IsNullOrEmpty(Url))
-                writer.AddAttribute("href", Url);
+            if (string.IsNullOrEmpty(Url))
+                Url = "#";
+            writer.AddAttribute("href", Url);
 
             if (OpenTab)
                 writer.AddAttribute("target", "_blank");

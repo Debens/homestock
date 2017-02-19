@@ -33,8 +33,10 @@
     <Reference Include="System" />
     <Reference Include="System.configuration" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
     <Reference Include="System.Web" />
     <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -43,6 +45,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CompositeControls\PageHeader.cs" />
     <Compile Include="Configuration\Web\Sections\UserConfigurationSection.cs" />
     <Compile Include="Controls\Base\Button\ButtonAttribute.cs" />
     <Compile Include="Controls\Base\Button\ButtonBase.cs" />
@@ -50,6 +53,7 @@
     <Compile Include="Controls\Base\HomeStockControlBase.cs" />
     <Compile Include="Controls\Base\Button\IButton.cs" />
     <Compile Include="Controls\Button.cs" />
+    <Compile Include="Controls\PageSerpoator.cs" />
     <Compile Include="Controls\ToggleBox.cs" />
     <Compile Include="Core\Base\IHomeStockContext.cs" />
     <Compile Include="Core\Base\IHomeStockScript.cs" />
@@ -656,9 +660,7 @@
     <None Include="bundler\uglifyjs" />
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="CompositeControls\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

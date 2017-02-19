@@ -5,17 +5,20 @@
 
   --HS-Blue: #00acc1;
   --HS-Blue-Accent: #4dd0e1;
+  --HS-Blue-Focus: #008799;
 
   --HS-Red: #cc0000;
   --HS-Red-Accent: #ff3333;
+  --HS-Red-Focus:  #660000;
 
   --HS-Green: #2fb62f;
   --HS-Green-Accent: #5dd55d;
+  --HS-Green-Focus: #258e25;
 
-  --active-selected: #ff6600;
+  --HS-Active: #ff6600;
 }
 
-/*#region Buton*/
+/*#region Button*/
 a.hs-button
 {
     position: relative;
@@ -32,6 +35,29 @@ a.hs-button
     -webkit-user-select: none; /* Chrome/Safari */        
     -moz-user-select: none; /* Firefox */
     -ms-user-select: none; /* IE10+ */
+
+    -webkit-transition: all .1s linear; /* Saf3.2+, Chrome */
+     -moz-transition: all .1s linear; /* FF3.7+ */
+       -o-transition: all .1s linear; /* Opera 10.5 */
+          transition: all .1s linear;
+}
+
+a.hs-button:hover {
+    border: 2px solid;
+    border-color: var(--HS-Active);
+    border-radius: 4px;
+    color: var(--HS-Active);
+    
+    -webkit-transition: all .1s linear; /* Saf3.2+, Chrome */
+     -moz-transition: all .1s linear; /* FF3.7+ */
+       -o-transition: all .1s linear; /* Opera 10.5 */
+          transition: all .1s linear;
+}
+a.hs-button:hover {
+    -webkit-transition: all .1s linear; /* Saf3.2+, Chrome */
+     -moz-transition: all .1s linear; /* FF3.7+ */
+       -o-transition: all .1s linear; /* Opera 10.5 */
+          transition: all .1s linear;
 }
 
 /*#region Default*/
@@ -42,10 +68,12 @@ a.hs-button-default {
 a.hs-button-default:hover
 {
     background-color: var(--HS-Blue-Accent);
-    border: 1px solid var(--HS-Blue);
+}
+a.hs-button-default:active
+{
+    background-color: var(--HS-Blue-Focus);
 }
 /*#endregion Default*/
-
 
 /*#region New*/
 a.hs-button-new {
@@ -55,10 +83,12 @@ a.hs-button-new {
 a.hs-button-new:hover
 {
     background-color: var(--HS-Green-Accent);
-    border: 1px solid var(--HS-Green);
+}
+a.hs-button-new:active
+{
+    background-color: var(--HS-Green-Focus);
 }
 /*#endregion New*/
-
 
 /*#region Delete*/
 a.hs-button-delete {
@@ -68,9 +98,65 @@ a.hs-button-delete {
 a.hs-button-delete:hover
 {
     background-color: var(--HS-Red);
-    border: 1px solid var(--HS-Red-Accent);
+}
+a.hs-button-delete:active
+{
+    background-color: var(--HS-Red-Focus);
+    color: #ffffff;
 }
 /*#endregion Delete*/
 
 /*#endregion Button*/
 
+/*#region PageSeporator*/
+div.hs-page-seporator {
+    display: block;
+    text-align: center;
+    overflow: hidden;
+    white-space: nowrap;
+    margin: 10%;
+    margin-top: 4%;
+    margin-bottom: 4%; 
+}
+
+div.hs-page-seporator > span {
+    position: relative;
+    display: inline-block;
+}
+	
+div.hs-page-seporator > span:before,
+div.hs-page-seporator > span:after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    width: 9999px;
+    height: 1px;
+    background-color: var(--dark-grey);
+}
+
+div.hs-page-seporator > span:before {
+    right: 100%;
+    margin-right: 15px;
+}
+
+div.hs-page-seporator > span:after {
+    left: 100%;
+    margin-left: 15px;
+}
+/*#endregion PageSeporator*/
+
+/*#region PageHeader*/
+div.hs-page-header {
+    padding-bottom: 3%;
+    text-align: center;
+}
+
+h1.hs-page-header-title {
+    display: inline;
+    font-size: 4em;
+}
+
+p.hs-page-header-description {
+    display: inline;
+}
+/*#endregion PageHeader*/
