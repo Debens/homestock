@@ -4,6 +4,8 @@
 
 <asp:content runat="server" id="contentPlaceHolderID" contentplaceholderid="MainViewContent">
     
-    <Control:Button runat="server" Text="This is a test" ID="test" Url="http://google.com" OpenTab="true" />
+    <Control:Button runat="server" Text="Google" ID="test" Url="http://google.com" OpenTab="true" />
+    <Control:Button runat="server" Text="Google" ID="Button1" Url="http://google.com" OpenTab="true" Type="New" />
+    <Control:Button runat="server" Text="Google" ID="Button2" Url="http://google.com" OpenTab="true" Type="Delete" />
 
 </asp:content>

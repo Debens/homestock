@@ -2,8 +2,16 @@
   --light-grey: #dbdbdb;
   --grey: #888889;
   --dark-grey: #333333;
-  --active: #00acc1;
-  --active-accent: #4dd0e1;
+
+  --HS-Blue: #00acc1;
+  --HS-Blue-Accent: #4dd0e1;
+
+  --HS-Red: #ff3333;
+  --HS-Red-Accent: #e60000;
+
+  --HS-Green: #33cc33;
+  --HS-Green-Accent: #2aa22a;
+
   --active-selected: #ff6600;
 }
 
@@ -14,23 +22,55 @@ a.hs-button
     padding: 2% 4% 2% 4%;
     cursor: pointer;
     color: #FFF;
-    background-color: var(--active);
     text-decoration: none;
     font-size: 100%;
     text-align: center;
     font-style: normal;
     width: 20%;
-    border: 1px solid var(--active-accent);
     border-width: 1px 1px 3px;
     margin-bottom: 10px;
     -webkit-user-select: none; /* Chrome/Safari */        
     -moz-user-select: none; /* Firefox */
     -ms-user-select: none; /* IE10+ */
 }
-a.hs-button:hover
+
+/*#region Default*/
+a.hs-button-default:hover
 {
-    background-color: var(--active-accent);
-    border: 1px solid var(--active);
+    background-color: var(--HS-Blue-Accent);
+    border: 1px solid var(--HS-Blue);
 }
+a.hs-button-default {
+    background-color: var(--HS-Blue);
+    border: 1px solid var(--HS-Blue-Accent);
+}
+/*#endregion Default*/
+
+
+/*#region New*/
+a.hs-button-new:hover
+{
+    background-color: var(--HS-Green-Accent);
+    border: 1px solid var(--HS-Green);
+}
+a.hs-button-new {
+    background-color: var(--HS-Green);
+    border: 1px solid var(--HS-Green-Accent);
+}
+/*#endregion New*/
+
+
+/*#region Delete*/
+a.hs-button-delete:hover
+{
+    background-color: var(--HS-Red-Accent);
+    border: 1px solid var(--HS-Red);
+}
+a.hs-button-delete {
+    background-color: var(--HS-Red);
+    border: 1px solid var(--HS-Red-Accent);
+}
+/*#endregion Delete*/
+
 /*#endregion Button*/
 
