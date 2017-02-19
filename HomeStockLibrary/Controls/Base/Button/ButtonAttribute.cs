@@ -9,21 +9,17 @@ namespace HomeStockLibrary.Controls.Base.Button
     internal class ButtonAttribute : Attribute
     {
         private string backgroundColor;
-
-        public ButtonAttribute()
-        {
-            backgroundColor = "ThisShouldBeTheDefaultButtonBackgroundColor";
-        }
+        private string defaultBackgroundColout = "hs-button-default";
 
         public string BackgroundColor
         {
             get
             {
-                return backgroundColor;
+                return backgroundColor ?? defaultBackgroundColout;
             }
             set
             {
-                backgroundColor = value ?? string.Empty;
+                backgroundColor = value ?? defaultBackgroundColout;
             }
         }
     }

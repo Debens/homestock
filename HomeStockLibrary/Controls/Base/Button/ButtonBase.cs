@@ -14,7 +14,8 @@ namespace HomeStockLibrary.Controls.Base.Button
         public override void RenderControl(HtmlTextWriter writer)
         {
             writer.AddAttribute("ID", ID);
-            writer.AddAttribute("class", "hs-button");
+           
+            writer.AddAttribute("class", getCssClasses(Type));
 
             RenderButtonAttributes(writer);
             writer.RenderBeginTag("a");
@@ -26,10 +27,12 @@ namespace HomeStockLibrary.Controls.Base.Button
 
         protected string getCssClasses(ButtonType type)
         {
-            var attribute = EnumHelper.GetAttributeOfType<ButtonAttribute>(type);
-            var background = attribute.BackgroundColor;
+            string baseButtonClass = "hs-button";
+            
+            ButtonAttribute attribute = EnumHelper.GetAttributeOfType<ButtonAttribute>(type);
+            string backgroundClass = attribute.BackgroundColor;
 
-            return background;
+            return baseButtonClass + " " + backgroundClass;
         }
     }
 }
