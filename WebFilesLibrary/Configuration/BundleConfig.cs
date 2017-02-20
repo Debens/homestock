@@ -21,5 +21,21 @@ namespace WebFilesLibrary.Configuration
                 return (BundleSourceCollection)base["BundleSources"];
             }
         }
+
+        [ConfigurationProperty("outputFolder", IsRequired = true)]
+        public string OutputFolder
+        {
+            get
+            {
+                string folderDir = (string)base["outputFolder"];
+                if (!folderDir.EndsWith("/"))
+                    folderDir += "/";
+                return folderDir;
+            }
+            set
+            {
+                base["outputFolder"] = value;
+            }
+        }
     }
 }

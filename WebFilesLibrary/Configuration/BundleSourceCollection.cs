@@ -18,6 +18,30 @@ namespace WebFilesLibrary.Configuration
         {
             return ((BundleSource)element).Name;
         }
+        
+        public BundleSource this[int index]
+        {
+            get
+            {
+                return (BundleSource)BaseGet(index);
+            }
+            set
+            {
+                if (BaseGet(index) != null)
+                {
+                    BaseRemoveAt(index);
+                }
+                BaseAdd(index, value);
+            }
+        }
+
+        new public BundleSource this[string Name]
+        {
+            get
+            {
+                return (BundleSource)BaseGet(Name);
+            }
+        }
 
         public int IndexOf(BundleSource bundleSource)
         {

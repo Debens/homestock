@@ -31,7 +31,7 @@ namespace WebFilesLibrary.Configuration
             set { this["folderSrc"] = value; }
         }
 
-        [ConfigurationProperty("filter")]
+        [ConfigurationProperty("filter", IsRequired = true, DefaultValue = "*")]
         public string Filter
         {
             get { return (string)this["filter"]; }
