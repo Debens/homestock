@@ -13,6 +13,33 @@ namespace HomeStock.Testing.Library.Controls {
     public partial class Buttons {
         
         /// <summary>
+        /// Button3 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::HomeStockLibrary.Controls.Button Button3;
+        
+        /// <summary>
+        /// Button4 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::HomeStockLibrary.Controls.Button Button4;
+        
+        /// <summary>
+        /// Button5 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::HomeStockLibrary.Controls.Button Button5;
+        
+        /// <summary>
         /// test control.
         /// </summary>
         /// <remarks>
@@ -20,5 +47,14 @@ namespace HomeStock.Testing.Library.Controls {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::HomeStockLibrary.Controls.Button test;
+        
+        /// <summary>
+        /// Button1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::HomeStockLibrary.Controls.Button Button1;
     }
 }

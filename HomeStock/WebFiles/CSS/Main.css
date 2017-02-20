@@ -56,9 +56,11 @@ td{
 
 h1.side-title {
 	float: left;
-	writing-mode: tb-rl;
+	writing-mode: vertical-rl;
+    -webkit-writing-mode: vertical-lr;
+    white-space: nowrap;
 	filter: flipv fliph;
-	padding-right: 2%;
+	padding-right: 1px;
 	padding-top: 20px;
 	color: #666666;
 	font-size: 3em;

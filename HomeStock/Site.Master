@@ -19,7 +19,7 @@
             <div class="o-container">
                 <table>
                     <tr>
-                        <td style="table-layout: fixed; width: 50px;">
+                        <td style="table-layout: fixed; width: 50px; max-width:50px">
                             <div class="side-ribbon">
                                 <div id="push-left" class="bars-container">
                                     <div class="bar1"></div>

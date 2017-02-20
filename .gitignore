@@ -1,15 +1,15 @@
 .vs/**
 
-HomeStock/bin/**
-HomeStock/obj/Debug/**
+HomeStock/bin/
+HomeStock/obj/Debug/
 
-HomeStockAPI/bin/**
-HomeStockAPI/obj/Debug/**
+HomeStockAPI/bin/
+HomeStockAPI/obj/Debug/
 
-homeStock.Business/bin/**
-homeStock.Business/obj/Debug/**
-HomeStock.Business/bin/**
-HomeStock.Business/obj/Debug/**
+homeStock.Business/bin/
+homeStock.Business/obj/Debug/
+HomeStock.Business/bin/
+HomeStock.Business/obj/Debug/
 
-HomeStockLibrary/bin/**
-HomeStockLibrary/obj/Debug/**
+HomeStockLibrary/bin/
+HomeStockLibrary/obj/
