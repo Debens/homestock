@@ -43,6 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Bundling\HomeStockBundleReference.cs" />
     <Compile Include="Configuration\Web\Sections\UserConfigurationSection.cs" />
     <Compile Include="Controls\Base\Button\ButtonAttribute.cs" />
     <Compile Include="Controls\Base\Button\ButtonBase.cs" />
