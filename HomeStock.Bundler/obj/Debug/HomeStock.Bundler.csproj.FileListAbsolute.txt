@@ -1,0 +1,8 @@
+C:\Users\Sven\Documents\GitHub\HomeStock\HomeStock.Bundler\bin\Debug\HomeStock.Bundler.exe.config
+C:\Users\Sven\Documents\GitHub\HomeStock\HomeStock.Bundler\bin\Debug\HomeStock.Bundler.exe
+C:\Users\Sven\Documents\GitHub\HomeStock\HomeStock.Bundler\bin\Debug\HomeStock.Bundler.pdb
+C:\Users\Sven\Documents\GitHub\HomeStock\HomeStock.Bundler\bin\Debug\WebFilesLibrary.dll
+C:\Users\Sven\Documents\GitHub\HomeStock\HomeStock.Bundler\bin\Debug\WebFilesLibrary.pdb
+C:\Users\Sven\Documents\GitHub\HomeStock\HomeStock.Bundler\obj\Debug\HomeStock.Bundler.csprojResolveAssemblyReference.cache
+C:\Users\Sven\Documents\GitHub\HomeStock\HomeStock.Bundler\obj\Debug\HomeStock.Bundler.exe
+C:\Users\Sven\Documents\GitHub\HomeStock\HomeStock.Bundler\obj\Debug\HomeStock.Bundler.pdb

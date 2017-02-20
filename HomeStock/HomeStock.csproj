@@ -94,6 +94,10 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Bundles\HomeStock.Business.js" />
+    <Content Include="Bundles\HomeStock.Data.js" />
+    <Content Include="Bundles\HomeStock.UI.js" />
+    <Content Include="Bundles\HomeStock.Utility.js" />
     <Content Include="Index.html" />
     <Content Include="packages.config" />
     <Content Include="ApplicationInsights.config">

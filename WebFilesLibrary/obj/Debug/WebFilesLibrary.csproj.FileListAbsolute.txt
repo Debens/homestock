@@ -1,0 +1,4 @@
+C:\Users\Sven\Documents\GitHub\HomeStock\WebFilesLibrary\bin\Debug\WebFilesLibrary.pdb
+C:\Users\Sven\Documents\GitHub\HomeStock\WebFilesLibrary\obj\Debug\WebFilesLibrary.pdb
+C:\Users\Sven\Documents\GitHub\HomeStock\WebFilesLibrary\bin\Debug\WebFilesLibrary.dll
+C:\Users\Sven\Documents\GitHub\HomeStock\WebFilesLibrary\obj\Debug\WebFilesLibrary.dll
