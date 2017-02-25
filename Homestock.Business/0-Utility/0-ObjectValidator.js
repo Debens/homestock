@@ -2,7 +2,7 @@
     "use strict";
 
     window.ObjectValidator = {
-        "validateProperties": function (object, requiredProperties) {
+        "Validate": function (object, requiredProperties) {
             object = object || {};
             var validationResults = new ValidationResults();
 

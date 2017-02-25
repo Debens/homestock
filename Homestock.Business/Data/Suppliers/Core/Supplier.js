@@ -12,7 +12,7 @@
     ];
 
     var Supplier = function (params) {
-        var validation = window.ObjectValidator.validateProperties(params, requiredParams);
+        var validation = ObjectValidator.Validate(params, requiredParams);
         if (!validation.isValid)
             throw messagePrefix + "Failed construction, missing parameter(s) " + validation.missingProperties.join(", ");
         var self = this;

@@ -16,7 +16,7 @@
     ];
 
     function Node(params) {
-        var validation = window.ObjectValidator.validateProperties(params, requiredNodeParams);
+        var validation = ObjectValidator.Validate(params, requiredNodeParams);
         if (!validation.isValid)
             throw messagePrefix + "Failed construction, missing parameter(s) " + validation.missingProperties.join(", ");
         var self = this;
@@ -43,7 +43,7 @@
     };
 
     function Tree(params) {
-        var validation = window.ObjectValidator.validateProperties(params, requiredTreeParams);
+        var validation = ObjectValidator.Validate(params, requiredTreeParams);
         if (!validation.isValid)
             throw messagePrefix + "Failed construction, missing parameter(s) " + validation.missingProperties.join(", ");
         var self = this;
