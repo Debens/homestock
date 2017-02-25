@@ -1,4 +1,5 @@
 ﻿using HomeStockLibrary.Controls.Base;
+using HomeStockLibrary.Controls.Core;
 using HomeStockLibrary.Core;
 using System;
 using System.Collections.Generic;

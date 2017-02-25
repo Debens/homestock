@@ -4,12 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace HomeStockLibrary.Core.Base
+namespace HomeStockLibrary.Util.Script.Base
 {
     public interface IHomeStockScript
     {
-        string Script(bool renderTags = false);
-
-        string Description { get; set; }
+        string BuildScript(bool renderTags = false);
     }
 }

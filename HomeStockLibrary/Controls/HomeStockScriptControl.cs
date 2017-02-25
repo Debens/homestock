@@ -2,27 +2,30 @@
 using System.Collections.Generic;
 using System.Web.UI;
 using HomeStockLibrary.Core;
+using HomeStockLibrary.Util.Script;
+using HomeStockLibrary.Util.Script.Base;
+using System.Linq;
 
 namespace HomeStockLibrary.Controls
 {
     public class HomeStockScriptControl : HomeStockControlBase
     {
-        private List<HomeStockScript> scripts;
+        private List<HomeStockScriptRegion> scriptRegions;
 
         public HomeStockScriptControl()
         {
-            scripts = new List<HomeStockScript>();
+            scriptRegions = new List<HomeStockScriptRegion>();
         }
 
         public override void RenderControl(HtmlTextWriter writer)
         {
             writer.RenderBeginTag("script");
 
-            foreach (HomeStockScript script in scripts)
+            foreach (HomeStockScriptRegion region in scriptRegions)
             {
                 writer.InnerWriter.Write("\n");
-                writer.InnerWriter.Write(script.Description);
-                writer.InnerWriter.Write(script.Script());
+                writer.InnerWriter.Write(region.ID);
+                writer.InnerWriter.Write(region.BuildScript());
             }
 
             writer.InnerWriter.Write("\n");
@@ -30,10 +33,10 @@ namespace HomeStockLibrary.Controls
             writer.RenderEndTag();
         }
 
-        public void AddScript (HomeStockScript script, bool renderAtTop = false)
+        public void AddScript (HomeStockScriptRegion scriptRegion)
         {
-            int insertIndex = renderAtTop ? 0 : scripts.Count;
-            scripts.Insert(insertIndex, script);
+            scriptRegions.Add(scriptRegion);
+            scriptRegions.OrderBy(s => s.Priority).ThenBy(s => s.ID);
         }
     }
 }
