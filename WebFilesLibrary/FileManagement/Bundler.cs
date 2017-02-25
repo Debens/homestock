@@ -26,6 +26,8 @@ namespace WebFilesLibrary.FileManagement
             string dir = Path.GetDirectoryName(targetFile);
             if (!Directory.Exists(dir))
                 Directory.CreateDirectory(dir);
+            if (File.Exists(targetFile))
+                File.Delete(targetFile);
 
             using (StreamWriter sw = File.AppendText(targetFile))
             {
