@@ -1,10 +1,6 @@
 ﻿; (function () {
     "use strict";
 
-    var messagePrefix = "HomeStock: ";
-
-    window.HomeStock = HomeStock;
-
     var nameSpace = new window.ns.Tree();
 
     var HomeStock = {
@@ -16,4 +12,6 @@
         },
         "Config": function () { }
     };
+
+    window.HomeStock = HomeStock;
 })();
