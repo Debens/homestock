@@ -49,24 +49,25 @@
     <Compile Include="Controls\Base\Button\ButtonAttribute.cs" />
     <Compile Include="Controls\Base\Button\ButtonBase.cs" />
     <Compile Include="Controls\Base\Button\ButtonType.cs" />
-    <Compile Include="Controls\Base\FileInclusionType.cs" />
+    <Compile Include="Controls\Core\FileInclusionType.cs" />
     <Compile Include="Controls\Base\HomeStockControlBase.cs" />
     <Compile Include="Controls\Base\Button\IButton.cs" />
     <Compile Include="Controls\Button.cs" />
+    <Compile Include="Util\Script\Base\IHomeStockScript.cs" />
+    <Compile Include="Util\Script\HomeStockScriptRegion.cs" />
     <Compile Include="Controls\HomeStockFileInclusion.cs" />
     <Compile Include="Controls\PageSerpoator.cs" />
     <Compile Include="Controls\ToggleBox.cs" />
     <Compile Include="Core\Base\IHomeStockContext.cs" />
-    <Compile Include="Core\Base\IHomeStockScript.cs" />
     <Compile Include="Core\HomeStockContext.cs" />
-    <Compile Include="Core\HomeStockControlAssistant.cs" />
+    <Compile Include="Util\HomeStockControlAssistant.cs" />
     <Compile Include="Core\HomeStockPage.cs">
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Core\HomeStockScript.cs" />
+    <Compile Include="Util\Script\HomeStockScript.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Util\EnumHelper.cs" />
-    <Compile Include="Util\HomeStockScriptAssistant.cs" />
+    <Compile Include="Util\Script\HomeStockScriptAssistant.cs" />
     <Compile Include="Controls\HomeStockScriptControl.cs" />
   </ItemGroup>
   <ItemGroup>

@@ -1,7 +1,8 @@
-﻿using System;
+﻿using HomeStockLibrary.Core;
+using System;
 using System.Web.UI;
 
-namespace HomeStockLibrary.Core
+namespace HomeStockLibrary.Util
 {
     public class HomeStockControlAssistant
     {

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace HomeStockLibrary.Controls.Base
+namespace HomeStockLibrary.Controls.Core
 {
     public enum FileInclusionType
     {

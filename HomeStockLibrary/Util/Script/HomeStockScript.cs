@@ -1,11 +1,11 @@
-﻿using HomeStockLibrary.Core.Base;
+﻿using HomeStockLibrary.Util.Script.Base;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace HomeStockLibrary.Core
+namespace HomeStockLibrary.Util.Script
 {
     public class HomeStockScript : IHomeStockScript
     {
@@ -24,7 +24,7 @@ namespace HomeStockLibrary.Core
 
         public string Description { get; set; }
 
-        public string Script(bool renderTags = false)
+        public string BuildScript(bool renderTags = false)
         {
             return renderTags ? Description + "\n<script type=\"text/javascript\">" + this.script + "<\\script>" : script;
         }
