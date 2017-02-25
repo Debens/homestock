@@ -1,7 +1,0 @@
-/Volumes/NO NAME/HomeStock/HomeStock.Business/obj/Debug/.NETFramework,Version=v4.5.2.AssemblyAttribute.cs
-/Volumes/NO NAME/HomeStock/HomeStock.Business/bin/Debug/HomeStock.Business.dll.mdb
-/Volumes/NO NAME/HomeStock/HomeStock.Business/bin/Debug/HomeStock.Business.pdb
-/Volumes/NO NAME/HomeStock/HomeStock.Business/bin/Debug/HomeStock.Business.dll
-/Volumes/NO NAME/HomeStock/HomeStock.Business/obj/Debug/HomeStock.Business.dll
-/Volumes/NO NAME/HomeStock/HomeStock.Business/obj/Debug/HomeStock.Business.dll.mdb
-/Volumes/NO NAME/HomeStock/HomeStock.Business/obj/Debug/HomeStock.Business.pdb

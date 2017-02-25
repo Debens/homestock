@@ -1,4 +1,0 @@
-E:\HomeStock\HomeStockLibrary\bin\Release\HomeStockLibrary.dll
-E:\HomeStock\HomeStockLibrary\bin\Release\HomeStockLibrary.pdb
-E:\HomeStock\HomeStockLibrary\obj\Release\HomeStockLibrary.dll
-E:\HomeStock\HomeStockLibrary\obj\Release\HomeStockLibrary.pdb
