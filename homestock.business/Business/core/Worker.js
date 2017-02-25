@@ -2,19 +2,22 @@
     "use strict";
 
     var requiredParams = [
-        "id",
-        "modules"
+        "id"
     ];
 
-    window.Business.Worker = Worker;
+    var nsString = "Business.Core";
+    var ns = HomeStock.Import(nsString);
+    ns.Worker = Worker;
 
-    var messagePrefix = "Business.Worker: ";
+    var messagePrefix = nsString + ".Worker: ";
 
-    var Worker = function (params) {
+    function Worker(params) {
         var validation = window.ObjectValidator.validateProperties(params, requiredParams);
         if (!validation.isValid)
-            throw messagePrefix + "params is missing properties: " + validation.missingProperties.join(", ");
+            throw messagePrefix + "Failed construction, missing parameter(s) " + validation.missingProperties.toString();
         var self = this;
+
+        params.modules = params.module || [];
 
         self["Name"] = params.id;
         

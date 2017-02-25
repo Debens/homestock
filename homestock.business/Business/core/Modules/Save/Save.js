@@ -5,15 +5,16 @@
         "worker"
     ];
 
-    var nsString = "Business.Module";
+    var nsString = "Business.Core.Modules";
+    var ns = HomeStock.Import(nsString);
     var messagePrefix = nsString + ".Save: ";
 
-    window[nsString].Save = Save;
+    ns.Save = Save;
 
     var Save = function (params) {
         var validation = window.ObjectValidator.validateProperties(params, requiredParams);
         if (!validation.isValid)
-            throw messagePrefix + "params is missing properties: " + validation.missingProperties.join(", ");
+            throw messagePrefix + "Failed construction, missing parameter(s) " + validation.missingProperties.join(", ");
         var self = this;
         
         var worker = params.worker;

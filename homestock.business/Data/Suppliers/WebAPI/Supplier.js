@@ -1,20 +1,21 @@
 ﻿; (function () {
     "use strict";
 
-    var nsString = "Data";
+    var nsString = "Data.Suppliers.WebAPI";
+    var ns = HomeStock.Import(nsString);
     var messagePrefix = nsString + ".Supplier: ";
 
-    window[nsString].Supplier = Supplier;
+    ns.Supplier = Supplier;
 
     var requiredParams = [
         "id",
         "schemaId"
     ];
 
-    var Supplier = function (params) {
+    function Supplier (params) {
         var validation = window.ObjectValidator.validateProperties(params, requiredParams);
         if (!validation.isValid)
-            throw messagePrefix + "params is missing properties: " + validation.missingProperties.join(", ");
+            throw messagePrefix + "Failed construction, missing parameter(s) " + validation.missingProperties.join(", ");
         var self = this;
 
     };

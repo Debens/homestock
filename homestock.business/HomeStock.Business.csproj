@@ -43,6 +43,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="0-Utility\1-ObjectTree.js" />
     <Content Include="Business\Core\Modules\Builder\Builder.js" />
     <Content Include="Business\Core\Modules\Query\Query.js" />
     <Content Include="Business\Core\Modules\Save\Save.js" />
@@ -66,7 +67,7 @@
     <Content Include="_old\Mark I\Utility\Config\HomeStock.js" />
     <Content Include="_old\Mark I\Utility\Config\PageInitializer.js" />
     <Content Include="_old\Mark I\Utility\HomeStockIFramPageNavigator.js" />
-    <Content Include="Utility\ObjectValidator.js" />
+    <Content Include="0-Utility\0-ObjectValidator.js" />
     <Content Include="_old\Mark I\Utility\UriHelper.js" />
   </ItemGroup>
   <ItemGroup>
@@ -76,13 +77,7 @@
     <Content Include="Data\Suppliers\WebAPI\Supplier.js" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Utility\HomeStock\HomeStock.js" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Utility\HomeStock\NameSpacing\Tree.js" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Utility\HomeStock\NameSpacing\Node.js" />
+    <Content Include="0-Utility\HomeStock\HomeStock.js" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

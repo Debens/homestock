@@ -1,10 +1,10 @@
 ﻿; (function () {
     "use strict";
 
-    var nsString = "Data.Supplier";
-    var messagePrefix = nsString + ".WebAPI: ";
+    var nsString = "Data.Suppliers.Core";
+    var ns = HomeStock.Import(nsString);
 
-    window[nsString].Supplier = Supplier;
+    ns.Supplier = Supplier;
 
     var requiredParams = [
         "id",
@@ -14,7 +14,7 @@
     var Supplier = function (params) {
         var validation = window.ObjectValidator.validateProperties(params, requiredParams);
         if (!validation.isValid)
-            throw messagePrefix + "params is missing properties: " + validation.missingProperties.join(", ");
+            throw messagePrefix + "Failed construction, missing parameter(s) " + validation.missingProperties.join(", ");
         var self = this;
 
     };
