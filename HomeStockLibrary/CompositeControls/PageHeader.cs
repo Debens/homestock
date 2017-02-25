@@ -33,14 +33,18 @@ namespace HomeStockLibrary.CompositeControls
             writer.AddAttribute("class", "hs-page-header-title");
             writer.RenderBeginTag("h1");
             writer.InnerWriter.Write(Title);
+
+            writer.RenderBeginTag("br");
             writer.RenderEndTag();
 
-            seporator.RenderControl(writer);
+            writer.RenderEndTag();
 
             writer.AddAttribute("class", "hs-page-header-description");
             writer.RenderBeginTag("p");
             writer.InnerWriter.Write(Description);
             writer.RenderEndTag();
+
+            seporator.RenderControl(writer);
 
             writer.RenderEndTag();
         }
