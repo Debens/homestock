@@ -94,7 +94,6 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Index.html" />
     <Content Include="packages.config" />
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
@@ -115,26 +114,6 @@
     <Content Include="WebFiles\fonts\oxygen\oxygen-v5-latin-700.svg" />
     <Content Include="WebFiles\fonts\oxygen\oxygen-v5-latin-regular.svg" />
     <Content Include="WebFiles\Inventory.html" />
-    <Content Include="WebFiles\JavaScript\business\Manager\ContainerManager.js" />
-    <Content Include="WebFiles\JavaScript\business\Manager\HomeManager.js" />
-    <Content Include="WebFiles\JavaScript\business\Manager\OwnerManager.js" />
-    <Content Include="WebFiles\JavaScript\business\Manager\StockManager.js" />
-    <Content Include="WebFiles\JavaScript\business\ModelObjects\Container.js" />
-    <Content Include="WebFiles\JavaScript\business\ModelObjects\Home.js" />
-    <Content Include="WebFiles\JavaScript\business\ModelObjects\Owner.js" />
-    <Content Include="WebFiles\JavaScript\business\ModelObjects\Stock.js" />
-    <Content Include="WebFiles\JavaScript\business\Repository\Base\AjaxHelper.js" />
-    <Content Include="WebFiles\JavaScript\business\Repository\ContainerRepository.js" />
-    <Content Include="WebFiles\JavaScript\business\Repository\HomeRepository.js" />
-    <Content Include="WebFiles\JavaScript\business\Repository\HSRepository.js" />
-    <Content Include="WebFiles\JavaScript\business\Repository\OwnerRepsoitory.js" />
-    <Content Include="WebFiles\JavaScript\business\Repository\StockRepository.js" />
-    <Content Include="WebFiles\JavaScript\Core\Config\ApplicationSettings.js" />
-    <Content Include="WebFiles\JavaScript\Core\Config\HomeStock.js" />
-    <Content Include="WebFiles\JavaScript\Core\Config\PageInitializer.js" />
-    <Content Include="WebFiles\JavaScript\Core\ViewModel\EditItemViewModel.js" />
-    <Content Include="WebFiles\JavaScript\Core\ViewModel\InventoryViewModel.js" />
-    <Content Include="WebFiles\JavaScript\Core\ViewModel\MainViewModel.js" />
     <Content Include="WebFiles\JavaScript\Unmanaged\dist\carbonAd.js" />
     <Content Include="WebFiles\JavaScript\Unmanaged\dist\githubIcons.js" />
     <Content Include="WebFiles\JavaScript\Unmanaged\dist\menu.js" />
@@ -142,8 +121,6 @@
     <Content Include="WebFiles\JavaScript\Unmanaged\Lib\jquery-3.1.1.js" />
     <Content Include="WebFiles\JavaScript\Unmanaged\Lib\knockout-3.4.1.min.js" />
     <Content Include="WebFiles\JavaScript\Unmanaged\src\menu.js" />
-    <Content Include="WebFiles\JavaScript\Utility\HomeStockIFramPageNavigator.js" />
-    <Content Include="WebFiles\JavaScript\Utility\UriHelper.js" />
     <Content Include="WebFiles\NewStockItem.html" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
