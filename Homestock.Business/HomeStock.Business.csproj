@@ -29,6 +29,9 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <RunPostBuildEvent>Always</RunPostBuildEvent>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -79,7 +82,20 @@
   <ItemGroup>
     <Content Include="0-Utility\HomeStock\HomeStock.js" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\HomeStockLibrary\HomeStockLibrary.csproj">
+      <Project>{7055eb6b-452e-4127-b032-db510659172c}</Project>
+      <Name>HomeStockLibrary</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\WebFilesLibrary\WebFilesLibrary.csproj">
+      <Project>{86e85130-b19e-475b-b16e-2f320245054c}</Project>
+      <Name>WebFilesLibrary</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>$(SolutionDir)HomeStock.Bundler\bin\Debug\HomeStock.Bundler.exe $(SolutionDir)</PostBuildEvent>
+  </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">

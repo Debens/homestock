@@ -26,7 +26,7 @@ namespace ConsoleApplication1
             {
                 var targetDir = formatPath(BundleConfig.GetConfig().OutputFolder, baseDirectory);
                 Bundler.Bundle(formatPath(bundle.FolderSrc, baseDirectory), targetDir, bundle.Name, bundle.Type, bundle.Filter);
-                Console.WriteLine(string.Format("Created {0} bundle in {1}", bundle.Name, targetDir));
+                Console.WriteLine(string.Format("Bundle '{0}' built at {1}", bundle.Name, targetDir));
             }
         }
 
