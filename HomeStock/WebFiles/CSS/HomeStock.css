@@ -8,8 +8,8 @@
   --HS-Blue-Focus: #008799;
 
   --HS-Red: #cc0000;
-  --HS-Red-Accent: #ff3333;
-  --HS-Red-Focus:  #660000;
+  --HS-Red-Accent: #ff1a1a;
+  --HS-Red-Focus:  #990000;
 
   --HS-Green: #2fb62f;
   --HS-Green-Accent: #5dd55d;
@@ -32,7 +32,7 @@ a.hs-button
     width: 20%;
     border-width: 1px 1px 3px;
     margin-bottom: 10px;
-    opacity: .5;
+    opacity: .95;
     -webkit-user-select: none; /* Chrome/Safari */        
     -moz-user-select: none; /* Firefox */
     -ms-user-select: none; /* IE10+ */
@@ -48,7 +48,7 @@ a.hs-button:hover {
     border-color: var(--HS-Active);
     border-radius: 4px;
     color: var(--HS-Active);
-    opacity: .9;
+    opacity: .7;
     
     -webkit-transition: all .1s linear; /* Saf3.2+, Chrome */
      -moz-transition: all .1s linear; /* FF3.7+ */
@@ -94,6 +94,8 @@ a.hs-button-delete {
 a.hs-button-delete:hover
 {
     background-color: var(--HS-Red);
+    border-color: black;
+    color: black;
 }
 a.hs-button-delete:active
 {
