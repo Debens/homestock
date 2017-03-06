@@ -59,14 +59,14 @@ namespace HomeStockLibrary.Util.Script
         public string BuildScript(bool renderTags = false)
         {
             var idString = string.IsNullOrEmpty(ID) ? "" : string.Format(" ID '{0}'", ID);
-            string scriptString = "//RegionStart" + idString + "\n";
+            string scriptString = "//RegionStart" + idString + "\n\n";
 
             foreach (var script in scripts)
             {
                 scriptString += script.BuildScript();
             }
             
-            scriptString += "\n//RegionEnd"  + idString;
+            scriptString += "\n\n//RegionEnd"  + idString;
 
             return renderTags ? "<script type=\"text/javascript\">" + scriptString + "<\\script>" : scriptString;
         }

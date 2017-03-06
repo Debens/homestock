@@ -46,5 +46,10 @@ namespace HomeStockLibrary.Util.Script
         {
             ScriptControl.AddScript(scriptRegion);
         }
+
+        public static void RenderScriptTo(HomeStockScript script, string regionID, bool forceCreate = true)
+        {
+            ScriptControl.AppendScript(script, regionID, forceCreate);
+        }
     }
 }
