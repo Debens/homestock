@@ -14,7 +14,12 @@ namespace HomeStockLibrary.Controls
             
         }
 
-        public override void RenderControl(HtmlTextWriter writer)
+        public override void ValidateProperties()
+        {
+
+        }
+
+        protected override void Render(HtmlTextWriter writer)
         {
           
         }

@@ -17,7 +17,7 @@ namespace HomeStockLibrary.Controls
         {
             get
             {
-                return !string.IsNullOrWhiteSpace(_text) ? /*"~  " +*/ _text /*+ "  ~"*/ :  defaultText;
+                return !string.IsNullOrWhiteSpace(_text) ?  _text :  defaultText;
             }
             set
             {
@@ -25,7 +25,12 @@ namespace HomeStockLibrary.Controls
             }
         }
 
-        public override void RenderControl(HtmlTextWriter writer)
+        public override void ValidateProperties()
+        {
+            // Nothing to validate
+        }
+
+        protected override void Render(HtmlTextWriter writer)
         {
             writer.AddAttribute("class", "hs-page-seporator");
             writer.RenderBeginTag("div");

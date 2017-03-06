@@ -5,6 +5,8 @@ using HomeStockLibrary.Core;
 using HomeStockLibrary.Util.Script;
 using HomeStockLibrary.Util.Script.Base;
 using System.Linq;
+using System;
+using HomeStockLibrary.Exceptions;
 
 namespace HomeStockLibrary.Controls
 {
@@ -17,15 +19,15 @@ namespace HomeStockLibrary.Controls
             scriptRegions = new List<HomeStockScriptRegion>();
         }
 
-        public override void RenderControl(HtmlTextWriter writer)
+        protected override void Render(HtmlTextWriter writer)
         {
             writer.RenderBeginTag("script");
 
             foreach (HomeStockScriptRegion region in scriptRegions)
             {
                 writer.InnerWriter.Write("\n");
-                writer.InnerWriter.Write(region.ID);
-                writer.InnerWriter.Write(region.BuildScript());
+                writer.InnerWriter.WriteLine("//" + region.ID);
+                writer.InnerWriter.WriteLine(region.BuildScript());
             }
 
             writer.InnerWriter.Write("\n");
@@ -37,6 +39,21 @@ namespace HomeStockLibrary.Controls
         {
             scriptRegions.Add(scriptRegion);
             scriptRegions.OrderBy(s => s.Priority).ThenBy(s => s.ID);
+        }
+
+        public void AppendScript(HomeStockScript script, string regionID, bool forceAdd = true)
+        {
+            HomeStockScriptRegion scriptRegion = scriptRegions.Find(r => r.ID == regionID);
+            if (scriptRegion == null)
+                scriptRegion = new HomeStockScriptRegion(regionID);
+            scriptRegion.AddScript(script);
+            AddScript(scriptRegion);
+        }
+
+        public override void ValidateProperties()
+        {
+            if (scriptRegions.Count < 1)
+                throw new HomeStockControlException("HomeStockScriptControl must define at least one script region");
         }
     }
 }

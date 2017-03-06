@@ -1,10 +1,49 @@
-﻿using System.Web.UI;
+﻿using HomeStockLibrary.Core.Base;
+using HomeStockLibrary.Exceptions;
+using System.Web.UI;
 using System.Web.UI.WebControls;
+using System;
 
 namespace HomeStockLibrary.Controls.Base
 {
-    public abstract class HomeStockControlBase : WebControl
+    public abstract class HomeStockControlBase : WebControl, IValidatable
     {
-        public abstract override void RenderControl(HtmlTextWriter writer);
+        protected abstract override void Render(HtmlTextWriter writer);
+
+        public abstract void ValidateProperties();
+
+        public override void RenderControl(HtmlTextWriter writer)
+        {
+            ValidateProperties();
+            Render(writer);
+        }
+        
+        public void Validate(string value, string propertyName)
+        {
+            if (string.IsNullOrEmpty(value) || string.IsNullOrWhiteSpace(value))
+                throwError(propertyName);
+        }
+
+        public void Validate(string value, string propertyName, string message)
+        {
+            if (string.IsNullOrEmpty(value) || string.IsNullOrWhiteSpace(value))
+                throwError(propertyName, message);
+        }
+
+        public void Validate(string value, Exception exception)
+        {
+            if (string.IsNullOrEmpty(value) || string.IsNullOrWhiteSpace(value))
+                throw exception;
+        }
+
+        private void throwError(string propertyName)
+        {
+            throw new HomeStockException(string.Format("Property '{0}' is required for {1} with ID '{2}'", propertyName, this.GetType(), this.ID));
+        }
+
+        private void throwError(string propertyName, string message)
+        {
+            throw new HomeStockException(string.Format("Property '{0}' is required for {1} with ID '{2}', {3}", propertyName, this.GetType(), this.ID, message));
+        }
     }
 }

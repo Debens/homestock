@@ -1,5 +1,6 @@
 ﻿using HomeStockLibrary.Util;
 using System.Web.UI;
+using System;
 
 namespace HomeStockLibrary.Controls.Base.Button
 {
@@ -11,7 +12,7 @@ namespace HomeStockLibrary.Controls.Base.Button
 
         public abstract void RenderButtonAttributes(HtmlTextWriter writer);
 
-        public override void RenderControl(HtmlTextWriter writer)
+        protected override void Render(HtmlTextWriter writer)
         {
             writer.AddAttribute("ID", ID);
            
@@ -33,6 +34,11 @@ namespace HomeStockLibrary.Controls.Base.Button
             string backgroundClass = attribute.BackgroundColor;
 
             return baseButtonClass + " " + backgroundClass;
+        }
+
+        public override void ValidateProperties()
+        {
+            Validate(Text, "Text");
         }
     }
 }

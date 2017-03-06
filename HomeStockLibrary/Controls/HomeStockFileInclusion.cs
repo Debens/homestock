@@ -30,7 +30,7 @@ namespace HomeStockLibrary.Controls
 
         public FileInclusionType type { get; set; }
 
-        public override void RenderControl(HtmlTextWriter writer)
+        protected override void Render(HtmlTextWriter writer)
         {
             HomeStockContext context = new HomeStockContext();
             string appRelativePath = Source.StartsWith("~/") ? Source : "~/" + Source;
@@ -73,6 +73,11 @@ namespace HomeStockLibrary.Controls
                 default: { throw new ArgumentException(string.Format("Cannot render inclusion tage for type {0}", type)); }
             }
             return tag;
+        }
+
+        public override void ValidateProperties()
+        {
+            Validate(Source, "Source");
         }
     }
 }
