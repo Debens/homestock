@@ -10,7 +10,12 @@ namespace HomeStockLibrary.Bundling
 {
     public class HomeStockBundleReference : HomeStockControlBase
     {
-        public override void RenderControl(HtmlTextWriter writer)
+        public override void ValidateProperties()
+        {
+            throw new NotImplementedException();
+        }
+
+        protected override void Render(HtmlTextWriter writer)
         {
             throw new NotImplementedException();
         }

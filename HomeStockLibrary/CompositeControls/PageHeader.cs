@@ -1,6 +1,7 @@
 ﻿using HomeStockLibrary.Controls;
 using HomeStockLibrary.Controls.Base;
 using System.Web.UI;
+using System;
 
 namespace HomeStockLibrary.CompositeControls
 {
@@ -20,7 +21,7 @@ namespace HomeStockLibrary.CompositeControls
             seporator.Text = SeporatorText;
         }
 
-        public override void RenderControl(HtmlTextWriter writer)
+        protected override void Render(HtmlTextWriter writer)
         {
             writer.AddAttribute("class", "hs-page-header");
             writer.RenderBeginTag("div");
@@ -42,6 +43,11 @@ namespace HomeStockLibrary.CompositeControls
             seporator.RenderControl(writer);
 
             writer.RenderEndTag();
+        }
+
+        public override void ValidateProperties()
+        {
+            throw new NotImplementedException();
         }
     }
 }
