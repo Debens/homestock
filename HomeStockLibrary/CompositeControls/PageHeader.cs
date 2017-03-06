@@ -47,7 +47,7 @@ namespace HomeStockLibrary.CompositeControls
 
         public override void ValidateProperties()
         {
-            throw new NotImplementedException();
+            Validate(Title, "Title");
         }
     }
 }

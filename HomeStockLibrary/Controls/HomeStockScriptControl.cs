@@ -52,8 +52,8 @@ namespace HomeStockLibrary.Controls
 
         public override void ValidateProperties()
         {
-            if (scriptRegions.Count < 1)
-                throw new HomeStockControlException("HomeStockScriptControl must define at least one script region");
+        //    if (scriptRegions.Count < 1)
+        //        throw new HomeStockControlException("HomeStockScriptControl must define at least one script region");
         }
     }
 }

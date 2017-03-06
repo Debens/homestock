@@ -17,7 +17,7 @@ namespace HomeStockLibrary.Bundling
 
         protected override void Render(HtmlTextWriter writer)
         {
-            throw new NotImplementedException();
+           throw new NotImplementedException();
         }
     }
 }
