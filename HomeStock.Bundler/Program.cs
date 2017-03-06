@@ -15,7 +15,7 @@ namespace ConsoleApplication1
 
 #if DEBUG
             if (string.IsNullOrEmpty(baseDirectory))
-                baseDirectory = "C:\\Users\\Sven\\Documents\\GitHub\\HomeStock\\";
+                baseDirectory = "C:\\Users\\Sven\\Documents\\GitHub\\HomeStock\\WebFiles";
 #endif
 
             if (string.IsNullOrEmpty(baseDirectory))
