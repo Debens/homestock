@@ -30,6 +30,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=9.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.9.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.configuration" />
     <Reference Include="System.Core" />
@@ -53,6 +57,19 @@
     <Compile Include="Controls\Base\HomeStockControlBase.cs" />
     <Compile Include="Controls\Base\Button\IButton.cs" />
     <Compile Include="Controls\Button.cs" />
+    <Compile Include="Core\Base\IValidatable.cs" />
+    <Compile Include="Data\Suppliers\Base\IAPISupplier.cs" />
+    <Compile Include="Util\Core\HomeStockContractResolver.cs" />
+    <Compile Include="Util\HomeStockJsonAssistant.cs" />
+    <Compile Include="Core\HomeStockScriptObject.cs" />
+    <Compile Include="Data\Suppliers\APIEndpointExtension.cs" />
+    <Compile Include="Data\Suppliers\APISupplier.cs" />
+    <Compile Include="Data\Suppliers\APIEndpoint.cs" />
+    <Compile Include="Data\Suppliers\Base\BaseSupplier.cs" />
+    <Compile Include="Data\Suppliers\Base\ISupplier.cs" />
+    <Compile Include="Exceptions\HomeStockControlException.cs" />
+    <Compile Include="Exceptions\HomeStockException.cs" />
+    <Compile Include="Util\HomeStockObjectAssistant.cs" />
     <Compile Include="Util\Script\Base\IHomeStockScript.cs" />
     <Compile Include="Util\Script\HomeStockScriptRegion.cs" />
     <Compile Include="Controls\HomeStockFileInclusion.cs" />
@@ -74,9 +91,13 @@
     <Content Include="README.txt" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="packages.config" />
+    <None Include="packages.config">
+      <SubType>Designer</SubType>
+    </None>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Data\Workers\Base\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
