@@ -12,7 +12,7 @@ namespace HomeStockLibrary.Data.Suppliers.Base
 {
     public abstract class BaseSupplier : HomeStockScriptObject, ISupplier
     {
-        protected static readonly string ScriptRegionID = "HomeStock Data Supplier Script Region";
+        protected static readonly string ScriptRegionID = "HomeStock Data Suppliers";
 
         public override void RenderControl(HtmlTextWriter writer)
         {
