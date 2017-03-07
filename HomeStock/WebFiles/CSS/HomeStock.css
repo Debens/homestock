@@ -171,17 +171,17 @@ p.hs-page-header-description {
 
 @media (max-width: 700px) {
     a.hs-button {
-        padding: 13px 27px 13px 27px;  
+        padding: 13px 27px 13px 27px !important;
     }
 
     div.hs-page-seporator {
-        margin-top: 28px;
-        margin-bottom:28px;
+        margin-top: 28px !important;
+        margin-bottom:28px !important;
     }
 }
 
 @media (min-width: 1400px) {
     a.hs-button {
-        padding: 24px 55px 24px 55px;  
+        padding: 24px 55px 24px 55px !important; 
     }
 }
