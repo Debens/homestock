@@ -52,6 +52,10 @@
     <Content Include="Business\Core\Modules\Save\Save.js" />
     <Content Include="Data\Suppliers\Core\Schema.js" />
     <Content Include="Data\Suppliers\Core\Supplier.js" />
+    <Content Include="Data\Suppliers\WebSQL\Supplier.js" />
+    <Content Include="Data\SyncModules\RecordMapper.js" />
+    <Content Include="Data\SyncModules\SchemaMapping.js" />
+    <Content Include="Data\SyncModules\SyncModule.js" />
     <Content Include="_old\Mark I\Manager\ContainerManager.js" />
     <Content Include="_old\Mark I\Manager\HomeManager.js" />
     <Content Include="_old\Mark I\Manager\OwnerManager.js" />
