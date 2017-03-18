@@ -14,6 +14,9 @@
 
             validationResults.isValid = !validationResults.missingProperties.length;
             return validationResults;
+        },
+        "IsFunction": function (obj) {
+            return !!obj && typeof obj === "function";
         }
     };
 

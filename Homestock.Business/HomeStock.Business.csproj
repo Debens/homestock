@@ -47,6 +47,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="0-Utility\1-ObjectTree.js" />
+    <Content Include="0-Utility\WebRequestAssistant.js" />
     <Content Include="Business\Core\Modules\Builder\Builder.js" />
     <Content Include="Business\Core\Modules\Query\Query.js" />
     <Content Include="Business\Core\Modules\Save\Save.js" />
@@ -84,7 +85,7 @@
     <Content Include="Data\Suppliers\WebAPI\Supplier.js" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="0-Utility\HomeStock\HomeStock.js" />
+    <Content Include="0-Utility\2-HomeStock.js" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\HomeStockLibrary\HomeStockLibrary.csproj">
