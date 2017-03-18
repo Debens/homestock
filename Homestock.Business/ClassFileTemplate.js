@@ -2,18 +2,19 @@
     "use strict";
 
     var nsString = "";
+    var ns = HomeStock.Import(nsString);
     var messagePrefix = nsString + ".: ";
 
-    window[nsString]. = ;
+    ns. = ;
 
     var requiredParams = [
         "id"
     ];
 
     var  = function (params) {
-        var validation = window.ObjectValidator.validateProperties(params, requiredParams);
+        var validation = ObjectValidator.Validate(params, requiredParams);
         if (!validation.isValid)
-            throw messagePrefix + "params is missing properties: " + validation.missingProperties.join(", ");
+            throw messagePrefix + "Failed construction, missing parameter(s) " + validation.missingProperties.join(", ");
         var self = this;
 
     };
