@@ -12,6 +12,8 @@ namespace HomeStockLibrary.Data.Suppliers
 {
     public class APISupplier : BaseSupplier, IAPISupplier
     {
+        protected override string namespaceString { get { return "Data.Suppliers.WebAPI"; } }
+
         public string EndPoint { get; set; }
 
         public override void ValidateProperties()
@@ -21,7 +23,7 @@ namespace HomeStockLibrary.Data.Suppliers
 
         public override string GenerateCreationString()
         {
-            return string.Format("var {0} = {1};", this.ID, HomeStockJsonAssistant.Convert(this, typeof(IAPISupplier)));
+            return HomeStockJsonAssistant.Convert(this, typeof(IAPISupplier));
         }
     }
 }

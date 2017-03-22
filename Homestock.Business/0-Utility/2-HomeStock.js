@@ -10,7 +10,10 @@
 
             return nameSpace.Traverse(nsString);
         },
-        "Config": function () { }
+        "Config": function () { },
+
+        "Suppliers": {},
+        "Workers": {}
     };
 
     window.HomeStock = HomeStock;

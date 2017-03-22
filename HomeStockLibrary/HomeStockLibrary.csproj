@@ -58,6 +58,12 @@
     <Compile Include="Controls\Base\Button\IButton.cs" />
     <Compile Include="Controls\Button.cs" />
     <Compile Include="Core\Base\IValidatable.cs" />
+    <Compile Include="Data\Schemas\Column.cs" />
+    <Compile Include="Data\Schemas\Core\IColumn.cs" />
+    <Compile Include="Data\Schemas\Core\IEntity.cs" />
+    <Compile Include="Data\Schemas\Core\ISchema.cs" />
+    <Compile Include="Data\Schemas\Entity.cs" />
+    <Compile Include="Data\Schemas\Schema.cs" />
     <Compile Include="Data\Suppliers\Base\IAPISupplier.cs" />
     <Compile Include="Util\Core\HomeStockContractResolver.cs" />
     <Compile Include="Util\HomeStockJsonAssistant.cs" />

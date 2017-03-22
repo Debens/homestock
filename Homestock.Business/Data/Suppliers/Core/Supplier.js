@@ -12,7 +12,7 @@
         "schemaId"
     ];
 
-    var Supplier = function (params) {
+    function Supplier (params) {
         var validation = ObjectValidator.Validate(params, requiredParams);
         if (!validation.isValid)
             throw messagePrefix + "Failed construction, missing parameter(s) " + validation.missingProperties.join(", ");
