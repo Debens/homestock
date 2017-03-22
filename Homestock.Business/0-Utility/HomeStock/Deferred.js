@@ -4,13 +4,11 @@
     var nsString = "HomeStock";
     var messagePrefix = nsString + ".Deferred: ";
 
-    HomeStock.Deferred = Deferred;
-
     var requiredParams = [
         
     ];
 
-    var Deferred = function (params) {
+    HomeStock.Deferred = function (params) {
         var validation = ObjectValidator.Validate(params, requiredParams);
         if (!validation.isValid)
             throw messagePrefix + "Failed construction, missing parameter(s) " + validation.missingProperties.join(", ");
