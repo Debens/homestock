@@ -37,6 +37,7 @@
     <Reference Include="System" />
     <Reference Include="System.configuration" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Web" />
     <Reference Include="System.Web.Extensions" />
     <Reference Include="System.Xml.Linq" />
@@ -65,6 +66,8 @@
     <Compile Include="Data\Schemas\Entity.cs" />
     <Compile Include="Data\Schemas\Schema.cs" />
     <Compile Include="Data\Suppliers\Base\IAPISupplier.cs" />
+    <Compile Include="Data\Suppliers\Base\IWebSQLSupplier.cs" />
+    <Compile Include="Data\Suppliers\WebSQLSupplier.cs" />
     <Compile Include="Util\Core\HomeStockContractResolver.cs" />
     <Compile Include="Util\HomeStockJsonAssistant.cs" />
     <Compile Include="Core\HomeStockScriptObject.cs" />

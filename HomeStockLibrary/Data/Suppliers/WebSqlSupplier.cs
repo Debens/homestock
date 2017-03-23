@@ -1,33 +1,31 @@
-﻿using HomeStockLibrary.Core;
-using HomeStockLibrary.Data.Suppliers.Base;
-using HomeStockLibrary.Util;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.Serialization;
 using System.Text;
 using System.Threading.Tasks;
-using System.Web.UI;
-using System.Runtime.Serialization;
+using HomeStockLibrary.Data.Suppliers.Base;
+using HomeStockLibrary.Util;
 
 namespace HomeStockLibrary.Data.Suppliers
 {
     [Serializable, DataContract]
-    public class APISupplier : BaseSupplier, IAPISupplier
+    public class WebSQLSupplier : BaseSupplier, IWebSQLSupplier
     {
         protected override string namespaceString { get { return "Data.Suppliers.WebAPI"; } }
 
         [DataMember(Name = "id")]
         public override string ID { get; set; }
-        
-        [DataMember(Name = "endPoint")]
-        public string EndPoint { get; set; }
+
+        [DataMember(Name = "tableName")]
+        public string TableName { get; set; }
 
         [DataMember(Name = "schemaId")]
         public string SchemaID { get; set; }
 
         public override void ValidateProperties()
         {
-            Validate(EndPoint, "Endpoint");
+            Validate(TableName, "TableName");
             Validate(SchemaID, "SchemaID");
         }
 

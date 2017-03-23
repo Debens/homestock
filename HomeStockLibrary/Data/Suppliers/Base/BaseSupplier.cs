@@ -16,6 +16,8 @@ namespace HomeStockLibrary.Data.Suppliers.Base
 
         protected static readonly string ScriptRegionID = "HomeStock Data Suppliers";
 
+        string SchemaID { get; set; }
+
         public override void RenderControl(HtmlTextWriter writer)
         {
             ValidateProperties();

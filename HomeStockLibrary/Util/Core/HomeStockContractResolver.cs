@@ -26,7 +26,7 @@ namespace HomeStockLibrary.Util.Core
         {
             var properties = base.CreateProperties(type, memberSerialization);
             IList<JsonProperty> runtimePropertiesInDataContract = properties.Where(p =>
-                contractProperties.Any(cp => cp.Name == p.PropertyName && cp.PropertyType == p.PropertyType)).ToList();
+                contractProperties.Any(cp => cp.Name == p.UnderlyingName && cp.PropertyType == p.PropertyType)).ToList();
 
             return runtimePropertiesInDataContract;
         }
