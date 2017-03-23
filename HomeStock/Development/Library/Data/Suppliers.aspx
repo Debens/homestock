@@ -5,6 +5,6 @@
 
 <asp:content runat="server" id="contentPlaceHolderID" contentplaceholderid="MainViewContent">
     
-    <Supplier:APISupplier runat="server" ID="apiSupplier" EndPoint="SomeBullShit"  />
+    <Supplier:APISupplier runat="server" ID="apiSupplier" EndPoint="SomeBullShit" SchemaID="ASchemaID"  />
 
 </asp:content>
