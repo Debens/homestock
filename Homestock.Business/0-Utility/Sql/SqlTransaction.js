@@ -26,7 +26,10 @@
         offset: "OFFSET",
         on: "ON",
         set: "SET",
-        values: "VALUES"
+        values: "VALUES",
+        if: "IF",
+        not: "NOT",
+        exists: "EXISTS"
     }
 
     ns.SqlTransaction = function (params) {
@@ -79,6 +82,8 @@
             }
             return self;
         };
+
+        self["Uniquely"] = function () { _operation += " " + Keywords.if + " " + Keywords.not + " " + Keywords.exists; return self; };
             
         self["Select"] = function () { _operation = Keywords.select; return self; };
         self["Delete"] = function () { _operation = Keywords.delete; return self; };
@@ -123,9 +128,9 @@
 
         self["From"] = function (tableName, tableAlias) { _table = { name: tableName, alias: tableAlias }; return self; };
 
-        self["Where"] = function (whereClause) { if (whereClause) { _constraints.push(Keywords.offset + " " + whereClause); } return self; };
-        self["GroupBy"] = function (groupClause) { if (groupClause) { _constraints.push(Keywords.offset + " " + groupClause); } return self; };
-        self["OrderBy"] = function (orderClause) { if (orderClause) { _constraints.push(Keywords.offset + " " + orderClause); } return self; };
+        self["Where"] = function (whereClause) { if (whereClause) { _constraints.push(Keywords.where + " " + whereClause); } return self; };
+        self["GroupBy"] = function (groupClause) { if (groupClause) { _constraints.push(Keywords.groupby + " " + groupClause); } return self; };
+        self["OrderBy"] = function (orderClause) { if (orderClause) { _constraints.push(Keywords.orderby + " " + orderClause); } return self; };
         self["Limit"] = function (count, offset) {
             if (count) {
                 var constraint = Keywords.limit + " " + count;

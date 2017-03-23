@@ -16,15 +16,14 @@
                 console.log(messagePrefix + "\n" + sql);
             };
 
-            var error = function () {
-                debugger;
-                console.error(messagePrefix + sql);
+            var error = function (transaction, error) {
+                console.error(messagePrefix + " Failed to run query \n" + sql + "\n" + error.message);
             };
 
             var database = HomeStock.Database.GetConnection()
             var sqlExecuting =  database.transaction(function (tx) {
-                tx.executeSql(sql);
-            }, null, success, error);
+                tx.executeSql(sql, null, success, error);
+            });
         }
     };
 })();
