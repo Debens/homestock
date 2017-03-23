@@ -9,7 +9,8 @@
 
     var messagePrefix = nsString + ".Worker: ";
     var requiredParams = [
-        "id"
+        "id",
+        "schemaId"
     ];
 
     function Worker(params) {

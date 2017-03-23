@@ -11,7 +11,7 @@
     ns.Supplier = Supplier;
 
     var requiredParams = [
-        "ID",
+        "id",
         "schemaId"
     ];
 
