@@ -87,7 +87,7 @@
             
         self["Select"] = function () { _operation = Keywords.select; return self; };
         self["Delete"] = function () { _operation = Keywords.delete; return self; };
-        self["Update"] = function (columnNames, columnValues) {
+        self["Update"] = function (columnValues, columnNames) {
             if (!Array.isArray(columnNames))
                 throw messagePrefix + "Cannot update without array of column names";
             if (!Array.isArray(columnValues))
@@ -96,16 +96,17 @@
                 throw messagePrefix + "Update column names/values mismatch";
 
             if (columnNames.length) {
+                _operation = Keywords.update;
                 var updates = [];
                 for (var index = 0; index < columnNames.length; index++) {
-                    updates.push(columnNames[index] + " = " + columnValues[index])
+                    updates.push(columnNames[index] + " = '" + columnValues[index] + "'")
                 }
                 _constraints.push(Keywords.set + " " + updates.join(", "));
             }
 
             return self;
         };
-        self["Insert"] = function (columnNames, columnValues) {
+        self["Insert"] = function (columnValues, columnNames) {
             if (!Array.isArray(columnNames))
                 throw messagePrefix + "Cannot update without array of column names";
             if (!Array.isArray(columnValues))
