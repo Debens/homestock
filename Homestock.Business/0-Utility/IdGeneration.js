@@ -3,7 +3,17 @@
 
     var nsString = "Util";
     var ns = HomeStock.Import(nsString);
-    var messagePrefix = nsString + ".UUID: ";
+
+    var ALPHABET = '23456789abdegjkmnpqrvwxyz';
+    var ID_LENGTH = 8;
+
+    ns.GUID = function (prefix) {
+        var guid = '';
+        for (var i = 0; i < ID_LENGTH; i++) {
+            guid += ALPHABET.charAt(Math.floor(Math.random() * ALPHABET.length));
+        }
+        return prefix ? prefix.toString() + "-" + guid : guid;
+    };
 
     ns.UUID = function (prefix) { // Public Domain/MIT
         var d = new Date().getTime();
@@ -16,5 +26,5 @@
             return (c === 'x' ? r : (r & 0x3 | 0x8)).toString(16);
         });
         return prefix ? prefix.toString() + "-" + uuid : uuid;
-    }
+    };
 })();
