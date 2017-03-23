@@ -9,5 +9,7 @@ namespace HomeStockLibrary.Data.Suppliers.Base
     public interface ISupplier
     {
         string ID { get; set; }
+
+        string SchemaID { get; set; }
     }
 }

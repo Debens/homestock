@@ -18,7 +18,7 @@ namespace HomeStockLibrary.Data.Suppliers
 
         [DataMember(Name = "id")]
         public override string ID { get; set; }
-        
+
         [DataMember(Name = "endPoint")]
         public string EndPoint { get; set; }
 
