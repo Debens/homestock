@@ -61,6 +61,7 @@
     <Content Include="Data\SyncModules\RecordMapper.js" />
     <Content Include="Data\SyncModules\SchemaMapping.js" />
     <Content Include="Data\SyncModules\SyncModule.js" />
+    <Content Include="0-Utility\UUID.js" />
     <Content Include="_old\Mark I\Manager\ContainerManager.js" />
     <Content Include="_old\Mark I\Manager\HomeManager.js" />
     <Content Include="_old\Mark I\Manager\OwnerManager.js" />
