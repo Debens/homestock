@@ -19,7 +19,7 @@
         var validation = ObjectValidator.Validate(params, requiredParams);
         if (!validation.isValid)
             throw messagePrefix + "Failed construction, missing parameter(s) " + validation.missingProperties.join(", ") + ", for supplier '" + params.id + "'";
-        var self = new nsCore.CoreSupplier(params);
+        var self = new nsCore.Supplier(params);
         
 
         return self;

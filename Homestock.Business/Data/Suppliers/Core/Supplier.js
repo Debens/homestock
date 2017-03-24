@@ -5,7 +5,7 @@
     var messagePrefix = nsString + ": ";
     var ns = HomeStock.Import(nsString);
 
-    ns.CoreSupplier = Supplier;
+    ns.Supplier = Supplier;
 
     var requiredParams = [
         "id",
