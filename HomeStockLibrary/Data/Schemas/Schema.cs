@@ -1,27 +1,28 @@
-﻿using HomeStockLibrary.Controls.Base;
-using HomeStockLibrary.Core;
+﻿using HomeStockLibrary.Core;
 using HomeStockLibrary.Data.Schemas.Core;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Web.UI;
+using System.Runtime.Serialization;
+using HomeStockLibrary.Util;
 
 namespace HomeStockLibrary.Data.Schemas
 {
+    [DataContract]
     public class Schema : HomeStockScriptObject, ISchema
     {
+        [DataMember(Name = "entities"), PersistenceMode(PersistenceMode.InnerProperty)]
         public List<Entity> Entitiies { get; set; }
 
         public override string GenerateCreationString()
         {
-            throw new NotImplementedException();
+            return HomeStockJsonAssistant.Convert(this, typeof(ISchema));
         }
 
         public override void ValidateProperties()
         {
-            throw new NotImplementedException();
+            Validate(ID, "ID");
+            foreach (var entity in Entitiies)
+                entity.ValidateProperties();
         }
     }
 }

@@ -8,8 +8,6 @@ namespace HomeStockLibrary.Core.Base
 {
     public interface IValidatable
     {
-        void ValidateProperties();
-
         void Validate(string value, string propertyName);
 
         void Validate(string value, string propertyName, string message);

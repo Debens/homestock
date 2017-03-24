@@ -22,9 +22,6 @@ namespace HomeStockLibrary.Data.Suppliers
         [DataMember(Name = "endPoint")]
         public string EndPoint { get; set; }
 
-        [DataMember(Name = "schemaId")]
-        public string SchemaID { get; set; }
-
         public override void ValidateProperties()
         {
             Validate(EndPoint, "Endpoint");

@@ -59,6 +59,7 @@
     <Compile Include="Controls\Base\Button\IButton.cs" />
     <Compile Include="Controls\Button.cs" />
     <Compile Include="Core\Base\IValidatable.cs" />
+    <Compile Include="Core\HomeStockValidatble.cs" />
     <Compile Include="Data\Schemas\Column.cs" />
     <Compile Include="Data\Schemas\Core\IColumn.cs" />
     <Compile Include="Data\Schemas\Core\IEntity.cs" />
@@ -68,6 +69,7 @@
     <Compile Include="Data\Suppliers\Base\IAPISupplier.cs" />
     <Compile Include="Data\Suppliers\Base\IWebSQLSupplier.cs" />
     <Compile Include="Data\Suppliers\WebSQLSupplier.cs" />
+    <Compile Include="Exceptions\HomeStockPropertyException.cs" />
     <Compile Include="Util\Core\HomeStockContractResolver.cs" />
     <Compile Include="Util\HomeStockJsonAssistant.cs" />
     <Compile Include="Core\HomeStockScriptObject.cs" />

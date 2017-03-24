@@ -7,15 +7,18 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Web.UI;
+using System.Runtime.Serialization;
 
 namespace HomeStockLibrary.Data.Suppliers.Base
 {
+    [DataContract]
     public abstract class BaseSupplier : HomeStockScriptObject, ISupplier
     {
         protected abstract string namespaceString { get; }
 
         protected static readonly string ScriptRegionID = "HomeStock Data Suppliers";
-        
+
+        [DataMember(Name = "schemaId")]
         public string SchemaID { get; set; }
 
         public override void RenderControl(HtmlTextWriter writer)

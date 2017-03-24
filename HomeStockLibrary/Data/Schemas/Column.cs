@@ -1,14 +1,18 @@
 ﻿using HomeStockLibrary.Data.Schemas.Core;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Runtime.Serialization;
+using HomeStockLibrary.Core;
 
 namespace HomeStockLibrary.Data.Schemas
 {
-    public class Column : IColumn
+    [DataContract]
+    public class Column : HomeStockValidatble, IColumn
     {
+        [DataMember(Name = "name")]
         public string Name { get; set; }
+
+        public override void ValidateProperties()
+        {
+            Validate(Name, "Name");
+        }
     }
 }
