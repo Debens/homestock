@@ -49,6 +49,9 @@
     <Content Include="0-Utility\1-ObjectTree.js" />
     <Content Include="0-Utility\HomeStock\Deferred.js" />
     <Content Include="0-Utility\HomeStock\Database.js" />
+    <Content Include="0-Utility\HomeStock\Schemas.js" />
+    <Content Include="0-Utility\HomeStock\Suppliers.js" />
+    <Content Include="0-Utility\HomeStock\Workers.js" />
     <Content Include="0-Utility\Sql\SqlRunner.js" />
     <Content Include="0-Utility\Sql\SqlTransaction.js" />
     <Content Include="0-Utility\WebRequestAssistant.js" />

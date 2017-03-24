@@ -9,14 +9,17 @@
     var messagePrefix = nsString + ".Schema: ";
 
     var requiredParams = [
-        "id"
+        "id",
+        "entities"
     ];
 
-    var Schema = function (params) {
+    function Schema (params) {
         var validation = ObjectValidator.Validate(params, requiredParams);
         if (!validation.isValid)
             throw messagePrefix + "Failed construction, missing parameter(s) " + validation.missingProperties.join(", ");
         var self = this;
 
+
+        self.Id = params.id;
     };
 })();

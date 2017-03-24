@@ -6,25 +6,22 @@
     var messagePrefix = nsString + ".Supplier: ";
 
     var nsCoreString = "Data.Suppliers.Core";
-    var nsCore = HomeStock.Import(nsString);
+    var nsCore = HomeStock.Import(nsCoreString);
 
     ns.Supplier = Supplier;
 
     var requiredParams = [
-        "id",
-        "tableName",
-        "schemaId"
+        "tableName"
     ];
 
-    Supplier.prototype = $.extend(nsCore.Supplier.prototype, Supplier.prototype, true);
-
     function Supplier(params) {
+        params = params || {};
         var validation = ObjectValidator.Validate(params, requiredParams);
         if (!validation.isValid)
-            throw messagePrefix + "Failed construction, missing parameter(s) " + validation.missingProperties.join(", ");
-        var self = this;
+            throw messagePrefix + "Failed construction, missing parameter(s) " + validation.missingProperties.join(", ") + ", for supplier '" + params.id + "'";
+        var self = new nsCore.CoreSupplier(params);
 
 
-        return {};
+        return self;
     };
 })();
