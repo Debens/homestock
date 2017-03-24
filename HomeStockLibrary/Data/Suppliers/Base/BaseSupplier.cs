@@ -27,7 +27,7 @@ namespace HomeStockLibrary.Data.Suppliers.Base
 
             var creationString = new StringBuilder();
             creationString.AppendLine(string.Format("var ns = HomeStock.Import(\"{0}\");", namespaceString));
-            creationString.AppendLine(string.Format("HomeStock.Suppliers.{0} = ns.Supplier({1});", this.ID, GenerateCreationString()));
+            creationString.AppendLine(string.Format("HomeStock.Suppliers.Add(new ns.Supplier({0}));", GenerateCreationString()));
 
             HomeStockScriptAssistant.RenderScriptTo(new HomeStockScript(creationString.ToString()), ScriptRegionID);
         }

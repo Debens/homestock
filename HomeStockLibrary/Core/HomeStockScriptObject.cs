@@ -7,9 +7,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Web.UI;
+using System.Runtime.Serialization;
 
 namespace HomeStockLibrary.Core
 {
+    [DataContract]
     public abstract class HomeStockScriptObject : HomeStockControlBase
     {
         public abstract string GenerateCreationString();

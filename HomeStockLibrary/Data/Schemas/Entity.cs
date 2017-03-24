@@ -12,7 +12,7 @@ namespace HomeStockLibrary.Data.Schemas
         [DataMember(Name = "name")]
         public string Name { get; set; }
 
-        [DataMember(Name = "columns"), PersistenceMode(PersistenceMode.InnerProperty)]
+        [PersistenceMode(PersistenceMode.InnerProperty)]
         public List<Column> Columns { get; set; }
 
         public override void ValidateProperties() {

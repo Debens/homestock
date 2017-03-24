@@ -3,11 +3,16 @@ using HomeStockLibrary.Exceptions;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using System;
+using System.Runtime.Serialization;
 
 namespace HomeStockLibrary.Controls.Base
 {
+    [DataContract]
     public abstract class HomeStockControlBase : WebControl, IValidatable
     {
+        [DataMember(Name = "id")]
+        public override string ID { get; set; }
+
         protected abstract override void Render(HtmlTextWriter writer);
 
         public abstract void ValidateProperties();
