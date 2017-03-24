@@ -11,7 +11,7 @@ namespace HomeStock.Data
     {
         public HomeStockContext() : base()
         {
-            Database.SetInitializer(new HomeStockDBInit());
+            //Database.SetInitializer(new HomeStockDBInit());
         }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
