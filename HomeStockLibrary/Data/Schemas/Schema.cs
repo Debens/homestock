@@ -11,7 +11,7 @@ namespace HomeStockLibrary.Data.Schemas
     public class Schema : HomeStockScriptObject, ISchema
     {
         [DataMember(Name = "entities"), PersistenceMode(PersistenceMode.InnerProperty)]
-        public List<Entity> Entitiies { get; set; }
+        public List<Entity> Entities { get; set; }
 
         public override string GenerateCreationString()
         {
@@ -21,7 +21,7 @@ namespace HomeStockLibrary.Data.Schemas
         public override void ValidateProperties()
         {
             Validate(ID, "ID");
-            foreach (var entity in Entitiies)
+            foreach (var entity in Entities)
                 entity.ValidateProperties();
         }
     }

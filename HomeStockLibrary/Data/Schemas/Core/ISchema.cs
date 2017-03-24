@@ -10,6 +10,6 @@ namespace HomeStockLibrary.Data.Schemas.Core
     {
         string ID { get; set; }
 
-        List<Entity> Entitiies { get; set; }
+        List<Entity> Entities { get; set; }
     }
 }
