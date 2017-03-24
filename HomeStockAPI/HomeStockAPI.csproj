@@ -221,6 +221,7 @@
     <Compile Include="Data\HomeStockContext.cs" />
     <Compile Include="Data\HomeStockDBInit.cs" />
     <Compile Include="Exceptions\EntityDoesNotExistException.cs" />
+    <Compile Include="Exceptions\EntityIdentityException.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>

@@ -2,6 +2,7 @@
 using HomeStock.Model.Internal;
 using HomeStock.Repository;
 using System;
+using HomeStock.Exceptions;
 
 namespace HomeStock.Managers
 {
@@ -54,7 +55,7 @@ namespace HomeStock.Managers
         {
             WorkingEntity = Create();
             if (string.IsNullOrEmpty(WorkingEntity.Id))
-                throw new NullReferenceException("Entity cannot be inserted without a valid ID");
+                throw new EntityIdentityException("Entity cannot be inserted without a valid ID", WorkingEntity.Id);
             TEntity newEntity = Repository.Insert(WorkingEntity);
             WorkingEntity = newEntity;
             return WorkingEntity;

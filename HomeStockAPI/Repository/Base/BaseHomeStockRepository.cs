@@ -11,11 +11,7 @@ namespace HomeStock.Repository
     public class BaseHomeStockRepository<T> : IRepository<T>
         where T : mEntity
     {
-        public HomeStockContext Context
-        {
-            get;
-            set;
-        }
+        public HomeStockContext Context { get; set; }
        
         public BaseHomeStockRepository(HomeStockContext context)
         {
@@ -24,6 +20,9 @@ namespace HomeStock.Repository
 
         public virtual T Insert(T entity)
         {
+            if (Context.Set<T>().Any(e => e.Id == entity.Id))
+                throw new EntityIdentityException("Entity already exists with ID '" + entity.Id + "'", entity.Id);
+
             Context.Set<T>().Add(entity);
             return entity;
         }
@@ -53,8 +52,11 @@ namespace HomeStock.Repository
 
         public virtual void Delete(string Id)
         {
-            T existingEnitity = Get(Id);
-            Context.Set<T>().Remove(existingEnitity);
+            if (Context.Set<T>().Any(e => e.Id == Id))
+            {
+                T existingEnitity = Get(Id);
+                Context.Set<T>().Remove(existingEnitity);
+            }
         }
 
         public virtual IEnumerable<T> GetAll()
@@ -86,7 +88,7 @@ namespace HomeStock.Repository
         {
             foreach (string Id in Ids)
             {
-                Delete(Ids);
+                Delete(Id);
             }
         }
 
