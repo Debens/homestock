@@ -1,6 +1,8 @@
 ﻿; (function () {
     "use strict";
 
+    var messagePrefix = "HomeStock: ";
+
     var nameSpace = new window.ns.Tree();
 
     var HomeStock = {
@@ -10,10 +12,7 @@
 
             return nameSpace.Traverse(nsString);
         },
-        "Config": function () { },
-
-        "Suppliers": {},
-        "Workers": {}
+        "Config": function () { }
     };
 
     window.HomeStock = HomeStock;
