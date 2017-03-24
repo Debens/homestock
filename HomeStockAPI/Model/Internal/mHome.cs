@@ -7,7 +7,7 @@ namespace HomeStock.Model.Internal
 {
     public class mHome : mNamedEntity
     {
-        public virtual int OwnerId { get; set; }
+        public virtual string OwnerId { get; set; }
         public virtual mOwner Owner { get; set; }
         public virtual ICollection<mContainer> Containers { get; set; }
     }

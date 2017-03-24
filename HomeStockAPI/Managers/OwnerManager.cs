@@ -19,6 +19,7 @@ namespace HomeStock.Managers
         {
             var newOwner = new mOwner
             {
+                Id = WorkingEntity.Id,
                 Name = WorkingEntity.Name,
                 Created = DateTime.UtcNow,
                 Homes = WorkingEntity.Homes
@@ -34,7 +35,7 @@ namespace HomeStock.Managers
             return toOwner;
         }
 
-        public mOwner Get(int ownerId)
+        public mOwner Get(string ownerId)
         {
             return Repository.Get(ownerId);
         }
@@ -44,7 +45,7 @@ namespace HomeStock.Managers
             return Repository.GetAll();
         }
 
-        public void Delete(int ownerId)
+        public void Delete(string ownerId)
         {
             Repository.Delete(ownerId);
         }

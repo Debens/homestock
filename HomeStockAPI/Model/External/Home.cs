@@ -8,7 +8,7 @@ namespace HomeStock.Model.External
 {
     public class Home : NamedEntity
     {
-        public int OwnerId { get; set; }
+        public string OwnerId { get; set; }
         public string Owner { get; set; }
     }
 }

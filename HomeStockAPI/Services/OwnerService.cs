@@ -14,14 +14,14 @@ namespace HomeStock.Services
     public class OwnerService
     {
 
-        public int OwnerId { get; set; }
+        public string OwnerId { get; set; }
 
-        public OwnerService(int ownerId)
+        public OwnerService(string ownerId)
         {
             this.OwnerId = ownerId;
         }
         
-        public OwnerHomeService Homes(int homeId)
+        public OwnerHomeService Homes(string homeId)
         {
             return new OwnerHomeService(OwnerId, homeId);
         }

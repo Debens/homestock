@@ -7,7 +7,7 @@ namespace HomeStock.Model.Internal
 {
     public class mStock : mNamedEntity
     {
-        public virtual int ContainerId { get; set; }
+        public virtual string ContainerId { get; set; }
         public virtual mContainer Container { get; set; }
         public DateTime Expiry { get; set; }
         public List<string> Tags { get; set; }

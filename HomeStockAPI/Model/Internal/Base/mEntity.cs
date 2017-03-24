@@ -7,7 +7,7 @@ namespace HomeStock.Model.Internal
 {
     public class mEntity
     {
-        public int Id { get; set; }
+        public string Id { get; set; }
         public int InitDB { get; set; }
         public DateTime Created { get; set; }
     }

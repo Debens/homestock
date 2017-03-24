@@ -28,22 +28,23 @@ namespace HomeStock.Controllers
             return Ok(OwnerService.GetAll());
         }
 
-        [Route("{ownerId:int}", Name = "GetOwner")]
-        public IHttpActionResult Get(int ownerId)
+        [Route("{ownerId:length(12)}", Name = "GetOwner")]
+        public IHttpActionResult /*HttpResponseMessage*/ Get(string ownerId)
         {
             var service = new OwnerService(ownerId);
             return Ok(service.Get());
+           // return Request.CreateResponse(HttpStatusCode.OK, service.Get());
         }
 
-        [Route("{ownerId:int}", Name = "PutOwner")]
-        public IHttpActionResult Put(int ownerId, Owner owner)
+        [Route("{ownerId:length(12)}", Name = "PutOwner")]
+        public IHttpActionResult Put(string ownerId, Owner owner)
         {
             var service = new OwnerService(ownerId);
             return Ok(service.Update(owner));
         }
 
-        [Route("{ownerId:int}", Name = "DeleteOwner")]
-        public void Delete(int ownerId)
+        [Route("{ownerId:length(12)}", Name = "DeleteOwner")]
+        public void Delete(string ownerId)
         {
             new OwnerService(ownerId).Delete();
         }

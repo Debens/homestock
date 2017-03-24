@@ -11,18 +11,19 @@ namespace HomeStock.Managers
 {
     public class ContainerManager : BaseEntityManager<mContainer, ContainerRepository, HomeStockContext>
     {
-        public int OwnerId { get; set; }
-        public int HomeId { get; set; }
+        public string OwnerId { get; set; }
+        public string HomeId { get; set; }
 
-        public ContainerManager(int ownerId, int homeId) : base() { this.OwnerId = ownerId; this.HomeId = homeId; }
-        public ContainerManager(mContainer container, int ownerId, int homeId) : base(container) { this.OwnerId = ownerId; this.HomeId = homeId; }
-        public ContainerManager(HomeStockContext context, int ownerId, int homeId) : base(context) { this.OwnerId = ownerId; this.HomeId = homeId; this.Repository = new ContainerRepository(Context); }
-        public ContainerManager(HomeStockContext context, mContainer container, int ownerId, int homeId) : base(context, container) { this.OwnerId = ownerId; this.HomeId = homeId; this.Repository = new ContainerRepository(Context); }
+        public ContainerManager(string ownerId, string homeId) : base() { this.OwnerId = ownerId; this.HomeId = homeId; }
+        public ContainerManager(mContainer container, string ownerId, string homeId) : base(container) { this.OwnerId = ownerId; this.HomeId = homeId; }
+        public ContainerManager(HomeStockContext context, string ownerId, string homeId) : base(context) { this.OwnerId = ownerId; this.HomeId = homeId; this.Repository = new ContainerRepository(Context); }
+        public ContainerManager(HomeStockContext context, mContainer container, string ownerId, string homeId) : base(context, container) { this.OwnerId = ownerId; this.HomeId = homeId; this.Repository = new ContainerRepository(Context); }
 
         public override mContainer Create()
         {
             var newContainer = new mContainer
             {
+                Id = WorkingEntity.Id,
                 Name = WorkingEntity.Name,
                 Created = DateTime.UtcNow,
                 HomeId = WorkingEntity.HomeId,
@@ -42,7 +43,7 @@ namespace HomeStock.Managers
             return toContainer;
         }
 
-        public mContainer Get(int containerId)
+        public mContainer Get(string containerId)
         {
             mOwner owner = new OwnerManager(Context).Get(OwnerId);
             mHome home = new HomeManager(Context, OwnerId).Get(HomeId);
@@ -58,7 +59,7 @@ namespace HomeStock.Managers
             return Repository.GetWhere(c => c.Home.OwnerId == OwnerId && c.HomeId == HomeId);
         }
 
-        public void Delete(int containerId)
+        public void Delete(string containerId)
         {
             mOwner owner = new OwnerManager(Context).Get(OwnerId);
             mHome home = new HomeManager(Context, OwnerId).Get(HomeId);

@@ -11,14 +11,14 @@ namespace HomeStock.Repository
     {
         T Insert(T entity);
         T Update(T entity);
-        T Get(int Id);
+        T Get(string Id);
         void Delete(T entity);
-        void Delete(int Id);
+        void Delete(string Id);
         IEnumerable<T> GetAll();
         IEnumerable<T> Insert(IEnumerable<T> entities);
         IEnumerable<T> Update(IEnumerable<T> entities);
-        IEnumerable<T> Get(IEnumerable<int> Ids);
+        IEnumerable<T> Get(IEnumerable<string> Ids);
         void Delete(IEnumerable<T> entities);
-        void Delete(IEnumerable<int> Ids);
+        void Delete(IEnumerable<string> Ids);
     }
 } 

@@ -35,7 +35,7 @@ namespace HomeStock.Repository
             return oldEntity;
         }
 
-        public virtual T Get(int Id)
+        public virtual T Get(string Id)
         {
             if (!Context.Set<T>().Any(e => e.Id == Id))
             {
@@ -51,7 +51,7 @@ namespace HomeStock.Repository
             Delete(entity.Id);
         }
 
-        public virtual void Delete(int Id)
+        public virtual void Delete(string Id)
         {
             T existingEnitity = Get(Id);
             Context.Set<T>().Remove(existingEnitity);
@@ -72,7 +72,7 @@ namespace HomeStock.Repository
             return newEntities.Select(e => Update(e));
         }
 
-        public virtual IEnumerable<T> Get(IEnumerable<int> Ids)
+        public virtual IEnumerable<T> Get(IEnumerable<string> Ids)
         {
             return Ids.Select(id => Get(id));
         }
@@ -82,9 +82,9 @@ namespace HomeStock.Repository
             Delete(entities.Select(e => e.Id));
         }
 
-        public virtual void Delete(IEnumerable<int> Ids)
+        public virtual void Delete(IEnumerable<string> Ids)
         {
-            foreach (int Id in Ids)
+            foreach (string Id in Ids)
             {
                 Delete(Ids);
             }

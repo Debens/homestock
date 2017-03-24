@@ -11,18 +11,20 @@ namespace HomeStock.Managers
 {
     public class StockManager : BaseEntityManager<mStock, StockRepository, HomeStockContext>
     {
-        public int OwnerId { get; set; }
-        public int HomeId { get; set; }
-        public int ContainerId { get; set; }
+        public string OwnerId { get; set; }
+        public string HomeId { get; set; }
+        public string ContainerId { get; set; }
 
-        public StockManager(int ownerId, int homeId, int containerId) : base() { this.OwnerId = ownerId; this.HomeId = homeId; this.ContainerId = containerId; }
-        public StockManager(mStock stock, int ownerId, int homeId, int containerId) : base(stock) { this.OwnerId = ownerId; this.HomeId = homeId; this.ContainerId = containerId; }
-        public StockManager(HomeStockContext context, int ownerId, int homeId, int containerId) : base(context) { this.OwnerId = ownerId; this.HomeId = homeId; this.ContainerId = containerId; this.Repository = new StockRepository(Context); }
-        public StockManager(HomeStockContext context, mStock stock, int ownerId, int homeId, int containerId) : base(context, stock) { this.OwnerId = ownerId; this.HomeId = homeId; this.ContainerId = containerId; this.Repository = new StockRepository(Context); }
+        public StockManager(string ownerId, string homeId, string containerId) : base() { this.OwnerId = ownerId; this.HomeId = homeId; this.ContainerId = containerId; }
+        public StockManager(mStock stock, string ownerId, string homeId, string containerId) : base(stock) { this.OwnerId = ownerId; this.HomeId = homeId; this.ContainerId = containerId; }
+        public StockManager(HomeStockContext context, string ownerId, string homeId, string containerId) : base(context) { this.OwnerId = ownerId; this.HomeId = homeId; this.ContainerId = containerId; this.Repository = new StockRepository(Context); }
+        public StockManager(HomeStockContext context, mStock stock, string ownerId, string homeId, string containerId) : base(context, stock) { this.OwnerId = ownerId; this.HomeId = homeId; this.ContainerId = containerId; this.Repository = new StockRepository(Context); }
 
         public override mStock Create()
         {
-            var newStock = new mStock {
+            var newStock = new mStock
+            {
+                Id = WorkingEntity.Id,
                 Name = WorkingEntity.Name,
                 Created = DateTime.UtcNow,
                 ContainerId = WorkingEntity.ContainerId,
@@ -43,7 +45,7 @@ namespace HomeStock.Managers
             return toItem;
         }
 
-        public mStock Get(int stockId)
+        public mStock Get(string stockId)
         {
             mOwner owner = new OwnerManager(Context).Get(OwnerId);
             mHome home = new HomeManager(Context, OwnerId).Get(HomeId);
@@ -60,7 +62,7 @@ namespace HomeStock.Managers
             return Repository.GetWhere(s => s.Container.Home.OwnerId == OwnerId && s.Container.HomeId == HomeId && s.ContainerId == ContainerId);
         }
 
-        public void Delete(int stockId)
+        public void Delete(string stockId)
         {
             mOwner owner = new OwnerManager(Context).Get(OwnerId);
             mHome home = new HomeManager(Context, OwnerId).Get(HomeId);

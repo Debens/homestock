@@ -11,17 +11,18 @@ namespace HomeStock.Managers
 {
     public class HomeManager : BaseEntityManager<mHome, HomeRepository, HomeStockContext>
     {
-        public int OwnerId { get; set; }
+        public string OwnerId { get; set; }
         
-        public HomeManager(int ownerId) : base() { this.OwnerId = ownerId; }
-        public HomeManager(mHome home, int ownerId) : base(home) { this.OwnerId = ownerId; }
-        public HomeManager(HomeStockContext context, int ownerId) : base(context) { this.OwnerId = ownerId; this.Repository = new HomeRepository(Context); }
-        public HomeManager(HomeStockContext context, mHome home, int ownerId) : base(context, home) { this.OwnerId = ownerId; this.Repository = new HomeRepository(Context); }
+        public HomeManager(string ownerId) : base() { this.OwnerId = ownerId; }
+        public HomeManager(mHome home, string ownerId) : base(home) { this.OwnerId = ownerId; }
+        public HomeManager(HomeStockContext context, string ownerId) : base(context) { this.OwnerId = ownerId; this.Repository = new HomeRepository(Context); }
+        public HomeManager(HomeStockContext context, mHome home, string ownerId) : base(context, home) { this.OwnerId = ownerId; this.Repository = new HomeRepository(Context); }
 
         public override mHome Create()
         {
             var newHome = new mHome
             {
+                Id = WorkingEntity.Id,
                 Name = WorkingEntity.Name,
                 Created = DateTime.UtcNow,
                 OwnerId = WorkingEntity.OwnerId,
@@ -39,7 +40,7 @@ namespace HomeStock.Managers
             return toHome;
         }
 
-        public mHome Get(int homeId)
+        public mHome Get(string homeId)
         {
             mOwner owner = new OwnerManager(Context).Get(OwnerId);
             mHome home = Repository.Get(homeId);
@@ -54,7 +55,7 @@ namespace HomeStock.Managers
             return Repository.GetWhere(h => h.OwnerId == OwnerId);
         }
 
-        public void Delete(int homeId)
+        public void Delete(string homeId)
         {
             mOwner owner = new OwnerManager(Context).Get(OwnerId);
             mHome home = Repository.Get(homeId);

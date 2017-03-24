@@ -53,6 +53,8 @@ namespace HomeStock.Managers
         public virtual TEntity Insert()
         {
             WorkingEntity = Create();
+            if (string.IsNullOrEmpty(WorkingEntity.Id))
+                throw new NullReferenceException("Entity cannot be inserted without a valid ID");
             TEntity newEntity = Repository.Insert(WorkingEntity);
             WorkingEntity = newEntity;
             return WorkingEntity;

@@ -12,12 +12,12 @@ namespace HomeStock.Services
 {
     public class OwnerHomeContainerStockService
     {
-        public int OwnerId { get; set; }
-        public int HomeId { get; set; }
-        public int ContainerId { get; set; }
-        public int StockId { get; set; }
+        public string OwnerId { get; set; }
+        public string HomeId { get; set; }
+        public string ContainerId { get; set; }
+        public string StockId { get; set; }
 
-        public OwnerHomeContainerStockService(int ownerId, int homeId, int containerId, int stockId)
+        public OwnerHomeContainerStockService(string ownerId, string homeId, string containerId, string stockId)
         {
             this.OwnerId = ownerId;
             this.HomeId = homeId;
@@ -38,7 +38,7 @@ namespace HomeStock.Services
             }
         }
 
-        public static List<Stock> GetAll(int ownerId, int homeId, int containerId)
+        public static List<Stock> GetAll(string ownerId, string homeId, string containerId)
         {
             using (var context = new HomeStockContext())
             {

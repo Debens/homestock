@@ -13,7 +13,7 @@ namespace ContainerStock.Controllers
     public class OwnerHomeContainerController : ApiController
     {
         [Route("", Name = "PostContainer")]
-        public IHttpActionResult Post(int ownerId, int homeId, Container container)
+        public IHttpActionResult Post(string ownerId, string homeId, Container container)
         {
             container.HomeId = homeId;
             container = OwnerHomeContainerService.Create(container);
@@ -22,27 +22,27 @@ namespace ContainerStock.Controllers
         }
 
         [Route("", Name = "GetAllContainers")]
-        public IHttpActionResult GetAll(int ownerId, int homeId)
+        public IHttpActionResult GetAll(string ownerId, string homeId)
         {
             return Ok(OwnerHomeContainerService.GetAll(ownerId, homeId));
         }
 
-        [Route("{containerId:int}", Name = "GetContainer")]
-        public IHttpActionResult Get(int ownerId, int homeId, int containerId)
+        [Route("{containerId:length(12)}", Name = "GetContainer")]
+        public IHttpActionResult Get(string ownerId, string homeId, string containerId)
         {
             var service = new OwnerHomeContainerService(ownerId, homeId, containerId);
             return Ok(service.Get());
         }
 
-        [Route("{containerId:int}", Name = "PutContainer")]
-        public IHttpActionResult Put(int ownerId, int homeId, int containerId, Container container)
+        [Route("{containerId:length(12)}", Name = "PutContainer")]
+        public IHttpActionResult Put(string ownerId, string homeId, string containerId, Container container)
         {
             var service = new OwnerHomeContainerService(ownerId, homeId, containerId);
             return Ok(service.Update(container));
         }
 
-        [Route("{containerId:int}", Name = "DeleteContainer")]
-        public void Delete(int ownerId, int homeId, int containerId)
+        [Route("{containerId:length(12)}", Name = "DeleteContainer")]
+        public void Delete(string ownerId, string homeId, string containerId)
         {
             new OwnerHomeContainerService(ownerId, homeId, containerId).Delete();
         }

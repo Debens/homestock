@@ -13,7 +13,7 @@ namespace ContainerStock.Controllers
     public class OwnerHomeContainerStockController : ApiController
     {
         [Route("", Name = "PostStock")]
-        public IHttpActionResult Post(int ownerId, int homeId, int containerId, Stock stock)
+        public IHttpActionResult Post(string ownerId, string homeId, string containerId, Stock stock)
         {
             stock.ContainerId = containerId;
             stock = OwnerHomeContainerStockService.Create(stock);
@@ -22,27 +22,27 @@ namespace ContainerStock.Controllers
         }
 
         [Route("", Name = "GetAllStocks")]
-        public IHttpActionResult GetAll(int ownerId, int homeId, int containerId)
+        public IHttpActionResult GetAll(string ownerId, string homeId, string containerId)
         {
             return Ok(OwnerHomeContainerStockService.GetAll(ownerId, homeId, containerId));
         }
 
-        [Route("{stockId:int}", Name = "GetStock")]
-        public IHttpActionResult Get(int ownerId, int homeId, int containerId, int stockId)
+        [Route("{stockId:length(40)}", Name = "GetStock")]
+        public IHttpActionResult Get(string ownerId, string homeId, string containerId, string stockId)
         {
             var service = new OwnerHomeContainerStockService(ownerId, homeId, containerId, stockId);
             return Ok(service.Get());
         }
 
-        [Route("{stockId:int}", Name = "PutStock")]
-        public IHttpActionResult Put(int ownerId, int homeId, int containerId, int stockId, Stock stock)
+        [Route("{stockId:length(40)}", Name = "PutStock")]
+        public IHttpActionResult Put(string ownerId, string homeId, string containerId, string stockId, Stock stock)
         {
             var service = new OwnerHomeContainerStockService(ownerId, homeId, containerId, stockId);
             return Ok(service.Update(stock));
         }
 
-        [Route("{stockId:int}", Name = "DeleteStock")]
-        public void Delete(int ownerId, int homeId, int containerId, int stockId)
+        [Route("{stockId:length(40)}", Name = "DeleteStock")]
+        public void Delete(string ownerId, string homeId, string containerId, string stockId)
         {
             new OwnerHomeContainerStockService(ownerId, homeId, containerId, stockId).Delete();
         }

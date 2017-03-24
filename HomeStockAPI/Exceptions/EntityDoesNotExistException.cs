@@ -7,9 +7,9 @@ namespace HomeStock.Exceptions
 {
     public class EntityDoesNotExistException : Exception
     {
-        public readonly int EntityId;
+        public readonly string EntityId;
 
-        public EntityDoesNotExistException(string message, int entityId) : base(message)
+        public EntityDoesNotExistException(string message, string entityId) : base(message)
         {
             EntityId = entityId;
         }
