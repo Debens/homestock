@@ -26,7 +26,8 @@ namespace HomeStockLibrary.Controls
             foreach (HomeStockScriptRegion region in scriptRegions)
             {
                 writer.InnerWriter.Write("\n");
-                writer.InnerWriter.WriteLine("//" + region.ID);
+                if(!string.IsNullOrEmpty(region.ID))
+                    writer.InnerWriter.WriteLine("//" + region.ID);
                 writer.InnerWriter.WriteLine(region.BuildScript());
             }
 

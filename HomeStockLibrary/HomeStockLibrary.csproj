@@ -50,7 +50,12 @@
   <ItemGroup>
     <Compile Include="Bundling\HomeStockBundleReference.cs" />
     <Compile Include="CompositeControls\PageHeader.cs" />
-    <Compile Include="Configuration\Web\Sections\UserConfigurationSection.cs" />
+    <Compile Include="Configuration\ElementCollections\ColumnCollection.cs" />
+    <Compile Include="Configuration\ElementCollections\TableCollection.cs" />
+    <Compile Include="Configuration\Elements\Column.cs" />
+    <Compile Include="Configuration\Elements\Database.cs" />
+    <Compile Include="Configuration\Elements\Table.cs" />
+    <Compile Include="Configuration\Sections\HomeStockConfiguration.cs" />
     <Compile Include="Controls\Base\Button\ButtonAttribute.cs" />
     <Compile Include="Controls\Base\Button\ButtonBase.cs" />
     <Compile Include="Controls\Base\Button\ButtonType.cs" />
