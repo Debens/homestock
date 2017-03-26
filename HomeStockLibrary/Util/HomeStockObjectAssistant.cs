@@ -16,18 +16,16 @@ namespace HomeStockLibrary.Util
 
             foreach (var property in properties)
             {
-                var name = property.Name;
-                var propertyType = GetGenericArguemnt(property.PropertyType);
-                if (typeof(IList).IsAssignableFrom(propertyType))
+                var genericType = GetGenericArguemnt(property.PropertyType);
+                if (typeof(IList).IsAssignableFrom(property.PropertyType))
                 {
-                    var genericType = propertyType.GetGenericArguments()[0];
                     yield return property;
                     foreach (var info in GetPropertyInfoRecursively(genericType))
-                        yield return info;
+                         yield return info;
                 }
                 else if (property.PropertyType.Module.ScopeName != "CommonLanguageRuntimeLibrary")
                 {
-                    foreach (var info in GetPropertyInfoRecursively(propertyType))
+                    foreach (var info in GetPropertyInfoRecursively(genericType))
                         yield return info;
                 }
                 else
