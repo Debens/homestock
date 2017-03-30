@@ -19,7 +19,7 @@ namespace HomeStock.Development.Library.Data {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::HomeStockLibrary.Data.Suppliers.APISupplier apiSupplier;
+        protected global::HomeStockLibrary.Data.Suppliers.API apiSupplier;
         
         /// <summary>
         /// ASchemaID control.
