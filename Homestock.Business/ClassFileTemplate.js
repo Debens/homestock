@@ -3,9 +3,9 @@
 
     var nsString = "";
     var ns = HomeStock.Import(nsString);
-    var messagePrefix = nsString + ".: ";
 
     ns. = ;
+    var messagePrefix = nsString + ".: ";
 
     var requiredParams = [
         "id"
