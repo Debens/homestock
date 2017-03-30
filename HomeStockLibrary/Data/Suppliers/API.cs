@@ -1,36 +1,32 @@
-﻿using HomeStockLibrary.Core;
-using HomeStockLibrary.Data.Suppliers.Base;
+﻿using HomeStockLibrary.Data.Suppliers.Base;
+using HomeStockLibrary.Data.Suppliers.Base.API;
 using HomeStockLibrary.Util;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Web.UI;
 using System.Runtime.Serialization;
 
 namespace HomeStockLibrary.Data.Suppliers
 {
     [Serializable, DataContract]
-    public class APISupplier : BaseSupplier, IAPISupplier
+    public class API : BaseSupplier, IAPI
     {
         protected override string namespaceString { get { return "Data.Suppliers.WebAPI"; } }
 
         [DataMember(Name = "id")]
         public override string ID { get; set; }
-
-        [DataMember(Name = "endPoint")]
-        public string EndPoint { get; set; }
+        
+        [DataMember(Name = "endPoint"), PersistenceMode(PersistenceMode.InnerProperty)]
+        public EndPoint EndPoint { get; set; }
 
         public override void ValidateProperties()
         {
-            Validate(EndPoint, "Endpoint");
+            EndPoint.ValidateProperties();
             Validate(SchemaID, "SchemaID");
         }
 
         public override string GenerateCreationString()
         {
-            return HomeStockJsonAssistant.Convert(this, typeof(IAPISupplier));
+            return HomeStockJsonAssistant.Convert(this, typeof(IAPI));
         }
     }
 }

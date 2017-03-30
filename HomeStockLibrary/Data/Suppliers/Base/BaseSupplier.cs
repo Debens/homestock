@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Web.UI;
 using System.Runtime.Serialization;
+using HomeStockLibrary.Data.Suppliers.Base.API;
 
 namespace HomeStockLibrary.Data.Suppliers.Base
 {
