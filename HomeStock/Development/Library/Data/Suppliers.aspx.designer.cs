@@ -13,21 +13,21 @@ namespace HomeStock.Development.Library.Data {
     public partial class Suppliers {
         
         /// <summary>
-        /// apiSupplier control.
+        /// apiHomeStock control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::HomeStockLibrary.Data.Suppliers.API apiSupplier;
+        protected global::HomeStockLibrary.Data.Suppliers.WebAPI apiHomeStock;
         
         /// <summary>
-        /// ASchemaID control.
+        /// homeStockSchema control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::HomeStockLibrary.Data.Schemas.Schema ASchemaID;
+        protected global::HomeStockLibrary.Data.Schemas.Schema homeStockSchema;
     }
 }
