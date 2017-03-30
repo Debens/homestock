@@ -1,25 +1,21 @@
 ﻿; (function () {
     "use strict";
 
-    var nsString = "Data.Suppliers.Core";
+    var nsString = "Data.Suppliers.WebAPI.Operators";
     var ns = HomeStock.Import(nsString);
+    var messagePrefix = nsString + ".Writer: ";
 
-    ns.Schema = Schema;
-   
-    var messagePrefix = nsString + ".Schema: ";
+    ns.Writer = Writer;
 
     var requiredParams = [
-        "id",
-        "entities"
+
     ];
 
-    function Schema (params) {
+    var Writer = function (params) {
         var validation = ObjectValidator.Validate(params, requiredParams);
         if (!validation.isValid)
             throw messagePrefix + "Failed construction, missing parameter(s) " + validation.missingProperties.join(", ");
         var self = this;
 
-
-        self.Id = params.id;
     };
 })();
