@@ -28,21 +28,30 @@
 
         self.Name = params.id;
 
-        self.Read = function (params) {
+        self["Read"] = function (params) {
+            var readingData = new HomeStock.Deferred();
             eventObj.Trigger("PreRead", [self]);
 
-            protectedData.Read(params);
+            var performingRead = protectedData.Read(params);
+            performingRead.then(function (records) {
+                var recordSet = new ns.RecordSet();
+                eventObj.Trigger("Read", [recordSet]);
+                readingData.resolve(recordSet);
+            },
+            readingData.reject);
 
-            eventObj.Trigger("Read");
+            return readingData.promise();
         };
-        self.Write = function (recordSet) {
+
+        self["Write"] = function (recordSet) {
             eventObj.Trigger("PreWrite", [recordSet, self]);
 
             protectedData.Write(recordSet);
             
             eventObj.Trigger("Write");
         };
-        self.Remove = function (recordSet) {
+
+        self["Remove"] = function (recordSet) {
             eventObj.Trigger("PreRemove", [recordSet, self]);
 
             protectedData.Remove(params);

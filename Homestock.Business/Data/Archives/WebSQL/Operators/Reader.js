@@ -3,9 +3,9 @@
 
     var nsString = "Data.Archives.WebSQL.Operators";
     var ns = HomeStock.Import(nsString);
-    var messagePrefix = nsString + ".Reader: ";
 
     ns.Reader = Reader;
+    var messagePrefix = nsString + ".Reader: ";
 
     var requiredParams = [
 

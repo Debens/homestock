@@ -3,9 +3,9 @@
 
     var nsString = "Data.Archives.WebAPI.Operators";
     var ns = HomeStock.Import(nsString);
-    var messagePrefix = nsString + ".Remover: ";
 
     ns.Remover = Remover;
+    var messagePrefix = nsString + ".Remover: ";
 
     var requiredParams = [
 
