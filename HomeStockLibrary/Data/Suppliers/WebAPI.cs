@@ -1,5 +1,5 @@
 ﻿using HomeStockLibrary.Data.Suppliers.Base;
-using HomeStockLibrary.Data.Suppliers.Base.API;
+using HomeStockLibrary.Data.Suppliers.Base.WebAPI;
 using HomeStockLibrary.Util;
 using System;
 using System.Web.UI;
@@ -8,7 +8,7 @@ using System.Runtime.Serialization;
 namespace HomeStockLibrary.Data.Suppliers
 {
     [Serializable, DataContract]
-    public class API : BaseSupplier, IAPI
+    public class WebAPI : BaseSupplier, IWebAPI
     {
         protected override string namespaceString { get { return "Data.Suppliers.WebAPI"; } }
 
@@ -26,7 +26,7 @@ namespace HomeStockLibrary.Data.Suppliers
 
         public override string GenerateCreationString()
         {
-            return HomeStockJsonAssistant.Convert(this, typeof(IAPI));
+            return HomeStockJsonAssistant.Convert(this, typeof(IWebAPI));
         }
     }
 }

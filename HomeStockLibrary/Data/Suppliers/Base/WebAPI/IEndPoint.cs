@@ -1,7 +1,6 @@
 ﻿using System.Collections.Generic;
-using HomeStockLibrary.Data.Suppliers.API;
 
-namespace HomeStockLibrary.Data.Suppliers.Base.API
+namespace HomeStockLibrary.Data.Suppliers.Base.WebAPI
 {
     public interface IEndPoint
     {

@@ -1,4 +1,4 @@
-﻿namespace HomeStockLibrary.Data.Suppliers.Base.API
+﻿namespace HomeStockLibrary.Data.Suppliers.Base.WebAPI
 {
     public interface IEndPointFragment
     {

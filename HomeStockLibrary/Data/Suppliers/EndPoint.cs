@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.Serialization;
 using HomeStockLibrary.Core;
-using HomeStockLibrary.Data.Suppliers.Base.API;
+using HomeStockLibrary.Data.Suppliers.Base.WebAPI;
 
 namespace HomeStockLibrary.Data.Suppliers
 {
@@ -21,8 +21,9 @@ namespace HomeStockLibrary.Data.Suppliers
             foreach (var fragment in EndPointFragments)
                 fragment.ValidateProperties();
             Validate(Url, "Url");
-            
-            string.Format(Url, EndPointFragments.Select(f => f.Entity)); // Test expected use case
+
+            var entities = EndPointFragments.Select(f => f.Entity);
+            string.Format(Url, EndPointFragments.Select(f => f.Entity).ToArray()); // Test expected use case
         }
     }
 }

@@ -17,21 +17,21 @@ namespace HomeStockLibrary.Util
             foreach (var property in properties)
             {
                 var genericType = GetGenericArguemnt(property.PropertyType);
-                if (typeof(IList).IsAssignableFrom(property.PropertyType))
-                {
+                //if (typeof(IList).IsAssignableFrom(property.PropertyType))
+                //{
                     yield return property;
                     foreach (var info in GetPropertyInfoRecursively(genericType))
                          yield return info;
-                }
-                else if (property.PropertyType.Module.ScopeName != "CommonLanguageRuntimeLibrary")
-                {
-                    foreach (var info in GetPropertyInfoRecursively(genericType))
-                        yield return info;
-                }
-                else
-                {
-                    yield return property;
-                }
+                //}
+                //else if (property.PropertyType.Module.ScopeName != "CommonLanguageRuntimeLibrary")
+                //{
+                //    foreach (var info in GetPropertyInfoRecursively(genericType))
+                //        yield return info;
+                //}
+                //else
+                //{
+                //    yield return property;
+                //}
             }
 
             var interfaces = type.GetInterfaces();

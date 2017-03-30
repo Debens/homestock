@@ -1,6 +1,6 @@
 ﻿using System.Runtime.Serialization;
 using HomeStockLibrary.Core;
-using HomeStockLibrary.Data.Suppliers.Base.API;
+using HomeStockLibrary.Data.Suppliers.Base.WebAPI;
 
 namespace HomeStockLibrary.Data.Suppliers
 {
