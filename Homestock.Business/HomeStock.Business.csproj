@@ -59,6 +59,8 @@
     <Content Include="Business\Core\Modules\Builder\Builder.js" />
     <Content Include="Business\Core\Modules\Query\Query.js" />
     <Content Include="Business\Core\Modules\Save\Save.js" />
+    <Content Include="Data\Archives\Core\RecordSet.js" />
+    <Content Include="Data\Archives\WebAPI\UrlFormatter.js" />
     <Content Include="Data\Schema.js" />
     <Content Include="Data\Archives\WebAPI\Operators\Reader.js" />
     <Content Include="Data\Archives\WebAPI\Operators\Remover.js" />
