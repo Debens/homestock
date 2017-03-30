@@ -8,7 +8,8 @@
 
     var requiredComposeParams = [
         "url",
-        "fragments"
+        "fragments",
+        "constraintData"
     ];
 
     ns.UrlFormatter = function () {
