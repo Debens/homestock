@@ -8,16 +8,16 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Web.UI;
 using System.Runtime.Serialization;
-using HomeStockLibrary.Data.Suppliers.Base.WebAPI;
+using HomeStockLibrary.Data.Archives.Base.WebAPI;
 
-namespace HomeStockLibrary.Data.Suppliers.Base
+namespace HomeStockLibrary.Data.Archives.Base
 {
     [DataContract]
-    public abstract class BaseSupplier : HomeStockScriptObject, ISupplier
+    public abstract class BaseArchive : HomeStockScriptObject, IArchive
     {
         protected abstract string namespaceString { get; }
 
-        protected static readonly string ScriptRegionID = "HomeStock Data Suppliers";
+        protected static readonly string ScriptRegionID = "HomeStock Data Archives";
 
         [DataMember(Name = "schemaId")]
         public string SchemaID { get; set; }
@@ -28,7 +28,7 @@ namespace HomeStockLibrary.Data.Suppliers.Base
 
             var creationString = new StringBuilder();
             creationString.AppendLine(string.Format("var ns = HomeStock.Import(\"{0}\");", namespaceString));
-            creationString.AppendLine(string.Format("HomeStock.Suppliers.Add(new ns.Supplier({0}));", GenerateCreationString()));
+            creationString.AppendLine(string.Format("HomeStock.Archives.Add(new ns.Archive({0}));", GenerateCreationString()));
 
             HomeStockScriptAssistant.RenderScriptTo(new HomeStockScript(creationString.ToString()), ScriptRegionID);
         }

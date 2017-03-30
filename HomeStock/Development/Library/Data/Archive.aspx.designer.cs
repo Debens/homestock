@@ -10,7 +10,7 @@
 namespace HomeStock.Development.Library.Data {
     
     
-    public partial class Suppliers {
+    public partial class Archives {
         
         /// <summary>
         /// apiHomeStock control.
@@ -19,7 +19,7 @@ namespace HomeStock.Development.Library.Data {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::HomeStockLibrary.Data.Suppliers.WebAPI apiHomeStock;
+        protected global::HomeStockLibrary.Data.Archives.WebAPI apiHomeStock;
         
         /// <summary>
         /// homeStockSchema control.

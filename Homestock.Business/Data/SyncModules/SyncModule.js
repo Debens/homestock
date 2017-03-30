@@ -1,6 +1,6 @@
-﻿// Will peridically get all records from on supplier, map them to a new suppler
+﻿// Will peridically get all records from on archive, map them to a new suppler
 
-//Potentially have a litener on one supplier and then map and sync the result to another supplier
+//Potentially have a litener on one archive and then map and sync the result to another archive
 // WebSQL -> WebAPI
 
 

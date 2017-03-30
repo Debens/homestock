@@ -1,21 +1,21 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Suppliers.aspx.cs" Inherits="HomeStock.Development.Library.Data.Suppliers" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Archive.aspx.cs" Inherits="HomeStock.Development.Library.Data.Archives" %>
 
 <%@ Register Assembly="HomeStockLibrary" Namespace="HomeStockLibrary.Controls" TagPrefix="Control" %>
-<%@ Register Assembly="HomeStockLibrary" Namespace="HomeStockLibrary.Data.Suppliers" TagPrefix="Supplier" %>
+<%@ Register Assembly="HomeStockLibrary" Namespace="HomeStockLibrary.Data.Archives" TagPrefix="Archive" %>
 <%@ Register Assembly="HomeStockLibrary" Namespace="HomeStockLibrary.Data.Schemas" TagPrefix="Schema" %>
 
 <asp:content runat="server" id="contentPlaceHolderID" contentplaceholderid="MainViewContent">
     
-    <Supplier:WebAPI runat="server" ID="apiHomeStock" SchemaID="homeStockSchema" >
+    <Archive:WebAPI runat="server" ID="apiHomeStock" SchemaID="homeStockSchema" >
         <EndPoint Url="/api/owner/{0}/home/{1}/container/{2}/inventory/{3}">
             <EndPointFragments>
-                <Supplier:EndPointFragment Entity="Owner" IdentifierField="Id" />
-                <Supplier:EndPointFragment Entity="Home" IdentifierField="Id" />
-                <Supplier:EndPointFragment Entity="Container" IdentifierField="Id" />
-                <Supplier:EndPointFragment Entity="Stock" IdentifierField="Id" />
+                <Archive:EndPointFragment Entity="Owner" IdentifierField="Id" />
+                <Archive:EndPointFragment Entity="Home" IdentifierField="Id" />
+                <Archive:EndPointFragment Entity="Container" IdentifierField="Id" />
+                <Archive:EndPointFragment Entity="Stock" IdentifierField="Id" />
             </EndPointFragments>
         </EndPoint>
-    </Supplier:WebAPI>
+    </Archive:WebAPI>
 
     <Schema:Schema runat="server" ID="homeStockSchema">
         <Entities>
@@ -54,7 +54,7 @@
             </Schema:Entity>
         </Entities>
     </Schema:Schema>
-<%--    <Supplier:APISupplier runat="server" ID="apiSupplier" EndPoint="SomeBullShit" SchemaID="ASchemaID"  />
+<%--    <Archive:APIArchive runat="server" ID="apiArchive" EndPoint="SomeBullShit" SchemaID="ASchemaID"  />
 
     <Schema:Schema runat="server" ID="ASchemaID">
         <Entities>

@@ -4,16 +4,16 @@ using System.Linq;
 using System.Runtime.Serialization;
 using System.Text;
 using System.Threading.Tasks;
-using HomeStockLibrary.Data.Suppliers.Base;
-using HomeStockLibrary.Data.Suppliers.Base.WebAPI;
+using HomeStockLibrary.Data.Archives.Base;
+using HomeStockLibrary.Data.Archives.Base.WebSQL;
 using HomeStockLibrary.Util;
 
-namespace HomeStockLibrary.Data.Suppliers
+namespace HomeStockLibrary.Data.Archives
 {
     [Serializable, DataContract]
-    public class WebSQL : BaseSupplier, IWebSQLSupplier
+    public class WebSQL : BaseArchive, IWebSQL
     {
-        protected override string namespaceString { get { return "Data.Suppliers.WebAPI"; } }
+        protected override string namespaceString { get { return "Data.Archives.WebAPI"; } }
 
         [DataMember(Name = "id")]
         public override string ID { get; set; }
@@ -32,7 +32,7 @@ namespace HomeStockLibrary.Data.Suppliers
 
         public override string GenerateCreationString()
         {
-            return HomeStockJsonAssistant.Convert(this, typeof(IWebAPI));
+            return HomeStockJsonAssistant.Convert(this, typeof(IWebSQL));
         }
     }
 }

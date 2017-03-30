@@ -1,7 +1,7 @@
 ﻿; (function () {
     "use strict";
 
-    var nsString = "Data.Suppliers.WebAPI.Operators";
+    var nsString = "Data.Archives.WebAPI.Operators";
     var ns = HomeStock.Import(nsString);
     var messagePrefix = nsString + ".Remover: ";
 

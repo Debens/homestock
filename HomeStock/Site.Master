@@ -2,7 +2,7 @@
 
 <%@ Register Assembly="HomeStockLibrary" Namespace="HomeStockLibrary.Controls" TagPrefix="Control" %>
 <%@ Register Assembly="HomeStockLibrary" Namespace="HomeStockLibrary.Data.Schemas" TagPrefix="Schema" %>
-<%@ Register Assembly="HomeStockLibrary" Namespace="HomeStockLibrary.Data.Suppliers" TagPrefix="Supplier" %>
+<%@ Register Assembly="HomeStockLibrary" Namespace="HomeStockLibrary.Data.Archives" TagPrefix="Archive" %>
 
 <!DOCTYPE html>
 <html lang="en">

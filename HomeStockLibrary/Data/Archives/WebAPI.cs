@@ -1,16 +1,16 @@
-﻿using HomeStockLibrary.Data.Suppliers.Base;
-using HomeStockLibrary.Data.Suppliers.Base.WebAPI;
+﻿using HomeStockLibrary.Data.Archives.Base;
+using HomeStockLibrary.Data.Archives.Base.WebAPI;
 using HomeStockLibrary.Util;
 using System;
 using System.Web.UI;
 using System.Runtime.Serialization;
 
-namespace HomeStockLibrary.Data.Suppliers
+namespace HomeStockLibrary.Data.Archives
 {
     [Serializable, DataContract]
-    public class WebAPI : BaseSupplier, IWebAPI
+    public class WebAPI : BaseArchive, IWebAPI
     {
-        protected override string namespaceString { get { return "Data.Suppliers.WebAPI"; } }
+        protected override string namespaceString { get { return "Data.Archives.WebAPI"; } }
 
         [DataMember(Name = "id")]
         public override string ID { get; set; }

@@ -8,7 +8,7 @@ using System.Web.UI.WebControls;
 
 namespace HomeStock.Development.Library.Data
 {
-    public partial class Suppliers : HomeStockPage
+    public partial class Archives : HomeStockPage
     {
         protected void Page_Load(object sender, EventArgs e)
         {

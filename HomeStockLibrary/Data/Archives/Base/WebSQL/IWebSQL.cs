@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace HomeStockLibrary.Data.Suppliers.Base
+namespace HomeStockLibrary.Data.Archives.Base.WebSQL
 {
-    interface IWebSQLSupplier
+    interface IWebSQL
     {
         string TableName { get; set; }
     }

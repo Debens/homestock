@@ -1,17 +1,17 @@
 ﻿; (function () {
     "use strict";
 
-    var nsString = "Data.Suppliers.WebAPI.Operators";
+    var nsString = "Data.Archives.WebSQL.Operators";
     var ns = HomeStock.Import(nsString);
-    var messagePrefix = nsString + ".Reader: ";
+    var messagePrefix = nsString + ".Writer: ";
 
-    ns.Reader = Reader;
+    ns.Writer = Writer;
 
     var requiredParams = [
-        
+
     ];
 
-    var Reader = function (params) {
+    var Writer = function (params) {
         var validation = ObjectValidator.Validate(params, requiredParams);
         if (!validation.isValid)
             throw messagePrefix + "Failed construction, missing parameter(s) " + validation.missingProperties.join(", ");

@@ -2,14 +2,14 @@
     "use strict";
 
     var nsString = "HomeStock";
-    var messagePrefix = nsString + ".Suppliers: ";
+    var messagePrefix = nsString + ".Archives: ";
     
-    var _suppliers = {};
-    HomeStock.Suppliers = _suppliers
+    var _archives = {};
+    HomeStock.Archives = _archives
 
-    HomeStock.Suppliers.Add = function (supplier) {
-        if (_suppliers.hasOwnProperty(supplier.Name))
-            console.error(messagePrefix + "Duplicate supplier ID '" + supplier.Name + "', the duplicate shall not be included");
-        _suppliers[supplier.Name] = supplier;
+    HomeStock.Archives.Add = function (archive) {
+        if (_archives.hasOwnProperty(archive.Name))
+            console.error(messagePrefix + "Duplicate archive ID '" + archive.Name + "', the duplicate shall not be included");
+        _archives[archive.Name] = archive;
     };
 })();

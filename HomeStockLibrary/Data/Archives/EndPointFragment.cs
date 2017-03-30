@@ -1,8 +1,8 @@
 ﻿using System.Runtime.Serialization;
 using HomeStockLibrary.Core;
-using HomeStockLibrary.Data.Suppliers.Base.WebAPI;
+using HomeStockLibrary.Data.Archives.Base.WebAPI;
 
-namespace HomeStockLibrary.Data.Suppliers
+namespace HomeStockLibrary.Data.Archives
 {
     [DataContract]
     public class EndPointFragment : HomeStockValidatble, IEndPointFragment

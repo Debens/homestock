@@ -86,7 +86,7 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Development\Library\Data\Suppliers.aspx" />
+    <Content Include="Development\Library\Data\Archive.aspx" />
     <Content Include="packages.config" />
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
@@ -160,12 +160,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\BundleConfig.cs" />
-    <Compile Include="Development\Library\Data\Suppliers.aspx.cs">
-      <DependentUpon>Suppliers.aspx</DependentUpon>
+    <Compile Include="Development\Library\Data\Archive.aspx.cs">
+      <DependentUpon>Archive.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Development\Library\Data\Suppliers.aspx.designer.cs">
-      <DependentUpon>Suppliers.aspx</DependentUpon>
+    <Compile Include="Development\Library\Data\Archive.aspx.designer.cs">
+      <DependentUpon>Archive.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Site.Master.cs">

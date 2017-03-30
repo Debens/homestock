@@ -1,7 +1,7 @@
 ﻿; (function () {
     "use strict";
 
-    var nsString = "Data.Suppliers.Core";
+    var nsString = "Data.Archives.Core";
     var ns = HomeStock.Import(nsString);
 
     ns.Schema = Schema;

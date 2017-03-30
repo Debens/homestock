@@ -60,14 +60,14 @@
     <Content Include="Business\Core\Modules\Query\Query.js" />
     <Content Include="Business\Core\Modules\Save\Save.js" />
     <Content Include="Data\Schema.js" />
-    <Content Include="Data\Suppliers\WebAPI\Operators\Reader.js" />
-    <Content Include="Data\Suppliers\WebAPI\Operators\Remover.js" />
-    <Content Include="Data\Suppliers\WebAPI\Operators\Writer.js" />
-    <Content Include="Data\Suppliers\Core\Supplier.js" />
-    <Content Include="Data\Suppliers\WebSQL\Operators\Reader.js" />
-    <Content Include="Data\Suppliers\WebSQL\Operators\Remover.js" />
-    <Content Include="Data\Suppliers\WebSQL\Operators\Writer.js" />
-    <Content Include="Data\Suppliers\WebSQL\Supplier.js" />
+    <Content Include="Data\Archives\WebAPI\Operators\Reader.js" />
+    <Content Include="Data\Archives\WebAPI\Operators\Remover.js" />
+    <Content Include="Data\Archives\WebAPI\Operators\Writer.js" />
+    <Content Include="Data\Archives\Core\Archive.js" />
+    <Content Include="Data\Archives\WebSQL\Operators\Reader.js" />
+    <Content Include="Data\Archives\WebSQL\Operators\Remover.js" />
+    <Content Include="Data\Archives\WebSQL\Operators\Writer.js" />
+    <Content Include="Data\Archives\WebSQL\Archive.js" />
     <Content Include="Data\SyncModules\RecordMapper.js" />
     <Content Include="Data\SyncModules\SchemaMapping.js" />
     <Content Include="Data\SyncModules\SyncModule.js" />
@@ -97,7 +97,7 @@
     <Folder Include="UI\" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Data\Suppliers\WebAPI\Supplier.js" />
+    <Content Include="Data\Archives\WebAPI\Archive.js" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="0-Utility\2-HomeStock.js" />
