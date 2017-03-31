@@ -1,8 +1,7 @@
 ﻿; (function () {
     "use strict";
 
-    var nsString = "";
-    var ns = HomeStock.Import(nsString);
+    var nsString = "", ns = HomeStock.Import(nsString);
 
     ns. = ;
     var messagePrefix = nsString + ".: ";
