@@ -92,7 +92,7 @@
                 throw messagePrefix + "Cannot update without array of column names";
             if (!Array.isArray(columnValues))
                 throw messagePrefix + "Cannot update without array of column values";
-            if (columnNames.length != columnValues.length)
+            if (columnNames.length !== columnValues.length)
                 throw messagePrefix + "Update column names/values mismatch";
 
             if (columnNames.length) {
@@ -111,7 +111,7 @@
                 throw messagePrefix + "Cannot update without array of column names";
             if (!Array.isArray(columnValues))
                 throw messagePrefix + "Cannot update without array of column values";
-            if (columnNames.length != columnValues.length)
+            if (columnNames.length !== columnValues.length)
                 throw messagePrefix + "Update column names/values mismatch";
 
             _operation = Keywords.insert;
@@ -153,7 +153,7 @@
                 sql += _operation + " ";
             if(_table.name)
                 sql += _table.name + " ";
-            if (_table.alias && _table.name != table.alias)
+            if (_table.alias && _table.name !== table.alias)
                 sql += "\"" + _table.alias + "\" "
 
             if(_columns.length)
