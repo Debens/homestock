@@ -50,6 +50,7 @@
     <Content Include="0-Utility\HomeStock\Deferred.js" />
     <Content Include="0-Utility\HomeStock\Database.js" />
     <Content Include="0-Utility\HomeStock\Events.js" />
+    <Content Include="0-Utility\HomeStock\Logging.js" />
     <Content Include="0-Utility\HomeStock\Schemas.js" />
     <Content Include="0-Utility\HomeStock\Suppliers.js" />
     <Content Include="0-Utility\HomeStock\Workers.js" />
