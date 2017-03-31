@@ -49,7 +49,7 @@
             if (!sql)
                 console.warn(messagePrefix + "Attempting to run empty SQL resulting no effect");
 
-            return sql ? ns.SqlRunner.Run(sql) : HomeStock.Deferred().resolve().promise();
+            return sql ? ns.SqlRunner.Run(sql) : new HomeStock.Deferred().resolve().promise();
         };
 
         self.Clear = function () {

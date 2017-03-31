@@ -7,7 +7,7 @@
 
     ns.SqlRunner = {
         "Run": function (sql) {
-            var executingSql = HomeStock.Deferred();
+            var executingSql = new HomeStock.Deferred();
             if (!sql)
                 return executingSql.resolve().promise();
             if (typeof sql !== typeof "String")
