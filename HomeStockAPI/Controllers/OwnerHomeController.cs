@@ -9,7 +9,7 @@ using System.Web.Http;
 
 namespace HomeStock.Controllers
 {
-    [RoutePrefix("api/owner/{ownerId}/home")]
+    [RoutePrefix("api/owner/{ownerId:length(12)}/home")]
     public class OwnerHomeController : ApiController
     {
         [Route("", Name = "PostHome")]
