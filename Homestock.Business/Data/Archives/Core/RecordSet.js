@@ -7,14 +7,7 @@
 
     ns.RecordSet = RecordSet;
 
-    var requiredParams = [
-        
-    ];
-
-    var RecordSet = function (params) {
-        var validation = ObjectValidator.Validate(params, requiredParams);
-        if (!validation.isValid)
-            throw messagePrefix + "Failed construction, missing parameter(s) " + validation.missingProperties.join(", ");
+    function RecordSet(records) {
         var self = this;
 
         var _records = [];
@@ -39,6 +32,8 @@
                 return [];
             return _records.find(predicate);
         };
+
+        self.Add(records);
     };
 
     function toArray(obj) {

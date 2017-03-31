@@ -31,6 +31,7 @@
             if (constants.requestTypes.indexOf(params.type) < 0)
                 throw messagePrefix + "Request parameter type, '" + params.type + "', does not match one of the following valid types: " + constants.requestTypes.join(", ");
 
+            var request = new HomeStock.Deferred();
             params = $.extend({}, constants.requestParamDefaults, params, true);
 
             if (!ObjectValidator.IsFunction(params.success))
@@ -38,15 +39,26 @@
             if (!ObjectValidator.IsFunction(params.error))
                 throw messagePrefix + "Error function is not of type 'function'";
 
+            var successWrapper = function (response) {
+                params.success(response);
+                request.resolve(response);
+            };
+            var errorWrapper = function (response) {
+                params.error(response);
+                request.reject(response);
+            };
+
             _lastRequestedUrl = params.url;
-            return $.ajax({
+            $.ajax({
                 url: params.url,
                 type: params.type,
                 data: params.data,
                 contentType: params.contentType,
-                success: params.success,
-                error: params.error
+                success: successWrapper,
+                error: errorWrapper
             });
+
+            return request.promise();
         },
         "LastRequestedUrl": function () { return _lastRequestedUrl; }
     };

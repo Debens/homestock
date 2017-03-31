@@ -12,15 +12,13 @@
         "constraintData"
     ];
 
-    ns.UrlFormatter = function () {
-        var self = this;
-
-        self.Format = function (params) {
+    ns.UrlFormatter = {
+        Format : function (params) {
             var validation = ObjectValidator.Validate(params, requiredComposeParams);
             if (!validation.isValid)
                 throw messagePrefix + "Failed construction, missing parameter(s) " + validation.missingProperties.join(", ");
 
-            var urlSegments = self.Decompose(params.url);
+            var urlSegments = ns.UrlFormatter.Decompose(params.url);
             var fragments = params.fragments;
             var constraintData = params.constraintData || {};
 
@@ -43,9 +41,8 @@
             }
 
             return formattedUrl;
-        };
-
-        self.Decompose = function (url) {
+        },
+        Decompose : function (url) {
             if (!url)
                 return [];
             if (typeof url !== typeof "A String")
@@ -53,6 +50,6 @@
 
             var regex = /\{\d\}/;
             return url.split(regex).filter(function (segment) { return !!segment; });
-        };
+        }
     };
 })();

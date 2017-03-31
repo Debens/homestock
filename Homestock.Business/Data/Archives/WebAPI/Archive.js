@@ -25,11 +25,16 @@
 
         protectedData.Read = function (params) {
             var restrictions = params.restrictions || {};
-            var formatter = new ns.UrlFormatter();
-            var url = new ns.UrlFormatter().Format({ url: self.Endpoint.url, fragments: self.Endpoint.endPointFragments, constraintData: restrictions });
+            var url = ns.UrlFormatter.Format({ url: self.Endpoint.url, fragments: self.Endpoint.endPointFragments, constraintData: restrictions });
             if (!url)
-                return HomeStock.Deferred().resolve().promise();
-            return nsUtil.WebRequestAssistant.Request({ url: url, type: "GET" });
+                return new HomeStock.Deferred().resolve([]).promise();
+
+            return nsUtil.WebRequestAssistant.Request({
+                url: url,
+                type: "GET",
+                success: params.success,
+                error: params.error
+            });
         };
 
         protectedData.Write = function (recordSet) {

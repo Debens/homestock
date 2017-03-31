@@ -11,19 +11,23 @@
 
         self.eventObj = function () { return _eventObj; };
 
-        self.On = function (eventName, callback) {
-            if (eventName) {
-                if (!callback || typeof callback !== "function")
-                    throw messagePrefix + "Callback function is required to create trigger";
+        self.on = function (eventName, callback) {
+            if (eventName) 
+                if (callback && typeof callback === "function")
                     _eventObj.on(eventName, callback);
-                }
         };
 
-        self.Off = function (eventName) {
+        self.on = function (eventName, callback) {
+            if (eventName) 
+                if (callback && typeof callback === "function")
+                    _eventObj.one(eventName, callback);
+        };
+
+        self.off = function (eventName) {
             if (eventName) { _eventObj.off(eventName); }
         };
 
-        self.Trigger = function (eventName, triggerArguments) {
+        self.trigger = function (eventName, triggerArguments) {
             if (eventName) { _eventObj.trigger(eventName, triggerArguments); }
         };
     };

@@ -8,8 +8,7 @@
     ns.Archive = Archive;
 
     var requiredParams = [
-        "id",
-        "schemaId"
+        "id"
     ];
 
     function Archive(params, protectedData) {
@@ -18,24 +17,31 @@
         if (!validation.isValid)
             throw messagePrefix + "Failed construction, missing parameter(s) " + validation.missingProperties.join(", ") + ", for archive '" + params.id + "'";
         var self = this;
-
+        
         protectedData = protectedData || {};
         protectedData.Read = function () { throw messagePrefix + "Read Not Implemented"; };
         protectedData.Write = function () { throw messagePrefix + "Write Not Implemented"; };
         protectedData.Remove = function () { throw messagePrefix + "Remove Not Implemented"; };
-
-        var eventObj = new HomeStock.EventObj();
-
+        
         self.Name = params.id;
 
+        var eventObj = new HomeStock.EventObj();
+        self.on = function (event, callback) { eventObj.on(event, callback); };
+        self.one = function (event, callback) { eventObj.one(event, callback); };
+        self.off = function (event) { eventObj.off(event) };
+        
+
         self["Read"] = function (params) {
+            params = params || {};
             var readingData = new HomeStock.Deferred();
-            eventObj.Trigger("PreRead", [self]);
+            eventObj.trigger("PreRead", [self]);
 
             var performingRead = protectedData.Read(params);
             performingRead.then(function (records) {
-                var recordSet = new ns.RecordSet();
-                eventObj.Trigger("Read", [recordSet]);
+                records = Array.isArray(records) ? records : Array(records);
+                var recordSet = new ns.RecordSet(records);
+
+                eventObj.trigger("Read", [recordSet]);
                 readingData.resolve(recordSet);
             },
             readingData.reject);
@@ -44,19 +50,19 @@
         };
 
         self["Write"] = function (recordSet) {
-            eventObj.Trigger("PreWrite", [recordSet, self]);
+            eventObj.trigger("PreWrite", [recordSet, self]);
 
             protectedData.Write(recordSet);
             
-            eventObj.Trigger("Write");
+            eventObj.trigger("Write");
         };
 
         self["Remove"] = function (recordSet) {
-            eventObj.Trigger("PreRemove", [recordSet, self]);
+            eventObj.trigger("PreRemove", [recordSet, self]);
 
             protectedData.Remove(params);
 
-            eventObj.Trigger("Remove");
+            eventObj.trigger("Remove");
         };
 
         return self;
