@@ -21,14 +21,14 @@
         <Entities>
             <Schema:Entity Name="Owner">
                 <Columns>
-                    <Schema:Column Name="Id" />
+                    <Schema:Column Name="Id" IdentityColumn="true" />
                     <Schema:Column Name="Name" />
                     <Schema:Column Name="Created" />
                 </Columns>
             </Schema:Entity>
             <Schema:Entity Name="Home">
                 <Columns>
-                    <Schema:Column Name="Id" />
+                    <Schema:Column Name="Id" IdentityColumn="true" />
                     <Schema:Column Name="Name" />
                     <Schema:Column Name="Created" />
                     <Schema:Column Name="OwnerId" />
@@ -36,7 +36,7 @@
             </Schema:Entity>
             <Schema:Entity Name="Container">
                 <Columns>
-                    <Schema:Column Name="Id" />
+                    <Schema:Column Name="Id" IdentityColumn="true" />
                     <Schema:Column Name="Name" />
                     <Schema:Column Name="Created" />
                     <Schema:Column Name="HomeId" />
@@ -44,7 +44,7 @@
             </Schema:Entity>
             <Schema:Entity Name="Stock">
                 <Columns>
-                    <Schema:Column Name="Id" />
+                    <Schema:Column Name="Id" IdentityColumn="true" />
                     <Schema:Column Name="Name" />
                     <Schema:Column Name="Created" />
                     <Schema:Column Name="ContainerId" />
