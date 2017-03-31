@@ -57,11 +57,9 @@
         </ul>
     </nav>
     <div id="c-mask" class="c-mask"></div>
-
     <script src="/WebFiles/JavaScript/Unmanaged/dist/menu.js"></script>
     <script src="/WebFiles/JavaScript/Unmanaged/Lib/jquery-3.1.1.js"></script>
     <script src="/WebFiles/JavaScript/Unmanaged/Lib/knockout-3.4.1.min.js"></script>
-
     <Control:HomeStockFileInclusion runat="server" Source="WebFiles/Bundles/" type="Script" Filter="*.js" />
     <script>
         /**
