@@ -7,7 +7,7 @@
 <asp:content runat="server" id="contentPlaceHolderID" contentplaceholderid="MainViewContent">
     
     <Archive:WebAPI runat="server" ID="apiHomeStock" SchemaID="homeStockSchema" >
-        <EndPoint Url="/api/owner/{0}/home/{1}/container/{2}/inventory/{3}">
+        <EndPoint Url="http://localhost:90/HomeStockAPI/api/owner/{0}/home/{1}/container/{2}/inventory/{3}">
             <EndPointFragments>
                 <Archive:EndPointFragment Entity="Owner" IdentifierField="Id" />
                 <Archive:EndPointFragment Entity="Home" IdentifierField="Id" />

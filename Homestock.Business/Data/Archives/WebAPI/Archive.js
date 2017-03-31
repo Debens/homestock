@@ -1,12 +1,10 @@
 ﻿; (function () {
     "use strict";
 
-    var nsString = "Data.Archives.WebAPI";
-    var nsCoreString = "Data.Archives.Core";
-    var nsOperatorString = "Data.Archives.WebAPI.Operators";
-    var ns = HomeStock.Import(nsString);
-    var nsCore = HomeStock.Import(nsCoreString);
-    var nsOperator = HomeStock.Import(nsOperatorString);
+    var nsString = "Data.Archives.WebAPI", ns = HomeStock.Import(nsString); 
+    var nsCoreString = "Data.Archives.Core", nsCore = HomeStock.Import(nsCoreString);
+    var nsOperatorString = "Data.Archives.WebAPI.Operators", nsOperator = HomeStock.Import(nsOperatorString);
+    var nsUtilString = "Util", nsUtil = HomeStock.Import(nsUtilString);
     
     ns.Archive = Archive;
     var messagePrefix = nsString + ".Archive: ";
@@ -26,7 +24,12 @@
         self.Endpoint = params.endPoint;
 
         protectedData.Read = function (params) {
-            var restrictions = params.restrictions;
+            var restrictions = params.restrictions || {};
+            var formatter = new ns.UrlFormatter();
+            var url = new ns.UrlFormatter().Format({ url: self.Endpoint.url, fragments: self.Endpoint.endPointFragments, constraintData: restrictions });
+            if (!url)
+                return HomeStock.Deferred().resolve().promise();
+            return nsUtil.WebRequestAssistant.Request({ url: url, type: "GET" });
         };
 
         protectedData.Write = function (recordSet) {

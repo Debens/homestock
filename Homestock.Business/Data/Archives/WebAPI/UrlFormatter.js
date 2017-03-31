@@ -22,18 +22,20 @@
 
             var urlSegments = self.Decompose(params.url);
             var fragments = params.fragments;
-            var constraintData = params.constraintData;
+            var constraintData = params.constraintData || {};
 
             var formattedUrl = "";
             for (var index = 0; index < urlSegments.length; index++) {
-                formattedUrl += urlSegments[index];
                 var fragment = fragments[index];
                 if (!fragment)
                     break;
-                var entityConstraint = constraintData[fragment.Entity];
+                var entityConstraint = constraintData[fragment.entity];
                 if (!entityConstraint)
                     break;
-                var constraint = entityConstraint[fragment.IdentifierField]
+
+                formattedUrl += urlSegments[index];
+
+                var constraint = entityConstraint[fragment.identifierField]
                 if (!constraint)
                     break;
 

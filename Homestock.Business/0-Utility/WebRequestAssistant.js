@@ -13,7 +13,7 @@
     var constants = { 
         requiredRequestParams: ["url", "type"],
         requestParamDefaults: {
-            contentType: "application/json",
+            contentType: "application/x-www-form-urlencoded",
             success: function () { },
             error: function () { },
             data: ""
@@ -39,7 +39,7 @@
                 throw messagePrefix + "Error function is not of type 'function'";
 
             _lastRequestedUrl = params.url;
-            $.ajax({
+            return $.ajax({
                 url: params.url,
                 type: params.type,
                 data: params.data,
