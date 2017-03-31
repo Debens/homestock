@@ -22,7 +22,8 @@
 a.hs-button
 {
     position: relative;
-    padding: 1.8% 3.7% 1.8% 3.7%;
+    padding: 1.4% 3.6% 1.4% 3.6%;
+    margin: 2px;
     cursor: pointer;
     color: #FFF;
     text-decoration: none;
@@ -171,7 +172,7 @@ p.hs-page-header-description {
 
 @media (max-width: 700px) {
     a.hs-button {
-        padding: 13px 27px 13px 27px !important;
+        padding: 10px 17px 10px 17px !important;
     }
 
     div.hs-page-seporator {
@@ -182,6 +183,6 @@ p.hs-page-header-description {
 
 @media (min-width: 1400px) {
     a.hs-button {
-        padding: 24px 55px 24px 55px !important; 
+        padding: 20px 50px 20px 50px !important; 
     }
 }
