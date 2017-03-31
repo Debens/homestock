@@ -19,14 +19,14 @@
 
     <Schema:Schema runat="server" ID="homeStockSchema">
         <Entities>
-            <Schema:Entity Name="Owner">
+            <Schema:Entity Name="Owner" IdentityPrefix="OWN" IdentityLength="12">
                 <Columns>
                     <Schema:Column Name="Id" IdentityColumn="true" />
                     <Schema:Column Name="Name" />
                     <Schema:Column Name="Created" />
                 </Columns>
             </Schema:Entity>
-            <Schema:Entity Name="Home">
+            <Schema:Entity Name="Home" IdentityPrefix="HOM" IdentityLength="12">
                 <Columns>
                     <Schema:Column Name="Id" IdentityColumn="true" />
                     <Schema:Column Name="Name" />
@@ -34,7 +34,7 @@
                     <Schema:Column Name="OwnerId" />
                 </Columns>
             </Schema:Entity>
-            <Schema:Entity Name="Container">
+            <Schema:Entity Name="Container" IdentityPrefix="CNT" IdentityLength="12">
                 <Columns>
                     <Schema:Column Name="Id" IdentityColumn="true" />
                     <Schema:Column Name="Name" />
@@ -42,7 +42,7 @@
                     <Schema:Column Name="HomeId" />
                 </Columns>
             </Schema:Entity>
-            <Schema:Entity Name="Stock">
+            <Schema:Entity Name="Stock" IdentityPrefix="STK" IdentityLength="40">
                 <Columns>
                     <Schema:Column Name="Id" IdentityColumn="true" />
                     <Schema:Column Name="Name" />

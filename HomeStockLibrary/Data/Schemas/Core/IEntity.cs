@@ -10,6 +10,10 @@ namespace HomeStockLibrary.Data.Schemas.Core
     {
         string Name { get; set; }
 
+        string IdentityPrefix { get; set; }
+
+        int IdentityLength { get; set; }
+
         List<Column> Columns { get; set; }
     }
 }
