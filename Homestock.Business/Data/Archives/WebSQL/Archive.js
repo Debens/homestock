@@ -11,8 +11,7 @@
     ns.Archive = Archive;
 
     var requiredParams = [
-        "tableName",
-        "schemaId"
+        "tableName"
     ];
 
     function Archive(params) {
@@ -21,9 +20,6 @@
         if (!validation.isValid)
             throw messagePrefix + "Failed construction, missing parameter(s) " + validation.missingProperties.join(", ") + ", for archive '" + params.id + "'";
         var self = new nsCore.Archive(params);
-
-        var schemaId = params.schemaId;
-        self.Schema = function () { return HomeStock.Schemas[schemaId]; };
 
         return self;
     };

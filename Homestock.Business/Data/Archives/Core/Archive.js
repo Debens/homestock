@@ -8,7 +8,8 @@
     ns.Archive = Archive;
 
     var requiredParams = [
-        "id"
+        "id",
+        "schemaId"
     ];
 
     function Archive(params, protectedData) {
@@ -22,8 +23,11 @@
         protectedData.Read = function () { throw messagePrefix + "Read Not Implemented"; };
         protectedData.Write = function () { throw messagePrefix + "Write Not Implemented"; };
         protectedData.Remove = function () { throw messagePrefix + "Remove Not Implemented"; };
-        
+
+        var schemaId = params.schemaId;
+
         self.Name = params.id;
+        self.Schema = function () { return HomeStock.Schemas[schemaId]; };
 
         var eventObj = new HomeStock.EventObj();
         self.on = function (event, callback) { eventObj.on(event, callback); };
