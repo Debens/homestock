@@ -17,7 +17,7 @@ namespace HomeStockLibrary.Data.Schemas
         public override string GenerateCreationString()
         {
             var creationString = new StringBuilder();
-            creationString.AppendLine("var ns = HomeStock.Import(\"Data.Archives.Core\");");
+            creationString.AppendLine("var ns = HomeStock.Import(\"Data\");");
             creationString.AppendLine("HomeStock.Schemas.Add(new ns.Schema(" + HomeStockJsonAssistant.Convert(this, typeof(ISchema)) + "));");
             return creationString.ToString();
         }
