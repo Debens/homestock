@@ -19,7 +19,8 @@ namespace HomeStock.Controllers
         public IHttpActionResult Post(Owner owner)
         {
             Owner newOwner = OwnerService.Create(owner);
-            return CreatedAtRoute("GetOwner", new { ownerId = owner.Id }, newOwner);
+            return Ok(newOwner);
+            //turn CreatedAtRoute("GetOwner", new { ownerId = newOwner.Id }, newOwner);
         }
 
         [Route("", Name = "GetAllOwners")]
