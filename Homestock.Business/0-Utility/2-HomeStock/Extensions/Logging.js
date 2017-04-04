@@ -23,8 +23,8 @@
     };
 
     HomeStock.Logging = {};
-    HomeStock.Logging.Disable = function () { nsRoot.Logging.Enabled(false); };
-    HomeStock.Logging.Enable = function () { nsRoot.Logging.Enabled(true); };
+    HomeStock.Logging.Disable = function () { nsRoot.Logging.Enable(false); };
+    HomeStock.Logging.Enable = function () { nsRoot.Logging.Enable(true); };
 
     function Write(message, type) {
         if (nsRoot.Logging.Enabled())

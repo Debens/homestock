@@ -11,7 +11,7 @@
 
         var _enabled = true;
         node.Logging = {};
-        node.Logging.Enable = function (enable) { _enabled = !!enable; };
+        node.Logging.Enable = function (enable) { _enabled = (enable != false); };
         node.Logging.Enabled = function () { return (_enabled && parentIsLogging(node)); };
 
         node.log = function (log) {
