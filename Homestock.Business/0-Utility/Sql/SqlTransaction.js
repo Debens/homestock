@@ -46,7 +46,7 @@
         self.Run = function () {
             var sql = self.toString();
             self.Clear();
-            if (!sql)
+            if (!sql && ns.Logging.Enabled())
                 console.warn(messagePrefix + "Attempting to run empty SQL resulting no effect");
 
             return sql ? ns.SqlRunner.Run(sql) : new HomeStock.Deferred().resolve().promise();
