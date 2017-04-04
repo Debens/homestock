@@ -9,10 +9,10 @@
     window.ns.Extensions.Logging = function (node) {
         node = node || {};
 
-        var _enabled = ko.observable(true);
+        var _enabled = true;
         node.Logging = {};
-        node.Logging.Enable = function (enable) { _enabled(!!enable); };
-        node.Logging.Enabled = function () { return _enabled() && (!node.__node__.Parent || nodeIsLogging(node.__node__.Parent.Facade)); };
+        node.Logging.Enable = function (enable) { _enabled = !!enable; };
+        node.Logging.Enabled = function () { return (_enabled && parentIsLogging(node)); };
 
         node.Log = function (log) {
             if (node.Logging.Enabled())
@@ -34,6 +34,10 @@
             if (node.Logging.Enabled())
                 console.error(error)
         };
+    };
+
+    function parentIsLogging(node) {
+        return !node.__node__.Parent || nodeIsLogging(node.__node__.Parent.Facade);
     };
 
     function nodeIsLogging(node) {
