@@ -24,7 +24,7 @@
 
     function Write(message, type) {
         if (nsRoot.Logging.Enabled())
-            if ((!!message && typeof message === typeof "string") && typeof console[type] === "function")
+            if (message && typeof message === typeof "string" && typeof console[type] === "function")
                 console[type](message);
-    }
+    };
 })();
