@@ -1,26 +1,21 @@
 ﻿:root {
-  --light-grey: #dbdbdb;
-  --grey: #888889;
-  --dark-grey: #333333;
-
-  --HS-Blue: #00acc1;
-  --HS-Blue-Accent: #4dd0e1;
-  --HS-Blue-Focus: #008799;
-
-  --HS-Red: #cc0000;
-  --HS-Red-Accent: #ff1a1a;
-  --HS-Red-Focus:  #990000;
-
-  --HS-Green: #2fb62f;
-  --HS-Green-Accent: #5dd55d;
-  --HS-Green-Focus: #258e25;
-
-  --HS-Active: #ff6600;
+    --light-grey: #dbdbdb;
+    --grey: #888889;
+    --dark-grey: #333333;
+    --HS-Blue: #00acc1;
+    --HS-Blue-Accent: #4dd0e1;
+    --HS-Blue-Focus: #008799;
+    --HS-Red: #cc0000;
+    --HS-Red-Accent: #ff1a1a;
+    --HS-Red-Focus: #990000;
+    --HS-Green: #2fb62f;
+    --HS-Green-Accent: #5dd55d;
+    --HS-Green-Focus: #258e25;
+    --HS-Active: #ff6600;
 }
 
 /*#region Button*/
-a.hs-button
-{
+a.hs-button {
     position: relative;
     padding: 1.4% 3.6% 1.4% 3.6%;
     margin: 2px;
@@ -33,44 +28,42 @@ a.hs-button
     width: 20%;
     border-width: 1px 1px 3px;
     margin-bottom: 10px;
-    opacity: .95;
+    opacity: .65;
     white-space: nowrap;
-    -webkit-user-select: none; /* Chrome/Safari */        
+    -webkit-user-select: none; /* Chrome/Safari */
     -moz-user-select: none; /* Firefox */
     -ms-user-select: none; /* IE10+ */
-
     -webkit-transition: all .1s linear; /* Saf3.2+, Chrome */
-     -moz-transition: all .1s linear; /* FF3.7+ */
-       -o-transition: all .1s linear; /* Opera 10.5 */
-          transition: all .1s linear;
+    -moz-transition: all .1s linear; /* FF3.7+ */
+    -o-transition: all .1s linear; /* Opera 10.5 */
+    transition: all .1s linear;
 }
 
-a.hs-button:hover {
-    border: 2px solid;
-    border-color: var(--HS-Active);
-    border-radius: 4px;
-    color: var(--HS-Active);
-    opacity: .7;
-    
-    -webkit-transition: all .1s linear; /* Saf3.2+, Chrome */
-     -moz-transition: all .1s linear; /* FF3.7+ */
-       -o-transition: all .1s linear; /* Opera 10.5 */
-          transition: all .1s linear;
-}
+    a.hs-button:hover {
+        border: 2px solid;
+        border-color: var(--HS-Active);
+        border-radius: 6px;
+        color: var(--HS-Active);
+        opacity: .95;
+        -webkit-transition: all .1s linear; /* Saf3.2+, Chrome */
+        -moz-transition: all .1s linear; /* FF3.7+ */
+        -o-transition: all .1s linear; /* Opera 10.5 */
+        transition: all .1s linear;
+    }
 
 /*#region Default*/
 a.hs-button-default {
     background-color: var(--HS-Blue);
     border: 1px solid var(--HS-Blue-Accent);
 }
-a.hs-button-default:hover
-{
-    background-color: var(--HS-Blue-Accent);
-}
-a.hs-button-default:active
-{
-    background-color: var(--HS-Blue-Focus);
-}
+
+    a.hs-button-default:hover {
+        background-color: var(--HS-Blue-Accent);
+    }
+
+    a.hs-button-default:active {
+        background-color: var(--HS-Blue-Focus);
+    }
 /*#endregion Default*/
 
 /*#region New*/
@@ -78,14 +71,14 @@ a.hs-button-new {
     background-color: var(--HS-Green);
     border: 1px solid var(--HS-Green-Accent);
 }
-a.hs-button-new:hover
-{
-    background-color: var(--HS-Green-Accent);
-}
-a.hs-button-new:active
-{
-    background-color: var(--HS-Green-Focus);
-}
+
+    a.hs-button-new:hover {
+        background-color: var(--HS-Green-Accent);
+    }
+
+    a.hs-button-new:active {
+        background-color: var(--HS-Green-Focus);
+    }
 /*#endregion New*/
 
 /*#region Delete*/
@@ -93,17 +86,17 @@ a.hs-button-delete {
     background-color: var(--HS-Red-Accent);
     border: 1px solid var(--HS-Red);
 }
-a.hs-button-delete:hover
-{
-    background-color: var(--HS-Red);
-    border-color: black;
-    color: black;
-}
-a.hs-button-delete:active
-{
-    background-color: var(--HS-Red-Focus);
-    color: #ffffff;
-}
+
+    a.hs-button-delete:hover {
+        background-color: var(--HS-Red);
+        border-color: black;
+        color: black;
+    }
+
+    a.hs-button-delete:active {
+        background-color: var(--HS-Red-Focus);
+        color: #ffffff;
+    }
 /*#endregion Delete*/
 
 /*#endregion Button*/
@@ -114,44 +107,40 @@ div.hs-page-seporator {
     text-align: center;
     overflow: hidden;
     white-space: nowrap;
-
     color: white;
-
     margin: 10%;
     margin-top: 4%;
-    margin-bottom: 4%; 
+    margin-bottom: 4%;
 }
 
-div.hs-page-seporator > span {
-    border-radius: 25px;
+    div.hs-page-seporator > span {
+        border-radius: 25px;
+        background: var(--grey);
+        padding-left: 10px;
+        padding-right: 10px;
+        position: relative;
+        display: inline-block;
+    }
 
-    background: var(--grey);
-    padding-left: 10px;
-    padding-right: 10px;
+        div.hs-page-seporator > span:before,
+        div.hs-page-seporator > span:after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            width: 9999px;
+            height: 1px;
+            background-color: var(--grey);
+        }
 
-    position: relative;
-    display: inline-block;
-}
-	
-div.hs-page-seporator > span:before,
-div.hs-page-seporator > span:after {
-    content: "";
-    position: absolute;
-    top: 50%;
-    width: 9999px;
-    height: 1px;
-    background-color: var(--grey);
-}
+        div.hs-page-seporator > span:before {
+            right: 100%;
+            margin-right: 0px;
+        }
 
-div.hs-page-seporator > span:before {
-    right: 100%;
-    margin-right: 0px;
-}
-
-div.hs-page-seporator > span:after {
-    left: 100%;
-    margin-left: 0px;
-}
+        div.hs-page-seporator > span:after {
+            left: 100%;
+            margin-left: 0px;
+        }
 /*#endregion PageSeporator*/
 
 /*#region PageHeader*/
@@ -177,12 +166,12 @@ p.hs-page-header-description {
 
     div.hs-page-seporator {
         margin-top: 28px !important;
-        margin-bottom:28px !important;
+        margin-bottom: 28px !important;
     }
 }
 
 @media (min-width: 1400px) {
     a.hs-button {
-        padding: 20px 50px 20px 50px !important; 
+        padding: 20px 50px 20px 50px !important;
     }
 }
