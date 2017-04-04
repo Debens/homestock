@@ -47,13 +47,13 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="0-Utility\1-NameSpacing\1-ObjectTree.js" />
-    <Content Include="0-Utility\HomeStock\Deferred.js" />
-    <Content Include="0-Utility\HomeStock\Database.js" />
-    <Content Include="0-Utility\HomeStock\Events.js" />
-    <Content Include="0-Utility\HomeStock\Logging.js" />
-    <Content Include="0-Utility\HomeStock\Schemas.js" />
-    <Content Include="0-Utility\HomeStock\Suppliers.js" />
-    <Content Include="0-Utility\HomeStock\Workers.js" />
+    <Content Include="0-Utility\2-HomeStock\Extensions\Deferred.js" />
+    <Content Include="0-Utility\2-HomeStock\Extensions\Database.js" />
+    <Content Include="0-Utility\2-HomeStock\Extensions\Events.js" />
+    <Content Include="0-Utility\2-HomeStock\Extensions\Logging.js" />
+    <Content Include="0-Utility\2-HomeStock\Extensions\Schemas.js" />
+    <Content Include="0-Utility\2-HomeStock\Extensions\Suppliers.js" />
+    <Content Include="0-Utility\2-HomeStock\Extensions\Workers.js" />
     <Content Include="0-Utility\Sql\SqlRunner.js" />
     <Content Include="0-Utility\Sql\SqlTransaction.js" />
     <Content Include="0-Utility\WebRequestAssistant.js" />
@@ -103,7 +103,7 @@
     <Content Include="Data\Archives\WebAPI\Archive.js" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="0-Utility\2-HomeStock.js" />
+    <Content Include="0-Utility\2-HomeStock\2-HomeStock.js" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\HomeStockLibrary\HomeStockLibrary.csproj">
