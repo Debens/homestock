@@ -56,7 +56,7 @@
 
         self.Traverse = function (nameSapceString) {
             if (!nameSapceString)
-                return nsRoot;
+                return nsRoot.Facade;
 
             var nameSpaceComponents = nameSapceString.split(".");
             var compententLength = nameSpaceComponents.length;
