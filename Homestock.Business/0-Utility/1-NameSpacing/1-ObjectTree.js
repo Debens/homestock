@@ -40,6 +40,10 @@
                 return newChild;
             }
         };
+
+        for (var index = 0; index < Object.keys(ns.Extensions).length; index++) {
+            ns.Extensions[Object.keys(ns.Extensions)[index]](self.Facade);
+        }
     };
 
     function Tree(params) {
@@ -48,16 +52,16 @@
             throw messagePrefix + "Failed construction, missing parameter(s) " + validation.missingProperties.join(", ");
         var self = this;
 
-        var nsTree = new window.ns.Node({ name: "root", parent: null });
+        var nsRoot = new window.ns.Node({ name: "root", parent: null });
 
         self.Traverse = function (nameSapceString) {
             if (!nameSapceString)
-                throw messagePrefix + "cannot traverse namespace without a namespace string";
+                return nsRoot;
 
             var nameSpaceComponents = nameSapceString.split(".");
             var compententLength = nameSpaceComponents.length;
 
-            var currentNode = nsTree;
+            var currentNode = nsRoot;
             for (var index = 0; index < compententLength; index++)
                 currentNode = currentNode.ScopeTo(nameSpaceComponents.shift());
 

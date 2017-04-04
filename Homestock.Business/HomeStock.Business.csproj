@@ -46,7 +46,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="0-Utility\1-ObjectTree.js" />
+    <Content Include="0-Utility\1-NameSpacing\1-ObjectTree.js" />
     <Content Include="0-Utility\HomeStock\Deferred.js" />
     <Content Include="0-Utility\HomeStock\Database.js" />
     <Content Include="0-Utility\HomeStock\Events.js" />
@@ -114,6 +114,9 @@
       <Project>{86e85130-b19e-475b-b16e-2f320245054c}</Project>
       <Name>WebFilesLibrary</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="0-Utility\1-NameSpacing\Extensions\1.1-Logging.js" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>

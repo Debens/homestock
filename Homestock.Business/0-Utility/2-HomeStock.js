@@ -7,9 +7,6 @@
 
     var HomeStock = {
         "Import": function (nsString) {
-            if (!nsString)
-                throw messagePrefix + "Must provider a namesapce string to import a namespace";
-
             return nameSpace.Traverse(nsString);
         },
         "Config": function () { }
