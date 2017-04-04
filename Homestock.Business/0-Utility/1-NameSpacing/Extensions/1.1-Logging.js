@@ -37,7 +37,7 @@
     };
 
     function parentIsLogging(node) {
-        return !node.__node__.Parent || nodeIsLogging(node.__node__.Parent.Facade); // returns true if no parent as root node's parent is 'logging'
+        return !node.__node__.Parent || nodeIsLogging(node.__node__.Parent.Facade); // returns true if no parent as root node's parent is always 'logging'
     };
 
     function nodeIsLogging(node) {
