@@ -42,7 +42,7 @@ a.hs-button {
     a.hs-button:hover {
         border: 2px solid;
         border-color: var(--HS-Active);
-        border-radius: 6px;
+        border-radius: 5px;
         color: var(--HS-Active);
         opacity: .95;
         -webkit-transition: all .1s linear; /* Saf3.2+, Chrome */
