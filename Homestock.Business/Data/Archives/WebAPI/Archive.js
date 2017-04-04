@@ -49,6 +49,8 @@
                 if (!url)
                     return new HomeStock.Deferred().reject({ responseText: messagePrefix + "Failed Write, cannot to format URL" }).promise();
 
+                //TODO: Validate restrictions against URL
+
                 requests.push(nsUtil.WebRequestAssistant.Request({
                     url: url,
                     type: "POST",
@@ -72,6 +74,8 @@
                 var url = ns.UrlFormatter.Format({ url: self.Endpoint.url, fragments: self.Endpoint.endPointFragments, constraintData: restrictions });
                 if (!url)
                     return new HomeStock.Deferred().reject({ responseText: messagePrefix + "Failed Remove, cannot to format URL" }).promise();
+
+                //TODO: Validate restrictions against URL
 
                 requests.push(nsUtil.WebRequestAssistant.Request({
                     url: url,
