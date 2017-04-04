@@ -6,19 +6,19 @@
 
     var nsRoot = HomeStock.Import();
 
-    HomeStock.Log = function (log) {
+    HomeStock.log = function (log) {
         Write(log, "log");
     };
-    HomeStock.Info = function (info) {
+    HomeStock.info = function (info) {
         Write(info, "info");
     };
-    HomeStock.Debug = function (debug) {
+    HomeStock.debug = function (debug) {
         Write(debug, "debug");
     };
-    HomeStock.Warn = function (warning) {
+    HomeStock.warn = function (warning) {
         Write(warning, "warn");
     };
-    HomeStock.Error = function (error) {
+    HomeStock.error = function (error) {
         Write(error, "error");
     };
 

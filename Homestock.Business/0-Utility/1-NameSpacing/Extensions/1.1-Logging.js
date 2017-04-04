@@ -14,25 +14,26 @@
         node.Logging.Enable = function (enable) { _enabled = !!enable; };
         node.Logging.Enabled = function () { return (_enabled && parentIsLogging(node)); };
 
-        node.Log = function (log) {
-            if (node.Logging.Enabled())
-                console.log(log)
+        node.log = function (log) {
+            Write(log, "log");
         };
-        node.Info = function (info) {
-            if (node.Logging.Enabled())
-                console.info(info)
+        node.info = function (info) {
+            Write(info, "info");
         };
-        node.Debug = function (debug) {
-            if (node.Logging.Enabled())
-                console.debug(debug)
+        node.debug = function (debug) {
+            Write(debug, "debug");
         };
-        node.Warn = function (warning) {
-            if (node.Logging.Enabled())
-                console.warn(warning)
+        node.warn = function (warning) {
+            Write(warning, "warn");
         };
-        node.Error = function (error) {
+        node.error = function (error) {
+            Write(error, "error");
+        };
+
+        function Write(message, type) {
             if (node.Logging.Enabled())
-                console.error(error)
+                if (message && typeof message === typeof "string" && typeof console[type] === "function")
+                    console[type](message);
         };
     };
 

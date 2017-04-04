@@ -14,13 +14,13 @@
                 throw messagePrefix + "Cannot run sql statement of type '" + typeof sql + "'";
 
             var success = function () {
-                console.log(messagePrefix + "\n" + sql);
+                ns.log(messagePrefix + "\n" + sql);
                 executingSql.resolve();
             };
 
             var error = function (transaction, error) {
                 error.message = messagePrefix + "Failed to run query \n" + sql + "\n" + error.message;
-                console.error(error.message);
+                ns.error(error.message);
                 executingSql.reject(transaction, error);
             };
 

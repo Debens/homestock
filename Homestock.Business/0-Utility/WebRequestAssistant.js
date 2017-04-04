@@ -6,7 +6,7 @@
     var messagePrefix = nsString + ".WebRequestAssistant: ";
 
     if (!$) {
-        console.error(messagePrefix + "JQuery is required to make web requests. WebRequestAssistant shall not be initialised");
+        HomeStock.error(messagePrefix + "JQuery is required to make web requests. WebRequestAssistant shall not be initialised");
         return;
     }
        
