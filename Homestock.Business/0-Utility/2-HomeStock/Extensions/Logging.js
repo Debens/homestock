@@ -22,6 +22,10 @@
         Write(error, "error");
     };
 
+    HomeStock.Logging = {};
+    HomeStock.Logging.Disable = function () { nsRoot.Logging.Enabled(false); };
+    HomeStock.Logging.Enable = function () { nsRoot.Logging.Enabled(true); };
+
     function Write(message, type) {
         if (nsRoot.Logging.Enabled())
             if (message && typeof message === typeof "string" && typeof console[type] === "function")

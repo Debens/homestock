@@ -9,7 +9,7 @@
 
     HomeStock.Archives.Add = function (archive) {
         if (_archives.hasOwnProperty(archive.Name))
-            console.error(messagePrefix + "Duplicate archive ID '" + archive.Name + "', the duplicate shall not be included");
+            HomeStock.error(messagePrefix + "Duplicate archive ID '" + archive.Name + "', the duplicate shall not be included");
         _archives[archive.Name] = archive;
     };
 })();
