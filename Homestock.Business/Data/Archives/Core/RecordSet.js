@@ -12,14 +12,17 @@
 
         var _records = [];
         self.Records = function () { return _records; }
-
+        self.length = _records.length;
+        
         self.Add = function (records) {
             records = toArray(records);
             _records = _records.concat(records);
+            self.length = _records.length;
         };
         self.Remove = function (records) {
             records = toArray(records);
             // TODO : Remove 
+            self.length = _records.length;
         };
 
         self.Select = function (predicate) {

@@ -38,9 +38,50 @@
         };
 
         protectedData.Write = function (recordSet) {
+            var restrictions = params.restrictions || {};
+
+            var requests = [];
+            for (var index = 0; index < recordSet.length; index++) {
+                var data = recordSet.Records()[index];
+                if (!data)
+                    return new HomeStock.Deferred().reject({ responseText: messagePrefix + "Failed Write, missing data to write" }).promise();
+                var url = ns.UrlFormatter.Format({ url: self.Endpoint.url, fragments: self.Endpoint.endPointFragments, constraintData: restrictions });
+                if (!url)
+                    return new HomeStock.Deferred().reject({ responseText: messagePrefix + "Failed Write, cannot to format URL" }).promise();
+
+                requests.push(nsUtil.WebRequestAssistant.Request({
+                    url: url,
+                    type: "POST",
+                    data: data,
+                    success: params.success,
+                    error: params.error
+                }));
+            }
+
+            return $.when.apply($, requests);
         };
 
         protectedData.Remove = function (recordSet) {
+            var restrictions = params.restrictions || {};
+
+            var requests = [];
+            for (var index = 0; index < recordSet.length; index++) {
+                var data = recordSet.Records()[index];
+                if (!data)
+                    return new HomeStock.Deferred().reject({ responseText: messagePrefix + "Failed Remove, missing data to remove" }).promise();
+                var url = ns.UrlFormatter.Format({ url: self.Endpoint.url, fragments: self.Endpoint.endPointFragments, constraintData: restrictions });
+                if (!url)
+                    return new HomeStock.Deferred().reject({ responseText: messagePrefix + "Failed Remove, cannot to format URL" }).promise();
+
+                requests.push(nsUtil.WebRequestAssistant.Request({
+                    url: url,
+                    type: "DELETE",
+                    success: params.success,
+                    error: params.error
+                }));
+            }
+
+            return $.when.apply($, requests);
         };
 
         return self;
