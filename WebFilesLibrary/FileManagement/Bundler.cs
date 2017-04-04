@@ -14,7 +14,7 @@ namespace WebFilesLibrary.FileManagement
             if (!Directory.Exists(folderSrc))
                 throw new ArgumentException(string.Format("Cannot bundle files in Directory '{0}' as it does not exist", folderSrc));
 
-            IEnumerable<string> files = Directory.EnumerateFiles(folderSrc, filter, SearchOption.AllDirectories);
+            IEnumerable<string> files = Directory.EnumerateFiles(folderSrc, filter, SearchOption.AllDirectories).OrderBy(f => f);
 
             StringBuilder bundledFile = new StringBuilder();
             foreach(string file in files)
