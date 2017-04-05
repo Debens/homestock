@@ -32,6 +32,10 @@ a.hs-button {
     margin-bottom: 10px;
     opacity: .65;
     white-space: nowrap;
+    border: solid; /*Add border in now that is the same as the background color to avoid resize on hover*/
+    border-radius: 5px;
+    border-color: var(--HS--Background);
+
     -webkit-user-select: none; /* Chrome/Safari */
     -moz-user-select: none; /* Firefox */
     -ms-user-select: none; /* IE10+ */
@@ -42,13 +46,10 @@ a.hs-button {
 }
 
     a.hs-button:hover {
-        margin-top: -3px;
-        margin-bottom: -3px;
-        border: 3px solid;
         border-color: var(--dark-grey);
-        border-radius: 5px;
         color: var(--dark-grey);
         opacity: .95;
+
         -webkit-transition: all .1s linear; /* Saf3.2+, Chrome */
         -moz-transition: all .1s linear; /* FF3.7+ */
         -o-transition: all .1s linear; /* Opera 10.5 */
@@ -110,8 +111,8 @@ a.hs-button-delete {
     display: block;
     padding: 9px;
     border: 1px solid #DDDDDD;
-    margin-bottom: 30px;
     border-radius: 3px;
+    margin: 20px;
 }
 
     .hs-input-wrapper input,

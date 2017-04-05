@@ -9,6 +9,7 @@
     
     <Control:TextBox runat="server" ID="tbx" />
 
+    <Control:Button runat="server" Text="Default" ID="Button3" Type="Default"/>
     <Control:TextBox runat="server" ID="tbxLbl" Label="First Name" />
     
     <Control:TextBox runat="server" ID="tbxLblTag" Label="First Name" Tag="Enter Your First Name Here"/>

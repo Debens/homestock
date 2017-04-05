@@ -22,6 +22,15 @@ namespace HomeStock.Development.Library.Controls {
         protected global::HomeStockLibrary.Controls.TextBox tbx;
         
         /// <summary>
+        /// Button3 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::HomeStockLibrary.Controls.Button Button3;
+        
+        /// <summary>
         /// tbxLbl control.
         /// </summary>
         /// <remarks>
