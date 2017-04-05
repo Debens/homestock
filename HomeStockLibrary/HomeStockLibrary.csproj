@@ -57,6 +57,7 @@
     <Compile Include="Controls\Base\HomeStockControlBase.cs" />
     <Compile Include="Controls\Base\Button\IButton.cs" />
     <Compile Include="Controls\Button.cs" />
+    <Compile Include="Controls\TextBox.cs" />
     <Compile Include="Core\Base\IValidatable.cs" />
     <Compile Include="Core\HomeStockValidatble.cs" />
     <Compile Include="Data\Schemas\Column.cs" />

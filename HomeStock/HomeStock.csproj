@@ -86,6 +86,7 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Development\Library\Controls\TextBox.aspx" />
     <Content Include="Development\Library\Data\Archive.aspx" />
     <Content Include="packages.config" />
     <Content Include="ApplicationInsights.config">
@@ -151,6 +152,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="Development\Library\Controls\TextBox.aspx.cs">
+      <DependentUpon>TextBox.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Development\Library\Controls\TextBox.aspx.designer.cs">
+      <DependentUpon>TextBox.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Development\Library\Data\Archive.aspx.cs">
       <DependentUpon>Archive.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
