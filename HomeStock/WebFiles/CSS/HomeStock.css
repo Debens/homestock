@@ -17,15 +17,16 @@
 /*#region Button*/
 a.hs-button {
     position: relative;
-    padding: 1.4% 3.6% 1.4% 3.6%;
+    padding: 1.2% 2% 1.2% 2%;
     margin: 2px;
     cursor: pointer;
-    color: #FFF;
+    display: inline-block;
+    color: var(--light-grey);
     text-decoration: none;
     font-size: 100%;
     text-align: center;
     font-style: normal;
-    width: 20%;
+    min-width: 140px;
     border-width: 1px 1px 3px;
     margin-bottom: 10px;
     opacity: .65;
@@ -40,10 +41,10 @@ a.hs-button {
 }
 
     a.hs-button:hover {
-        border: 2px solid;
-        border-color: var(--HS-Active);
+        border: 3px solid;
+        border-color: var(--dark-grey);
         border-radius: 5px;
-        color: var(--HS-Active);
+        color: var(--dark-grey);
         opacity: .95;
         -webkit-transition: all .1s linear; /* Saf3.2+, Chrome */
         -moz-transition: all .1s linear; /* FF3.7+ */
@@ -114,7 +115,7 @@ div.hs-page-seporator {
 }
 
     div.hs-page-seporator > span {
-        border-radius: 25px;
+        border-radius: 15px;
         background: var(--grey);
         padding-left: 10px;
         padding-right: 10px;
@@ -162,6 +163,7 @@ p.hs-page-header-description {
 @media (max-width: 700px) {
     a.hs-button {
         padding: 10px 17px 10px 17px !important;
+        min-width: 70px !important;
     }
 
     div.hs-page-seporator {
@@ -172,6 +174,7 @@ p.hs-page-header-description {
 
 @media (min-width: 1400px) {
     a.hs-button {
-        padding: 20px 50px 20px 50px !important;
+        padding: 12px 30px 12px 30px !important;
+        min-width: 160px !important;
     }
 }
