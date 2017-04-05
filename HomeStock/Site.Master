@@ -34,7 +34,9 @@
                         </td>
                         <td style="background-color: #f4f7f8">
                             <div style="padding: 5%">
-                                <asp:ContentPlaceHolder runat="server" ID="MainViewContent" />
+                                <div style="max-width: 1000px; margin:auto;">
+                                    <asp:ContentPlaceHolder runat="server" ID="MainViewContent" />
+                                </div>
                             </div>
                         </td>
                     </tr>
