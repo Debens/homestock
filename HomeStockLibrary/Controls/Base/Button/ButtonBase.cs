@@ -30,10 +30,10 @@ namespace HomeStockLibrary.Controls.Base.Button
         {
             string baseButtonClass = "hs-button";
             
-            ButtonAttribute attribute = EnumHelper.GetAttributeOfType<ButtonAttribute>(type);
-            string backgroundClass = attribute.BackgroundColor;
+            Styling attribute = EnumHelper.GetAttributeOfType<Styling>(type);
+            string cssClass = attribute.ClassName;
 
-            return baseButtonClass + " " + backgroundClass;
+            return baseButtonClass + " " + cssClass;
         }
 
         public override void ValidateProperties()

@@ -8,13 +8,13 @@ namespace HomeStockLibrary.Controls.Base.Button
 {
     public enum ButtonType
     {
-        [ButtonAttribute(BackgroundColor = "hs-button-default")]
+        [Styling(ClassName = "button-default")]
         Default,
 
-        [ButtonAttribute(BackgroundColor = "hs-button-new")]
+        [Styling(ClassName = "hs-button-new")]
         New,
 
-        [ButtonAttribute(BackgroundColor = "hs-button-delete")]
+        [Styling(ClassName = "hs-button-delete")]
         Delete
     }
 }
