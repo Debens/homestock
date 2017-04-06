@@ -7,7 +7,7 @@
     var ALPHABET = '23456789abdegjkmnpqrvwxyz';
     var ID_LENGTH = 8;
 
-    ns.GUID = function (prefix) {
+    function GUID (prefix) {
         var guid = '';
         for (var i = 0; i < ID_LENGTH; i++) {
             guid += ALPHABET.charAt(Math.floor(Math.random() * ALPHABET.length));
@@ -15,7 +15,7 @@
         return prefix ? prefix.toString() + "-" + guid : guid;
     };
 
-    ns.UUID = function (prefix) { // Public Domain/MIT
+    function UUID (prefix) { // Public Domain/MIT
         var d = new Date().getTime();
         if (typeof performance !== 'undefined' && typeof performance.now === 'function') {
             d += performance.now(); //use high-precision timer if available
@@ -27,4 +27,7 @@
         });
         return prefix ? prefix.toString() + "-" + uuid : uuid;
     };
+
+    ns.Export("GUID", GUID);
+    ns.Export("UUID", UUID);
 })();

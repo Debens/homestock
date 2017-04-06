@@ -3,11 +3,11 @@
 
     var messagePrefix = "HomeStock: ";
 
-    var nameSpace = new window.ns.Tree();
+    var nameSpace = new Namespace();
 
     var HomeStock = {
         "Import": function (nsString) {
-            return nameSpace.Traverse(nsString);
+            return nameSpace.Import(nsString);
         },
         "Config": function () { }
     };

@@ -46,7 +46,8 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="0-Utility\1-NameSpacing\1-ObjectTree.js" />
+    <Content Include="0-Utility\1-NameSpacing\1-Namespace.js" />
+    <Content Include="0-Utility\0-Tree.js" />
     <Content Include="0-Utility\2-HomeStock\Extensions\Deferred.js" />
     <Content Include="0-Utility\2-HomeStock\Extensions\Database.js" />
     <Content Include="0-Utility\2-HomeStock\Extensions\Events.js" />
