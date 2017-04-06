@@ -50,7 +50,7 @@
   <ItemGroup>
     <Compile Include="Bundling\HomeStockBundleReference.cs" />
     <Compile Include="CompositeControls\PageHeader.cs" />
-    <Compile Include="Controls\Base\Styling.cs" />
+    <Compile Include="Controls\Base\Attributes\Styling.cs" />
     <Compile Include="Controls\Base\Button\ButtonBase.cs" />
     <Compile Include="Controls\Base\Button\ButtonType.cs" />
     <Compile Include="Controls\Core\FileInclusionType.cs" />
