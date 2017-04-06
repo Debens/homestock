@@ -94,8 +94,6 @@ a.hs-button-delete {
 
     a.hs-button-delete:hover {
         background-color: var(--HS-Red);
-        border-color: black;
-        color: black;
     }
 
     a.hs-button-delete:active {
