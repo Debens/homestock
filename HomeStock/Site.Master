@@ -1,9 +1,4 @@
 ﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="HomeStock.Site" %>
-
-<%@ Register Assembly="HomeStockLibrary" Namespace="HomeStockLibrary.Controls" TagPrefix="Control" %>
-<%@ Register Assembly="HomeStockLibrary" Namespace="HomeStockLibrary.Data.Schemas" TagPrefix="Schema" %>
-<%@ Register Assembly="HomeStockLibrary" Namespace="HomeStockLibrary.Data.Archives" TagPrefix="Archive" %>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -16,25 +11,28 @@
     <link rel="stylesheet" href="/WebFiles/CSS/HomeStock.css">
 </head>
 <body>
+    <%@ Register Assembly="HomeStockLibrary" Namespace="HomeStockLibrary.Controls" TagPrefix="Control" %>
+    <%@ Register Assembly="HomeStockLibrary" Namespace="HomeStockLibrary.Data.Schemas" TagPrefix="Schema" %>
+    <%@ Register Assembly="HomeStockLibrary" Namespace="HomeStockLibrary.Data.Archives" TagPrefix="Archive" %>
+
     <div id="o-wrapper" class="o-wrapper">
         <main class="o-content" style="height: 100%;">
             <div class="o-container">
                 <table>
                     <tr>
-                        <td style="table-layout: fixed; width: 50px; max-width:50px">
+                        <td id="push-left" style="table-layout: fixed; width: 50px; max-width:50px; cursor: pointer">
                             <div class="side-ribbon">
-                                <div id="push-left" class="bars-container">
+                                <div class="bars-container">
                                     <div class="bar1"></div>
                                     <div class="bar2"></div>
                                     <div class="bar3"></div>
                                 </div>
-                                <h1 class="side-title">The Test Container</h1>
-                                <h1 class="side-plus">+</h1>
+                                <h1 class="side-title unselectable">Hello Sir.</h1>
                             </div>
                         </td>
                         <td style="background-color: #f4f7f8">
                             <div style="padding: 5%">
-                                <div style="max-width: 1000px; margin:auto;">
+                                <div style="max-width: 1000px; margin:auto; text-align: center;">
                                     <asp:ContentPlaceHolder runat="server" ID="MainViewContent" />
                                 </div>
                             </div>
@@ -44,6 +42,7 @@
             </div>
         </main>
     </div>
+
     <nav id="c-menu" class="c-menu c-menu">
         <button class="c-menu__close">&#8617 HOME STOCK</button>
         <ul class="c-menu__items">
@@ -58,6 +57,7 @@
             <li class="c-menu__item">Test Home</li>
         </ul>
     </nav>
+
     <div id="c-mask" class="c-mask"></div>
     <script src="/WebFiles/JavaScript/Unmanaged/dist/menu.js"></script>
     <script src="/WebFiles/JavaScript/Unmanaged/Lib/jquery-3.1.1.js"></script>

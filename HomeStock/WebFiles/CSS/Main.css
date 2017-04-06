@@ -67,19 +67,13 @@ h1.side-title {
 	margin-left: 4px;
 }
 
-h1.side-plus {
-    color: #666666;
-    font-size: 4em;
-    margin-left: 10px;
-    position: fixed;
-    bottom: 1px;
-    transition: text-shadow .2s ease-in-out;
-}
-
-h1.side-plus:hover{
-    cursor: pointer;
-    transition: text-shadow .2s ease-in-out;
-    text-shadow: 1px 1px 2px; #4d4d4d;
+.unselectable {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 
 .side-ribbon {
