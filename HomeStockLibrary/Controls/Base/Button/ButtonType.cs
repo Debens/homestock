@@ -4,7 +4,7 @@ namespace HomeStockLibrary.Controls.Base.Button
 {
     public enum ButtonType
     {
-        [Styling(ClassName = "button-default")]
+        [Styling(ClassName = "hs-button-default")]
         Default,
 
         [Styling(ClassName = "hs-button-new")]

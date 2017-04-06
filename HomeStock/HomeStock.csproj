@@ -147,7 +147,7 @@
     <Content Include="WebFiles\sass\_objects.layout.scss" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Development\Library\Controls\Buttons.aspx" />
+    <Content Include="Development\Library\Controls\Button.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -174,12 +174,12 @@
     <Compile Include="Site.Master.designer.cs">
       <DependentUpon>Site.Master</DependentUpon>
     </Compile>
-    <Compile Include="Development\Library\Controls\Buttons.aspx.cs">
-      <DependentUpon>Buttons.aspx</DependentUpon>
+    <Compile Include="Development\Library\Controls\Button.aspx.cs">
+      <DependentUpon>Button.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Development\Library\Controls\Buttons.aspx.designer.cs">
-      <DependentUpon>Buttons.aspx</DependentUpon>
+    <Compile Include="Development\Library\Controls\Button.aspx.designer.cs">
+      <DependentUpon>Button.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
