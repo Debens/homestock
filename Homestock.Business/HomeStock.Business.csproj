@@ -114,7 +114,10 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="0-Utility\1-NameSpacing\Extensions\1.1-Logging.js" />
+    <Content Include="0-Utility\1-NameSpacing\ObjectExtensions\1.1-Logging.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="0-Utility\1-NameSpacing\ObjectExtensions\1.1-Validation.js" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>

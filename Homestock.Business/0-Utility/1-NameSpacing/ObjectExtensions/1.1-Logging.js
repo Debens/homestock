@@ -1,12 +1,10 @@
 ﻿; (function () {
     "use strict";
 
-    var messagePrefix = "NameSpace.Logging: ";
-
     window.ns = window.ns || {};
-    window.ns.Extensions = window.ns.Extensions || {};
+    window.ns.ObjExtensions = window.ns.ObjExtensions || {};
 
-    window.ns.Extensions.Logging = function (prototype, ns) {
+    window.ns.ObjExtensions.Logging = function (prototype, ns) {
         if (!prototype)
             return;
 
@@ -23,11 +21,11 @@
             Write(warning, "warn");
         };
         prototype.error = function (error) {
-            Write(error, "error");
+            Write(error, "error", true);
         };
 
-        function Write(message, type) {
-            if (ns.Logging.Enabled())
+        function Write(message, type, force) {
+            if (force || ns.__node__.Logging.Enabled())
                 if (message && typeof message === typeof "string" && typeof console[type] === "function")
                     console[type](message);
         };
