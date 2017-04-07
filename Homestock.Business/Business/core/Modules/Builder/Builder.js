@@ -1,29 +1,19 @@
 ﻿; (function () {
     "use strict";
 
-    var requiredParams = [
-        "worker"
-    ];
-
     var nsString = "Business.Core.Modules";
-    var ns = HomeStock.Import(nsString);
     var messagePrefix = nsString + ".Builder: ";
 
-    ns.Builder = Builder;
+    var ns = HomeStock.Import(nsString);
+    ns.Export("Builder", Builder);
 
-    var Builder = function (params) {
-        var validation = ObjectValidator.Validate(params, requiredParams);
-        if (!validation.isValid)
-            throw messagePrefix + "Failed construction, missing parameter(s) " + validation.missingProperties.join(", ");
+    function Builder (params) {
+        this.validate(params, "worker");
         var self = this;
         
-        var worker = params.worker;
+        var _worker = params.worker;
         
-        self["ContructStore"] = function () { throw messagePrefix + "ContructStore Method Not Implemented"; };
+        function buildStore() { throw messagePrefix + "ContructStore Method Not Implemented"; };
 
-    };
-
-    function applyValidation(dataStore) {
-        throw messagePrefix + "applyValidation method not impemented";
     };
 })();

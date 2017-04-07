@@ -4,6 +4,9 @@
     var nsString = "Util";
     var ns = HomeStock.Import(nsString);
 
+    ns.Export("GUID", GUID);
+    ns.Export("UUID", UUID);
+
     var ALPHABET = '23456789abdegjkmnpqrvwxyz';
     var ID_LENGTH = 8;
 
@@ -27,7 +30,4 @@
         });
         return prefix ? prefix.toString() + "-" + uuid : uuid;
     };
-
-    ns.Export("GUID", GUID);
-    ns.Export("UUID", UUID);
 })();
