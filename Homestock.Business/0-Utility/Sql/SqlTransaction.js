@@ -35,6 +35,8 @@
     ns.SqlTransaction = function (params) {
         var self = this;
 
+        var sqlRunner = new ns.SqlRunner();
+
         var _operation = "";
         var _table = "";
         var _columns = [];
@@ -47,9 +49,9 @@
             var sql = self.toString();
             self.Clear();
             if (!sql)
-                ns.warn(messagePrefix + "Attempting to run empty SQL resulting no effect");
+                this.warn(messagePrefix + "Attempting to run empty SQL resulting no effect");
 
-            return sql ? ns.SqlRunner.Run(sql) : new HomeStock.Deferred().resolve().promise();
+            return sql ? sqlRunner.Run(sql) : new HomeStock.Deferred().resolve().promise();
         };
 
         self.Clear = function () {

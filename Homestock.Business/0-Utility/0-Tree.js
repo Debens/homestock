@@ -8,12 +8,13 @@
 
     function Tree(params) {
         var self = this;
+        params = params || {};
 
-        var root = new Node({ name: "root", parent: null });
+        var root = new Node({ name: "root", parent: null, extend: params.nodeExtension });
 
         self.Traverse = function (objLoc) {
             if (!objLoc)
-                return nsRoot.Facade;
+                return root.Facade;
 
             var locationComponents = objLoc.split(".");
             var compententLength = locationComponents.length;
@@ -28,6 +29,9 @@
 
     function Node(params) {
         var self = this;
+        params = params || {};
+
+        var _extend = params.extend;
 
         self.Name = params.name;
         self.Parent = params.parent;
@@ -38,15 +42,18 @@
         self.ScopeTo = function (name) {
             var matchingChildren = $.grep(self.Children, function (node) { return node.Name == name });
             if (matchingChildren.length > 1)
-                throw messagePrefix + "Node '" + self.Name + "' has multiple children called '" + name + "'";
+                throw messagePrefix + "Node '" + self.Name + "' has multiple children named '" + name + "'";
 
             if (matchingChildren.length == 1)
                 return matchingChildren[0];
             else {
-                var newChild = new Node({ name: name, parent: self });
+                var newChild = new Node({ name: name, parent: self, extend: _extend });
                 self.Children.push(newChild);
                 return newChild;
             }
         };
+
+        if (typeof _extend === "function")
+            _extend(self.Facade);
     };
 })();

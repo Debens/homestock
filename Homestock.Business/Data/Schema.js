@@ -4,7 +4,7 @@
     var nsString = "Data";
     var ns = HomeStock.Import(nsString);
 
-    ns.Schema = Schema;
+    ns.Export("Schema", Schema);
    
     var messagePrefix = nsString + ".Schema: ";
 

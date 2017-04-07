@@ -8,7 +8,7 @@
     var nsCoreString = "Data.Archives.Core";
     var nsCore = HomeStock.Import(nsCoreString);
 
-    ns.Archive = Archive;
+    ns.Export("Archive", Archive);
 
     var requiredParams = [
         "tableName"

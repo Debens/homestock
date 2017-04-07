@@ -3,7 +3,8 @@
 
     var nsString = "Data.Archives.WebAPI";
     var ns = HomeStock.Import(nsString);
-    
+
+    ns.Export("UrlFormatter", UrlFormatter);
     var messagePrefix = nsString + ".UrlFormatter: ";
 
     var requiredComposeParams = [
@@ -12,8 +13,10 @@
         "constraintData"
     ];
 
-    ns.UrlFormatter = {
-        Format : function (params) {
+    function UrlFormatter() {
+        var self = this;
+
+        self.Format = function (params) {
             var validation = ObjectValidator.Validate(params, requiredComposeParams);
             if (!validation.isValid)
                 throw messagePrefix + "Failed construction, missing parameter(s) " + validation.missingProperties.join(", ");
@@ -41,8 +44,9 @@
             }
 
             return formattedUrl;
-        },
-        Decompose : function (url) {
+        }
+
+        self.Decompose = function (url) {
             if (!url)
                 return [];
             if (typeof url !== typeof "A String")

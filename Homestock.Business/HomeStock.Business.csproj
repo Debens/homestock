@@ -64,9 +64,6 @@
     <Content Include="Data\Archives\Core\RecordSet.js" />
     <Content Include="Data\Archives\WebAPI\UrlFormatter.js" />
     <Content Include="Data\Schema.js" />
-    <Content Include="Data\Archives\WebAPI\Operators\Reader.js" />
-    <Content Include="Data\Archives\WebAPI\Operators\Remover.js" />
-    <Content Include="Data\Archives\WebAPI\Operators\Writer.js" />
     <Content Include="Data\Archives\Core\Archive.js" />
     <Content Include="Data\Archives\WebSQL\Operators\Reader.js" />
     <Content Include="Data\Archives\WebSQL\Operators\Remover.js" />

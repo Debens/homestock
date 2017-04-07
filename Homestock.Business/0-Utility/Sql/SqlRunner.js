@@ -5,8 +5,10 @@
     var ns = HomeStock.Import(nsString);
     var messagePrefix = nsString + ".SQLRunner: ";
 
-    ns.SqlRunner = {
-        "Run": function (sql) {
+    ns.Export("SqlRunner", SqlRunner);
+
+    function SqlRunner () {
+        Run = function (sql) {
             var executingSql = new HomeStock.Deferred();
             if (!sql)
                 return executingSql.resolve().promise();
@@ -14,13 +16,13 @@
                 throw messagePrefix + "Cannot run sql statement of type '" + typeof sql + "'";
 
             var success = function () {
-                ns.log(messagePrefix + "\n" + sql);
+                this.log(messagePrefix + "\n" + sql);
                 executingSql.resolve();
             };
 
             var error = function (transaction, error) {
                 error.message = messagePrefix + "Failed to run query \n" + sql + "\n" + error.message;
-                ns.error(error.message);
+                this.error(error.message);
                 executingSql.reject(transaction, error);
             };
 

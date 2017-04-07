@@ -3,13 +3,10 @@
 
     var nsString = "Util";
     var ns = HomeStock.Import(nsString);
-    var messagePrefix = nsString + ".WebRequestAssistant: ";
+    var messagePrefix = nsString + ".AjaxAssistant: ";
 
-    if (!$) {
-        HomeStock.error(messagePrefix + "JQuery is required to make web requests. WebRequestAssistant shall not be initialised");
-        return;
-    }
-       
+    ns.Export("AjaxAssistant", AjaxAssistant);
+    
     var constants = { 
         requiredRequestParams: ["url", "type"],
         requestParamDefaults: {
@@ -20,11 +17,14 @@
         },
         requestTypes: ["GET", "HEAD", "POST", "DELETE", "UPDATE"]
     }
+    
+    function AjaxAssistant () {
+        var self = this;
 
-    var _lastRequestedUrl = "";
+        var _lastRequestedUrl = "";
+        self.LastRequestedUrl = function () { return _lastRequestedUrl; }
 
-    ns.WebRequestAssistant = {
-        "Request": function (params) {
+        self.Request = function (params) {
             var validation = ObjectValidator.Validate(params, constants.requiredRequestParams);
             if (!validation.isValid)
                 throw messagePrefix + "Request is missing required parameters: " + validation.missingProperties.join(", ");
@@ -59,7 +59,6 @@
             });
 
             return request.promise();
-        },
-        "LastRequestedUrl": function () { return _lastRequestedUrl; }
+        }
     };
 })();

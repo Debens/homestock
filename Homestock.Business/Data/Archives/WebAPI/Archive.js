@@ -6,7 +6,7 @@
     var nsOperatorString = "Data.Archives.WebAPI.Operators", nsOperator = HomeStock.Import(nsOperatorString);
     var nsUtilString = "Util", nsUtil = HomeStock.Import(nsUtilString);
     
-    ns.Archive = Archive;
+    ns.Export("Archive", Archive);
     var messagePrefix = nsString + ".Archive: ";
 
     var requiredParams = [
@@ -23,13 +23,15 @@
 
         self.Endpoint = params.endPoint;
 
+        var urlFormatter = new ns.UrlFormatter();
+
         protectedData.Read = function (params) {
             var restrictions = params.restrictions || {};
-            var url = ns.UrlFormatter.Format({ url: self.Endpoint.url, fragments: self.Endpoint.endPointFragments, constraintData: restrictions });
+            var url = urlFormatter.Format({ url: self.Endpoint.url, fragments: self.Endpoint.endPointFragments, constraintData: restrictions });
             if (!url)
                 return new HomeStock.Deferred().resolve([]).promise();
 
-            return nsUtil.WebRequestAssistant.Request({
+            return nsUtil.AjaxAssistant.Request({
                 url: url,
                 type: "GET",
                 success: params.success,
@@ -45,13 +47,13 @@
                 var data = recordSet.Records()[index];
                 if (!data)
                     return new HomeStock.Deferred().reject({ responseText: messagePrefix + "Failed Write, missing data to write" }).promise();
-                var url = ns.UrlFormatter.Format({ url: self.Endpoint.url, fragments: self.Endpoint.endPointFragments, constraintData: restrictions });
+                var url = urlFormatter.Format({ url: self.Endpoint.url, fragments: self.Endpoint.endPointFragments, constraintData: restrictions });
                 if (!url)
                     return new HomeStock.Deferred().reject({ responseText: messagePrefix + "Failed Write, cannot to format URL" }).promise();
 
                 //TODO: Validate restrictions against URL
 
-                requests.push(nsUtil.WebRequestAssistant.Request({
+                requests.push(nsUtil.AjaxAssistant.Request({
                     url: url,
                     type: "POST",
                     data: data,
@@ -71,13 +73,13 @@
                 var data = recordSet.Records()[index];
                 if (!data)
                     return new HomeStock.Deferred().reject({ responseText: messagePrefix + "Failed Remove, missing data to remove" }).promise();
-                var url = ns.UrlFormatter.Format({ url: self.Endpoint.url, fragments: self.Endpoint.endPointFragments, constraintData: restrictions });
+                var url = urlFormatter.Format({ url: self.Endpoint.url, fragments: self.Endpoint.endPointFragments, constraintData: restrictions });
                 if (!url)
                     return new HomeStock.Deferred().reject({ responseText: messagePrefix + "Failed Remove, cannot to format URL" }).promise();
 
                 //TODO: Validate restrictions against URL
 
-                requests.push(nsUtil.WebRequestAssistant.Request({
+                requests.push(nsUtil.AjaxAssistant.Request({
                     url: url,
                     type: "DELETE",
                     success: params.success,

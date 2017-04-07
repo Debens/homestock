@@ -5,7 +5,7 @@
     var ns = HomeStock.Import(nsString);
     var messagePrefix = nsString + ".RecordSet: ";
 
-    ns.RecordSet = RecordSet;
+    ns.Export("RecordSet", RecordSet);
 
     function RecordSet(records) {
         var self = this;

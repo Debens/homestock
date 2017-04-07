@@ -2,15 +2,19 @@
     "use strict";
 
     var messagePrefix = "HomeStock: ";
+    
+    function HomeStock () {
+        var self = this;
 
-    var nameSpace = new Namespace();
+        var nameSpace = new Namespace();
 
-    var HomeStock = {
-        "Import": function (nsString) {
+        self.Import = function (nsString) {
             return nameSpace.Import(nsString);
-        },
-        "Config": function () { }
+        }
+
+        self.Config = function () { };
     };
 
-    window.HomeStock = HomeStock;
+    window.HomeStock = new HomeStock();
+    window.HomeStock.Import().Export("HomeStock", HomeStock);
 })();
