@@ -21,7 +21,7 @@
             if (!validation.isValid)
                 throw messagePrefix + "Failed construction, missing parameter(s) " + validation.missingProperties.join(", ");
 
-            var urlSegments = ns.UrlFormatter.Decompose(params.url);
+            var urlSegments = self.Decompose(params.url);
             var fragments = params.fragments;
             var constraintData = params.constraintData || {};
 

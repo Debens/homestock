@@ -11,12 +11,13 @@
     
     function Archive(params, protectedData) {
         this.validate(params, "endPoint");
-        var self = new nsCore.Archive(params, protectedData);
         protectedData = protectedData || {};
+        var self = new nsCore.Archive(params, protectedData);
 
         self.Endpoint = params.endPoint;
 
-        var urlFormatter = new ns.UrlFormatter();
+        var ajaxAssistant = params.ajaxAssistant || new nsUtil.AjaxAssistant();
+        var urlFormatter = params.urlFormatter || new ns.UrlFormatter();
 
         protectedData.Read = function (params) {
             var restrictions = params.restrictions || {};
@@ -24,7 +25,7 @@
             if (!url)
                 return new HomeStock.Deferred().resolve([]).promise();
 
-            return nsUtil.AjaxAssistant.Request({
+            return ajaxAssistant.Request({
                 url: url,
                 type: "GET",
                 success: params.success,
@@ -46,7 +47,7 @@
 
                 //TODO: Validate restrictions against URL
 
-                requests.push(nsUtil.AjaxAssistant.Request({
+                requests.push(ajaxAssistant.Request({
                     url: url,
                     type: "POST",
                     data: data,
@@ -72,7 +73,7 @@
 
                 //TODO: Validate restrictions against URL
 
-                requests.push(nsUtil.AjaxAssistant.Request({
+                requests.push(ajaxAssistant.Request({
                     url: url,
                     type: "DELETE",
                     success: params.success,
