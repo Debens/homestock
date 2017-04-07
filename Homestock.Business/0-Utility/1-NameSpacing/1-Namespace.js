@@ -23,17 +23,20 @@
         node.Logging.Enable = function (enable) { _loggingEnabled = (enable != false); };
         node.Logging.Enabled = function () { return ( _loggingEnabled && parentIsLogging(node)); };
 
-        self.Export = function (sig, constructor) {
-            if (!sig)
+        self.Export = function (signature, obj) {
+            if (!obj)
+                return null;
+            if (!signature)
                 throw messagePrefix + "Signature was not provided for namespace export";
-            if (!constructor || typeof constructor !== "function")
-                throw messagePrefix + "Constructor is not valid function";
 
-            self[sig] = constructor;
-            constructor.prototype._fullPath = node.Path + "." + sig;
+            self[signature] = obj;
 
-            for (var index = 0; index < Object.keys(ns.ObjExtensions).length; index++) {
-                ns.ObjExtensions[Object.keys(ns.ObjExtensions)[index]](constructor.prototype, self);
+            if (typeof obj === "function") {
+                constructor.prototype._fullPath = node.Path + "." + signature;
+
+                for (var index = 0; index < Object.keys(ns.ObjExtensions).length; index++) {
+                    ns.ObjExtensions[Object.keys(ns.ObjExtensions)[index]](obj.prototype, self);
+                }
             }
         }
 
