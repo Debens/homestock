@@ -16,12 +16,12 @@
     };
 
     function extendNode(node) {
-        var self = node;
+        var self = node.Facade;
 
         var _loggingEnabled = true;
-        self.Logging = {};
-        self.Logging.Enable = function (enable) { _loggingEnabled = (enable != false); };
-        self.Logging.Enabled = function () { return (_loggingEnabled && parentIsLogging(self)); };
+        node.Logging = {};
+        node.Logging.Enable = function (enable) { _loggingEnabled = (enable != false); };
+        node.Logging.Enabled = function () { return ( _loggingEnabled && parentIsLogging(node)); };
 
         self.Export = function (sig, constructor) {
             if (!sig)
@@ -30,9 +30,10 @@
                 throw messagePrefix + "Constructor is not valid function";
 
             self[sig] = constructor;
+            constructor.prototype._fullPath = node.Path + "." + sig;
 
-            for (var index = 0; index < Object.keys(ns.Extensions).length; index++) {
-                ns.Extensions[Object.keys(ns.Extensions)[index]](constructor.prototype, self);
+            for (var index = 0; index < Object.keys(ns.ObjExtensions).length; index++) {
+                ns.ObjExtensions[Object.keys(ns.ObjExtensions)[index]](constructor.prototype, self);
             }
         }
 
@@ -40,7 +41,7 @@
     };
 
     function parentIsLogging(node) {
-        return !node.__node__.Parent || nodeIsLogging(node.__node__.Parent.Facade); // returns true if no parent as root node's parent is always 'logging'
+        return !node.Parent || nodeIsLogging(node.Parent); // returns true if no parent as root node's parent is always 'logging'
     };
 
     function nodeIsLogging(node) {

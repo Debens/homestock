@@ -12,17 +12,18 @@
 
         var root = new Node({ name: "root", parent: null, extend: params.nodeExtension });
 
-        self.Traverse = function (objLoc) {
-            if (!objLoc)
+        self.Traverse = function (path) {
+            if (!path)
                 return root.Facade;
 
-            var locationComponents = objLoc.split(".");
+            var locationComponents = path.split(".");
             var compententLength = locationComponents.length;
 
             var currentNode = root;
             for (var index = 0; index < compententLength; index++)
                 currentNode = currentNode.ScopeTo(locationComponents.shift());
 
+            currentNode.Path = path;
             return currentNode.Facade;
         };
     };
@@ -54,6 +55,6 @@
         };
 
         if (typeof _extend === "function")
-            _extend(self.Facade);
+            _extend(self);
     };
 })();

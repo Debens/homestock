@@ -150,21 +150,14 @@
 
         function buildStatement() {
             var sql = "";
-
-            if(_operation)
-                sql += _operation + " ";
-            if(_table.name)
-                sql += _table.name + " ";
-            if (_table.alias && _table.name !== table.alias)
-                sql += "\"" + _table.alias + "\" "
-
-            if(_columns.length)
-                sql += "( " + _columns.join(", ") + " ) ";
+            sql += _operation ? _operation + " " : "";
+            sql += _table.name ? _table.name + " " : "";
+            sql += (_table.alias && _table.name !== table.alias) ? "\"" + _table.alias + "\" " : "";
+            sql += _columns.length ? "( " + _columns.join(", ") + " ) " : "";
 
             //TODO: Joins
-
-            if(_constraints.length)
-                sql += "\n" + _constraints.join("\n");
+            
+            sql += _constraints.length ? "\n" + _constraints.join("\n") : "";
 
             return sql.trim();
         };
