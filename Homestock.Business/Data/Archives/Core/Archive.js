@@ -7,16 +7,8 @@
 
     ns.Export("Archive", Archive);
 
-    var requiredParams = [
-        "id",
-        "schemaId"
-    ];
-
     function Archive(params, protectedData) {
-        params = params || {};
-        var validation = ObjectValidator.Validate(params, requiredParams);
-        if (!validation.isValid)
-            throw messagePrefix + "Failed construction, missing parameter(s) " + validation.missingProperties.join(", ") + ", for archive '" + params.id + "'";
+        this.validate(params, "id", "schemaId");
         var self = this;
         
         protectedData = protectedData || {};

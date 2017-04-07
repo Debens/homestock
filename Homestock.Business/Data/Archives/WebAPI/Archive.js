@@ -8,18 +8,11 @@
     
     ns.Export("Archive", Archive);
     var messagePrefix = nsString + ".Archive: ";
-
-    var requiredParams = [
-        "endPoint"
-    ];
     
     function Archive(params, protectedData) {
-        params = params || {};
-        protectedData = protectedData || {};
-        var validation = ObjectValidator.Validate(params, requiredParams);
-        if (!validation.isValid)
-            throw messagePrefix + "Failed construction, missing parameter(s) " + validation.missingProperties.join(", ") + ", for archive '" + params.id + "'";
+        this.validate(params, "endPoint");
         var self = new nsCore.Archive(params, protectedData);
+        protectedData = protectedData || {};
 
         self.Endpoint = params.endPoint;
 

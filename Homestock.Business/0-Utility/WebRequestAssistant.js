@@ -25,19 +25,17 @@
         self.LastRequestedUrl = function () { return _lastRequestedUrl; }
 
         self.Request = function (params) {
-            var validation = ObjectValidator.Validate(params, constants.requiredRequestParams);
-            if (!validation.isValid)
-                throw messagePrefix + "Request is missing required parameters: " + validation.missingProperties.join(", ");
+            this.validate(params, constants.requiredRequestParams);
             if (constants.requestTypes.indexOf(params.type) < 0)
                 throw messagePrefix + "Request parameter type, '" + params.type + "', does not match one of the following valid types: " + constants.requestTypes.join(", ");
 
             var request = new HomeStock.Deferred();
             params = $.extend({}, constants.requestParamDefaults, params, true);
 
-            if (!ObjectValidator.IsFunction(params.success))
-                throw messagePrefix + "Success function is not of type 'function'";
-            if (!ObjectValidator.IsFunction(params.error))
-                throw messagePrefix + "Error function is not of type 'function'";
+            if (!this.validate.isFunction(params.success))
+                throw messagePrefix + "Success function is not a valid function";
+            if (!this.validate.isFunction(params.error))
+                throw messagePrefix + "Error function is not a valid function";
 
             var successWrapper = function (response) {
                 params.success(response);

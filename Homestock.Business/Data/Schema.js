@@ -3,20 +3,12 @@
 
     var nsString = "Data";
     var ns = HomeStock.Import(nsString);
+    var messagePrefix = nsString + ".Schema: ";
 
     ns.Export("Schema", Schema);
    
-    var messagePrefix = nsString + ".Schema: ";
-
-    var requiredParams = [
-        "id",
-        "entities"
-    ];
-
     function Schema (params) {
-        var validation = ObjectValidator.Validate(params, requiredParams);
-        if (!validation.isValid)
-            throw messagePrefix + "Failed construction, missing parameter(s) " + validation.missingProperties.join(", ");
+        this.validate(params, "id", "entities");
         var self = this;
 
 
