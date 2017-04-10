@@ -17,6 +17,8 @@
         </EndPoint>
     </Archive:WebAPI>
 
+    <Archive:WebSQL runat="server" ID="sqlHomeStock" SchemaID="homeStockSchema" />
+
     <Schema:Schema runat="server" ID="homeStockSchema">
         <Entities>
             <Schema:Entity Name="Owner" IdentityPrefix="OWN" IdentityLength="12">

@@ -22,6 +22,15 @@ namespace HomeStock.Development.Library.Data {
         protected global::HomeStockLibrary.Data.Archives.WebAPI apiHomeStock;
         
         /// <summary>
+        /// sqlHomeStock control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::HomeStockLibrary.Data.Archives.WebSQL sqlHomeStock;
+        
+        /// <summary>
         /// homeStockSchema control.
         /// </summary>
         /// <remarks>
