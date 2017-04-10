@@ -6,31 +6,36 @@
     ns.Export("TableBuilder", TableBuilder);
     var messagePrefix = nsString + ".TableBuilder: ";
 
-    function TableBuilder (params) {
-        this.validate(params, "schemaId");
+    function TableBuilder() {
         var self = this;
-
-        var schemaId = params.schemaId;
-        var schema = function () { return HomeStock.Schemas[schemaId]; };
         
-        self.Build = function () {
-            var tableNames = Object.keys(schema().Entities);
+        self.Build = function (schema) {
+            this.validate(schema, "Entities");
+            var entities = Object.keys(schema.Entities);
 
-            for (var index = 0; index < tableNames.length; index++) {
-                var tableName = tableNames[index];
-                var columnNames = Object.keys(schema().Entities[tableName].Columns);
-                buildTable(tableName, columnNames);
-            }
+            for (var index = 0; index < entities.length; index++) 
+                self.BuildTable(schema.Entities[entities[index]]);
         };
 
-        function buildTable(tableName, columns) {
-            if (!tableName)
-                return;
-            this.validate.isArray(columns)
+        self.BuildTable = function (entity) {
+            this.validate(entity, "columns");
+            var tableName = entity.name;
+            var columns = buildColumns(entity.columns);
 
             var transaction = new ns.Transaction();
-            //TODO: Set the ID column if there is one.
             transaction.CreateTable(tableName, columns).Uniquely().Run();
+        };
+
+        function buildColumns(columns) {
+            var sqlColumns = [];
+            for (var index = 0; index < Object.keys(columns).length; index++) {
+                var column = columns[Object.keys(columns)[index]];
+                var sqlColumn = column.name;
+                if (column.isIdentity)
+                    sqlColumn += " " + ns.Keywords.primaryKey;
+                sqlColumns.push(sqlColumn);
+            }
+            return sqlColumns;
         };
     };
 })();

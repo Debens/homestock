@@ -22,14 +22,14 @@
         var entities = {};
         for (var eIndex = 0; eIndex < entityArray.length; eIndex++) {
             var entityObj = entityArray[eIndex];
-            var entity = { Columns: {}, Name: entityObj.name, Id: { Prefix: entityObj.identityPrefix, Length: entityObj.identityLength } };
+            var entity = { columns: {}, name: entityObj.name, Id: { Prefix: entityObj.identityPrefix, Length: entityObj.identityLength } };
 
             for (var cIndex = 0; cIndex < entityObj.columns.length; cIndex++) {
                 var columnObj = entityObj.columns[cIndex];
-                entity.Columns[columnObj.name] = { Name: columnObj.name, isIdentity: (columnObj.identityColumn == true)  };
+                entity.columns[columnObj.name] = { name: columnObj.name, isIdentity: (columnObj.identityColumn == true)  };
             }
 
-            entities[entity.Name] = entity;
+            entities[entity.name] = entity;
         }
         return entities;
     };

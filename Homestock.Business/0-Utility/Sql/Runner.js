@@ -19,13 +19,13 @@
 
             var self = this; // Needed as object scope is lost in success/error functions
             var success = function () {
-                self.log(messagePrefix + "\n" + sql);
+                self.info(messagePrefix + "\n" + sql);
                 executingSql.resolve();
             };
 
             var error = function (transaction, error) {
-                error.message = messagePrefix + "Failed to run query \n" + sql + "\n" + error.message;
-                self.error(error.message);
+                var errorMessage = messagePrefix + "Failed to run query \n" + sql + "\n" + error.message;
+                self.error(errorMessage);
                 executingSql.reject(transaction, error);
             };
 

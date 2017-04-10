@@ -27,6 +27,7 @@
         values: "VALUES",
         if: "IF",
         not: "NOT",
-        exists: "EXISTS"
+        exists: "EXISTS",
+        primaryKey: "PRIMARY KEY"
     });
 })();

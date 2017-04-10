@@ -9,7 +9,6 @@
     var messagePrefix = nsString + ".Archive: ";
 
     function Archive(params) {
-        this.validate(params, "tableName");
         var self = new nsCore.Archive(params);
 
         initTables(self.Schema());
