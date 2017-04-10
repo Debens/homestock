@@ -8,12 +8,13 @@
     var messagePrefix = nsString + ": ";
 
     function Worker(params) {
-        this.validate(params, "id", "schemaId");
+        this.validate(params, "id", "archiveId");
         var self = this;
 
-        params.modules = this.validate.isArray(params.module) ? params.module : [];
+        var modules = this.validate.isArray(params.module) ? params.module : [];
 
         self.name = params.id;
+        self.archive = HomeStock.Archives[params.archiveId];
         self.store = ko.observableArray([]);
 
         for (var index = 0; index < modules.length; index++) {
