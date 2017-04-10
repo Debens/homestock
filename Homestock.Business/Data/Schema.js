@@ -9,8 +9,7 @@
     function Schema (params) {
         this.validate(params, "id", "entities");
         var self = this;
-
-
+        
         self.Id = params.id;
         self.Entities = buildEntities(params.entities);
 
@@ -23,11 +22,11 @@
         var entities = {};
         for (var eIndex = 0; eIndex < entityArray.length; eIndex++) {
             var entityObj = entityArray[eIndex];
-            var entity = { Columns: {}, Name: entityObj.name };
+            var entity = { Columns: {}, Name: entityObj.name, Id: { Prefix: entityObj.identityPrefix, Length: entityObj.identityLength } };
 
             for (var cIndex = 0; cIndex < entityObj.columns.length; cIndex++) {
                 var columnObj = entityObj.columns[cIndex];
-                entity.Columns[columnObj.name] = { Name: columnObj.name };
+                entity.Columns[columnObj.name] = { Name: columnObj.name, isIdentity: (columnObj.identityColumn == true)  };
             }
 
             entities[entity.Name] = entity;

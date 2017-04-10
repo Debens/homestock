@@ -10,6 +10,7 @@ namespace HomeStockLibrary.Data.Schemas
         [DataMember(Name = "name")]
         public string Name { get; set; }
 
+        [DataMember(Name = "identityColumn")]
         public bool? IdentityColumn { get; set; }
 
         public override void ValidateProperties()
