@@ -1,1 +1,1 @@
-﻿// Defines a mapping of 2 schemas that outlines the steps needed to map on record to another
+﻿// Defines a mapping of 2 schemas that outlines the steps needed to map one record to another

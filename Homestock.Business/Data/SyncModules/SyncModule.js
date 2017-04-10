@@ -1,8 +1,7 @@
-﻿// Will peridically get all records from on archive, map them to a new suppler
+﻿// Will peridically get all records from one archive, map them to a new archive
 
-//Potentially have a litener on one archive and then map and sync the result to another archive
+//Potentially have a listener on one archive and then map and sync the result to another archive
 // WebSQL -> WebAPI
-
 
 // Read -> Read
 // Write -> Write
