@@ -8,8 +8,8 @@
     HomeStock.Workers = _workers;
 
     HomeStock.Workers.Add = function (worker) {
-        if (_workers.hasOwnProperty(worker.Name))
-            HomeStock.error(messagePrefix + "Duplicate worker ID '" + worker.Name + "', the duplicate shall not be included");
-        _workers[worker.Name] = worker;
+        if (_workers.hasOwnProperty(worker.name))
+            HomeStock.error(messagePrefix + "Duplicate worker ID '" + worker.name + "', the duplicate shall not be included");
+        _workers[worker.name] = worker;
     };
 })();
