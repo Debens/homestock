@@ -79,7 +79,7 @@
     <Compile Include="Data\Archives\EndPointFragment.cs" />
     <Compile Include="Data\Archives\WebAPI.cs" />
     <Compile Include="Data\Archives\Base\BaseArchive.cs" />
-    <Compile Include="Data\Archives\Base\WebAPI\IArchive.cs" />
+    <Compile Include="Data\Archives\Base\IArchive.cs" />
     <Compile Include="Exceptions\HomeStockControlException.cs" />
     <Compile Include="Exceptions\HomeStockException.cs" />
     <Compile Include="Util\HomeStockObjectAssistant.cs" />
@@ -109,7 +109,7 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Configuration\Web\Sections\" />
+    <Folder Include="Configuration\" />
     <Folder Include="Data\Workers\Base\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

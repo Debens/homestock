@@ -1,4 +1,4 @@
-﻿namespace HomeStockLibrary.Data.Archives.Base.WebAPI
+﻿namespace HomeStockLibrary.Data.Archives.Base
 {
     public interface IArchive
     {
