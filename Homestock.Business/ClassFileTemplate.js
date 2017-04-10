@@ -6,7 +6,7 @@
 
     ns.Export("", );
 
-    var  = function (params) {
+    function  (params) {
         this.validate(params, "");
         var self = this;
 
