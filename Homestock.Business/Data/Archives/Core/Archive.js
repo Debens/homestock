@@ -1,11 +1,10 @@
 ﻿; (function () {
     "use strict";
 
-    var nsString = "Data.Archives.Core";
-    var messagePrefix = nsString + ": ";
-    var ns = HomeStock.Import(nsString);
+    var nsString = "Data.Archives.Core", ns = HomeStock.Import(nsString);
 
     ns.Export("Archive", Archive);
+    var messagePrefix = nsString + ": ";
 
     function Archive(params, protectedData) {
         this.validate(params, "id", "schemaId");

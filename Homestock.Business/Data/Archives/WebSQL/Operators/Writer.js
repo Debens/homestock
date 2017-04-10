@@ -1,20 +1,12 @@
 ﻿; (function () {
     "use strict";
 
-    var nsString = "Data.Archives.WebSQL.Operators";
-    var ns = HomeStock.Import(nsString);
+    var nsString = "Data.Archives.WebSQL.Operators", ns = HomeStock.Import(nsString);
 
-    ns.Writer = Writer;
+    ns.Export("Writer", Writer);
     var messagePrefix = nsString + ".Writer: ";
 
-    var requiredParams = [
-
-    ];
-
     var Writer = function (params) {
-        var validation = ObjectValidator.Validate(params, requiredParams);
-        if (!validation.isValid)
-            throw messagePrefix + "Failed construction, missing parameter(s) " + validation.missingProperties.join(", ");
         var self = this;
 
     };

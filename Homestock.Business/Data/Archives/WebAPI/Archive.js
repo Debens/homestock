@@ -11,6 +11,7 @@
     
     function Archive(params, protectedData) {
         this.validate(params, "endPoint");
+
         protectedData = protectedData || {};
         var self = new nsCore.Archive(params, protectedData);
 

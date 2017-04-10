@@ -1,11 +1,10 @@
 ﻿; (function () {
     "use strict";
 
-    var nsString = "Business.Core.Modules";
-    var messagePrefix = nsString + ".Save: ";
+    var nsString = "Business.Core.Modules", ns = HomeStock.Import(nsString);
 
-    var ns = HomeStock.Import(nsString);
     ns.Export("Save", Save);
+    var messagePrefix = nsString + ".Save: ";
 
     var Save = function (params) {
         this.validate(params, "worker");

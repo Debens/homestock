@@ -1,8 +1,7 @@
 ﻿; (function () {
     "use strict";
 
-    var nsString = "Util";
-    var ns = HomeStock.Import(nsString);
+    var nsString = "Util", ns = HomeStock.Import(nsString);
     var messagePrefix = nsString + ".AjaxAssistant: ";
 
     ns.Export("AjaxAssistant", AjaxAssistant);
