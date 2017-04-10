@@ -88,6 +88,7 @@
   <ItemGroup>
     <Content Include="Development\Library\Controls\TextBox.aspx" />
     <Content Include="Development\Library\Data\Archive.aspx" />
+    <Content Include="Development\Library\Data\Worker.aspx" />
     <Content Include="packages.config" />
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
@@ -165,6 +166,13 @@
     </Compile>
     <Compile Include="Development\Library\Data\Archive.aspx.designer.cs">
       <DependentUpon>Archive.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Development\Library\Data\Worker.aspx.cs">
+      <DependentUpon>Worker.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Development\Library\Data\Worker.aspx.designer.cs">
+      <DependentUpon>Worker.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Site.Master.cs">
