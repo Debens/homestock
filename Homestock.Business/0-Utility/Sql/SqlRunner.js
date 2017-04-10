@@ -7,22 +7,25 @@
 
     ns.Export("SqlRunner", SqlRunner);
 
-    function SqlRunner () {
-        Run = function (sql) {
+    function SqlRunner() {
+        var self = this;
+
+        self.Run = function (sql) {
             var executingSql = new HomeStock.Deferred();
             if (!sql)
                 return executingSql.resolve().promise();
             if (typeof sql !== typeof "String")
                 throw messagePrefix + "Cannot run sql statement of type '" + typeof sql + "'";
 
+            var self = this; // Needed as object scope is lost in success/error functions
             var success = function () {
-                this.log(messagePrefix + "\n" + sql);
+                self.log(messagePrefix + "\n" + sql);
                 executingSql.resolve();
             };
 
             var error = function (transaction, error) {
                 error.message = messagePrefix + "Failed to run query \n" + sql + "\n" + error.message;
-                this.error(error.message);
+                self.error(error.message);
                 executingSql.reject(transaction, error);
             };
 
