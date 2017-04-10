@@ -1,6 +1,9 @@
 ﻿; (function () {
     "use strict";
 
+    window.HomeStock = new HomeStock();
+    window.HomeStock.Import().Export("HomeStock", HomeStock);
+
     var messagePrefix = "HomeStock: ";
     
     function HomeStock () {
@@ -14,7 +17,4 @@
 
         self.Config = function () { };
     };
-
-    window.HomeStock = new HomeStock();
-    window.HomeStock.Import().Export("HomeStock", HomeStock);
 })();

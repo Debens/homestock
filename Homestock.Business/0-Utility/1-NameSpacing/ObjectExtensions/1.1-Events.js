@@ -10,16 +10,16 @@
         
         prototype._eventObj = $({});
 
-        prototype.one = function (eventName, callback) {
-            if (eventName)
-                if (callback && typeof callback === "function")
-                    prototype._eventObj.one(eventName, callback);
-        };
-
         prototype.on = function (eventName, callback) {
             if (eventName)
                 if (callback && typeof callback === "function")
                     prototype._eventObj.on(eventName, callback);
+        };
+
+        prototype.one = function (eventName, callback) {
+            if (eventName)
+                if (callback && typeof callback === "function")
+                    prototype._eventObj.one(eventName, callback);
         };
 
         prototype.off = function (eventName) {
