@@ -1,11 +1,10 @@
 ﻿; (function () {
     "use strict";
 
-    var nsString = "Util.SQL";
-    var ns = HomeStock.Import(nsString);
-    var messagePrefix = nsString + ".Runner: ";
+    var nsString = "Util.SQL", ns = HomeStock.Import(nsString);
 
     ns.Export("Runner", Runner);
+    var messagePrefix = nsString + ".Runner: ";
 
     function Runner() {
         var self = this;
@@ -24,8 +23,7 @@
             };
 
             var error = function (transaction, error) {
-                var errorMessage = messagePrefix + "Failed to run query \n" + sql + "\n" + error.message;
-                self.error(errorMessage);
+                self.error(messagePrefix + "Failed to run query \n" + sql + "\n" + error.message);
                 executingSql.reject(transaction, error);
             };
 

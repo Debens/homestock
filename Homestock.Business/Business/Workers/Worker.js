@@ -1,11 +1,11 @@
 ﻿; (function () {
     "use strict";
 
-    var nsString = "Business.Core", ns = HomeStock.Import(nsString);
-    var nsModules = HomeStock.Import("Business.Core.Modules");
+    var nsString = "Business.Workers", ns = HomeStock.Import(nsString);
+    var nsModules = HomeStock.Import("Business.Worker.Modules");
 
     ns.Export("Worker", Worker);
-    var messagePrefix = nsString + ".Worker: ";
+    var messagePrefix = nsString + ": ";
 
     function Worker(params) {
         this.validate(params, "id", "schemaId");

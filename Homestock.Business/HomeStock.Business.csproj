@@ -60,9 +60,11 @@
     <Content Include="0-Utility\Sql\TableBuilder.js" />
     <Content Include="0-Utility\Sql\Transaction.js" />
     <Content Include="0-Utility\AjaxAssistant.js" />
-    <Content Include="Business\Core\Modules\Builder\Builder.js" />
-    <Content Include="Business\Core\Modules\Query\Query.js" />
-    <Content Include="Business\Core\Modules\Save\Save.js" />
+    <Content Include="Business\ViewModel\Builder.js" />
+    <Content Include="Business\ViewModel\Instigator.js" />
+    <Content Include="Business\Workers\Modules\Builder\Builder.js" />
+    <Content Include="Business\Workers\Modules\Query\Query.js" />
+    <Content Include="Business\Workers\Modules\Save\Save.js" />
     <Content Include="Data\Archives\Core\RecordSet.js" />
     <Content Include="Data\Archives\WebAPI\UrlFormatter.js" />
     <Content Include="Data\Schema.js" />
@@ -88,7 +90,7 @@
     <Content Include="_old\Mark I\Repository\HomeRepository.js" />
     <Content Include="_old\Mark I\Repository\OwnerRepsoitory.js" />
     <Content Include="_old\Mark I\Repository\StockRepository.js" />
-    <Content Include="Business\Core\Worker.js" />
+    <Content Include="Business\Workers\Worker.js" />
     <Content Include="_old\Mark I\Utility\Config\ApplicationSettings.js" />
     <Content Include="_old\Mark I\Utility\Config\HomeStock.js" />
     <Content Include="_old\Mark I\Utility\Config\PageInitializer.js" />
