@@ -13,8 +13,8 @@
 
         params.modules = this.validate.isArray(params.module) ? params.module : [];
 
-        self.Name = params.id;
-        self.Store = ko.observableArray([]);
+        self.name = params.id;
+        self.store = ko.observableArray([]);
 
         for (var index = 0; index < modules.length; index++) {
             if (!nsModules[modules[index]])

@@ -10,7 +10,7 @@
         this.validate(params, "eventObject", "modelBuilder", "modelBinder")
 
         var _eventObj = params.eventObject;
-        var _model = ko.observableArray([]);
+        var _model = ko.observable({});
 
         var constructionParams = { eventObject: _eventObj, viewModel: _model };
         params.modelBuilder.Build(constructionParams);
