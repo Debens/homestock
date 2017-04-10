@@ -56,8 +56,8 @@
     <Content Include="0-Utility\2-HomeStock\Extensions\Suppliers.js" />
     <Content Include="0-Utility\2-HomeStock\Extensions\Workers.js" />
     <Content Include="0-Utility\Sql\Keywords.js" />
-    <Content Include="0-Utility\Sql\SqlRunner.js" />
-    <Content Include="0-Utility\Sql\SqlTransaction.js" />
+    <Content Include="0-Utility\Sql\Runner.js" />
+    <Content Include="0-Utility\Sql\Transaction.js" />
     <Content Include="0-Utility\AjaxAssistant.js" />
     <Content Include="Business\Core\Modules\Builder\Builder.js" />
     <Content Include="Business\Core\Modules\Query\Query.js" />

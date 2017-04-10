@@ -1,13 +1,13 @@
 ﻿; (function () {
     "use strict";
 
-    var nsString = "Util.Sql";
+    var nsString = "Util.SQL";
     var ns = HomeStock.Import(nsString);
-    var messagePrefix = nsString + ".SQLRunner: ";
+    var messagePrefix = nsString + ".Runner: ";
 
-    ns.Export("SqlRunner", SqlRunner);
+    ns.Export("Runner", Runner);
 
-    function SqlRunner() {
+    function Runner() {
         var self = this;
 
         self.Run = function (sql) {

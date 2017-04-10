@@ -1,16 +1,16 @@
 ﻿; (function () {
     "use strict";
 
-    var nsString = "Util.Sql";
+    var nsString = "Util.SQL";
     var ns = HomeStock.Import(nsString);
-    var messagePrefix = nsString + ".SqlTransaction: ";
+    var messagePrefix = nsString + ".Transaction: ";
 
-    ns.Export("SqlTransaction", SqlTransaction);
+    ns.Export("Transaction", Transaction);
 
-    function SqlTransaction () {
+    function Transaction () {
         var self = this;
 
-        var sqlRunner = new ns.SqlRunner();
+        var sqlRunner = new ns.Runner();
 
         var _operation = "";
         var _table = "";
