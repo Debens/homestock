@@ -18,25 +18,19 @@
         var schemaId = params.schemaId;
 
         self.Name = params.id;
-        self.Schema = function () { return HomeStock.Schemas[schemaId]; };
-
-        var eventObj = new HomeStock.EventObj();
-        self.on = function (event, callback) { eventObj.on(event, callback); };
-        self.one = function (event, callback) { eventObj.one(event, callback); };
-        self.off = function (event) { eventObj.off(event) };
-        
+        self.Schema = function () { return HomeStock.Schemas[schemaId]; };        
 
         self["Read"] = function (params) {
             params = params || {};
             var readingData = new HomeStock.Deferred();
-            eventObj.trigger("PreRead", [self]);
+            self.trigger("PreRead", [self]);
 
             var performingRead = protectedData.Read(params);
             performingRead.then(function (records) {
                 records = Array.isArray(records) ? records : Array(records);
                 var recordSet = new ns.RecordSet(records);
 
-                eventObj.trigger("Read", [recordSet]);
+                self.trigger("Read", [recordSet]);
                 readingData.resolve(recordSet);
             },
             readingData.reject);
@@ -45,19 +39,19 @@
         };
 
         self["Write"] = function (recordSet) {
-            eventObj.trigger("PreWrite", [recordSet, self]);
+            self.trigger("PreWrite", [recordSet, self]);
 
             protectedData.Write(recordSet);
             
-            eventObj.trigger("Write");
+            self.trigger("Write");
         };
 
         self["Remove"] = function (recordSet) {
-            eventObj.trigger("PreRemove", [recordSet, self]);
+            self.trigger("PreRemove", [recordSet, self]);
 
             protectedData.Remove(params);
 
-            eventObj.trigger("Remove");
+            self.trigger("Remove");
         };
 
         return self;
