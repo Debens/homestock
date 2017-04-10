@@ -48,13 +48,13 @@ namespace HomeStockLibrary.Controls
             if (scriptRegion == null)
                 scriptRegion = new HomeStockScriptRegion(regionID);
             scriptRegion.AddScript(script);
-            AddScript(scriptRegion);
+            if(!scriptRegions.Contains(scriptRegion))
+                AddScript(scriptRegion);
         }
 
         public override void ValidateProperties()
         {
-        //    if (scriptRegions.Count < 1)
-        //        throw new HomeStockControlException("HomeStockScriptControl must define at least one script region");
+            // Nothing to validate 
         }
     }
 }
