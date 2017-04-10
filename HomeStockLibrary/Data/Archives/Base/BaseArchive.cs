@@ -16,7 +16,7 @@ namespace HomeStockLibrary.Data.Archives.Base
     public abstract class BaseArchive : HomeStockScriptObject, IArchive
     {
         public override string ScriptRegionID => "HomeStock Data Archives";
-        public override int? ScriptRegionPriority => null; // TODO: Add to web.config
+        public override int? ScriptRegionPriority => 15; // TODO: Add to web.config
 
         protected abstract string namespaceString { get; }
 

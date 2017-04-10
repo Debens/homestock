@@ -72,6 +72,8 @@
     <Compile Include="Data\Archives\Base\WebAPI\IWebAPI.cs" />
     <Compile Include="Data\Archives\Base\WebSQL\IWebSQL.cs" />
     <Compile Include="Data\Archives\WebSQL.cs" />
+    <Compile Include="Data\Workers\Base\IWorker.cs" />
+    <Compile Include="Data\Workers\Worker.cs" />
     <Compile Include="Exceptions\HomeStockPropertyException.cs" />
     <Compile Include="Util\Core\HomeStockContractResolver.cs" />
     <Compile Include="Util\HomeStockJsonAssistant.cs" />
@@ -110,7 +112,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Configuration\" />
-    <Folder Include="Data\Workers\Base\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
