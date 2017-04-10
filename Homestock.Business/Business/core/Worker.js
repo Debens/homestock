@@ -1,7 +1,7 @@
 ﻿; (function () {
     "use strict";
 
-    var nsString = "Business.Core", HomeStock.Import(nsString);
+    var nsString = "Business.Core", ns = HomeStock.Import(nsString);
     var nsModules = HomeStock.Import("Business.Core.Modules");
 
     ns.Export("Worker", Worker);
