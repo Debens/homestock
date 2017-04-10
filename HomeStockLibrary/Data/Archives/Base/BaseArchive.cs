@@ -15,22 +15,28 @@ namespace HomeStockLibrary.Data.Archives.Base
     [DataContract]
     public abstract class BaseArchive : HomeStockScriptObject, IArchive
     {
+        public override string ScriptRegionID => "HomeStock Data Archives";
+        public override int? ScriptRegionPriority => null; // TODO: Add to web.config
+
         protected abstract string namespaceString { get; }
 
-        protected static readonly string ScriptRegionID = "HomeStock Data Archives";
-
+        protected abstract string CreationParameters { get; }
+        
         [DataMember(Name = "schemaId")]
         public string SchemaID { get; set; }
 
-        public override void RenderControl(HtmlTextWriter writer)
+        public override string GenerateCreationString()
         {
-            ValidateProperties();
-
             var creationString = new StringBuilder();
             creationString.AppendLine(string.Format("var ns = HomeStock.Import(\"{0}\");", namespaceString));
-            creationString.AppendLine(string.Format("HomeStock.Archives.Add(new ns.Archive({0}));", GenerateCreationString()));
+            creationString.AppendLine(string.Format("HomeStock.Archives.Add(new ns.Archive({0}));", CreationParameters));
+            return creationString.ToString();
+        }
 
-            HomeStockScriptAssistant.RenderScriptTo(new HomeStockScript(creationString.ToString()), ScriptRegionID);
+        public override void ValidateProperties()
+        {
+            Validate(SchemaID, "SchemaID");
+            Validate(CreationParameters, "CreationParameters");
         }
     }
 }

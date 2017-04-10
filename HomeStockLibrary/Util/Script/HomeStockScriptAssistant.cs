@@ -27,6 +27,11 @@ namespace HomeStockLibrary.Util.Script
             }
         }
 
+        public static void CreateRegion(string name, int? priority)
+        {
+            ScriptControl.CreateRegion(name, priority);
+        }
+
         /// <summary>
         /// Renders a <see cref="HomeStockScript"/> onto the current <see cref="System.Web.UI.Page"/>
         /// </summary>
@@ -38,18 +43,18 @@ namespace HomeStockLibrary.Util.Script
             ScriptControl.AddScript(region);
         }
 
+        public static void RenderScript(HomeStockScript script, string regionID, bool forceCreate = true)
+        {
+            ScriptControl.AddScript(script, regionID, forceCreate);
+        }
+
         /// <summary>
-        /// Renders a <see cref="HomeStockScript"/> onto the current <see cref="System.Web.UI.Page"/>
+        /// Renders a <see cref="HomeStockScriptRegion"/> onto the current <see cref="System.Web.UI.Page"/>
         /// </summary>
         /// <param name="script">Script that is to be added to the page</param>
         public static void RenderScript(HomeStockScriptRegion scriptRegion)
         {
             ScriptControl.AddScript(scriptRegion);
-        }
-
-        public static void RenderScriptTo(HomeStockScript script, string regionID, bool forceCreate = true)
-        {
-            ScriptControl.AppendScript(script, regionID, forceCreate);
         }
     }
 }

@@ -13,27 +13,8 @@ namespace HomeStockLibrary.Data.Archives
     [Serializable, DataContract]
     public class WebSQL : BaseArchive, IWebSQL
     {
-        protected override string namespaceString { get { return "Data.Archives.WebSQL"; } }
+        protected override string namespaceString => "Data.Archives.WebSQL";
 
-        [DataMember(Name = "id")]
-        public override string ID { get; set; }
-
-        // TODO : Decided if this property if needed. Should Archives be one per table, or per schema?
-        //[DataMember(Name = "tableName")]
-        //public string TableName { get; set; }
-
-        [DataMember(Name = "schemaId")]
-        public string SchemaID { get; set; }
-
-        public override void ValidateProperties()
-        {
-           // Validate(TableName, "TableName");
-            Validate(SchemaID, "SchemaID");
-        }
-
-        public override string GenerateCreationString()
-        {
-            return HomeStockJsonAssistant.Convert(this, typeof(IWebSQL));
-        }
+        protected override string CreationParameters => HomeStockJsonAssistant.Convert(this, typeof(IWebSQL));
     }
 }

@@ -10,7 +10,9 @@ namespace HomeStockLibrary.Data.Archives
     [Serializable, DataContract]
     public class WebAPI : BaseArchive, IWebAPI
     {
-        protected override string namespaceString { get { return "Data.Archives.WebAPI"; } }
+        protected override string namespaceString => "Data.Archives.WebAPI";
+
+        protected override string CreationParameters => HomeStockJsonAssistant.Convert(this, typeof(IWebAPI));
 
         [DataMember(Name = "id")]
         public override string ID { get; set; }
@@ -21,12 +23,6 @@ namespace HomeStockLibrary.Data.Archives
         public override void ValidateProperties()
         {
             EndPoint.ValidateProperties();
-            Validate(SchemaID, "SchemaID");
-        }
-
-        public override string GenerateCreationString()
-        {
-            return HomeStockJsonAssistant.Convert(this, typeof(IWebAPI));
         }
     }
 }

@@ -21,14 +21,14 @@ namespace HomeStockLibrary.Util.Script
         public HomeStockScriptRegion(string id)
         {
             this.ID = id;
-            this.Priority = _priority;
+            this.Priority = defaultPriority;
             scripts = new List<IHomeStockScript>();
         }
 
-        public HomeStockScriptRegion(string id, int priority)
+        public HomeStockScriptRegion(string id, int? priority)
         {
             this.ID = id;
-            this.Priority = priority;
+            this.Priority = (int)((priority == null) ? defaultPriority : priority);
             scripts = new List<IHomeStockScript>();
         }
 

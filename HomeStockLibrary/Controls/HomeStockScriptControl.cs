@@ -36,20 +36,31 @@ namespace HomeStockLibrary.Controls
             writer.RenderEndTag();
         }
 
-        public void AddScript (HomeStockScriptRegion scriptRegion)
+        public bool CreateRegion(string name, int? priority)
         {
-            scriptRegions.Add(scriptRegion);
-            scriptRegions.OrderBy(s => s.Priority).ThenBy(s => s.ID);
+            if (scriptRegions.Find(r => r.ID == name) == null)
+            {
+                AddScript(new HomeStockScriptRegion(name, priority));
+                return true;
+            }
+
+            return false;
         }
 
-        public void AppendScript(HomeStockScript script, string regionID, bool forceAdd = true)
+        public void AddScript (HomeStockScriptRegion scriptRegion)
         {
+            if (!scriptRegions.Contains(scriptRegion))
+            {
+                scriptRegions.Add(scriptRegion);
+                scriptRegions = scriptRegions.OrderByDescending(s => s.Priority).ThenBy(s => s.ID).ToList();
+            }
+        }
+
+        public void AddScript(HomeStockScript script, string regionID, bool forceAdd = true)
+        {
+            CreateRegion(regionID, null);
             HomeStockScriptRegion scriptRegion = scriptRegions.Find(r => r.ID == regionID);
-            if (scriptRegion == null)
-                scriptRegion = new HomeStockScriptRegion(regionID);
             scriptRegion.AddScript(script);
-            if(!scriptRegions.Contains(scriptRegion))
-                AddScript(scriptRegion);
         }
 
         public override void ValidateProperties()
