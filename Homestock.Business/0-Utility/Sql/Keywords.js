@@ -1,8 +1,7 @@
 ﻿; (function () {
     "use strict";
 
-    var nsString = "Util.SQL";
-    var ns = HomeStock.Import(nsString);
+    var nsString = "Util.SQL", ns = HomeStock.Import(nsString);
 
     ns.Export("Keywords", {
         create: "CREATE",
