@@ -31,11 +31,9 @@
             var request = new HomeStock.Deferred();
             params = $.extend({}, constants.requestParamDefaults, params, true);
 
-            if (!this.validate.isFunction(params.success))
-                throw messagePrefix + "Success function is not a valid function";
-            if (!this.validate.isFunction(params.error))
-                throw messagePrefix + "Error function is not a valid function";
-
+            this.validate.isFunction(params.success);
+            this.validate.isFunction(params.error);
+                
             var successWrapper = function (response) {
                 params.success(response);
                 request.resolve(response);

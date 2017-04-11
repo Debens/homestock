@@ -11,7 +11,7 @@
         this.validate(params, "id", "archiveId");
         var self = this;
 
-        var modules = this.validate.isArray(params.module) ? params.module : [];
+        var modules = Array.isArray(params.module) ? params.module : [];
 
         self.name = params.id;
         self.archive = HomeStock.Archives[params.archiveId];
