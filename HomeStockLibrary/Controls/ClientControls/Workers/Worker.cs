@@ -17,10 +17,10 @@ namespace HomeStockLibrary.Controls.ClientControls.Workers
 
         public override string RenderScript()
         {
-            var creationString = new StringBuilder();
-            creationString.AppendLine("var ns = HomeStock.Import(\"Business.Workers\");");
-            creationString.AppendLine(string.Format("HomeStock.Workers.Add(new ns.Worker({0}));", JsonAssistant.Convert(this, typeof(IWorker))));
-            return creationString.ToString();
+            var script = new StringBuilder();
+            script.AppendLine("var ns = HomeStock.Import(\"Business.Workers\");");
+            script.AppendLine(string.Format("HomeStock.Workers.Add(new ns.Worker({0}));", JsonAssistant.Convert(this, typeof(IWorker))));
+            return script.ToString();
         }
 
         public override void ValidateProperties()

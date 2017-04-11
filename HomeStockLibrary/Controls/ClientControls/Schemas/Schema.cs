@@ -19,10 +19,10 @@ namespace HomeStockLibrary.Controls.ClientControls.Schemas
 
         public override string RenderScript()
         {
-            var creationString = new StringBuilder();
-            creationString.AppendLine("var ns = HomeStock.Import(\"Data\");");
-            creationString.AppendLine("HomeStock.Schemas.Add(new ns.Schema(" + JsonAssistant.Convert(this, typeof(ISchema)) + "));");
-            return creationString.ToString();
+            var script = new StringBuilder();
+            script.AppendLine("var ns = HomeStock.Import(\"Data\");");
+            script.AppendLine("HomeStock.Schemas.Add(new ns.Schema(" + JsonAssistant.Convert(this, typeof(ISchema)) + "));");
+            return script.ToString();
         }
 
         public override void ValidateProperties()

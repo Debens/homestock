@@ -19,10 +19,10 @@ namespace HomeStockLibrary.Controls.ClientControls.Archives.Base
 
         public override string RenderScript()
         {
-            var creationString = new StringBuilder();
-            creationString.AppendLine(string.Format("var ns = HomeStock.Import(\"{0}\");", namespaceString));
-            creationString.AppendLine(string.Format("HomeStock.Archives.Add(new ns.Archive({0}));", CreationParameters));
-            return creationString.ToString();
+            var script = new StringBuilder();
+            script.AppendLine(string.Format("var ns = HomeStock.Import(\"{0}\");", namespaceString));
+            script.AppendLine(string.Format("HomeStock.Archives.Add(new ns.Archive({0}));", CreationParameters));
+            return script.ToString();
         }
 
         public override void ValidateProperties()
