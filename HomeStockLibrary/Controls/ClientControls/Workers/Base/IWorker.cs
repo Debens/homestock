@@ -3,7 +3,6 @@
     public interface IWorker
     {
         string ID { get; set; }
-
         string ArchiveID { get; set; }
     }
 }
