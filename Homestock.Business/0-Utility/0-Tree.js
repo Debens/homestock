@@ -13,10 +13,8 @@
         var root = new Node({ name: "root", parent: null, extend: params.nodeExtension });
 
         self.Traverse = function (path) {
-            if (!path)
-                return root.Facade;
-
-            var locationComponents = path.split(".");
+            path = path || "";
+            var locationComponents = path.split(".").filter(String);
             var compententLength = locationComponents.length;
 
             var currentNode = root;
