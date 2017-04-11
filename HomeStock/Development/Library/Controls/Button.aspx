@@ -6,8 +6,6 @@
     
     <Control:PageHeader runat="server" Title="Button" Description="Below is a various set of different possible button configurations" />
 
-   <%-- <Control:PageSerpoator runat="server" Text="Types" />--%>
-
     <Control:Button runat="server" Text="Default" ID="Button3" Type="Default"/>
     <Control:Button runat="server" Text="New" ID="Button4" Type="New" />
     <Control:Button runat="server" Text="Delete" ID="Button5"  Type="Delete" />
