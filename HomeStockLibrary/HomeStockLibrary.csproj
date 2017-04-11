@@ -48,6 +48,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Cache\Cache.cs" />
+    <Compile Include="Cache\SmartCache.cs" />
     <Compile Include="Controls\PageHeader.cs" />
     <Compile Include="Controls\Base\Attributes\Styling.cs" />
     <Compile Include="Controls\Base\Button\ButtonBase.cs" />
