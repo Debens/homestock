@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Runtime.Serialization;
 using System.Web.UI;
-using HomeStockLibrary.Core;
+using HomeStockLibrary.Controls.Base;
 using HomeStockLibrary.Exceptions;
 using HomeStockLibrary.Controls.ClientControls.Schemas.Base;
 

@@ -58,8 +58,8 @@
     <Compile Include="Controls\Base\Button\IButton.cs" />
     <Compile Include="Controls\Button.cs" />
     <Compile Include="Controls\TextBox.cs" />
-    <Compile Include="Core\Base\IValidatable.cs" />
-    <Compile Include="Core\Validatble.cs" />
+    <Compile Include="Controls\Base\IValidatable.cs" />
+    <Compile Include="Controls\Base\Validatble.cs" />
     <Compile Include="Controls\ClientControls\Schemas\Column.cs" />
     <Compile Include="Controls\ClientControls\Schemas\Base\IColumn.cs" />
     <Compile Include="Controls\ClientControls\Schemas\Base\IEntity.cs" />

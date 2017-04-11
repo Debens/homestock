@@ -1,5 +1,5 @@
 ﻿using System.Runtime.Serialization;
-using HomeStockLibrary.Core;
+using HomeStockLibrary.Controls.Base;
 using HomeStockLibrary.Controls.ClientControls.Archives.Base.WebAPI;
 
 namespace HomeStockLibrary.Controls.ClientControls.Archives
