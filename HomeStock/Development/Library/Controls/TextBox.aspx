@@ -1,11 +1,10 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="TextBox.aspx.cs" Inherits="HomeStock.Development.Library.Controls.TextBoc" %>
 
 <%@ Register Assembly="HomeStockLibrary" Namespace="HomeStockLibrary.Controls" TagPrefix="Control" %>
-<%@ Register Assembly="HomeStockLibrary" Namespace="HomeStockLibrary.CompositeControls" TagPrefix="UserControl" %>
 
 <asp:content runat="server" id="contentPlaceHolderID" contentplaceholderid="MainViewContent">
     
-    <UserControl:PageHeader runat="server" Title="TextBox" Description="Below is a various set of different possible TextBox configurations" />
+    <Control:PageHeader runat="server" Title="TextBox" Description="Below is a various set of different possible TextBox configurations" />
     
     <Control:TextBox runat="server" ID="tbx" />
 

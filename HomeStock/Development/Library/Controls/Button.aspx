@@ -1,11 +1,10 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Button.aspx.cs" Inherits="HomeStock.Testing.Library.Controls.Buttons" %>
 
 <%@ Register Assembly="HomeStockLibrary" Namespace="HomeStockLibrary.Controls" TagPrefix="Control" %>
-<%@ Register Assembly="HomeStockLibrary" Namespace="HomeStockLibrary.CompositeControls" TagPrefix="UserControl" %>
 
 <asp:content runat="server" id="contentPlaceHolderID" contentplaceholderid="MainViewContent">
     
-    <UserControl:PageHeader runat="server" Title="Button" Description="Below is a various set of different possible button configurations" />
+    <Control:PageHeader runat="server" Title="Button" Description="Below is a various set of different possible button configurations" />
 
    <%-- <Control:PageSerpoator runat="server" Text="Types" />--%>
 

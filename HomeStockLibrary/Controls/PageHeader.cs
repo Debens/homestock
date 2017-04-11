@@ -3,7 +3,7 @@ using HomeStockLibrary.Controls.Base;
 using System.Web.UI;
 using System;
 
-namespace HomeStockLibrary.CompositeControls
+namespace HomeStockLibrary.Controls
 {
     public class PageHeader : WebControlBase
     {
