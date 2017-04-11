@@ -15,6 +15,6 @@ namespace HomeStockLibrary.Data.Archives
     {
         protected override string namespaceString => "Data.Archives.WebSQL";
 
-        protected override string CreationParameters => HomeStockJsonAssistant.Convert(this, typeof(IWebSQL));
+        protected override string CreationParameters => JsonAssistant.Convert(this, typeof(IWebSQL));
     }
 }

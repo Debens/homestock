@@ -8,7 +8,7 @@ using HomeStockLibrary.Data.Archives.Base.WebAPI;
 namespace HomeStockLibrary.Data.Archives
 {
     [DataContract]
-    public class EndPoint : HomeStockValidatble, IEndPoint
+    public class EndPoint : Validatble, IEndPoint
     {
         [DataMember(Name = "url")]
         public string Url { get; set; }

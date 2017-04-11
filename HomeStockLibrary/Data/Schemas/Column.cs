@@ -5,7 +5,7 @@ using HomeStockLibrary.Core;
 namespace HomeStockLibrary.Data.Schemas
 {
     [DataContract]
-    public class Column : HomeStockValidatble, IColumn
+    public class Column : Validatble, IColumn
     {
         [DataMember(Name = "name")]
         public string Name { get; set; }

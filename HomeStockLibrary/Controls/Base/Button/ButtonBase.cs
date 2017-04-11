@@ -5,7 +5,7 @@ using HomeStockLibrary.Controls.Base.Attributes;
 
 namespace HomeStockLibrary.Controls.Base.Button
 {
-    public abstract class ButtonBase : HomeStockControlBase, IButton
+    public abstract class ButtonBase : WebControlBase, IButton
     {
         public string Text { get; set; }
 
@@ -31,7 +31,7 @@ namespace HomeStockLibrary.Controls.Base.Button
         {
             string baseButtonClass = "hs-button";
             
-            Styling attribute = EnumHelper.GetAttributeOfType<Styling>(type);
+            Styling attribute = EnumAssistant.GetAttributeOfType<Styling>(type);
             string cssClass = attribute.ClassName;
 
             return baseButtonClass + " " + cssClass;

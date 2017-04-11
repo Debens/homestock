@@ -10,13 +10,13 @@ using System.Web.Script.Serialization;
 
 namespace HomeStockLibrary.Util
 {
-    public class HomeStockJsonAssistant
+    public class JsonAssistant
     {
         public static string Convert(Object obj, Type type)
         {
             var settings = new JsonSerializerSettings()
             {
-                ContractResolver = new HomeStockContractResolver(type)
+                ContractResolver = new DataMemberContractResolver(type)
             };
 
             return JsonConvert.SerializeObject(obj, settings) ;

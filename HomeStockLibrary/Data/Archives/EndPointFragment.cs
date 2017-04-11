@@ -5,7 +5,7 @@ using HomeStockLibrary.Data.Archives.Base.WebAPI;
 namespace HomeStockLibrary.Data.Archives
 {
     [DataContract]
-    public class EndPointFragment : HomeStockValidatble, IEndPointFragment
+    public class EndPointFragment : Validatble, IEndPointFragment
     {
         [DataMember(Name = "entity")]
         public string Entity { get; set; }

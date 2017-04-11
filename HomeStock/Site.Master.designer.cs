@@ -28,6 +28,6 @@ namespace HomeStock {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::HomeStockLibrary.Controls.HomeStockScriptControl SiteMasterScriptAssistant;
+        protected global::HomeStockLibrary.Controls.Resources.ScriptInclusion SiteMasterScriptAssistant;
     }
 }

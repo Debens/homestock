@@ -12,7 +12,7 @@
 
         var _getWorkers = params.getWorkers;
         var _eventObj = params.eventObject;
-        var _model = ko.observable({});
+        var _model = ko ? ko.observable({}) : {};
 
         var builder = params.modelBuilder;
         var binder = params.modelBinder;

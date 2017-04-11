@@ -8,7 +8,7 @@ using System.Runtime.Serialization;
 namespace HomeStockLibrary.Controls.Base
 {
     [DataContract]
-    public abstract class HomeStockControlBase : WebControl, IValidatable
+    public abstract class WebControlBase : WebControl, IValidatable
     {
         [DataMember(Name = "id")]
         public override string ID { get; set; }

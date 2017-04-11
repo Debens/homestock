@@ -9,7 +9,7 @@ using HomeStockLibrary.Exceptions;
 namespace HomeStockLibrary.Data.Schemas
 {
     [DataContract]
-    public class Entity : HomeStockValidatble, IEntity
+    public class Entity : Validatble, IEntity
     {
         [DataMember(Name = "name")]
         public string Name { get; set; }

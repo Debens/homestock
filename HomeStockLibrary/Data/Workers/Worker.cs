@@ -4,14 +4,15 @@ using HomeStockLibrary.Core;
 using System.Text;
 using HomeStockLibrary.Util;
 using System.Runtime.Serialization;
+using HomeStockLibrary.Core.Base;
 
 namespace HomeStockLibrary.Data.Workers
 {
     [DataContract]
-    public class Worker : HomeStockScriptObject, IWorker
+    public class Worker : ScriptObjectBase, IWorker
     {
-        public override string ScriptRegionID => "HomeStock Data Workers";
-        public override int? ScriptRegionPriority => null;
+        public override string ScriptRegionID => "HomeStock Workers";
+        public override int? ScriptRegionPriority => 11;
 
         [DataMember(Name = "archiveId")]
         public string ArchiveID { get; set; }
@@ -20,7 +21,7 @@ namespace HomeStockLibrary.Data.Workers
         {
             var creationString = new StringBuilder();
             creationString.AppendLine("var ns = HomeStock.Import(\"Business.Workers\");");
-            creationString.AppendLine(string.Format("HomeStock.Workers.Add(new ns.Worker({0}));", HomeStockJsonAssistant.Convert(this, typeof(IWorker))));
+            creationString.AppendLine(string.Format("HomeStock.Workers.Add(new ns.Worker({0}));", JsonAssistant.Convert(this, typeof(IWorker))));
             return creationString.ToString();
         }
 

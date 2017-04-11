@@ -2,7 +2,7 @@
 
 namespace HomeStockLibrary.Util
 {
-    public static class EnumHelper
+    public static class EnumAssistant
     {
         /// <summary>
         /// Gets an attribute on an enum field value

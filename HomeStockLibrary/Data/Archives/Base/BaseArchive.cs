@@ -1,21 +1,13 @@
-﻿using HomeStockLibrary.Controls.Base;
-using HomeStockLibrary.Core;
-using HomeStockLibrary.Util.Script;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Web.UI;
+﻿using System.Text;
 using System.Runtime.Serialization;
-using HomeStockLibrary.Data.Archives.Base.WebAPI;
+using HomeStockLibrary.Core.Base;
 
 namespace HomeStockLibrary.Data.Archives.Base
 {
     [DataContract]
-    public abstract class BaseArchive : HomeStockScriptObject, IArchive
+    public abstract class BaseArchive : ScriptObjectBase, IArchive
     {
-        public override string ScriptRegionID => "HomeStock Data Archives";
+        public override string ScriptRegionID => "HomeStock Archives";
         public override int? ScriptRegionPriority => 15; // TODO: Add to web.config
 
         protected abstract string namespaceString { get; }

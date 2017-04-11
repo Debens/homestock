@@ -10,16 +10,16 @@ using System.Collections;
 
 namespace HomeStockLibrary.Util.Core
 {
-    public class HomeStockContractResolver : DefaultContractResolver
+    public class DataMemberContractResolver : DefaultContractResolver
     {
         private Type contractType;
         private PropertyInfo[] contractProperties;
 
-        public HomeStockContractResolver(Type contractType)
+        public DataMemberContractResolver(Type contractType)
         {
             this.contractType = contractType;
 
-            contractProperties = HomeStockObjectAssistant.GetPropertyInfoRecursively(this.contractType).ToArray();
+            contractProperties = ObjectAssistant.GetPropertyInfoRecursively(this.contractType).ToArray();
         }
 
         protected override IList<JsonProperty> CreateProperties(Type type, MemberSerialization memberSerialization)

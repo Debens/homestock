@@ -4,11 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace HomeStockLibrary.Controls.Core
+namespace HomeStockLibrary.Util.Script.Base
 {
-    public enum FileInclusionType
+    public interface IScript
     {
-        Script,
-        Style
+        string BuildScript(bool renderTags = false);
     }
 }

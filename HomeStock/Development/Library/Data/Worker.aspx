@@ -7,7 +7,7 @@
 <%@ Register Assembly="HomeStockLibrary" Namespace="HomeStockLibrary.Data.Workers" TagPrefix="Data" %>
 
 <asp:content runat="server" id="contentPlaceHolderID" contentplaceholderid="MainViewContent">
-    
+
     <Data:Worker runat="server" ID="HSworker" ArchiveID="sqlHomeStock" />
     
     <Archive:WebSQL runat="server" ID="sqlHomeStock" SchemaID="homeStockSchema" />

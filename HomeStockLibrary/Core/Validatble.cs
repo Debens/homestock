@@ -8,7 +8,7 @@ using HomeStockLibrary.Exceptions;
 
 namespace HomeStockLibrary.Core
 {
-    public class HomeStockValidatble : IValidatable
+    public class Validatble : IValidatable
     {
         public virtual void ValidateProperties() { /*Can be overriden such that it can be called by other classes, not enforced*/ }
         

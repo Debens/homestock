@@ -1,17 +1,15 @@
 ﻿using HomeStockLibrary.Controls.Base;
-using HomeStockLibrary.Controls.Core;
+using HomeStockLibrary.Controls.Resources.Core;
 using HomeStockLibrary.Core;
 using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Web.UI;
 
-namespace HomeStockLibrary.Controls
+namespace HomeStockLibrary.Controls.Resources
 {
-    public class HomeStockFileInclusion : HomeStockControlBase
+    public class FileInclusion : WebControlBase
     {
         public string Source { get; set; }
 
@@ -47,7 +45,7 @@ namespace HomeStockLibrary.Controls
 
             foreach(string file in files)
             {
-                writer.WriteLine(RenderInclusionTag(getRelativePath(file, context.MapPath(Source)), type));
+                RenderInclusionTag(writer, getRelativePath(file, context.MapPath(Source)), type);
             }
         }
 
@@ -63,7 +61,7 @@ namespace HomeStockLibrary.Controls
             return Uri.UnescapeDataString(folderUri.MakeRelativeUri(pathUri).ToString().Replace('/', Path.DirectorySeparatorChar));
         }
 
-        private string RenderInclusionTag(string path, FileInclusionType type)
+        private void RenderInclusionTag(HtmlTextWriter writer, string path, FileInclusionType type)
         {
             string tag = "";
             switch(type)
@@ -72,7 +70,7 @@ namespace HomeStockLibrary.Controls
                 case FileInclusionType.Style: { tag = string.Format("<link rel=\"stylesheet\" type=\"text/css\" href=\"{0}\">", path); } break;
                 default: { throw new ArgumentException(string.Format("Cannot render inclusion tage for type {0}", type)); }
             }
-            return tag;
+            writer.WriteLine(tag);
         }
 
         public override void ValidateProperties()

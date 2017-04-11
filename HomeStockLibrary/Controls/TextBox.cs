@@ -8,7 +8,7 @@ using System.Web.UI;
 
 namespace HomeStockLibrary.Controls
 {
-    public class TextBox : HomeStockControlBase
+    public class TextBox : WebControlBase
     {
         public string Placeholder { get; set; }
 
@@ -19,7 +19,6 @@ namespace HomeStockLibrary.Controls
         public override void ValidateProperties()
         {
             Validate(ID, "ID");
-            // Nothing.
         }
 
         protected override void Render(HtmlTextWriter writer)

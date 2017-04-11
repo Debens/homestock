@@ -9,27 +9,27 @@ using System.Web.UI;
 
 namespace HomeStockLibrary.Util.Script
 {
-    public class HomeStockScriptRegion : IHomeStockScript
+    public class ScriptRegion : IScript
     {
         private const int defaultPriority = 10;
         private const int minPriority = 0;
         private const int maxPriority = 100;
 
         private int _priority;
-        private List<IHomeStockScript> scripts { get; set; }
+        private List<IScript> scripts { get; set; }
 
-        public HomeStockScriptRegion(string id)
+        public ScriptRegion(string id)
         {
             this.ID = id;
             this.Priority = defaultPriority;
-            scripts = new List<IHomeStockScript>();
+            scripts = new List<IScript>();
         }
 
-        public HomeStockScriptRegion(string id, int? priority)
+        public ScriptRegion(string id, int? priority)
         {
             this.ID = id;
             this.Priority = (int)((priority == null) ? defaultPriority : priority);
-            scripts = new List<IHomeStockScript>();
+            scripts = new List<IScript>();
         }
 
         public string ID { get; set; }
@@ -46,12 +46,12 @@ namespace HomeStockLibrary.Util.Script
             }
         }
 
-        public void AddScript(IHomeStockScript script)
+        public void AddScript(IScript script)
         {
             scripts.Add(script);
         }
 
-        public void AddScript(IEnumerable<IHomeStockScript> scripts)
+        public void AddScript(IEnumerable<IScript> scripts)
         {
             this.scripts.AddRange(scripts);
         }

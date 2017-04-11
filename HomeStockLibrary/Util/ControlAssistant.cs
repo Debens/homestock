@@ -4,7 +4,7 @@ using System.Web.UI;
 
 namespace HomeStockLibrary.Util
 {
-    public class HomeStockControlAssistant
+    public class ControlAssistant
     {
         public Control FindPageControl(Func<Control, bool> isMatch)
         {

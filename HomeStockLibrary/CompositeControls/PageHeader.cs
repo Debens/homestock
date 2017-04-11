@@ -5,7 +5,7 @@ using System;
 
 namespace HomeStockLibrary.CompositeControls
 {
-    public class PageHeader : HomeStockControlBase
+    public class PageHeader : WebControlBase
     {
         public string Title { get; set; }
 

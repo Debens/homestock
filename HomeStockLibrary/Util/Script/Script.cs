@@ -7,16 +7,16 @@ using System.Threading.Tasks;
 
 namespace HomeStockLibrary.Util.Script
 {
-    public class HomeStockScript : IHomeStockScript
+    public class Script : IScript
     {
         private string script;
 
-        public HomeStockScript(string script)
+        public Script(string script)
         {
             this.script = script;
         }
 
-        public HomeStockScript(string script, string description)
+        public Script(string script, string description)
         {
             this.script = script;
             Description = description;

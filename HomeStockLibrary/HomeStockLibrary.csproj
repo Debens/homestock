@@ -48,18 +48,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Bundling\HomeStockBundleReference.cs" />
     <Compile Include="CompositeControls\PageHeader.cs" />
     <Compile Include="Controls\Base\Attributes\Styling.cs" />
     <Compile Include="Controls\Base\Button\ButtonBase.cs" />
     <Compile Include="Controls\Base\Button\ButtonType.cs" />
-    <Compile Include="Controls\Core\FileInclusionType.cs" />
-    <Compile Include="Controls\Base\HomeStockControlBase.cs" />
+    <Compile Include="Controls\Resources\Core\FileInclusionType.cs" />
+    <Compile Include="Controls\Base\WebControlBase.cs" />
     <Compile Include="Controls\Base\Button\IButton.cs" />
     <Compile Include="Controls\Button.cs" />
     <Compile Include="Controls\TextBox.cs" />
     <Compile Include="Core\Base\IValidatable.cs" />
-    <Compile Include="Core\HomeStockValidatble.cs" />
+    <Compile Include="Core\Validatble.cs" />
     <Compile Include="Data\Schemas\Column.cs" />
     <Compile Include="Data\Schemas\Core\IColumn.cs" />
     <Compile Include="Data\Schemas\Core\IEntity.cs" />
@@ -75,32 +74,32 @@
     <Compile Include="Data\Workers\Base\IWorker.cs" />
     <Compile Include="Data\Workers\Worker.cs" />
     <Compile Include="Exceptions\HomeStockPropertyException.cs" />
-    <Compile Include="Util\Core\HomeStockContractResolver.cs" />
-    <Compile Include="Util\HomeStockJsonAssistant.cs" />
-    <Compile Include="Core\HomeStockScriptObject.cs" />
+    <Compile Include="Util\Core\DataMemberContractResolver.cs" />
+    <Compile Include="Util\JsonAssistant.cs" />
+    <Compile Include="Core\Base\ScriptObjectBase.cs" />
     <Compile Include="Data\Archives\EndPointFragment.cs" />
     <Compile Include="Data\Archives\WebAPI.cs" />
     <Compile Include="Data\Archives\Base\BaseArchive.cs" />
     <Compile Include="Data\Archives\Base\IArchive.cs" />
     <Compile Include="Exceptions\HomeStockControlException.cs" />
     <Compile Include="Exceptions\HomeStockException.cs" />
-    <Compile Include="Util\HomeStockObjectAssistant.cs" />
-    <Compile Include="Util\Script\Base\IHomeStockScript.cs" />
-    <Compile Include="Util\Script\HomeStockScriptRegion.cs" />
-    <Compile Include="Controls\HomeStockFileInclusion.cs" />
+    <Compile Include="Util\ObjectAssistant.cs" />
+    <Compile Include="Util\Script\Base\IScript.cs" />
+    <Compile Include="Util\Script\ScriptRegion.cs" />
+    <Compile Include="Controls\Resources\FileInclusion.cs" />
     <Compile Include="Controls\PageSerpoator.cs" />
     <Compile Include="Controls\ToggleBox.cs" />
     <Compile Include="Core\Base\IHomeStockContext.cs" />
     <Compile Include="Core\HomeStockContext.cs" />
-    <Compile Include="Util\HomeStockControlAssistant.cs" />
+    <Compile Include="Util\ControlAssistant.cs" />
     <Compile Include="Core\HomeStockPage.cs">
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Util\Script\HomeStockScript.cs" />
+    <Compile Include="Util\Script\Script.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Util\EnumHelper.cs" />
-    <Compile Include="Util\Script\HomeStockScriptAssistant.cs" />
-    <Compile Include="Controls\HomeStockScriptControl.cs" />
+    <Compile Include="Util\EnumAssistant.cs" />
+    <Compile Include="Util\Script\ScriptAssistant.cs" />
+    <Compile Include="Controls\Resources\ScriptInclusion.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="README.txt" />

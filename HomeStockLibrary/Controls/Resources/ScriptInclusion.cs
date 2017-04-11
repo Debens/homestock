@@ -1,29 +1,25 @@
 ﻿using HomeStockLibrary.Controls.Base;
 using System.Collections.Generic;
 using System.Web.UI;
-using HomeStockLibrary.Core;
 using HomeStockLibrary.Util.Script;
-using HomeStockLibrary.Util.Script.Base;
 using System.Linq;
-using System;
-using HomeStockLibrary.Exceptions;
 
-namespace HomeStockLibrary.Controls
+namespace HomeStockLibrary.Controls.Resources
 {
-    public class HomeStockScriptControl : HomeStockControlBase
+    public class ScriptInclusion : WebControlBase
     {
-        private List<HomeStockScriptRegion> scriptRegions;
+        private List<ScriptRegion> scriptRegions;
 
-        public HomeStockScriptControl()
+        public ScriptInclusion()
         {
-            scriptRegions = new List<HomeStockScriptRegion>();
+            scriptRegions = new List<ScriptRegion>();
         }
 
         protected override void Render(HtmlTextWriter writer)
         {
             writer.RenderBeginTag("script");
 
-            foreach (HomeStockScriptRegion region in scriptRegions)
+            foreach (ScriptRegion region in scriptRegions)
             {
                 writer.InnerWriter.Write("\n");
                 if(!string.IsNullOrEmpty(region.ID))
@@ -40,14 +36,14 @@ namespace HomeStockLibrary.Controls
         {
             if (scriptRegions.Find(r => r.ID == name) == null)
             {
-                AddScript(new HomeStockScriptRegion(name, priority));
+                AddScript(new ScriptRegion(name, priority));
                 return true;
             }
 
             return false;
         }
 
-        public void AddScript (HomeStockScriptRegion scriptRegion)
+        public void AddScript (ScriptRegion scriptRegion)
         {
             if (!scriptRegions.Contains(scriptRegion))
             {
@@ -56,10 +52,10 @@ namespace HomeStockLibrary.Controls
             }
         }
 
-        public void AddScript(HomeStockScript script, string regionID, bool forceAdd = true)
+        public void AddScript(Script script, string regionID, bool forceAdd = true)
         {
             CreateRegion(regionID, null);
-            HomeStockScriptRegion scriptRegion = scriptRegions.Find(r => r.ID == regionID);
+            ScriptRegion scriptRegion = scriptRegions.Find(r => r.ID == regionID);
             scriptRegion.AddScript(script);
         }
 

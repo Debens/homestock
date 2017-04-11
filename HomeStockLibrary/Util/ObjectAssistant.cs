@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace HomeStockLibrary.Util
 {
-    public static class HomeStockObjectAssistant
+    public static class ObjectAssistant
     {
         public static IEnumerable<PropertyInfo> GetPropertyInfoRecursively(Type type)
         {

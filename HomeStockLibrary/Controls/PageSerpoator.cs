@@ -8,7 +8,7 @@ using System.Web.UI;
 
 namespace HomeStockLibrary.Controls
 {
-    public class PageSerpoator : HomeStockControlBase
+    public class PageSerpoator : WebControlBase
     {
         private string defaultText = "~";
 

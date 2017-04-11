@@ -12,7 +12,7 @@ namespace HomeStockLibrary.Data.Archives
     {
         protected override string namespaceString => "Data.Archives.WebAPI";
 
-        protected override string CreationParameters => HomeStockJsonAssistant.Convert(this, typeof(IWebAPI));
+        protected override string CreationParameters => JsonAssistant.Convert(this, typeof(IWebAPI));
 
         [DataMember(Name = "id")]
         public override string ID { get; set; }
