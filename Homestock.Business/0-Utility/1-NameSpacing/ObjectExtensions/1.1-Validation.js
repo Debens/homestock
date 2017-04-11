@@ -8,7 +8,7 @@
         if (!prototype)
             return;
 
-        var messagePrefix = prototype._fullPath + ".validate: ";
+        var messagePrefix = ( prototype._fullPath || "[Unknown Path]" ) + ".Validation: ";
 
         prototype.validate = function (s, p) {
             var args = Array.from(arguments);
@@ -31,19 +31,23 @@
         };
 
         prototype.validate.isFunction = function (func) {
-            return typeof func === "function";
+            if (typeof func !== "function")
+                throw messagePrefix + "Object is required to be of type 'function'";
         }
 
         prototype.validate.isString = function (string) {
-            return typeof string === "string";
+            if (typeof string !== "string");
+                throw messagePrefix + "Object is required to be of type 'string'";
         }
 
         prototype.validate.isNumber = function (number) {
-            return Number.isFinite(parseInt(number, 10))
+            if (!Number.isFinite(parseInt(number, 10)))
+                throw messagePrefix + "Object cannot be parsed into a number";
         }
 
         prototype.validate.isArray = function (array) {
-            return Array.isArray(array);
+            if (!Array.isArray(array))
+                throw messagePrefix + "Object is required to be of type 'Array'";
         }
     };
 })();
