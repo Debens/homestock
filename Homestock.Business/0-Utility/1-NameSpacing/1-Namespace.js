@@ -32,7 +32,7 @@
             self[signature] = obj;
 
             if (typeof obj === "function") {
-                constructor.prototype._fullPath = node.Path + "." + signature;
+                obj.prototype._fullPath = node.Path + "." + signature;
 
                 for (var index = 0; index < Object.keys(ns.ObjExtensions).length; index++) {
                     ns.ObjExtensions[Object.keys(ns.ObjExtensions)[index]](obj.prototype, self);
