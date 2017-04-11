@@ -79,26 +79,8 @@
     <Content Include="Data\SyncModules\SchemaMapping.js" />
     <Content Include="Data\SyncModules\SyncModule.js" />
     <Content Include="0-Utility\IDGeneration.js" />
-    <Content Include="_old\Mark I\Manager\ContainerManager.js" />
-    <Content Include="_old\Mark I\Manager\HomeManager.js" />
-    <Content Include="_old\Mark I\Manager\OwnerManager.js" />
-    <Content Include="_old\Mark I\Manager\StockManager.js" />
-    <Content Include="_old\Mark I\ModelObjects\Container.js" />
-    <Content Include="_old\Mark I\ModelObjects\Home.js" />
-    <Content Include="_old\Mark I\ModelObjects\Owner.js" />
-    <Content Include="_old\Mark I\ModelObjects\Stock.js" />
-    <Content Include="_old\Mark I\Repository\Base\AjaxHelper.js" />
-    <Content Include="_old\Mark I\Repository\ContainerRepository.js" />
-    <Content Include="_old\Mark I\Repository\HomeRepository.js" />
-    <Content Include="_old\Mark I\Repository\OwnerRepsoitory.js" />
-    <Content Include="_old\Mark I\Repository\StockRepository.js" />
     <Content Include="Business\Workers\Worker.js" />
-    <Content Include="_old\Mark I\Utility\Config\ApplicationSettings.js" />
-    <Content Include="_old\Mark I\Utility\Config\HomeStock.js" />
-    <Content Include="_old\Mark I\Utility\Config\PageInitializer.js" />
-    <Content Include="_old\Mark I\Utility\HomeStockIFramPageNavigator.js" />
     <Content Include="0-Utility\0-ObjectValidator.js" />
-    <Content Include="_old\Mark I\Utility\UriHelper.js" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="UI\" />
