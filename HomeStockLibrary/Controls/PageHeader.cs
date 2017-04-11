@@ -2,6 +2,7 @@
 using HomeStockLibrary.Controls.Base;
 using System.Web.UI;
 using System;
+using HomeStockLibrary.Controls.Templates.Core;
 
 namespace HomeStockLibrary.Controls
 {
@@ -23,6 +24,9 @@ namespace HomeStockLibrary.Controls
 
         protected override void Render(HtmlTextWriter writer)
         {
+            //Templator pageHeader = Templator.Load("PageHeader.html").Process(this);
+            //writer.Write(pageHeader.ToString());
+
             writer.AddAttribute("class", "hs-page-header");
             writer.RenderBeginTag("div");
 

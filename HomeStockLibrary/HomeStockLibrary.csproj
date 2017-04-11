@@ -59,6 +59,8 @@
     <Compile Include="Controls\Base\WebControlBase.cs" />
     <Compile Include="Controls\Base\Button\IButton.cs" />
     <Compile Include="Controls\Button.cs" />
+    <Compile Include="Controls\Resources\Core\ResourceLoader.cs" />
+    <Compile Include="Controls\Templates\Core\Templator.cs" />
     <Compile Include="Controls\TextBox.cs" />
     <Compile Include="Controls\Base\IValidatable.cs" />
     <Compile Include="Controls\Base\Validatble.cs" />
@@ -104,6 +106,7 @@
     <Compile Include="Controls\Resources\ScriptInclusion.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Controls\Templates\PageHeader.html" />
     <Content Include="README.txt" />
   </ItemGroup>
   <ItemGroup>
@@ -113,7 +116,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Configuration\" />
-    <Folder Include="Controls\Templates\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
