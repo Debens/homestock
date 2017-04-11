@@ -52,7 +52,7 @@
     <Compile Include="Controls\Base\Attributes\Styling.cs" />
     <Compile Include="Controls\Base\Button\ButtonBase.cs" />
     <Compile Include="Controls\Base\Button\ButtonType.cs" />
-    <Compile Include="Controls\ClientControls\Base\ScriptObjectBase.cs" />
+    <Compile Include="Controls\ClientControls\Base\ScriptObject.cs" />
     <Compile Include="Controls\Resources\Core\FileInclusionType.cs" />
     <Compile Include="Controls\Base\WebControlBase.cs" />
     <Compile Include="Controls\Base\Button\IButton.cs" />
