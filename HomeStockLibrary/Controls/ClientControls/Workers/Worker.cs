@@ -15,7 +15,7 @@ namespace HomeStockLibrary.Controls.ClientControls.Workers
         [DataMember(Name = "archiveId")]
         public string ArchiveID { get; set; }
 
-        public override string GenerateCreationString()
+        public override string RenderScript()
         {
             var creationString = new StringBuilder();
             creationString.AppendLine("var ns = HomeStock.Import(\"Business.Workers\");");

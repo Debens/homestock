@@ -17,7 +17,7 @@ namespace HomeStockLibrary.Controls.ClientControls.Archives.Base
         [DataMember(Name = "schemaId")]
         public string SchemaID { get; set; }
 
-        public override string GenerateCreationString()
+        public override string RenderScript()
         {
             var creationString = new StringBuilder();
             creationString.AppendLine(string.Format("var ns = HomeStock.Import(\"{0}\");", namespaceString));

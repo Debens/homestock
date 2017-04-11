@@ -12,13 +12,13 @@ namespace HomeStockLibrary.Controls.ClientControls.Base
         public abstract string ScriptRegionID { get; }
         public abstract int? ScriptRegionPriority { get; }
 
-        public abstract string GenerateCreationString();
+        public abstract string RenderScript();
 
         protected override void Render(HtmlTextWriter writer)
         {
             ScriptAssistant.CreateRegion(ScriptRegionID, ScriptRegionPriority);
 
-            string creationString = GenerateCreationString();
+            string creationString = RenderScript();
             Validate(creationString, new HomeStockControlException(string.Format("Control '{0}', of type {1}, GenerateCreationString returned an invalid result", this.ID, this.GetType())));
 
             ScriptAssistant.RenderScript(new Script(creationString), ScriptRegionID);

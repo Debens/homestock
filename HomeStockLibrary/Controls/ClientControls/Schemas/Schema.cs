@@ -17,7 +17,7 @@ namespace HomeStockLibrary.Controls.ClientControls.Schemas
         [DataMember(Name = "entities"), PersistenceMode(PersistenceMode.InnerProperty)]
         public List<Entity> Entities { get; set; }
 
-        public override string GenerateCreationString()
+        public override string RenderScript()
         {
             var creationString = new StringBuilder();
             creationString.AppendLine("var ns = HomeStock.Import(\"Data\");");
