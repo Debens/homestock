@@ -6,11 +6,17 @@
 
     ns.Export("Binder", Binder);
 
-    function Binder() {
+    function Binder(params) {
+        this.validate(params, "rootNode")
         var self = this;
 
+        var vmRoot = params.rootNode;
+        
         self.Bind = function (params) {
             self.validate(params, "eventObject", "viewModel");
+
+            ko.cleanNode(vmRoot);
+            ko.applyBindings(params.viewModel, vmRoot);
         };
     };
 })();
