@@ -1,13 +1,13 @@
-﻿using HomeStockLibrary.Controls.Base;
+﻿using System.Runtime.Serialization;
+using System.Web.UI;
+using HomeStockLibrary.Controls.Base;
 using HomeStockLibrary.Exceptions;
 using HomeStockLibrary.Util.Script;
-using System.Web.UI;
-using System.Runtime.Serialization;
 
-namespace HomeStockLibrary.Core.Base
+namespace HomeStockLibrary.Controls.ClientControls.Base
 {
     [DataContract]
-    public abstract class ScriptObjectBase : WebControlBase
+    public abstract class ScriptObject : WebControlBase
     {
         public abstract string ScriptRegionID { get; }
         public abstract int? ScriptRegionPriority { get; }

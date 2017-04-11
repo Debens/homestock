@@ -1,11 +1,11 @@
 ﻿using System.Text;
 using System.Runtime.Serialization;
-using HomeStockLibrary.Core.Base;
+using HomeStockLibrary.Controls.ClientControls.Base;
 
-namespace HomeStockLibrary.Data.Archives.Base
+namespace HomeStockLibrary.Controls.ClientControls.Archives.Base
 {
     [DataContract]
-    public abstract class BaseArchive : ScriptObjectBase, IArchive
+    public abstract class BaseArchive : ScriptObject, IArchive
     {
         public override string ScriptRegionID => "HomeStock Archives";
         public override int? ScriptRegionPriority => 15; // TODO: Add to web.config

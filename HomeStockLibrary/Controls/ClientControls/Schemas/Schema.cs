@@ -1,18 +1,15 @@
-﻿using HomeStockLibrary.Core;
-using HomeStockLibrary.Data.Schemas.Core;
+﻿using System.Web.UI;
+using System.Text;
 using System.Collections.Generic;
-using System.Web.UI;
 using System.Runtime.Serialization;
 using HomeStockLibrary.Util;
-using System.Text;
-using HomeStockLibrary.Util.Script;
-using System;
-using HomeStockLibrary.Core.Base;
+using HomeStockLibrary.Controls.ClientControls.Base;
+using HomeStockLibrary.Controls.ClientControls.Schemas.Base;
 
-namespace HomeStockLibrary.Data.Schemas
+namespace HomeStockLibrary.Controls.ClientControls.Schemas
 {
     [DataContract]
-    public class Schema : ScriptObjectBase, ISchema
+    public class Schema : ScriptObject, ISchema
     {
         public override string ScriptRegionID =>  "HomeStock Schemas";
         public override int? ScriptRegionPriority => 20; // TODO: Add to web.config

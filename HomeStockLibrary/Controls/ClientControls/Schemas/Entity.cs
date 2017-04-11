@@ -1,12 +1,12 @@
-﻿using HomeStockLibrary.Data.Schemas.Core;
+﻿using System.Linq;
 using System.Collections.Generic;
 using System.Runtime.Serialization;
 using System.Web.UI;
 using HomeStockLibrary.Core;
-using System.Linq;
 using HomeStockLibrary.Exceptions;
+using HomeStockLibrary.Controls.ClientControls.Schemas.Base;
 
-namespace HomeStockLibrary.Data.Schemas
+namespace HomeStockLibrary.Controls.ClientControls.Schemas
 {
     [DataContract]
     public class Entity : Validatble, IEntity

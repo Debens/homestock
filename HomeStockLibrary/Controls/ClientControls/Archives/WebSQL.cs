@@ -1,14 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.Serialization;
-using System.Text;
-using System.Threading.Tasks;
-using HomeStockLibrary.Data.Archives.Base;
-using HomeStockLibrary.Data.Archives.Base.WebSQL;
 using HomeStockLibrary.Util;
+using HomeStockLibrary.Controls.ClientControls.Archives.Base;
+using HomeStockLibrary.Controls.ClientControls.Archives.Base.WebSQL;
 
-namespace HomeStockLibrary.Data.Archives
+namespace HomeStockLibrary.Controls.ClientControls.Archives
 {
     [Serializable, DataContract]
     public class WebSQL : BaseArchive, IWebSQL

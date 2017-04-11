@@ -1,8 +1,8 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Archive.aspx.cs" Inherits="HomeStock.Development.Library.Data.Archives" %>
 
 <%@ Register Assembly="HomeStockLibrary" Namespace="HomeStockLibrary.Controls" TagPrefix="Control" %>
-<%@ Register Assembly="HomeStockLibrary" Namespace="HomeStockLibrary.Data.Archives" TagPrefix="Archive" %>
-<%@ Register Assembly="HomeStockLibrary" Namespace="HomeStockLibrary.Data.Schemas" TagPrefix="Schema" %>
+<%@ Register Assembly="HomeStockLibrary" Namespace="HomeStockLibrary.Controls.ClientControls.Archives" TagPrefix="Archive" %>
+<%@ Register Assembly="HomeStockLibrary" Namespace="HomeStockLibrary.Controls.ClientControls.Schemas" TagPrefix="Schema" %>
 
 <asp:content runat="server" id="contentPlaceHolderID" contentplaceholderid="MainViewContent">
     

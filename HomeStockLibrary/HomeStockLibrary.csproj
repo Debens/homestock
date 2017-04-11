@@ -52,6 +52,7 @@
     <Compile Include="Controls\Base\Attributes\Styling.cs" />
     <Compile Include="Controls\Base\Button\ButtonBase.cs" />
     <Compile Include="Controls\Base\Button\ButtonType.cs" />
+    <Compile Include="Controls\ClientControls\Base\ScriptObjectBase.cs" />
     <Compile Include="Controls\Resources\Core\FileInclusionType.cs" />
     <Compile Include="Controls\Base\WebControlBase.cs" />
     <Compile Include="Controls\Base\Button\IButton.cs" />
@@ -59,28 +60,27 @@
     <Compile Include="Controls\TextBox.cs" />
     <Compile Include="Core\Base\IValidatable.cs" />
     <Compile Include="Core\Validatble.cs" />
-    <Compile Include="Data\Schemas\Column.cs" />
-    <Compile Include="Data\Schemas\Core\IColumn.cs" />
-    <Compile Include="Data\Schemas\Core\IEntity.cs" />
-    <Compile Include="Data\Schemas\Core\ISchema.cs" />
-    <Compile Include="Data\Schemas\Entity.cs" />
-    <Compile Include="Data\Schemas\Schema.cs" />
-    <Compile Include="Data\Archives\EndPoint.cs" />
-    <Compile Include="Data\Archives\Base\WebAPI\IEndPoint.cs" />
-    <Compile Include="Data\Archives\Base\WebAPI\IEndPointFragment.cs" />
-    <Compile Include="Data\Archives\Base\WebAPI\IWebAPI.cs" />
-    <Compile Include="Data\Archives\Base\WebSQL\IWebSQL.cs" />
-    <Compile Include="Data\Archives\WebSQL.cs" />
-    <Compile Include="Data\Workers\Base\IWorker.cs" />
-    <Compile Include="Data\Workers\Worker.cs" />
+    <Compile Include="Controls\ClientControls\Schemas\Column.cs" />
+    <Compile Include="Controls\ClientControls\Schemas\Base\IColumn.cs" />
+    <Compile Include="Controls\ClientControls\Schemas\Base\IEntity.cs" />
+    <Compile Include="Controls\ClientControls\Schemas\Base\ISchema.cs" />
+    <Compile Include="Controls\ClientControls\Schemas\Entity.cs" />
+    <Compile Include="Controls\ClientControls\Schemas\Schema.cs" />
+    <Compile Include="Controls\ClientControls\Archives\EndPoint.cs" />
+    <Compile Include="Controls\ClientControls\Archives\Base\WebAPI\IEndPoint.cs" />
+    <Compile Include="Controls\ClientControls\Archives\Base\WebAPI\IEndPointFragment.cs" />
+    <Compile Include="Controls\ClientControls\Archives\Base\WebAPI\IWebAPI.cs" />
+    <Compile Include="Controls\ClientControls\Archives\Base\WebSQL\IWebSQL.cs" />
+    <Compile Include="Controls\ClientControls\Archives\WebSQL.cs" />
+    <Compile Include="Controls\ClientControls\Workers\Base\IWorker.cs" />
+    <Compile Include="Controls\ClientControls\Workers\Worker.cs" />
     <Compile Include="Exceptions\HomeStockPropertyException.cs" />
     <Compile Include="Util\Core\DataMemberContractResolver.cs" />
     <Compile Include="Util\JsonAssistant.cs" />
-    <Compile Include="Core\Base\ScriptObjectBase.cs" />
-    <Compile Include="Data\Archives\EndPointFragment.cs" />
-    <Compile Include="Data\Archives\WebAPI.cs" />
-    <Compile Include="Data\Archives\Base\BaseArchive.cs" />
-    <Compile Include="Data\Archives\Base\IArchive.cs" />
+    <Compile Include="Controls\ClientControls\Archives\EndPointFragment.cs" />
+    <Compile Include="Controls\ClientControls\Archives\WebAPI.cs" />
+    <Compile Include="Controls\ClientControls\Archives\Base\BaseArchive.cs" />
+    <Compile Include="Controls\ClientControls\Archives\Base\IArchive.cs" />
     <Compile Include="Exceptions\HomeStockControlException.cs" />
     <Compile Include="Exceptions\HomeStockException.cs" />
     <Compile Include="Util\ObjectAssistant.cs" />
@@ -111,6 +111,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Configuration\" />
+    <Folder Include="Controls\Templates\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

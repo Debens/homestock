@@ -1,8 +1,8 @@
-﻿using HomeStockLibrary.Data.Schemas.Core;
-using System.Runtime.Serialization;
+﻿using System.Runtime.Serialization;
 using HomeStockLibrary.Core;
+using HomeStockLibrary.Controls.ClientControls.Schemas.Base;
 
-namespace HomeStockLibrary.Data.Schemas
+namespace HomeStockLibrary.Controls.ClientControls.Schemas
 {
     [DataContract]
     public class Column : Validatble, IColumn

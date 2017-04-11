@@ -1,4 +1,4 @@
-﻿namespace HomeStockLibrary.Data.Archives.Base.WebSQL
+﻿namespace HomeStockLibrary.Controls.ClientControls.Archives.Base.WebSQL
 {
     interface IWebSQL : IArchive
     {

@@ -1,15 +1,13 @@
-﻿using System;
-using HomeStockLibrary.Data.Workers.Base;
-using HomeStockLibrary.Core;
-using System.Text;
-using HomeStockLibrary.Util;
+﻿using System.Text;
 using System.Runtime.Serialization;
-using HomeStockLibrary.Core.Base;
+using HomeStockLibrary.Util;
+using HomeStockLibrary.Controls.ClientControls.Workers.Base;
+using HomeStockLibrary.Controls.ClientControls.Base;
 
-namespace HomeStockLibrary.Data.Workers
+namespace HomeStockLibrary.Controls.ClientControls.Workers
 {
     [DataContract]
-    public class Worker : ScriptObjectBase, IWorker
+    public class Worker : ScriptObject, IWorker
     {
         public override string ScriptRegionID => "HomeStock Workers";
         public override int? ScriptRegionPriority => 11;

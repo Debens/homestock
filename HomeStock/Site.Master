@@ -13,8 +13,8 @@
 <body>
     <%@ Register Assembly="HomeStockLibrary" Namespace="HomeStockLibrary.Controls" TagPrefix="Control" %>
     <%@ Register Assembly="HomeStockLibrary" Namespace="HomeStockLibrary.Controls.Resources" TagPrefix="Resource" %>
-    <%@ Register Assembly="HomeStockLibrary" Namespace="HomeStockLibrary.Data.Schemas" TagPrefix="Schema" %>
-    <%@ Register Assembly="HomeStockLibrary" Namespace="HomeStockLibrary.Data.Archives" TagPrefix="Archive" %>
+    <%@ Register Assembly="HomeStockLibrary" Namespace="HomeStockLibrary.Controls.ClientControls.Schemas" TagPrefix="Schema" %>
+    <%@ Register Assembly="HomeStockLibrary" Namespace="HomeStockLibrary.Controls.ClientControls.Archives" TagPrefix="Archive" %>
 
     <div id="o-wrapper" class="o-wrapper">
         <main class="o-content" style="height: 100%;">

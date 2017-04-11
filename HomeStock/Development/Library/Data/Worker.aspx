@@ -2,9 +2,9 @@
 
 
 <%@ Register Assembly="HomeStockLibrary" Namespace="HomeStockLibrary.Controls" TagPrefix="Control" %>
-<%@ Register Assembly="HomeStockLibrary" Namespace="HomeStockLibrary.Data.Schemas" TagPrefix="Schema" %>
-<%@ Register Assembly="HomeStockLibrary" Namespace="HomeStockLibrary.Data.Archives" TagPrefix="Archive" %>
-<%@ Register Assembly="HomeStockLibrary" Namespace="HomeStockLibrary.Data.Workers" TagPrefix="Data" %>
+<%@ Register Assembly="HomeStockLibrary" Namespace="HomeStockLibrary.Controls.ClientControls.Schemas" TagPrefix="Schema" %>
+<%@ Register Assembly="HomeStockLibrary" Namespace="HomeStockLibrary.Controls.ClientControls.Archives" TagPrefix="Archive" %>
+<%@ Register Assembly="HomeStockLibrary" Namespace="HomeStockLibrary.Controls.ClientControls.Workers" TagPrefix="Data" %>
 
 <asp:content runat="server" id="contentPlaceHolderID" contentplaceholderid="MainViewContent">
 

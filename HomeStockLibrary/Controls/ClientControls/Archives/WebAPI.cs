@@ -1,11 +1,10 @@
-﻿using HomeStockLibrary.Data.Archives.Base;
-using HomeStockLibrary.Data.Archives.Base.WebAPI;
-using HomeStockLibrary.Util;
-using System;
+﻿using System;
 using System.Web.UI;
 using System.Runtime.Serialization;
+using HomeStockLibrary.Util;
+using HomeStockLibrary.Controls.ClientControls.Archives.Base;
 
-namespace HomeStockLibrary.Data.Archives
+namespace HomeStockLibrary.Controls.ClientControls.Archives
 {
     [Serializable, DataContract]
     public class WebAPI : BaseArchive, IWebAPI

@@ -19,7 +19,7 @@ namespace HomeStock.Development.Library.Data {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::HomeStockLibrary.Data.Workers.Worker HSworker;
+        protected global::HomeStockLibrary.Controls.ClientControls.Workers.Worker HSworker;
         
         /// <summary>
         /// sqlHomeStock control.
@@ -28,7 +28,7 @@ namespace HomeStock.Development.Library.Data {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::HomeStockLibrary.Data.Archives.WebSQL sqlHomeStock;
+        protected global::HomeStockLibrary.Controls.ClientControls.Archives.WebSQL sqlHomeStock;
         
         /// <summary>
         /// homeStockSchema control.
@@ -37,6 +37,6 @@ namespace HomeStock.Development.Library.Data {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::HomeStockLibrary.Data.Schemas.Schema homeStockSchema;
+        protected global::HomeStockLibrary.Controls.ClientControls.Schemas.Schema homeStockSchema;
     }
 }

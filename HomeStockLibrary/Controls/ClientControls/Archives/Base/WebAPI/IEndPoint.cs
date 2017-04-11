@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace HomeStockLibrary.Data.Archives.Base.WebAPI
+namespace HomeStockLibrary.Controls.ClientControls.Archives.Base.WebAPI
 {
     public interface IEndPoint
     {
