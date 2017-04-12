@@ -23,6 +23,8 @@
         node.Logging.Enable = function (enable) { _loggingEnabled = (enable != false); };
         node.Logging.Enabled = function () { return ( _loggingEnabled && parentIsLogging(node)); };
 
+        self.Members = [];
+
         self.Export = function (signature, obj) {
             if (!obj)
                 return null;
@@ -30,6 +32,7 @@
                 throw messagePrefix + "Signature was not provided for namespace export";
 
             self[signature] = obj;
+            self.Members.push(signature);
 
             if (typeof obj === "function") {
                 obj.prototype._fullPath = node.Path + "." + signature;
