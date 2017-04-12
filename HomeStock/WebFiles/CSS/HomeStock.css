@@ -241,16 +241,33 @@ p.hs-page-header-description {
 }
 /*#endregion PageHeader*/
 
-@media (max-width: 700px) {
-    a.hs-button {
-        padding: 10px 17px 10px 17px !important;
-        min-width: 70px !important;
-    }
+/*#region AccordionList*/
+div.hs-accordion-container {
 
-    div.hs-page-seporator {
-        margin-top: 28px !important;
-        margin-bottom: 28px !important;
-    }
+}
+
+div.hs-accordion-header {
+    cursor: pointer;
+    color: var(--light-grey);
+    background: var(--grey);
+    padding: 5px;
+    border-radius: 2px;
+}
+
+div.hs-accordion-content {
+    background-color: var(--HS--Background);
+}
+/*#endregion AccordionList*/
+@media (max-width: 700px) {
+    a .hs-button {
+    padding: 10px 17px 10px 17px !important;
+    min-width: 70px !important;
+}
+
+div.hs-page-seporator {
+    margin-top: 28px !important;
+    margin-bottom: 28px !important;
+}
 }
 
 @media (min-width: 1400px) {
