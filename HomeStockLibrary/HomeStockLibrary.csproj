@@ -50,6 +50,7 @@
   <ItemGroup>
     <Compile Include="Cache\Cache.cs" />
     <Compile Include="Cache\SmartCache.cs" />
+    <Compile Include="Controls\AccordionList.cs" />
     <Compile Include="Controls\PageHeader.cs" />
     <Compile Include="Controls\Base\Attributes\Styling.cs" />
     <Compile Include="Controls\Base\Button\ButtonBase.cs" />
@@ -107,6 +108,7 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Controls\Templates\PageHeader.html" />
+    <EmbeddedResource Include="Controls\Templates\AccordionList.html" />
     <Content Include="README.txt" />
   </ItemGroup>
   <ItemGroup>
