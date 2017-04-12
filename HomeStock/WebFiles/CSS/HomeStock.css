@@ -243,7 +243,8 @@ p.hs-page-header-description {
 
 /*#region AccordionList*/
 div.hs-accordion-container {
-
+    border-bottom-color: orangered;
+    border-bottom: 20px;
 }
 
 div.hs-accordion-header {
@@ -256,6 +257,7 @@ div.hs-accordion-header {
 
 div.hs-accordion-content {
     background-color: var(--HS--Background);
+    margin: 0 20px 0 20px;
 }
 /*#endregion AccordionList*/
 @media (max-width: 700px) {

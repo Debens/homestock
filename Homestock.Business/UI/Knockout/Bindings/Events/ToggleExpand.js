@@ -3,7 +3,7 @@
         return;
 
     var defaultOptions = {
-        duration: 500,
+        duration: 400,
         easing: "linear"
     };
 
