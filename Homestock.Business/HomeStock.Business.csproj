@@ -81,7 +81,6 @@
     <Content Include="Data\SyncModules\SyncModule.js" />
     <Content Include="0-Utility\IDGeneration.js" />
     <Content Include="Business\Workers\Worker.js" />
-    <Content Include="0-Utility\0-ObjectValidator.js" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="UI\" />
