@@ -82,12 +82,14 @@
     <Content Include="Data\SyncModules\SyncModule.js" />
     <Content Include="0-Utility\IDGeneration.js" />
     <Content Include="Business\Worker\Worker.js" />
+    <Content Include="UI\Knockout\Bindings\Events\ToggleClass.js" />
+    <Content Include="UI\Knockout\Bindings\Events\ToggleExpand.js" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Business\Worker\Modules\Builder\" />
     <Folder Include="Business\Worker\Modules\Save\" />
     <Folder Include="Business\Worker\Modules\Store\" />
-    <Folder Include="UI\" />
+    <Folder Include="UI\Controls\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Data\Archives\WebAPI\Archive.js" />
