@@ -11,11 +11,11 @@ namespace HomeStockLibrary.Controls.Resources.Core
 {
     public static class ResourceLoader
     {
-        private static SmartCache<string, string> cache = new SmartCache<string, string>(ReadResource);
-        private static SmartCache<string, string> tempaltes = new SmartCache<string, string>(ReadTemplate);
+        private static SmartCache<string, string> resourceCache = new SmartCache<string, string>(ReadResource);
+        private static SmartCache<string, string> templateCache = new SmartCache<string, string>(ReadTemplate);
 
-        public static string LoadResource(string resource) { return cache[resource]; }
-        public static string LoadTempalte(string template) { return tempaltes[template]; }
+        public static string LoadResource(string resource) { return resourceCache[resource]; }
+        public static string LoadTempalte(string template) { return templateCache[template]; }
 
         private static string ReadResource(string resource)
         {
