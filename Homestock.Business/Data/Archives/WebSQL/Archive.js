@@ -8,8 +8,12 @@
     ns.Export("Archive", Archive);
     var messagePrefix = nsString + ".Archive: ";
 
-    function Archive(params) {
-        var self = new nsCore.Archive(params);
+    function Archive(params, protectedData) {
+        protectedData = protectedData || {};
+        protectedData.self = protectedData.self || this;
+
+        new nsCore.Archive(params, protectedData);
+        var self = protectedData.self;
 
         initTables(self.Schema());
 

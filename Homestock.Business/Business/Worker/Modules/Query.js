@@ -18,6 +18,15 @@
         worker.Group = new nsQuery.SQLSpec({ type: "Group" });
         worker.Limit = new nsQuery.SQLSpec({ type: "Limit" });
 
-        worker.Query = function () { throw messagePrefix + "Query Method Not Implemented"; };
+        worker.Query = function () {
+            return worker.Archive.Read({
+                SQLSpecs: {
+                    Where: worker.Where(),
+                    Order: worker.Order(),
+                    Group: worker.Group(),
+                    Limit: worker.Limit()
+                }
+            });
+        };
     };
 })();

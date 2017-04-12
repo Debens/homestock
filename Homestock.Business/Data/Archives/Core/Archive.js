@@ -8,7 +8,7 @@
 
     function Archive(params, protectedData) {
         this.validate(params, "id", "schemaId");
-        var self = this;
+        var self = protectedData.self || this;
         
         protectedData = protectedData || {};
         protectedData.Read = function () { throw messagePrefix + "Read Not Implemented"; };

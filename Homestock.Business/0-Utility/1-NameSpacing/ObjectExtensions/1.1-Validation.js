@@ -49,5 +49,10 @@
             if (!Array.isArray(array))
                 throw messagePrefix + "Object is required to be of type 'Array'";
         }
+
+        prototype.validate.isType = function (obj, type) {
+            if (!(obj instanceof type))
+                throw messagePrefix + "Object does not match type with constructor: \n" + type.toLocaleString() ;
+        }
     };
 })();
