@@ -12,7 +12,7 @@
         this.validate(params, "type");
         var base = this;
         if (specTypes.indexOf(params.type) < 0) {
-            base.error(messagePrefix + params.type + " does not match one of the supported types: '" + specTypes.join("', '") + "'");
+            this.error(messagePrefix + params.type + " does not match one of the supported types: '" + specTypes.join("', '") + "'");
             return;
         }
         
@@ -31,18 +31,18 @@
 
             if (self._specs.length) {
                 if (!combinator) {
-                    base.error(messagePrefix + "Cannot append an exisiting spec without a comination operator");
+                    this.error(messagePrefix + "Cannot append an exisiting spec without a combination operator");
                     return;
                 }
                 spec = " " + combinator + " " + spec;
             }
             self._specs.push(spec);
             return self();
-        };
+        }.bind(base);
 
         var buildSpec = function () {
             return self._specs.join("");
-        }.bind(self);
+        };
 
         return self;
     };
