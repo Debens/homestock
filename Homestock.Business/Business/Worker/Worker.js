@@ -1,8 +1,8 @@
 ﻿; (function () {
     "use strict";
 
-    var nsString = "Business.Workers", ns = HomeStock.Import(nsString);
-    var nsModulesString = "Business.Workers.Modules", nsModules = HomeStock.Import(nsModulesString);
+    var nsString = "Business.Worker", ns = HomeStock.Import(nsString);
+    var nsModulesString = "Business.Worker.Modules", nsModules = HomeStock.Import(nsModulesString);
 
     ns.Export("Worker", Worker);
     var messagePrefix = nsString + ": ";

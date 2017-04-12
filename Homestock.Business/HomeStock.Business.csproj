@@ -64,10 +64,11 @@
     <Content Include="Business\ViewModel\Actions\Builder.js" />
     <Content Include="Business\ViewModel\Instigator.js" />
     <Content Include="Business\ViewModel\ViewModel.js" />
-    <Content Include="Business\Workers\Modules\Builder\Builder.js" />
-    <Content Include="Business\Workers\Modules\Query\Query.js" />
-    <Content Include="Business\Workers\Modules\Save\Save.js" />
-    <Content Include="Business\Workers\Modules\Store\Store.js" />
+    <Content Include="Business\Worker\Modules\Builder.js" />
+    <Content Include="Business\Worker\Modules\Query.js" />
+    <Content Include="Business\Worker\Modules\Query\SQLSpec.js" />
+    <Content Include="Business\Worker\Modules\Save.js" />
+    <Content Include="Business\Worker\Modules\Store.js" />
     <Content Include="Data\Archives\Core\RecordSet.js" />
     <Content Include="Data\Archives\WebAPI\UrlFormatter.js" />
     <Content Include="Data\Schema.js" />
@@ -80,9 +81,12 @@
     <Content Include="Data\SyncModules\SchemaMapping.js" />
     <Content Include="Data\SyncModules\SyncModule.js" />
     <Content Include="0-Utility\IDGeneration.js" />
-    <Content Include="Business\Workers\Worker.js" />
+    <Content Include="Business\Worker\Worker.js" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Business\Worker\Modules\Builder\" />
+    <Folder Include="Business\Worker\Modules\Save\" />
+    <Folder Include="Business\Worker\Modules\Store\" />
     <Folder Include="UI\" />
   </ItemGroup>
   <ItemGroup>

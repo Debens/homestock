@@ -1,7 +1,7 @@
 ﻿; (function () {
     "use strict";
 
-    var nsString = "Business.Workers.Modules", ns = HomeStock.Import(nsString);
+    var nsString = "Business.Worker.Modules", ns = HomeStock.Import(nsString);
 
     ns.Export("Store", Store);
     var messagePrefix = nsString + ".Store: ";

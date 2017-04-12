@@ -18,7 +18,7 @@ namespace HomeStockLibrary.Controls.ClientControls.Workers
         public override string RenderScript()
         {
             var script = new StringBuilder();
-            script.AppendLine("var ns = HomeStock.Import(\"Business.Workers\");");
+            script.AppendLine("var ns = HomeStock.Import(\"Business.Worker\");");
             script.AppendLine(string.Format("HomeStock.Workers.Add(new ns.Worker({0}));", JsonAssistant.Convert(this, typeof(IWorker))));
             return script.ToString();
         }
