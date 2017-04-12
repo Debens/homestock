@@ -106,7 +106,7 @@
     <Compile Include="Controls\Resources\ScriptInclusion.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Controls\Templates\PageHeader.html" />
+    <EmbeddedResource Include="Controls\Templates\PageHeader.html" />
     <Content Include="README.txt" />
   </ItemGroup>
   <ItemGroup>
