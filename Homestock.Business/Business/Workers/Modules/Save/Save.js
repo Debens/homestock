@@ -6,11 +6,11 @@
     ns.Export("Save", Save);
     var messagePrefix = nsString + ".Save: ";
 
-    var Save = function (params) {
+    function Save (params) {
         this.validate(params, "worker");
         var self = this;
         
-        var _worker = params.worker;
+        var worker = params.worker;
         
         worker.Save = function () { throw messagePrefix + "Save Method Not Implemented"; };
     };

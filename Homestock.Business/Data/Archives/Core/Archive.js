@@ -17,7 +17,7 @@
 
         var schemaId = params.schemaId;
 
-        self.Name = params.id;
+        self.name = params.id;
         self.Schema = function () { return HomeStock.Schemas[schemaId]; };        
 
         self["Read"] = function (params) {

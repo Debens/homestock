@@ -67,6 +67,7 @@
     <Content Include="Business\Workers\Modules\Builder\Builder.js" />
     <Content Include="Business\Workers\Modules\Query\Query.js" />
     <Content Include="Business\Workers\Modules\Save\Save.js" />
+    <Content Include="Business\Workers\Modules\Store\Store.js" />
     <Content Include="Data\Archives\Core\RecordSet.js" />
     <Content Include="Data\Archives\WebAPI\UrlFormatter.js" />
     <Content Include="Data\Schema.js" />

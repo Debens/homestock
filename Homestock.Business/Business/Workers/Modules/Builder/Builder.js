@@ -10,9 +10,17 @@
         this.validate(params, "worker");
         var self = this;
         
-        var _worker = params.worker;
-        
-        function buildStore() { throw messagePrefix + "ContructStore Method Not Implemented"; };
+        var worker = params.worker;
 
+        worker.on("Query", function (e, recordSet) {
+            buildStore({
+                recordSet: recordSet
+            });
+        });
+
+        var buildStore = function (params) {
+            this.validate(params, "recordSet");
+            //TODO: Build 
+        }.bind(self);
     };
 })();

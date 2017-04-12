@@ -10,7 +10,7 @@
         this.validate(params, "worker");
         var self = this;
         
-        var _worker = params.worker;
+        var worker = params.worker;
         
         worker.Query = function () { throw messagePrefix + "Query Method Not Implemented"; };
     };
