@@ -21,7 +21,7 @@
             <div class="o-container">
                 <table>
                     <tr>
-                        <td id="push-left" style="table-layout: fixed; width: 50px; max-width:50px; cursor: pointer">
+                        <td id="push-left" style="table-layout: fixed; width: 50px; max-width:50px; cursor: pointer; background-color: var(--grey)">
                             <div class="side-ribbon">
                                 <div class="bars-container">
                                     <div class="bar1"></div>

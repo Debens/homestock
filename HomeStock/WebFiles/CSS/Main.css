@@ -79,7 +79,7 @@ h1.side-title {
 .side-ribbon {
 	width: 10%;
 	height: 100%;
-    position: fixed;
+    position: relative;
 }
 
 iframe.main-content {
