@@ -4,30 +4,27 @@
 
     ko.bindingHandlers.toggleClass = {
         init: function (el, valueAccessor, allBindings) {
-            var classes = format(ko.unwrap(valueAccessor()));
+            var actionArray = ko.unwrap(valueAccessor());
+            actionArray = Array.isArray(actionArray) ? actionArray : [actionArray];
 
             var actionElement = $(el);
-            var parentSelect = allBindings.get("sParent");
-            var childSelect = allBindings.get("sChild");
-            var event = allBindings.get("event") || "click";
+            for (var index = 0; index < actionArray.length; index++) {
+                var action = actionArray[index];
+                var parentSelect = action.sParent;
+                var childSelect = action.sChild;
+                var event = action.event || "click";
 
-            $(el).on(event, function () {
-                var actionElement = $(el);
-                actionElement = parentSelect ? actionElement.closest(parentSelect.startsWith(".") ? parentSelect : "." + parentSelect) : actionElement;
-                actionElement = childSelect ? actionElement.find(childSelect.startsWith(".") ? childSelect : "." + childSelect) : actionElement;
+                $(el).on(event, function () {
+                    var actionElement = $(el);
+                    actionElement = parentSelect ? actionElement.closest(parentSelect.startsWith(".") ? parentSelect : "." + parentSelect) : actionElement;
+                    actionElement = childSelect ? actionElement.find(childSelect.startsWith(".") ? childSelect : "." + childSelect) : actionElement;
 
-                var enabled = actionElement.hasClass(classes.on);
-                actionElement.toggleClass(classes.on, !enabled);
-                if (classes.off)
-                    actionElement.toggleClass(classes.off, enabled);
-            });
+                    var enabled = actionElement.hasClass(action.classes.on);
+                    actionElement.toggleClass(action.classes.on, !enabled);
+                    if (action.classes.off)
+                        actionElement.toggleClass(action.classes.off, enabled);
+                });
+            }
         }
-    };
-
-    function format(toggleClasses) {
-        if (typeof toggleClasses === "string")
-            return { on: toggleClasses };
-        else
-            return toggleClasses;
     };
 })();

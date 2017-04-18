@@ -8,17 +8,17 @@
     };
 
     ko.bindingHandlers.toggleExpand = {
-        init: function (el, valueAccessor, allBindings) {
-            var intialState = ko.unwrap(valueAccessor());
+        init: function (el, valueAccessor) {
+            var action = ko.unwrap(valueAccessor());
 
             var actionElement = $(el);
-            var parentSelect = allBindings.get("sParent");
-            var childSelect = allBindings.get("sChild");
-            var options = $.extend({}, allBindings.get("options") || 400, defaultOptions, true);
-            var event = allBindings.get("event") || "click";
+            var parentSelect = action.sParent;
+            var childSelect = action.sChild;
+            var options = $.extend({}, action.options, defaultOptions, true);
+            var event = action.event || "click";
             var actionElement = findActionElement();
 
-            if (intialState)
+            if (action.open)
                 actionElement.slideDown(options);
             else
                 actionElement.slideUp(options);

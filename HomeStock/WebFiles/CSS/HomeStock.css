@@ -243,15 +243,53 @@ p.hs-page-header-description {
 
 /*#region AccordionList*/
 div.hs-accordion-container {
-    border-bottom-color: orangered;
-    border-bottom: 20px;
+    position: relative;
+    border-bottom: 2px solid var(--light-grey);
+    padding-bottom: 3px;
 }
+
+
+    div.hs-accordion-container:before {
+        content: '';
+        display: block;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        height: 3px;
+        width: 0;
+        transition: width 0s ease, background .5s ease;
+    }
+
+    div.hs-accordion-container:after {
+        content: '';
+        display: block;
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        height: 3px;
+        width: 0;
+        background: var(--HS-Active);
+        transition: width .5s ease;
+    }
+
+    div.hs-accordion-container:hover:before {
+        width: 100%;
+        background: var(--HS-Active);
+        transition: width .5s ease;
+    }
+
+    div.hs-accordion-container:hover:after {
+        width: 100%;
+        background: transparent;
+        transition: all 0s ease;
+    }
 
 div.hs-accordion-header {
     cursor: pointer;
-    color: var(--light-grey);
-    background: var(--grey);
+    color: var(--grey);
+    /*background: var(--grey);*/
     padding: 5px;
+    margin-bottom: 3px;
     border-radius: 2px;
 }
 
@@ -260,16 +298,62 @@ div.hs-accordion-content {
     margin: 0 20px 0 20px;
 }
 /*#endregion AccordionList*/
+
+/*#region Icons*/
+div.hs-transition-plus {
+    position: relative;
+    width: 20px;
+    height: 20px;
+    margin: 6px;
+}
+    div.hs-transition-plus:before,
+    div.hs-transition-plus:after {
+        content: "";
+        position: absolute;
+        background-color: var(--grey);
+        transition: transform 0.4s ease-out;
+    }
+
+    /* Vertical line */
+    div.hs-transition-plus:before {
+        top: 0;
+        left: 50%;
+        width: 4px;
+        height: 100%;
+        margin-left: -2px;
+    }
+
+    /* horizontal line */
+    div.hs-transition-plus:after {
+        top: 50%;
+        left: 0;
+        width: 100%;
+        height: 4px;
+        margin-top: -2px;
+    }
+
+div.hs-transition-plus.minus {
+    cursor: pointer;
+}
+    div.hs-transition-plus.minus:before {
+        transform: rotate(450deg);
+    }
+
+    div.hs-transition-plus.minus:after {
+        transform: rotate(540deg);
+    }
+/*#endregion Icons*/
+
 @media (max-width: 700px) {
-    a .hs-button {
+    a.hs-button {
     padding: 10px 17px 10px 17px !important;
     min-width: 70px !important;
-}
+    }
 
-div.hs-page-seporator {
-    margin-top: 28px !important;
-    margin-bottom: 28px !important;
-}
+    div.hs-page-seporator {
+        margin-top: 28px !important;
+        margin-bottom: 28px !important;
+    }
 }
 
 @media (min-width: 1400px) {
