@@ -1,8 +1,8 @@
 ﻿<div class="accordion">
     <div>
-        <div class="hs-accordion-container">
-            <div class="hs-accordion-entry">
-                <div class="hs-accordion-header" data-bind="toggleExpand: { open: false, sParent: 'hs-accordion-entry', sChild: 'hs-accordion-content' }, toggleClass: { classes : { on: 'minus' }, sChild: 'hs-transition-plus' }">
+        <ul class="hs-accordion-container">
+            <li class="hs-accordion-entry">
+                <div class="hs-accordion-header" data-bind="toggleExpand: { open: false, sParent: 'hs-accordion-entry', sChild: 'hs-accordion-content' }, toggleClass: [{ classes : { on: 'minus' }, sChild: 'hs-transition-plus' }, { classes: { on: 'selected'}, sParent: 'hs-accordion-entry'}]">
                     <div class="hs-transition-plus" style="float: left;"></div>
                     <span>First Accordion heading</span>
                 </div>
@@ -10,9 +10,9 @@
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi eu interdum diam. Donec interdum porttitor risus non bibendum. Maecenas sollicitudin eros in quam imperdiet placerat. Cras justo purus, rhoncus nec lobortis ut, iaculis vel ipsum. Donec dignissim arcu nec elit faucibus condimentum. Donec facilisis consectetur enim sit amet varius. Pellentesque justo dui, sodales quis luctus a, iaculis eget mauris. </p>
                     <p>Aliquam dapibus, ante quis fringilla feugiat, mauris risus condimentum massa, at elementum libero quam ac ligula. Pellentesque at rhoncus dolor. Duis porttitor nibh ut lobortis aliquam. Nullam eu dolor venenatis mauris placerat tristique eget id dolor. Quisque blandit adipiscing erat vitae dapibus. Nulla aliquam magna nec elementum tincidunt.</p>
                 </div>
-            </div>
-            <div class="hs-accordion-entry">
-                <div class="hs-accordion-header" data-bind="toggleExpand: { open: false, sParent: 'hs-accordion-entry', sChild: 'hs-accordion-content' }, toggleClass: { classes : { on: 'minus' }, sChild: 'hs-transition-plus' }">
+            </li>
+            <li class="hs-accordion-entry">
+                <div class="hs-accordion-header" data-bind="toggleExpand: { open: false, sParent: 'hs-accordion-entry', sChild: 'hs-accordion-content' }, toggleClass: [{ classes : { on: 'minus' }, sChild: 'hs-transition-plus' }, { classes: { on: 'selected'}, sParent: 'hs-accordion-entry'}]">
                     <div class="hs-transition-plus" style="float: left;"></div>
                     <span>Second Accordion heading</span>
                 </div>
@@ -20,9 +20,9 @@
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi eu interdum diam. Donec interdum porttitor risus non bibendum. Maecenas sollicitudin eros in quam imperdiet placerat. Cras justo purus, rhoncus nec lobortis ut, iaculis vel ipsum. Donec dignissim arcu nec elit faucibus condimentum. Donec facilisis consectetur enim sit amet varius. Pellentesque justo dui, sodales quis luctus a, iaculis eget mauris. </p>
                     <p>Aliquam dapibus, ante quis fringilla feugiat, mauris risus condimentum massa, at elementum libero quam ac ligula. Pellentesque at rhoncus dolor. Duis porttitor nibh ut lobortis aliquam. Nullam eu dolor venenatis mauris placerat tristique eget id dolor. Quisque blandit adipiscing erat vitae dapibus. Nulla aliquam magna nec elementum tincidunt.</p>
                 </div>
-            </div>
-            <div class="hs-accordion-entry">
-                <div class="hs-accordion-header" data-bind="toggleExpand: { open: false, sParent: 'hs-accordion-entry', sChild: 'hs-accordion-content' }, toggleClass: { classes : { on: 'minus' }, sChild: 'hs-transition-plus' }">
+            </li>
+            <li class="hs-accordion-entry">
+                <div class="hs-accordion-header" data-bind="toggleExpand: { open: false, sParent: 'hs-accordion-entry', sChild: 'hs-accordion-content' }, toggleClass: [{ classes : { on: 'minus' }, sChild: 'hs-transition-plus' }, { classes: { on: 'selected'}, sParent: 'hs-accordion-entry'}]">
                     <div class="hs-transition-plus" style="float: left;"></div>
                     <span>Third Accordion heading</span>
                 </div>
@@ -30,7 +30,27 @@
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi eu interdum diam. Donec interdum porttitor risus non bibendum. Maecenas sollicitudin eros in quam imperdiet placerat. Cras justo purus, rhoncus nec lobortis ut, iaculis vel ipsum. Donec dignissim arcu nec elit faucibus condimentum. Donec facilisis consectetur enim sit amet varius. Pellentesque justo dui, sodales quis luctus a, iaculis eget mauris. </p>
                     <p>Aliquam dapibus, ante quis fringilla feugiat, mauris risus condimentum massa, at elementum libero quam ac ligula. Pellentesque at rhoncus dolor. Duis porttitor nibh ut lobortis aliquam. Nullam eu dolor venenatis mauris placerat tristique eget id dolor. Quisque blandit adipiscing erat vitae dapibus. Nulla aliquam magna nec elementum tincidunt.</p>
                 </div>
-            </div>
-        </div>
+            </li>
+            <li class="hs-accordion-entry">
+                <div class="hs-accordion-header" data-bind="toggleExpand: { open: false, sParent: 'hs-accordion-entry', sChild: 'hs-accordion-content' }, toggleClass: [{ classes : { on: 'minus' }, sChild: 'hs-transition-plus' }, { classes: { on: 'selected'}, sParent: 'hs-accordion-entry'}]">
+                    <div class="hs-transition-plus" style="float: left;"></div>
+                    <span>Fourth Accordion heading</span>
+                </div>
+                <div class="hs-accordion-content">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi eu interdum diam. Donec interdum porttitor risus non bibendum. Maecenas sollicitudin eros in quam imperdiet placerat. Cras justo purus, rhoncus nec lobortis ut, iaculis vel ipsum. Donec dignissim arcu nec elit faucibus condimentum. Donec facilisis consectetur enim sit amet varius. Pellentesque justo dui, sodales quis luctus a, iaculis eget mauris. </p>
+                    <p>Aliquam dapibus, ante quis fringilla feugiat, mauris risus condimentum massa, at elementum libero quam ac ligula. Pellentesque at rhoncus dolor. Duis porttitor nibh ut lobortis aliquam. Nullam eu dolor venenatis mauris placerat tristique eget id dolor. Quisque blandit adipiscing erat vitae dapibus. Nulla aliquam magna nec elementum tincidunt.</p>
+                </div>
+            </li>
+            <li class="hs-accordion-entry">
+                <div class="hs-accordion-header" data-bind="toggleExpand: { open: false, sParent: 'hs-accordion-entry', sChild: 'hs-accordion-content' }, toggleClass: [{ classes : { on: 'minus' }, sChild: 'hs-transition-plus' }, { classes: { on: 'selected'}, sParent: 'hs-accordion-entry'}]">
+                    <div class="hs-transition-plus" style="float: left;"></div>
+                    <span>Fifth Accordion heading</span>
+                </div>
+                <div class="hs-accordion-content">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi eu interdum diam. Donec interdum porttitor risus non bibendum. Maecenas sollicitudin eros in quam imperdiet placerat. Cras justo purus, rhoncus nec lobortis ut, iaculis vel ipsum. Donec dignissim arcu nec elit faucibus condimentum. Donec facilisis consectetur enim sit amet varius. Pellentesque justo dui, sodales quis luctus a, iaculis eget mauris. </p>
+                    <p>Aliquam dapibus, ante quis fringilla feugiat, mauris risus condimentum massa, at elementum libero quam ac ligula. Pellentesque at rhoncus dolor. Duis porttitor nibh ut lobortis aliquam. Nullam eu dolor venenatis mauris placerat tristique eget id dolor. Quisque blandit adipiscing erat vitae dapibus. Nulla aliquam magna nec elementum tincidunt.</p>
+                </div>
+            </li>
+        </ul>
     </div>
 </div>

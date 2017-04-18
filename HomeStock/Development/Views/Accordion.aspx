@@ -4,7 +4,7 @@
 
 <asp:content runat="server" id="contentPlaceHolderID" contentplaceholderid="MainViewContent">
     
-    <Control:PageHeader runat="server" Title="Button" Description="Below is a various set of different possible button configurations" />
+    <Control:PageHeader runat="server" Title="Accordion" Description="Below is an example of an accordion list. It's not really an accordion as you can have more than one open at a time, but hey ho." />
 
     <Control:AccordionList runat="server" />
 

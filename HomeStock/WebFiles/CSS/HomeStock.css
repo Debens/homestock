@@ -242,16 +242,28 @@ p.hs-page-header-description {
 /*#endregion PageHeader*/
 
 /*#region AccordionList*/
-div.hs-accordion-entry {
-    border-bottom: 1px solid var(--light-grey);
-    padding-bottom: 3px;
-    transition: all 0.4s ease-out;
-    background-color: #FFF;
+ul.hs-accordion-container {
+    list-style-type: none;
 }
 
-div.hs-accordion-container {
-    border-top: 1px solid var(--light-grey);
-}
+    ul.hs-accordion-container > li.hs-accordion-entry {
+        padding-bottom: 3px;
+        transition: all 0.4s ease-out;
+        background-color: #FFF;
+        border-bottom: 1px solid var(--light-grey);
+        transition: all 0.4s ease-out;
+        box-shadow: 0 4px 2px -2px var(--light-grey);
+    }
+
+        /*ul.hs-accordion-container > li:first-child {
+            border-top: 1px solid var(--light-grey);
+        }*/
+
+        ul.hs-accordion-container > li.selected {
+            margin-top: 10px;
+            margin-bottom: 10px;
+            /*border-top: 1px solid var(--light-grey);*/
+        }
 
 div.hs-accordion-header {
     cursor: pointer;

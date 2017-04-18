@@ -340,9 +340,10 @@ img {
   cursor: pointer;
 }
 
-.selected {
+/*Is broken and was interfering with the accordion dev - shouldnt have just .selected*/
+/*.selected {
     border-bottom: solid 3px var(--active-selected) !important;
-}
+}*/
 
 .c-menu .c-menu__link {
   display: block;
