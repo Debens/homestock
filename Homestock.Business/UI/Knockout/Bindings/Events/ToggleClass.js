@@ -9,17 +9,17 @@
 
             var actionElement = $(el);
             for (var index = 0; index < actionArray.length; index++) {
-                var action = actionArray[index];
-                var parentSelect = action.sParent;
-                var childSelect = action.sChild;
-                var event = action.event || "click";
+                let action = actionArray[index];
+                let parentSelect = action.sParent;
+                let childSelect = action.sChild;
+                let event = action.event || "click";
 
                 $(el).on(event, function () {
-                    var actionElement = $(el);
+                    let actionElement = $(el);
                     actionElement = parentSelect ? actionElement.closest(parentSelect.startsWith(".") ? parentSelect : "." + parentSelect) : actionElement;
                     actionElement = childSelect ? actionElement.find(childSelect.startsWith(".") ? childSelect : "." + childSelect) : actionElement;
 
-                    var enabled = actionElement.hasClass(action.classes.on);
+                    let enabled = actionElement.hasClass(action.classes.on);
                     actionElement.toggleClass(action.classes.on, !enabled);
                     if (action.classes.off)
                         actionElement.toggleClass(action.classes.off, enabled);
