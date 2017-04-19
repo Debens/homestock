@@ -21,7 +21,7 @@
                 var property = propertyStack.splice(0, 1);
                 if (!source)
                     throw messagePrefix + "Missing source object to validate";
-                else if (!source.hasOwnProperty(property))
+                else if (!source[property] && !source.hasOwnProperty(property))
                     throw messagePrefix + "Object missing property '" + property + "'";
                 else if (propertyStack.length)
                     prototype.validate(source[property], propertyStack);
