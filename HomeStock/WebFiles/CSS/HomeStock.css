@@ -109,7 +109,6 @@ a.hs-button-delete {
 
     a.hs-button-delete:active {
         background-color: var(--HS-Red-Focus);
-        color: #ffffff;
     }
 /*#endregion Delete*/
 
