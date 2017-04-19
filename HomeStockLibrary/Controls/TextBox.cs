@@ -47,7 +47,7 @@ namespace HomeStockLibrary.Controls
             {
                 enforceStyling(writer);
                 writer.AddAttribute("for", this.ID);
-                writer.AddAttribute("class", "hs-input-label");
+                writer.AddAttribute("class", "hs-input-label unselectable");
                 writer.RenderBeginTag("label");
                 writer.InnerWriter.Write(string.Format("{0}", Label));
                 writer.RenderEndTag();

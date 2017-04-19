@@ -15,6 +15,17 @@
     --HS--Background: #f4f7f8;
 }
 
+/*#region General*/
+.unselectable {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+/*#endregion General*/
+
 /*#region Button*/
 a.hs-button {
     position: relative;
