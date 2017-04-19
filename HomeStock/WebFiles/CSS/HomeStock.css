@@ -12,7 +12,7 @@
     --HS-Green-Accent: #5dd55d;
     --HS-Green-Focus: #258e25;
     --HS-Active: #ff6600;
-    --HS--Background: #f4f7f8;
+    --HS-Background: #f4f7f8;
 }
 
 /*#region General*/
@@ -45,7 +45,7 @@ a.hs-button {
     white-space: nowrap;
     border: solid; /*Add border in now that is the same as the background color to avoid resize on hover*/
     border-radius: 5px;
-    border-color: var(--HS--Background);
+    border-color: var(--HS-Background);
 
     -webkit-user-select: none; /* Chrome/Safari */
     -moz-user-select: none; /* Firefox */
@@ -99,8 +99,8 @@ a.hs-button-new {
 
 /*#region Delete*/
 a.hs-button-delete {
-    background-color: var(--HS-Red-Accent);
-    border: 1px solid var(--HS-Red);
+    background-color: var(--HS-Red);
+    border: 1px solid var(--HS-Red-Accent);
 }
 
     a.hs-button-delete:hover {
@@ -136,7 +136,7 @@ a.hs-button-delete {
     .hs-input-wrapper input[type="password"],
     .hs-input-wrapper textarea,
     .hs-input-wrapper select {
-        background: var(--HS--Background);
+        background: var(--HS-Background);
         z-index: -1;
         display: block;
         padding: 9px;
@@ -185,7 +185,7 @@ label.hs-input-label {
     display: block;
     float: left;
     margin-top: -25px;
-    background: var(--HS--Background);
+    background: var(--HS-Background);
     height: 25px;
     padding: 2px 5px 2px 5px;
     color: #B9B9B9;
