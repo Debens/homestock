@@ -10,20 +10,22 @@
         var self = this;
 
         self.Build = function (params) {
-            self.validate(params, "workers", "eventObject", "viewModel");
-            
+            self.validate(params, "workers", "eventObject", "eventObject.trigger", "viewModel");
+
+            params.eventObject.trigger("PreVMBuild");
             for (var index = 0; index < Object.keys(params.workers).length; index++) {
                 var worker = params.workers[Object.keys(params.workers)[index]];
                 if (typeof worker === "object")
                     referenceWorker(params.viewModel, worker);
             }
+            params.eventObject.trigger("VMBuilt");
         };
 
         var referenceWorker = function (viewModel, worker) {
             if(ko.unwrap(viewModel).hasOwnProperty(worker.name))
                 this.warn(messagePrefix + "The view model already defines a worker '" + worker.name + "'. The duplicate worker shall not be added to the view model");
             else 
-                ko.unwrap(viewModel)[worker.name] = worker.store;
+                ko.unwrap(viewModel)[worker.name] = worker.Store;
         }.bind(self);
     };
 })();

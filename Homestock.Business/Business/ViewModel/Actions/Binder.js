@@ -15,8 +15,10 @@
         self.Bind = function (params) {
             self.validate(params, "eventObject", "viewModel");
 
+            params.eventObject.trigger("PreVMRender");
             ko.cleanNode(vmRoot);
             ko.applyBindings(params.viewModel, vmRoot);
+            params.eventObject.trigger("VMRendered");
         };
     };
 })();
