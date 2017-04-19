@@ -6,6 +6,13 @@
     
     <Control:PageHeader runat="server" Title="Accordion" Description="Below is an example of an accordion list. It's not really an accordion as you can have more than one open at a time, but hey ho." />
 
-    <Control:AccordionList runat="server" />
+    <Control:AccordionList runat="server" >
+        <Content>
+            <Control:TextBox runat="server" ID="tbx" Label="The Label" />
+            <Control:TextBox runat="server" ID="TextBox1" Label="The Label" Tag="Hi, I'm a tbx" />
+            <Control:Button runat="server" Text="Button 1" />
+            <Control:Button runat="server" Text="Button 2" />
+        </Content>
+    </Control:AccordionList>
 
 </asp:content>

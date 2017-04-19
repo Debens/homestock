@@ -13,6 +13,10 @@ namespace HomeStockLibrary.Controls.Base
         [DataMember(Name = "id")]
         public override string ID { get; set; }
 
+        [IgnoreDataMember]
+        public string BlendColour { get { return _blendColour ?? "var(--HS-Background)"; } set { _blendColour = value; } } // TODO: Config default blend colour
+        private string _blendColour;
+
         protected abstract override void Render(HtmlTextWriter writer);
 
         public abstract void ValidateProperties();

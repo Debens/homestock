@@ -1,4 +1,5 @@
-﻿using HomeStockLibrary.Core;
+﻿using HomeStockLibrary.Controls.Base;
+using HomeStockLibrary.Core;
 using System;
 using System.Web.UI;
 
@@ -44,6 +45,22 @@ namespace HomeStockLibrary.Util
             }
 
             return result;
+        }
+
+        public static void CascadeBlendColour(Control contorl, string colour)
+        {
+            appplyBlendColour(contorl, colour);
+            foreach (Control subControl in contorl.Controls)
+                CascadeBlendColour(subControl, colour);
+        }
+
+        public static void appplyBlendColour(Control contorl, string colour)
+        {
+            var webContorl = contorl as WebControlBase;
+            if (webContorl != null)
+            {
+                webContorl.BlendColour = colour;
+            }
         }
     }
 }

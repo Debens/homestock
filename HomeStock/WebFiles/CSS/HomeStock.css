@@ -244,10 +244,10 @@ p.hs-page-header-description {
 /*#region AccordionList*/
 ul.hs-accordion-container {
     list-style-type: none;
+    padding: 0;
 }
 
     ul.hs-accordion-container > li.hs-accordion-entry {
-        padding-bottom: 3px;
         transition: all 0.4s ease-out;
         background-color: #FFF;
         border-bottom: 1px solid var(--light-grey);
@@ -255,26 +255,20 @@ ul.hs-accordion-container {
         box-shadow: 0 4px 2px -2px var(--light-grey);
     }
 
-        /*ul.hs-accordion-container > li:first-child {
-            border-top: 1px solid var(--light-grey);
-        }*/
-
-        ul.hs-accordion-container > li.selected {
-            margin-top: 10px;
-            margin-bottom: 10px;
-            /*border-top: 1px solid var(--light-grey);*/
-        }
+    ul.hs-accordion-container > li.selected {
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
 
 div.hs-accordion-header {
     cursor: pointer;
     color: var(--grey);
-    /*background: var(--grey);*/
-    padding: 5px;
-    margin-bottom: 3px;
+    padding: 5px 5px 12px 5px;
     border-radius: 2px;
 }
 
 div.hs-accordion-content {
+    cursor: default;
     margin: 0 20px 0 20px;
 }
 /*#endregion AccordionList*/

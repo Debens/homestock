@@ -45,7 +45,7 @@
     </div>
 
     <nav id="c-menu" class="c-menu c-menu">
-        <button class="c-menu__close">&#8617 HOME STOCK</button>
+        <button class="c-menu__close">&#8617 HOMESTOCK</button>
         <ul class="c-menu__items">
             <li class="c-menu__item">
                 <b>Test Home</b>
@@ -81,12 +81,12 @@
         });
 
         $('.c-menu__items > li').click(function () {
-            var hadClass = $(this).hasClass("selected");
+            var hasClass = $(this).hasClass("selected");
             $("li", $(this).parent()).each(function (i) {
                 $(this).removeClass("selected");
                 $(this).find('ul').slideUp();
             });
-            if (!hadClass) {
+            if (!hasClass) {
                 $(this).toggleClass("selected");
                 $(this).find('ul').slideDown();
             }

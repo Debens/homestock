@@ -31,6 +31,7 @@ namespace HomeStockLibrary.Controls
             if (!string.IsNullOrEmpty(Placeholder))
                 writer.AddAttribute("placeHolder", Placeholder);
 
+            enforceStyling(writer);
             writer.AddAttribute("class", "hs-input");
             writer.RenderBeginTag("input");
             writer.RenderEndTag();
@@ -44,6 +45,7 @@ namespace HomeStockLibrary.Controls
         {
             if (!string.IsNullOrEmpty(Label))
             {
+                enforceStyling(writer);
                 writer.AddAttribute("for", this.ID);
                 writer.AddAttribute("class", "hs-input-label");
                 writer.RenderBeginTag("label");
@@ -61,6 +63,12 @@ namespace HomeStockLibrary.Controls
                 writer.InnerWriter.Write(string.Format("{0}", Tag));
                 writer.RenderEndTag();
             }
+        }
+
+        protected void enforceStyling(HtmlTextWriter writer)
+        {
+            if (!string.IsNullOrEmpty(BlendColour))
+                writer.AddStyleAttribute("background-color", BlendColour);
         }
     }
 }

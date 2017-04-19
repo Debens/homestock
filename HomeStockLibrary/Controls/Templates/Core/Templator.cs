@@ -1,13 +1,8 @@
 ﻿using HomeStockLibrary.Controls.Resources.Core;
 using HomeStockLibrary.Exceptions;
-using System;
-using System.Collections.Generic;
-using System.Linq;
+using HomeStockLibrary.Util;
 using System.Reflection;
-using System.Text;
 using System.Text.RegularExpressions;
-using System.Threading.Tasks;
-using System.Web.Script.Serialization;
 
 namespace HomeStockLibrary.Controls.Templates.Core
 {
@@ -51,11 +46,14 @@ namespace HomeStockLibrary.Controls.Templates.Core
 
         private string getValue(object pattern, string propertyName)
         {
-            PropertyInfo property = pattern.GetType().GetProperty(propertyName);
+            PropertyInfo property = pattern.GetType().GetProperty(propertyName, BindingFlags.Public | BindingFlags.NonPublic | BindingFlags.Instance);
             if (property == null)
                 throw new HomeStockPropertyException("Object pattern does not defined property '" + propertyName + "' found in template");
-            string value =  new JavaScriptSerializer().Serialize(property.GetValue(pattern, null));
-            return value.Trim('"');
+
+            // JSON not currently supported
+            //string value = JsonAssistant.Convert(, property.GetType());
+
+            return property.GetValue(pattern, null).ToString().Trim('"');
         }
     }
 }
