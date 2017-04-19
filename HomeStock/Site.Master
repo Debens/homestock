@@ -15,10 +15,14 @@
     <%@ Register Assembly="HomeStockLibrary" Namespace="HomeStockLibrary.Controls.Resources" TagPrefix="Resource" %>
     <%@ Register Assembly="HomeStockLibrary" Namespace="HomeStockLibrary.Controls.ClientControls.Schemas" TagPrefix="Schema" %>
     <%@ Register Assembly="HomeStockLibrary" Namespace="HomeStockLibrary.Controls.ClientControls.Archives" TagPrefix="Archive" %>
+    
+    <script src="/WebFiles/JavaScript/Unmanaged/dist/menu.js"></script>
+    <script src="/WebFiles/JavaScript/Unmanaged/Lib/jquery-3.1.1.js"></script>
+    <script src="/WebFiles/JavaScript/Unmanaged/Lib/knockout-3.4.1.min.js"></script>
+    <Resource:FileInclusion runat="server" Source="WebFiles/Bundles/" type="Script" Filter="*.js" />
 
     <div id="o-wrapper" class="o-wrapper">
         <main class="o-content" style="height: 100%;">
-            <div class="o-container">
                 <table>
                     <tr>
                         <td id="push-left" style="table-layout: fixed; width: 50px; max-width:50px; cursor: pointer; background-color: var(--grey)">
@@ -60,10 +64,6 @@
     </nav>
 
     <div id="c-mask" class="c-mask"></div>
-    <script src="/WebFiles/JavaScript/Unmanaged/dist/menu.js"></script>
-    <script src="/WebFiles/JavaScript/Unmanaged/Lib/jquery-3.1.1.js"></script>
-    <script src="/WebFiles/JavaScript/Unmanaged/Lib/knockout-3.4.1.min.js"></script>
-    <Resource:FileInclusion runat="server" Source="WebFiles/Bundles/" type="Script" Filter="*.js" />
     <script>
         /**
          * Push left instantiation and action.
