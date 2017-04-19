@@ -55,6 +55,7 @@
     <Content Include="0-Utility\2-HomeStock\Extensions\Storage\Schemas.js" />
     <Content Include="0-Utility\2-HomeStock\Extensions\Storage\Suppliers.js" />
     <Content Include="0-Utility\2-HomeStock\Extensions\Storage\Workers.js" />
+    <Content Include="0-Utility\Knockout\HelperMethods.js" />
     <Content Include="0-Utility\Sql\Keywords.js" />
     <Content Include="0-Utility\Sql\Runner.js" />
     <Content Include="0-Utility\Sql\TableBuilder.js" />
@@ -69,6 +70,7 @@
     <Content Include="Business\Worker\Modules\Query\SQLSpec.js" />
     <Content Include="Business\Worker\Modules\Save.js" />
     <Content Include="Business\Worker\Modules\Store.js" />
+    <Content Include="Business\Worker\Modules\Store\Modules\QuickSort.js" />
     <Content Include="Data\Archives\Core\RecordSet.js" />
     <Content Include="Data\Archives\WebAPI\UrlFormatter.js" />
     <Content Include="Data\Schema.js" />
@@ -88,7 +90,6 @@
   <ItemGroup>
     <Folder Include="Business\Worker\Modules\Builder\" />
     <Folder Include="Business\Worker\Modules\Save\" />
-    <Folder Include="Business\Worker\Modules\Store\" />
     <Folder Include="UI\Controls\" />
   </ItemGroup>
   <ItemGroup>
