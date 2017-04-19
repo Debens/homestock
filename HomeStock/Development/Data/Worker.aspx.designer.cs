@@ -13,13 +13,13 @@ namespace HomeStock.Development.Library.Data {
     public partial class Worker {
         
         /// <summary>
-        /// HSworker control.
+        /// HSCore control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::HomeStockLibrary.Controls.ClientControls.Workers.Worker HSworker;
+        protected global::HomeStockLibrary.Controls.ClientControls.Workers.Worker HSCore;
         
         /// <summary>
         /// sqlHomeStock control.

@@ -8,7 +8,7 @@
 
 <asp:content runat="server" id="contentPlaceHolderID" contentplaceholderid="MainViewContent">
 
-    <Data:Worker runat="server" ID="HSworker" ArchiveID="sqlHomeStock" />
+    <Data:Worker runat="server" ID="HSCore" ArchiveID="sqlHomeStock" />
     
     <Archive:WebSQL runat="server" ID="sqlHomeStock" SchemaID="homeStockSchema" />
 

@@ -11,5 +11,32 @@ namespace HomeStock.Development.Library.View {
     
     
     public partial class Accordion {
+        
+        /// <summary>
+        /// dummyStock control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::HomeStockLibrary.Controls.ClientControls.Workers.Worker dummyStock;
+        
+        /// <summary>
+        /// sqlHomeStock control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::HomeStockLibrary.Controls.ClientControls.Archives.WebSQL sqlHomeStock;
+        
+        /// <summary>
+        /// homeStockSchema control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::HomeStockLibrary.Controls.ClientControls.Schemas.Schema homeStockSchema;
     }
 }

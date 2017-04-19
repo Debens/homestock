@@ -9,7 +9,7 @@
     
     <Control:PageHeader runat="server" Title="Accordion" Description="Below is an example of an accordion list. It's not really an accordion as you can have more than one open at a time, but hey ho." />
 
-    <Control:AccordionList runat="server" VMBinding="HSworker" HeaderText="Name" >
+    <Control:AccordionList runat="server" VMBinding="dummyStock" HeaderText="Name" >
         <Content>
             <Control:TextBox runat="server" ID="tbx" Label="The Label" />
             <Control:TextBox runat="server" ID="TextBox1" Label="The Label" Tag="Hi, I'm a tbx" />
@@ -18,7 +18,7 @@
         </Content>
     </Control:AccordionList>
 
-    <Data:Worker runat="server" ID="HSworker" ArchiveID="sqlHomeStock" />
+    <Data:Worker runat="server" ID="dummyStock" ArchiveID="sqlHomeStock" />
     
     <Archive:WebSQL runat="server" ID="sqlHomeStock" SchemaID="homeStockSchema" />
 
@@ -40,9 +40,9 @@
     <script>
         HomeStock.on("PreVMRender", function () {
             var items = ["OJuice", "Bread", "Cheese", "Meat", "Milk"];
-            for (var index = 0; index < items.length; index++) {
-                var item = items[index];
-                HomeStock.Workers.HSworker.Store.push({ Entries: { Name: item } });
+            for (var index = 0; index < items.length * 10; index++) {
+                var item = items[index % items.length];
+                HomeStock.Workers.dummyStock.Store.push({ Entries: { Name: item } });
             }
         });
     </script>
