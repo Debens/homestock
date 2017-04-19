@@ -1,56 +1,14 @@
-﻿<div class="accordion">
-    <div>
-        <ul class="hs-accordion-container">
-            <li class="hs-accordion-entry">
-                <div class="hs-accordion-header" data-bind="toggleExpand: { open: false, sParent: 'hs-accordion-entry', sChild: 'hs-accordion-content' }, toggleClass: [{ classes : { on: 'minus' }, sChild: 'hs-transition-plus' }, { classes: { on: 'selected'}, sParent: 'hs-accordion-entry'}]">
-                    <div class="hs-transition-plus" style="float: left;"></div>
-                    <span class="unselectable">First Accordion heading</span>
-                    <div class="hs-transition-plus" style="float: right;"></div>
-                </div>
-                <div class="hs-accordion-content">
-                    {{ContentHTML}}
-                </div>
-            </li>
-            <li class="hs-accordion-entry">
-                <div class="hs-accordion-header" data-bind="toggleExpand: { open: false, sParent: 'hs-accordion-entry', sChild: 'hs-accordion-content' }, toggleClass: [{ classes : { on: 'minus' }, sChild: 'hs-transition-plus' }, { classes: { on: 'selected'}, sParent: 'hs-accordion-entry'}]">
-                    <div class="hs-transition-plus" style="float: left;"></div>
-                    <span>Second Accordion heading</span>
-                    <div class="hs-transition-plus" style="float: right;"></div>
-                </div>
-                <div class="hs-accordion-content">
-                    {{ContentHTML}}
-                </div>
-            </li>
-            <li class="hs-accordion-entry">
-                <div class="hs-accordion-header" data-bind="toggleExpand: { open: false, sParent: 'hs-accordion-entry', sChild: 'hs-accordion-content' }, toggleClass: [{ classes : { on: 'minus' }, sChild: 'hs-transition-plus' }, { classes: { on: 'selected'}, sParent: 'hs-accordion-entry'}]">
-                    <div class="hs-transition-plus" style="float: left;"></div>
-                    <span>Third Accordion heading</span>
-                    <div class="hs-transition-plus" style="float: right;"></div>
-                </div>
-                <div class="hs-accordion-content">
-                    {{ContentHTML}}
-                </div>
-            </li>
-            <li class="hs-accordion-entry">
-                <div class="hs-accordion-header" data-bind="toggleExpand: { open: false, sParent: 'hs-accordion-entry', sChild: 'hs-accordion-content' }, toggleClass: [{ classes : { on: 'minus' }, sChild: 'hs-transition-plus' }, { classes: { on: 'selected'}, sParent: 'hs-accordion-entry'}]">
-                    <div class="hs-transition-plus" style="float: left;"></div>
-                    <span>Fourth Accordion heading</span>
-                    <div class="hs-transition-plus" style="float: right;"></div>
-                </div>
-                <div class="hs-accordion-content">
-                    {{ContentHTML}}
-                </div>
-            </li>
-            <li class="hs-accordion-entry">
-                <div class="hs-accordion-header" data-bind="toggleExpand: { open: false, sParent: 'hs-accordion-entry', sChild: 'hs-accordion-content' }, toggleClass: [{ classes : { on: 'minus' }, sChild: 'hs-transition-plus' }, { classes: { on: 'selected'}, sParent: 'hs-accordion-entry'}]">
-                    <div class="hs-transition-plus" style="float: left;"></div>
-                    <span>Fifth Accordion heading</span>
-                    <div class="hs-transition-plus" style="float: right;"></div>
-                </div>
-                <div class="hs-accordion-content">
-                    {{ContentHTML}}
-                </div>
-            </li>
-        </ul>
-    </div>
+﻿<div class="hs-accordion">
+    <ul class="hs-accordion-container" data-bind="foreach: {{VMBinding}}">
+        <li class="hs-accordion-entry" data-bind="with: Entries">
+            <div class="hs-accordion-header" data-bind="toggleExpand: { open: false, sParent: 'hs-accordion-entry', sChild: 'hs-accordion-content' }, toggleClass: [{ classes : { on: 'minus' }, sChild: 'hs-transition-plus' }, { classes: { on: 'selected'}, sParent: 'hs-accordion-entry'}]">
+                <div class="hs-transition-plus" style="float: left;"></div>
+                <span class="unselectable" data-bind="text: {{HeaderText}}"></span>
+                <div class="hs-transition-plus" style="float: right;"></div>
+            </div>
+            <div class="hs-accordion-content">
+                {{ContentHTML}}
+            </div>
+        </li>
+    </ul>
 </div>

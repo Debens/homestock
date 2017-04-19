@@ -7,7 +7,7 @@ using System.Web.UI.HtmlControls;
 
 namespace HomeStockLibrary.Controls
 {
-    public class AccordionList : WebControlBase, INamingContainer
+    public class AccordionList : BindingControlBase, INamingContainer
     {
         public AccordionList()
         {
@@ -33,6 +33,8 @@ namespace HomeStockLibrary.Controls
             }
         }
 
+        public string HeaderText { get; set; }
+
         protected override void Render(HtmlTextWriter writer)
         {
             Templator pageHeader = Templator.Load("AccordionList.html").Process(this);
@@ -41,6 +43,8 @@ namespace HomeStockLibrary.Controls
 
         public override void ValidateProperties()
         {
+            base.ValidateProperties();
+            Validate(HeaderText, "HeaderText");
             Validate(ContentHTML, "Content");
         }
     }
