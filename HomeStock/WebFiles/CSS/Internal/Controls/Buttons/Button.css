@@ -1,0 +1,51 @@
+﻿a.hs-button {
+    position: relative;
+    padding: 1.2% 2% 1.2% 2%;
+    margin: 2px;
+    cursor: pointer;
+    display: inline-block;
+    color: var(--light-grey);
+    text-decoration: none;
+    font-size: 100%;
+    text-align: center;
+    font-style: normal;
+    min-width: 140px;
+    border-width: 1px 1px 3px;
+    margin-bottom: 10px;
+    opacity: .65;
+    white-space: nowrap;
+    border: solid; /*Add border in now that is the same as the background color to avoid resize on hover*/
+    border-radius: 5px;
+    border-color: var(--HS-Background);
+    -webkit-user-select: none; /* Chrome/Safari */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE10+ */
+    -webkit-transition: all .1s linear; /* Saf3.2+, Chrome */
+    -moz-transition: all .1s linear; /* FF3.7+ */
+    -o-transition: all .1s linear; /* Opera 10.5 */
+    transition: all .1s linear;
+}
+
+    a.hs-button:hover {
+        border-color: var(--dark-grey);
+        color: var(--dark-grey);
+        opacity: .95;
+        -webkit-transition: all .1s linear; /* Saf3.2+, Chrome */
+        -moz-transition: all .1s linear; /* FF3.7+ */
+        -o-transition: all .1s linear; /* Opera 10.5 */
+        transition: all .1s linear;
+    }
+
+@media (max-width: 700px) {
+    a.hs-button {
+        padding: 10px 17px 10px 17px !important;
+        min-width: 70px !important;
+    }
+}
+
+@media (min-width: 1400px) {
+    a.hs-button {
+        padding: 12px 30px 12px 30px !important;
+        min-width: 160px !important;
+    }
+}

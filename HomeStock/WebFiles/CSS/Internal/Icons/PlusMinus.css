@@ -1,0 +1,44 @@
+﻿div.hs-transition-plus {
+    position: relative;
+    width: 20px;
+    height: 20px;
+    margin: 6px;
+}
+
+    div.hs-transition-plus:before,
+    div.hs-transition-plus:after {
+        content: "";
+        position: absolute;
+        background-color: var(--grey);
+        transition: transform 0.4s ease-out;
+    }
+
+    /* Vertical line */
+    div.hs-transition-plus:before {
+        top: 0;
+        left: 50%;
+        width: 4px;
+        height: 100%;
+        margin-left: -2px;
+    }
+
+    /* horizontal line */
+    div.hs-transition-plus:after {
+        top: 50%;
+        left: 0;
+        width: 100%;
+        height: 4px;
+        margin-top: -2px;
+    }
+
+    div.hs-transition-plus.minus {
+        cursor: pointer;
+    }
+
+        div.hs-transition-plus.minus:before {
+            transform: rotate(450deg);
+        }
+
+        div.hs-transition-plus.minus:after {
+            transform: rotate(540deg);
+        }

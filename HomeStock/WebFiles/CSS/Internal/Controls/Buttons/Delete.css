@@ -1,0 +1,12 @@
+﻿a.hs-button-delete {
+    background-color: var(--HS-Red);
+    border: 1px solid var(--HS-Red-Accent);
+}
+
+    a.hs-button-delete:hover {
+        background-color: var(--HS-Red);
+    }
+
+    a.hs-button-delete:active {
+        background-color: var(--HS-Red-Focus);
+    }

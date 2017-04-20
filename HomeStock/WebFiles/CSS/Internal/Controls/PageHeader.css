@@ -1,0 +1,13 @@
+﻿div.hs-page-header {
+    padding-bottom: 3%;
+    text-align: center;
+}
+
+h1.hs-page-header-title {
+    display: inline;
+    font-size: 4em;
+}
+
+p.hs-page-header-description {
+    display: inline;
+}

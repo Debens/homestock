@@ -1,0 +1,12 @@
+﻿a.hs-button-new {
+    background-color: var(--HS-Green);
+    border: 1px solid var(--HS-Green-Accent);
+}
+
+    a.hs-button-new:hover {
+        background-color: var(--HS-Green-Accent);
+    }
+
+    a.hs-button-new:active {
+        background-color: var(--HS-Green-Focus);
+    }

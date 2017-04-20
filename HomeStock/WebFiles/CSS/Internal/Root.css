@@ -1,0 +1,16 @@
+﻿:root {
+    --HS-Background: #f4f7f8;
+    --light-grey: #dbdbdb;
+    --grey: #888889;
+    --dark-grey: #333333;
+    --HS-Blue: #00acc1;
+    --HS-Blue-Accent: #4dd0e1;
+    --HS-Blue-Focus: #008799;
+    --HS-Red: #d91919;
+    --HS-Red-Accent: #fb9a9a;
+    --HS-Red-Focus: #aa0000;
+    --HS-Green: #2fb62f;
+    --HS-Green-Accent: #5dd55d;
+    --HS-Green-Focus: #258e25;
+    --HS-Active: #ff6600;
+}

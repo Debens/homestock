@@ -95,20 +95,27 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Site.Master" />
-    <Content Include="WebFiles\CSS\font-awesome.css" />
-    <Content Include="WebFiles\CSS\font-awesome.min.css" />
-    <Content Include="WebFiles\CSS\HomeStock.css" />
-    <Content Include="WebFiles\CSS\ListView.css" />
-    <Content Include="WebFiles\CSS\Main.css" />
-    <Content Include="WebFiles\CSS\MainBody.css" />
-    <Content Include="WebFiles\CSS\NewStockForm.css" />
-    <Content Include="WebFiles\CSS\NewStockItem.css" />
-    <Content Include="WebFiles\CSS\style.css" />
-    <Content Include="WebFiles\CSS\style.min.css" />
-    <Content Include="WebFiles\fonts\font-awesome\fontawesome-webfont.svg" />
-    <Content Include="WebFiles\fonts\oxygen\oxygen-v5-latin-300.svg" />
-    <Content Include="WebFiles\fonts\oxygen\oxygen-v5-latin-700.svg" />
-    <Content Include="WebFiles\fonts\oxygen\oxygen-v5-latin-regular.svg" />
+    <Content Include="WebFiles\CSS\External\font-awesome.css" />
+    <Content Include="WebFiles\CSS\External\font-awesome.min.css" />
+    <Content Include="WebFiles\CSS\Internal\Attributes\Unselectable.css" />
+    <Content Include="WebFiles\CSS\Internal\Controls\AccordionList.css" />
+    <Content Include="WebFiles\CSS\Internal\Controls\Buttons\Button.css" />
+    <Content Include="WebFiles\CSS\Internal\Controls\Buttons\Default.css" />
+    <Content Include="WebFiles\CSS\Internal\Controls\Buttons\Delete.css" />
+    <Content Include="WebFiles\CSS\Internal\Controls\Buttons\New.css" />
+    <Content Include="WebFiles\CSS\Internal\Controls\Input.css" />
+    <Content Include="WebFiles\CSS\Internal\Controls\PageHeader.css" />
+    <Content Include="WebFiles\CSS\Internal\Controls\PageSeporator.css" />
+    <Content Include="WebFiles\CSS\Internal\Controls\TextBox.css" />
+    <Content Include="WebFiles\CSS\Internal\Icons\PlusMinus.css" />
+    <Content Include="WebFiles\CSS\Internal\Legacy\ListView.css" />
+    <Content Include="WebFiles\CSS\Internal\Legacy\Main.css" />
+    <Content Include="WebFiles\CSS\Internal\Legacy\MainBody.css" />
+    <Content Include="WebFiles\CSS\Internal\Legacy\NewStockForm.css" />
+    <Content Include="WebFiles\CSS\Internal\Legacy\NewStockItem.css" />
+    <Content Include="WebFiles\CSS\External\style.css" />
+    <Content Include="WebFiles\CSS\External\style.min.css" />
+    <Content Include="WebFiles\CSS\Internal\Root.css" />
     <Content Include="WebFiles\Inventory.html" />
     <Content Include="WebFiles\NewStockItem.html" />
     <None Include="Web.Debug.config">
@@ -117,23 +124,6 @@
     <None Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
-    <Content Include="WebFiles\fonts\font-awesome\fontawesome-webfont.eot" />
-    <Content Include="WebFiles\fonts\font-awesome\fontawesome-webfont.ttf" />
-    <Content Include="WebFiles\fonts\font-awesome\fontawesome-webfont.woff" />
-    <Content Include="WebFiles\fonts\font-awesome\fontawesome-webfont.woff2" />
-    <Content Include="WebFiles\fonts\font-awesome\FontAwesome.otf" />
-    <Content Include="WebFiles\fonts\oxygen\oxygen-v5-latin-300.eot" />
-    <Content Include="WebFiles\fonts\oxygen\oxygen-v5-latin-300.ttf" />
-    <Content Include="WebFiles\fonts\oxygen\oxygen-v5-latin-300.woff" />
-    <Content Include="WebFiles\fonts\oxygen\oxygen-v5-latin-300.woff2" />
-    <Content Include="WebFiles\fonts\oxygen\oxygen-v5-latin-700.eot" />
-    <Content Include="WebFiles\fonts\oxygen\oxygen-v5-latin-700.ttf" />
-    <Content Include="WebFiles\fonts\oxygen\oxygen-v5-latin-700.woff" />
-    <Content Include="WebFiles\fonts\oxygen\oxygen-v5-latin-700.woff2" />
-    <Content Include="WebFiles\fonts\oxygen\oxygen-v5-latin-regular.eot" />
-    <Content Include="WebFiles\fonts\oxygen\oxygen-v5-latin-regular.ttf" />
-    <Content Include="WebFiles\fonts\oxygen\oxygen-v5-latin-regular.woff" />
-    <Content Include="WebFiles\fonts\oxygen\oxygen-v5-latin-regular.woff2" />
     <Content Include="WebFiles\sass\style.scss" />
     <Content Include="WebFiles\sass\_components.buttons.scss" />
     <Content Include="WebFiles\sass\_components.carbonad.scss" />
@@ -208,6 +198,7 @@
       <Name>HomeStockLibrary</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

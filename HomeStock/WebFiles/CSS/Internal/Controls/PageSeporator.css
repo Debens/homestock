@@ -1,0 +1,47 @@
+﻿div.hs-page-seporator {
+    display: block;
+    text-align: center;
+    overflow: hidden;
+    white-space: nowrap;
+    color: white;
+    margin: 10%;
+    margin-top: 4%;
+    margin-bottom: 4%;
+}
+
+    div.hs-page-seporator > span {
+        border-radius: 15px;
+        background: var(--grey);
+        padding-left: 10px;
+        padding-right: 10px;
+        position: relative;
+        display: inline-block;
+    }
+
+        div.hs-page-seporator > span:before,
+        div.hs-page-seporator > span:after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            width: 9999px;
+            height: 1px;
+            background-color: var(--grey);
+        }
+
+        div.hs-page-seporator > span:before {
+            right: 100%;
+            margin-right: 0px;
+        }
+
+        div.hs-page-seporator > span:after {
+            left: 100%;
+            margin-left: 0px;
+        }
+
+
+@media (max-width: 700px) {
+    div.hs-page-seporator {
+        margin-top: 28px !important;
+        margin-bottom: 28px !important;
+    }
+}

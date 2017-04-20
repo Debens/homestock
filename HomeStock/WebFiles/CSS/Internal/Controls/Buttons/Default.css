@@ -1,0 +1,12 @@
+﻿a.hs-button-default {
+    background-color: var(--HS-Blue);
+    border: 1px solid var(--HS-Blue-Accent);
+}
+
+    a.hs-button-default:hover {
+        background-color: var(--HS-Blue-Accent);
+    }
+
+    a.hs-button-default:active {
+        background-color: var(--HS-Blue-Focus);
+    }
