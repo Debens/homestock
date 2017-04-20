@@ -117,19 +117,6 @@
     <None Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
-    <Content Include="WebFiles\sass\style.scss" />
-    <Content Include="WebFiles\sass\_components.buttons.scss" />
-    <Content Include="WebFiles\sass\_components.carbonad.scss" />
-    <Content Include="WebFiles\sass\_components.mask.scss" />
-    <Content Include="WebFiles\sass\_components.menus.scss" />
-    <Content Include="WebFiles\sass\_config.variables.scss" />
-    <Content Include="WebFiles\sass\_elements.headings.scss" />
-    <Content Include="WebFiles\sass\_elements.media.scss" />
-    <Content Include="WebFiles\sass\_elements.root.scss" />
-    <Content Include="WebFiles\sass\_elements.text.scss" />
-    <Content Include="WebFiles\sass\_generic.boxsizing.scss" />
-    <Content Include="WebFiles\sass\_generic.fonts.scss" />
-    <Content Include="WebFiles\sass\_objects.layout.scss" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Development\Controls\Button.aspx" />
