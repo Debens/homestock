@@ -103,7 +103,6 @@
     <Content Include="WebFiles\CSS\Internal\Controls\Buttons\Default.css" />
     <Content Include="WebFiles\CSS\Internal\Controls\Buttons\Delete.css" />
     <Content Include="WebFiles\CSS\Internal\Controls\Buttons\New.css" />
-    <Content Include="WebFiles\CSS\Internal\Controls\Input.css" />
     <Content Include="WebFiles\CSS\Internal\Controls\PageHeader.css" />
     <Content Include="WebFiles\CSS\Internal\Controls\PageSeporator.css" />
     <Content Include="WebFiles\CSS\Internal\Controls\TextBox.css" />
