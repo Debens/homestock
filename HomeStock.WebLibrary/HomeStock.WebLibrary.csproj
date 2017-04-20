@@ -1,0 +1,119 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{7A0ACC4F-4F2A-47AC-B79D-113A09BA143F}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>HomeStock.WebLibrary</RootNamespace>
+    <AssemblyName>HomeStock.WebLibrary</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="CSS\External\font-awesome.css" />
+    <Content Include="CSS\External\font-awesome.min.css" />
+    <Content Include="CSS\External\style.css" />
+    <Content Include="CSS\External\style.min.css" />
+    <Content Include="CSS\Internal\Attributes\Unselectable.css" />
+    <Content Include="CSS\Internal\Controls\AccordionList.css" />
+    <Content Include="CSS\Internal\Controls\Buttons\Button.css" />
+    <Content Include="CSS\Internal\Controls\Buttons\Default.css" />
+    <Content Include="CSS\Internal\Controls\Buttons\Delete.css" />
+    <Content Include="CSS\Internal\Controls\Buttons\New.css" />
+    <Content Include="CSS\Internal\Controls\PageHeader.css" />
+    <Content Include="CSS\Internal\Controls\PageSeporator.css" />
+    <Content Include="CSS\Internal\Controls\TextBox.css" />
+    <Content Include="CSS\Internal\Icons\PlusMinus.css" />
+    <Content Include="CSS\Internal\Legacy\Main.css" />
+    <Content Include="CSS\Internal\Root.css" />
+    <Content Include="JavaScript\External\carbonAd.js" />
+    <Content Include="JavaScript\External\githubIcons.js" />
+    <Content Include="JavaScript\External\jquery-3.1.1.js" />
+    <Content Include="JavaScript\External\knockout-3.4.1.min.js" />
+    <Content Include="JavaScript\External\menu.js" />
+    <Content Include="JavaScript\External\menu.min.js" />
+    <Content Include="JavaScript\Internal\Utility\0-Tree.js" />
+    <Content Include="JavaScript\Internal\Utility\1-NameSpacing\1-Namespace.js" />
+    <Content Include="JavaScript\Internal\Utility\1-NameSpacing\ObjectExtensions\1.1-Events.js" />
+    <Content Include="JavaScript\Internal\Utility\1-NameSpacing\ObjectExtensions\1.1-Logging.js" />
+    <Content Include="JavaScript\Internal\Utility\1-NameSpacing\ObjectExtensions\1.1-Validation.js" />
+    <Content Include="JavaScript\Internal\Utility\2-HomeStock\2-HomeStock.js" />
+    <Content Include="JavaScript\Internal\Utility\2-HomeStock\Extensions\Database.js" />
+    <Content Include="JavaScript\Internal\Utility\2-HomeStock\Extensions\Deferred.js" />
+    <Content Include="JavaScript\Internal\Utility\2-HomeStock\Extensions\Logging.js" />
+    <Content Include="JavaScript\Internal\Utility\2-HomeStock\Extensions\Storage\Schemas.js" />
+    <Content Include="JavaScript\Internal\Utility\2-HomeStock\Extensions\Storage\Suppliers.js" />
+    <Content Include="JavaScript\Internal\Utility\2-HomeStock\Extensions\Storage\Workers.js" />
+    <Content Include="JavaScript\Internal\Utility\AjaxAssistant.js" />
+    <Content Include="JavaScript\Internal\Utility\IDGeneration.js" />
+    <Content Include="JavaScript\Internal\Utility\Knockout\HelperMethods.js" />
+    <Content Include="JavaScript\Internal\Utility\Sql\Keywords.js" />
+    <Content Include="JavaScript\Internal\Utility\Sql\Runner.js" />
+    <Content Include="JavaScript\Internal\Utility\Sql\TableBuilder.js" />
+    <Content Include="JavaScript\Internal\Utility\Sql\Transaction.js" />
+    <Content Include="JavaScript\Internal\Business\ViewModel\Actions\Binder.js" />
+    <Content Include="JavaScript\Internal\Business\ViewModel\Actions\Builder.js" />
+    <Content Include="JavaScript\Internal\Business\ViewModel\Instigator.js" />
+    <Content Include="JavaScript\Internal\Business\ViewModel\ViewModel.js" />
+    <Content Include="JavaScript\Internal\Business\Worker\Modules\Builder.js" />
+    <Content Include="JavaScript\Internal\Business\Worker\Modules\Query.js" />
+    <Content Include="JavaScript\Internal\Business\Worker\Modules\Query\SQLSpec.js" />
+    <Content Include="JavaScript\Internal\Business\Worker\Modules\Save.js" />
+    <Content Include="JavaScript\Internal\Business\Worker\Modules\Store.js" />
+    <Content Include="JavaScript\Internal\Business\Worker\Modules\Store\Modules\QuickSort.js" />
+    <Content Include="JavaScript\Internal\Business\Worker\Worker.js" />
+    <Content Include="JavaScript\Internal\Data\Archives\Core\Archive.js" />
+    <Content Include="JavaScript\Internal\Data\Archives\Core\RecordSet.js" />
+    <Content Include="JavaScript\Internal\Data\Archives\WebAPI\Archive.js" />
+    <Content Include="JavaScript\Internal\Data\Archives\WebAPI\UrlFormatter.js" />
+    <Content Include="JavaScript\Internal\Data\Archives\WebSQL\Archive.js" />
+    <Content Include="JavaScript\Internal\Data\Archives\WebSQL\Operators\Reader.js" />
+    <Content Include="JavaScript\Internal\Data\Archives\WebSQL\Operators\Remover.js" />
+    <Content Include="JavaScript\Internal\Data\Archives\WebSQL\Operators\Writer.js" />
+    <Content Include="JavaScript\Internal\Data\Schema.js" />
+    <Content Include="JavaScript\Internal\Data\SyncModules\RecordMapper.js" />
+    <Content Include="JavaScript\Internal\Data\SyncModules\SchemaMapping.js" />
+    <Content Include="JavaScript\Internal\Data\SyncModules\SyncModule.js" />
+    <Content Include="JavaScript\Internal\UI\Knockout\Bindings\Events\ToggleClass.js" />
+    <Content Include="JavaScript\Internal\UI\Knockout\Bindings\Events\ToggleExpand.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="JavaScript\Internal\Business\Worker\Modules\Builder\" />
+    <Folder Include="JavaScript\Internal\Business\Worker\Modules\Save\" />
+    <Folder Include="JavaScript\Internal\UI\Controls\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

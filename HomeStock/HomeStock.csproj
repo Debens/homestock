@@ -95,22 +95,6 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Site.Master" />
-    <Content Include="WebFiles\CSS\External\font-awesome.css" />
-    <Content Include="WebFiles\CSS\External\font-awesome.min.css" />
-    <Content Include="WebFiles\CSS\Internal\Attributes\Unselectable.css" />
-    <Content Include="WebFiles\CSS\Internal\Controls\AccordionList.css" />
-    <Content Include="WebFiles\CSS\Internal\Controls\Buttons\Button.css" />
-    <Content Include="WebFiles\CSS\Internal\Controls\Buttons\Default.css" />
-    <Content Include="WebFiles\CSS\Internal\Controls\Buttons\Delete.css" />
-    <Content Include="WebFiles\CSS\Internal\Controls\Buttons\New.css" />
-    <Content Include="WebFiles\CSS\Internal\Controls\PageHeader.css" />
-    <Content Include="WebFiles\CSS\Internal\Controls\PageSeporator.css" />
-    <Content Include="WebFiles\CSS\Internal\Controls\TextBox.css" />
-    <Content Include="WebFiles\CSS\Internal\Icons\PlusMinus.css" />
-    <Content Include="WebFiles\CSS\Internal\Legacy\Main.css" />
-    <Content Include="WebFiles\CSS\External\style.css" />
-    <Content Include="WebFiles\CSS\External\style.min.css" />
-    <Content Include="WebFiles\CSS\Internal\Root.css" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -169,10 +153,6 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\HomeStock.Business\HomeStock.Business.csproj">
-      <Project>{555864cd-62ba-4585-af82-1dea3ea28fed}</Project>
-      <Name>HomeStock.Business</Name>
-    </ProjectReference>
     <ProjectReference Include="..\HomeStockLibrary\HomeStock.Library.csproj">
       <Project>{7055eb6b-452e-4127-b032-db510659172c}</Project>
       <Name>HomeStock.Library</Name>
