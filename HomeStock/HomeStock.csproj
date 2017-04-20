@@ -107,16 +107,10 @@
     <Content Include="WebFiles\CSS\Internal\Controls\PageSeporator.css" />
     <Content Include="WebFiles\CSS\Internal\Controls\TextBox.css" />
     <Content Include="WebFiles\CSS\Internal\Icons\PlusMinus.css" />
-    <Content Include="WebFiles\CSS\Internal\Legacy\ListView.css" />
     <Content Include="WebFiles\CSS\Internal\Legacy\Main.css" />
-    <Content Include="WebFiles\CSS\Internal\Legacy\MainBody.css" />
-    <Content Include="WebFiles\CSS\Internal\Legacy\NewStockForm.css" />
-    <Content Include="WebFiles\CSS\Internal\Legacy\NewStockItem.css" />
     <Content Include="WebFiles\CSS\External\style.css" />
     <Content Include="WebFiles\CSS\External\style.min.css" />
     <Content Include="WebFiles\CSS\Internal\Root.css" />
-    <Content Include="WebFiles\Inventory.html" />
-    <Content Include="WebFiles\NewStockItem.html" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
