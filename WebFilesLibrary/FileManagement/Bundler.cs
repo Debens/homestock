@@ -22,7 +22,7 @@ namespace WebFilesLibrary.FileManagement
                 bundledFile.AppendLine(File.ReadAllText(file));
             }
             
-            string targetFile = folderDst + name + (type == BundleType.Script ? ".js" : ".css");
+            string targetFile = folderDst + name + (type == BundleType.Script ? ".js" : ".css"); //TODO: Get file extension from enum attribute
             string dir = Path.GetDirectoryName(targetFile);
             if (!Directory.Exists(dir))
                 Directory.CreateDirectory(dir);

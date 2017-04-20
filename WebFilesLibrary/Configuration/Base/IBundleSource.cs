@@ -12,10 +12,6 @@ namespace WebFilesLibrary.Configuration.Base
 
         string FolderSrc { get; set; }
 
-        BundleType Type { get; set; }
-
-        string Filter { get; set; }
-
         bool IncludeSubFolders { get; set; }
     }
 }

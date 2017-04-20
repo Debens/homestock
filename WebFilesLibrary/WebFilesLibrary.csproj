@@ -44,6 +44,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Configuration\Base\IBundle.cs" />
+    <Compile Include="Configuration\Bundle.cs" />
+    <Compile Include="Configuration\BundleCollection.cs" />
     <Compile Include="FileManagement\Bundler.cs" />
     <Compile Include="Configuration\Base\BundleType.cs" />
     <Compile Include="Configuration\BundleSourceCollection.cs" />

@@ -4,11 +4,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <link rel="stylesheet" href="/WebFiles/CSS/font-awesome.css">
-    <link rel="stylesheet" href="/WebFiles/CSS/style.css">
-    <link rel="stylesheet" href="/WebFiles/CSS/Main.css">
-    <link rel="stylesheet" href="/WebFiles/CSS/MainBody.css">
-    <link rel="stylesheet" href="/WebFiles/CSS/HomeStock.css">
 </head>
 <body>
     <%@ Register Assembly="HomeStockLibrary" Namespace="HomeStockLibrary.Controls" TagPrefix="Control" %>
@@ -19,7 +14,8 @@
     <script src="/WebFiles/JavaScript/Unmanaged/dist/menu.js"></script>
     <script src="/WebFiles/JavaScript/Unmanaged/Lib/jquery-3.1.1.js"></script>
     <script src="/WebFiles/JavaScript/Unmanaged/Lib/knockout-3.4.1.min.js"></script>
-    <Resource:FileInclusion runat="server" Source="WebFiles/Bundles/" type="Script" Filter="*.js" />
+    <Resource:FileInclusion runat="server" Source="WebFiles/Bundles/JS/" type="Script" Filter="*.js" />
+    <Resource:FileInclusion runat="server" Source="WebFiles/Bundles/CSS/" type="Style" Filter="*.css" />
 
     <div id="o-wrapper" class="o-wrapper">
         <main class="o-content" style="height: 100%;">

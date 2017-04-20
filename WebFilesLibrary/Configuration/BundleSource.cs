@@ -17,25 +17,11 @@ namespace WebFilesLibrary.Configuration
             set { this["name"] = value; }
         }
 
-        [ConfigurationProperty("type", IsRequired = true)]
-        public BundleType Type
-        {
-            get { return (BundleType)this["type"]; }
-            set { this["type"] = value; }   
-        }
-
         [ConfigurationProperty("folderSrc", IsRequired = true)]
         public string FolderSrc
         {
             get { return (string)this["folderSrc"]; }
             set { this["folderSrc"] = value; }
-        }
-
-        [ConfigurationProperty("filter", IsRequired = true, DefaultValue = "*")]
-        public string Filter
-        {
-            get { return (string)this["filter"]; }
-            set { this["filter"] = value; }
         }
 
         [ConfigurationProperty("includeSubFolders", DefaultValue = false)]

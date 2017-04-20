@@ -6,9 +6,12 @@ using System.Threading.Tasks;
 
 namespace WebFilesLibrary.Configuration.Base
 {
-    public enum BundleType
+    interface IBundle
     {
-        Script,
-        Style
+        string Name { get; set; }
+
+        BundleType Type { get; set; }
+
+        string Filter { get; set; }
     }
 }

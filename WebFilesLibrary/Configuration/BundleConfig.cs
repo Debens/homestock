@@ -9,32 +9,20 @@ namespace WebFilesLibrary.Configuration
             return (BundleConfig)ConfigurationManager.GetSection("BundleConfig");
         }
 
-        [ConfigurationProperty("BundleSources", IsRequired = true)]
-        [ConfigurationCollection(typeof(BundleSourceCollection),
-        AddItemName = "add",
+        [ConfigurationProperty("BundleCollections", IsRequired = true)]
+        [ConfigurationCollection(typeof(BundleCollection),
+        AddItemName = "Collection",
         ClearItemsName = "clear",
         RemoveItemName = "remove")]
-        public BundleSourceCollection BundleSources
+        public BundleCollection BundleCollections
         {
             get
             {
-                return (BundleSourceCollection)base["BundleSources"];
-            }
-        }
-
-        [ConfigurationProperty("outputFolder", IsRequired = true)]
-        public string OutputFolder
-        {
-            get
-            {
-                string folderDir = (string)base["outputFolder"];
-                if (!folderDir.EndsWith("/"))
-                    folderDir += "/";
-                return folderDir;
+                return (BundleCollection)base["BundleCollections"];
             }
             set
             {
-                base["outputFolder"] = value;
+                base["BundleCollections"] = value;
             }
         }
     }
