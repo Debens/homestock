@@ -99,9 +99,9 @@
     <Content Include="0-Utility\2-HomeStock\2-HomeStock.js" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\HomeStockLibrary\HomeStockLibrary.csproj">
+    <ProjectReference Include="..\HomeStockLibrary\HomeStock.Library.csproj">
       <Project>{7055eb6b-452e-4127-b032-db510659172c}</Project>
-      <Name>HomeStockLibrary</Name>
+      <Name>HomeStock.Library</Name>
     </ProjectReference>
     <ProjectReference Include="..\WebFilesLibrary\WebFilesLibrary.csproj">
       <Project>{86e85130-b19e-475b-b16e-2f320245054c}</Project>

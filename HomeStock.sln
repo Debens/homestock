@@ -1,11 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+# Visual Studio 15
+VisualStudioVersion = 15.0.26228.12
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HomeStockAPI", "HomeStockAPI\HomeStockAPI.csproj", "{2F5CF398-4268-4553-806F-D94F003158A9}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HomeStock.API", "HomeStockAPI\HomeStock.API.csproj", "{2F5CF398-4268-4553-806F-D94F003158A9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HomeStockLibrary", "HomeStockLibrary\HomeStockLibrary.csproj", "{7055EB6B-452E-4127-B032-DB510659172C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HomeStock.Library", "HomeStockLibrary\HomeStock.Library.csproj", "{7055EB6B-452E-4127-B032-DB510659172C}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HomeStock.Business", "HomeStock.Business\HomeStock.Business.csproj", "{555864CD-62BA-4585-AF82-1DEA3EA28FED}"
 EndProject

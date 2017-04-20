@@ -186,9 +186,9 @@
       <Project>{555864cd-62ba-4585-af82-1dea3ea28fed}</Project>
       <Name>HomeStock.Business</Name>
     </ProjectReference>
-    <ProjectReference Include="..\HomeStockLibrary\HomeStockLibrary.csproj">
+    <ProjectReference Include="..\HomeStockLibrary\HomeStock.Library.csproj">
       <Project>{7055eb6b-452e-4127-b032-db510659172c}</Project>
-      <Name>HomeStockLibrary</Name>
+      <Name>HomeStock.Library</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup />
