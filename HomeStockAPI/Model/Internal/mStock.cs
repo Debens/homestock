@@ -9,6 +9,6 @@ namespace HomeStockAPI.Model.Internal
         public virtual string ContainerId { get; set; }
         public virtual mContainer Container { get; set; }
         public DateTime Expiry { get; set; }
-        public List<string> Tags { get; set; }
+        public ICollection<mTag> Tags { get; set; }
     }
 }
