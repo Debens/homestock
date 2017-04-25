@@ -8,12 +8,9 @@ namespace HomeStockAPI.Model.Mapping
 {
     public class ContainerMapping : EntityMapping<Container, mContainer>
     {
-        public override mContainer Map(Container dto)
+        public override mContainer Map(Container dto, HomeStockContext context)
         {
-            mHome home;
-            using (var context = new HomeStockContext())
-                home = new HomeRepository(context).Get(dto.HomeId);
-
+            mHome home = new HomeRepository(context).Get(dto.HomeId);
             return new mContainer()
             {
                 Id = dto.Id,

@@ -8,12 +8,9 @@ namespace HomeStockAPI.Model.Mapping
 {
     public class HomeMapping : EntityMapping<Home, mHome>
     {
-        public override mHome Map(Home dto)
+        public override mHome Map(Home dto, HomeStockContext context)
         {
-            mOwner owner;
-            using (var context = new HomeStockContext())
-                owner = new OwnerRepository(context).Get(dto.OwnerId);
-
+            mOwner owner = new OwnerRepository(context).Get(dto.OwnerId);
             return new mHome()
             {
                 Id = dto.Id,

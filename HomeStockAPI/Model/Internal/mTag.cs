@@ -7,6 +7,6 @@ namespace HomeStockAPI.Model.Internal
     {
         public virtual string OwnerId { get; set; }
         public virtual mOwner Owner { get; set; }
-        public virtual IEnumerable<mStock> Stock { get; set; }
+        public virtual ICollection<mStock> Stock { get; set; }
     }
 }

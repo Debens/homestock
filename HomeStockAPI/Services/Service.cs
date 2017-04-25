@@ -30,7 +30,7 @@ namespace HomeStockAPI.Services
         {
             using (var context = new HomeStockContext())
             {
-                E mEntity = Manager.Insert(context, Mapper.Map(entity));
+                E mEntity = Manager.Insert(context, Mapper.Map(entity, context));
                 context.SaveChanges();
                 return Mapper.Map(mEntity);
             }
@@ -48,7 +48,7 @@ namespace HomeStockAPI.Services
         {
             using (var context = new HomeStockContext())
             {
-                E mEntity = Manager.Update(context, Mapper.Map(entity));
+                E mEntity = Manager.Update(context, Mapper.Map(entity, context));
                 context.SaveChanges();
                 return Mapper.Map(mEntity);
             }

@@ -1,4 +1,5 @@
-﻿using HomeStockAPI.Model.External;
+﻿using HomeStockAPI.Data;
+using HomeStockAPI.Model.External;
 using HomeStockAPI.Model.Internal.Base;
 using System;
 using System.Collections.Generic;
@@ -11,12 +12,12 @@ namespace HomeStockAPI.Model.Mapping.Base
         where DTO : Entity
         where E : mEntity
     {
-        public abstract E Map(DTO dto);
+        public abstract E Map(DTO dto, HomeStockContext contexto);
         public abstract DTO Map(E model);
 
-        public IEnumerable<E> Map(IEnumerable<DTO> dtos)
+        public IEnumerable<E> Map(IEnumerable<DTO> dtos, HomeStockContext context)
         {
-            return dtos.Select(dto => Map(dto));
+            return dtos.Select(dto => Map(dto, context));
         }
 
         public IEnumerable<DTO> Map(IEnumerable<E> entities)

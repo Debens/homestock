@@ -214,10 +214,7 @@
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Bundler.cs" />
     <Compile Include="Controllers\OwnerController.cs" />
-    <Compile Include="Controllers\OwnerHomeContainerController.cs" />
-    <Compile Include="Controllers\OwnerHomeContainerStockController.cs" />
     <Compile Include="Controllers\OwnerHomeController.cs" />
-    <Compile Include="Controllers\OwnerTagController.cs" />
     <Compile Include="Data\EntityCollectionGenerator.cs" />
     <Compile Include="Data\HomeStockContext.cs" />
     <Compile Include="Data\HomeStockDBInit.cs" />

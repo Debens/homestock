@@ -9,12 +9,9 @@ namespace HomeStockAPI.Model.Mapping
 {
     public class TagMapping : EntityMapping<Tag, mTag>
     {
-        public override mTag Map(Tag dto)
+        public override mTag Map(Tag dto, HomeStockContext context)
         {
-            mOwner owner;
-            using (var context = new HomeStockContext())
-                owner = new OwnerRepository(context).Get(dto.OwnerId);
-
+            mOwner owner = new OwnerRepository(context).Get(dto.OwnerId);
             return new mTag()
             {
                 Id = dto.Id,

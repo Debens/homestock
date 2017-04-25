@@ -1,4 +1,5 @@
-﻿using HomeStockAPI.Model.External;
+﻿using HomeStockAPI.Data;
+using HomeStockAPI.Model.External;
 using HomeStockAPI.Model.Internal;
 using HomeStockAPI.Model.Mapping.Base;
 using System;
@@ -11,7 +12,7 @@ namespace HomeStockAPI.Model.Mapping
 {
     public class OwnerMapping : EntityMapping<Owner, mOwner>
     {
-        public override mOwner Map(Owner dto)
+        public override mOwner Map(Owner dto, HomeStockContext context)
         {
             return new mOwner()
             {
