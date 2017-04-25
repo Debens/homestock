@@ -17,8 +17,7 @@ namespace HomeStockAPI.Model.Mapping
                 Name = dto.Name,
                 Created = dto.Created,
                 Container = container,
-                Expiry = dto.Expiry,
-                Tags = dto.Tags
+                Expiry = dto.Expiry
             };
         }
 
@@ -31,8 +30,7 @@ namespace HomeStockAPI.Model.Mapping
                 Created = model.Created,
                 Container = model.Container.Name,
                 ContainerId = model.ContainerId,
-                Expiry = model.Expiry,
-                Tags = model.Tags
+                Expiry = model.Expiry
             };
         }
     }
