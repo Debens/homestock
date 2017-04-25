@@ -13,8 +13,8 @@
     <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>HomeStock</RootNamespace>
-    <AssemblyName>HomeStock</AssemblyName>
+    <RootNamespace>HomeStockAPI</RootNamespace>
+    <AssemblyName>HomeStockAPI</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <MvcBuildViews>false</MvcBuildViews>
     <UseIISExpress>true</UseIISExpress>
@@ -217,6 +217,7 @@
     <Compile Include="Controllers\OwnerHomeContainerController.cs" />
     <Compile Include="Controllers\OwnerHomeContainerStockController.cs" />
     <Compile Include="Controllers\OwnerHomeController.cs" />
+    <Compile Include="Controllers\OwnerTagController.cs" />
     <Compile Include="Data\EntityCollectionGenerator.cs" />
     <Compile Include="Data\HomeStockContext.cs" />
     <Compile Include="Data\HomeStockDBInit.cs" />
@@ -225,38 +226,42 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Managers\Base\BaseEntityManager.cs" />
-    <Compile Include="Managers\Base\IEntityManager.cs" />
-    <Compile Include="Managers\ContainerManager.cs" />
-    <Compile Include="Managers\StockManager.cs" />
-    <Compile Include="Managers\HomeManager.cs" />
-    <Compile Include="Managers\OwnerManager.cs" />
+    <Compile Include="Manager\Base\BaseManager.cs" />
+    <Compile Include="Manager\Base\IManager.cs" />
+    <Compile Include="Manager\Managers\ContainerManager.cs" />
+    <Compile Include="Manager\Managers\HomeManager.cs" />
+    <Compile Include="Manager\Managers\OwnerManager.cs" />
+    <Compile Include="Manager\Managers\StockManager.cs" />
+    <Compile Include="Manager\Managers\TagManager.cs" />
     <Compile Include="Model\External\Base\NamedEntity.cs" />
     <Compile Include="Model\External\Container.cs" />
     <Compile Include="Model\External\Base\Entity.cs" />
     <Compile Include="Model\External\Home.cs" />
     <Compile Include="Model\External\Owner.cs" />
     <Compile Include="Model\External\Stock.cs" />
+    <Compile Include="Model\External\Tag.cs" />
     <Compile Include="Model\Internal\Base\mEntity.cs" />
     <Compile Include="Model\Internal\mContainer.cs" />
     <Compile Include="Model\Internal\mHome.cs" />
     <Compile Include="Model\Internal\mOwner.cs" />
     <Compile Include="Model\Internal\Base\mNamedEntity.cs" />
     <Compile Include="Model\Internal\mStock.cs" />
-    <Compile Include="Model\MappingExtensions\ContainerMappingExtentions.cs" />
-    <Compile Include="Model\MappingExtensions\OwnerMappingExtentions.cs" />
-    <Compile Include="Model\MappingExtensions\StockMappingExtentions.cs" />
+    <Compile Include="Model\Internal\mTag.cs" />
+    <Compile Include="Model\Mapping\Base\IEntityMapping.cs" />
+    <Compile Include="Model\Mapping\ContainerMapping.cs" />
+    <Compile Include="Model\Mapping\HomeMapping.cs" />
+    <Compile Include="Model\Mapping\StockMapping.cs" />
+    <Compile Include="Model\Mapping\OwnerMapping.cs" />
+    <Compile Include="Model\Mapping\TagMapping.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Repository\Base\BaseHomeStockRepository.cs" />
+    <Compile Include="Repository\Base\BaseRepository.cs" />
     <Compile Include="Repository\Base\IRepository.cs" />
-    <Compile Include="Repository\ContainerRepository.cs" />
-    <Compile Include="Repository\HomeRepository.cs" />
-    <Compile Include="Repository\OwnerRespository.cs" />
-    <Compile Include="Repository\StockRepository.cs" />
-    <Compile Include="Services\OwnerHomeContainerService.cs" />
-    <Compile Include="Services\OwnerHomeContainerStockService.cs" />
-    <Compile Include="Services\OwnerHomeService.cs" />
-    <Compile Include="Services\OwnerService.cs" />
+    <Compile Include="Repository\Repositories\ContainerRepository.cs" />
+    <Compile Include="Repository\Repositories\HomeRepository.cs" />
+    <Compile Include="Repository\Repositories\OwnerRepository.cs" />
+    <Compile Include="Repository\Repositories\StockRepository.cs" />
+    <Compile Include="Services\Base\IService.cs" />
+    <Compile Include="Services\Service.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -265,11 +270,12 @@
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
+    <Compile Include="Model\Mapping\Base\EntityMapping.cs" />
     <Content Include="README.txt" />
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Compile Include="Model\MappingExtensions\HomeMappingExtentions.cs" />
+    <Compile Include="Repository\Repositories\TagRepository.cs" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>

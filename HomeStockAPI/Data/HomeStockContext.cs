@@ -1,11 +1,7 @@
-﻿using HomeStock.Model.Internal;
-using System;
-using System.Collections.Generic;
+﻿using HomeStockAPI.Model.Internal;
 using System.Data.Entity;
-using System.Linq;
-using System.Web;
 
-namespace HomeStock.Data
+namespace HomeStockAPI.Data
 {
     public class HomeStockContext : DbContext
     {
@@ -22,5 +18,6 @@ namespace HomeStock.Data
         public DbSet<mHome> Homes { get; set; }
         public DbSet<mOwner> Owners { get; set; }
         public DbSet<mStock> Stock { get; set; }
+        public DbSet<mTag> Tags { get; set; }
     }
 }

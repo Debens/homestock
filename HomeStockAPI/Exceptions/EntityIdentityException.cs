@@ -9,6 +9,8 @@ namespace HomeStock.Exceptions
     {
         public readonly string EntityId;
 
+        public EntityIdentityException(string message) : base(message) { }
+
         public EntityIdentityException(string message, string entityId) : base(message)
         {
             EntityId = entityId;

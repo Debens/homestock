@@ -2,8 +2,9 @@
 
 namespace HomeStockAPI.Model.External
 {
-    public class Home : NamedEntity
+    public class Tag : NamedEntity
     {
         public string OwnerId { get; set; }
+        public string Owner { get; set; }
     }
 }

@@ -1,11 +1,8 @@
-﻿
-using HomeStock.Model.Internal;
+﻿using HomeStockAPI.Model.Internal.Base;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 
-namespace HomeStock.Repository
+namespace HomeStockAPI.Repository
 {
     public interface IRepository<T> where T: mEntity
     {
@@ -18,6 +15,7 @@ namespace HomeStock.Repository
         IEnumerable<T> Insert(IEnumerable<T> entities);
         IEnumerable<T> Update(IEnumerable<T> entities);
         IEnumerable<T> Get(IEnumerable<string> Ids);
+        IEnumerable<T> GetWhere(Func<T, bool> predicate);
         void Delete(IEnumerable<T> entities);
         void Delete(IEnumerable<string> Ids);
     }

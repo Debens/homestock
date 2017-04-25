@@ -1,13 +1,9 @@
-﻿using HomeStock.Data;
-using HomeStock.Model.External;
-using HomeStock.Model.Internal;
-using HomeStock.Services;
-using OwnerStock.Model.MappingExtensions;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net;
-using System.Net.Http;
+﻿using HomeStockAPI.Managers;
+using HomeStockAPI.Model.External;
+using HomeStockAPI.Model.Internal;
+using HomeStockAPI.Model.Mapping;
+using HomeStockAPI.Repository;
+using HomeStockAPI.Services;
 using System.Web.Http;
 
 namespace HomeStock.Controllers
@@ -15,39 +11,51 @@ namespace HomeStock.Controllers
     [RoutePrefix("api/owner")]
     public class OwnerController : ApiController
     {
+        protected Service<Owner, mOwner, OwnerManager, OwnerRepository> service
+        {
+            get
+            {
+                return new Service<Owner, mOwner, OwnerManager, OwnerRepository>()
+                {
+                    Manager = new OwnerManager()
+                    {
+                        Repository = new OwnerRepository()
+                    },
+                    Mapper = new OwnerMapping()
+                };
+            }
+        }
+
         [Route("", Name = "PostOwner")]
         public IHttpActionResult Post(Owner owner)
         {
-            Owner newOwner = OwnerService.Create(owner);
-            return Ok(newOwner);
+            return Ok(service.Create(owner));
             //turn CreatedAtRoute("GetOwner", new { ownerId = newOwner.Id }, newOwner);
         }
 
         [Route("", Name = "GetAllOwners")]
         public IHttpActionResult GetAll()
         {
-            return Ok(OwnerService.GetAll());
+            return Ok(service.GetAll());
         }
 
         [Route("{ownerId:length(12)}", Name = "GetOwner")]
-        public IHttpActionResult /*HttpResponseMessage*/ Get(string ownerId)
+        public IHttpActionResult Get(string ownerId)
         {
-            var service = new OwnerService(ownerId);
-            return Ok(service.Get());
-           // return Request.CreateResponse(HttpStatusCode.OK, service.Get());
+            return Ok(service.Get(ownerId));
         }
 
         [Route("{ownerId:length(12)}", Name = "PutOwner")]
         public IHttpActionResult Put(string ownerId, Owner owner)
         {
-            var service = new OwnerService(ownerId);
+            owner.Id = ownerId;
             return Ok(service.Update(owner));
         }
 
         [Route("{ownerId:length(12)}", Name = "DeleteOwner")]
         public void Delete(string ownerId)
         {
-            new OwnerService(ownerId).Delete();
+            service.Delete(ownerId);
         }
     }
 }

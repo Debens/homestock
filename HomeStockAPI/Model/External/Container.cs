@@ -1,10 +1,6 @@
-﻿using HomeStock.Model.External.Base;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
+﻿using HomeStockAPI.Model.External.Base;
 
-namespace HomeStock.Model.External
+namespace HomeStockAPI.Model.External
 {
     public class Container : NamedEntity
     {

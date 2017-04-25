@@ -1,9 +1,7 @@
-﻿using System;
+﻿using HomeStockAPI.Model.Internal.Base;
 using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 
-namespace HomeStock.Model.Internal
+namespace HomeStockAPI.Model.Internal
 {
     public class mContainer : mNamedEntity
     {

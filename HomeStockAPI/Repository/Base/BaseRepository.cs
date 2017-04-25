@@ -1,19 +1,20 @@
-﻿
-using HomeStock.Data;
-using HomeStock.Model.Internal;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
 using System;
 using HomeStock.Exceptions;
+using HomeStockAPI.Model.Internal.Base;
+using HomeStockAPI.Data;
 
-namespace HomeStock.Repository
+namespace HomeStockAPI.Repository
 {
-    public class BaseHomeStockRepository<T> : IRepository<T>
+    public class BaseRepository<T> : IRepository<T>
         where T : mEntity
     {
         public HomeStockContext Context { get; set; }
-       
-        public BaseHomeStockRepository(HomeStockContext context)
+
+        public BaseRepository() { }
+
+        public BaseRepository(HomeStockContext context)
         {
             this.Context = context;
         }

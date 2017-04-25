@@ -1,15 +1,13 @@
-﻿using HomeStock.Model.Internal;
+﻿using HomeStockAPI.Data;
+using HomeStockAPI.Model.Internal;
 using System;
 using System.Collections.Generic;
 using System.Data.Entity;
-using System.Linq;
-using System.Web;
 
 namespace HomeStock.Data
 {
     public class HomeStockDBInit : DropCreateDatabaseIfModelChanges<HomeStockContext>
     {
-
         private static readonly Random Rand = new Random();
 
         private static List<string> OwnerNames = new List<string>(new string[] { "Debens'", "Towns'", "Houstons'" });
