@@ -1,4 +1,5 @@
-﻿using HomeStockAPI.Model.Internal;
+﻿using HomeStock.Data;
+using HomeStockAPI.Model.Internal;
 using System.Data.Entity;
 
 namespace HomeStockAPI.Data
@@ -7,7 +8,7 @@ namespace HomeStockAPI.Data
     {
         public HomeStockContext() : base()
         {
-            //Database.SetInitializer(new HomeStockDBInit());
+            Database.SetInitializer(new HomeStockDBInit());
         }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
