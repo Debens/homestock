@@ -8,12 +8,9 @@ namespace HomeStockAPI.Managers
     public class ContainerManager : BaseManager<mContainer, ContainerRepository>
     {
         public ContainerManager() : base() { }
-        public ContainerManager(ContainerRepository repository) : base(repository) { }
+        public ContainerManager(ContainerRepository repository, Func<string, Func<mContainer, bool>> parentMatch) : base(repository, parentMatch) { }
 
-        protected override Func<mContainer, bool> ParentSearchPredicate(string parentId)
-        {
-            return (c => c.HomeId == parentId);
-        }
+        public override Func<string, Func<mContainer, bool>> ParentMatch { get; set; }
 
         protected override mContainer ComposeEntity(ref mContainer container)
         {

@@ -14,7 +14,7 @@ namespace HomeStockAPI.Managers.Base
     {
         public R Repository { get; set; }
 
-        protected abstract Func<E, bool> ParentSearchPredicate(string parentId);
+        public abstract Func<string, Func<E, bool>> ParentMatch { get; set; }
 
         protected abstract E ComposeEntity(ref E entity);
         protected abstract E UpdateEntity(E from, ref E to);
@@ -24,6 +24,12 @@ namespace HomeStockAPI.Managers.Base
         public BaseManager(R repository)
         {
             Repository = repository;
+        }
+
+        public BaseManager(R repository, Func<string, Func<E, bool>> parentMatch)
+        {
+            Repository = repository;
+            ParentMatch = parentMatch;
         }
 
         public E Insert(HomeStockContext context, E entity)
@@ -58,7 +64,7 @@ namespace HomeStockAPI.Managers.Base
         public IEnumerable<E> GetAll(HomeStockContext context, string parentId)
         {
             Repository.Context = context;
-            return Repository.GetWhere(ParentSearchPredicate(parentId));
+            return Repository.GetWhere(ParentMatch(parentId));
         }
 
         public IEnumerable<E> GetAll(HomeStockContext context)

@@ -8,16 +8,9 @@ namespace HomeStockAPI.Manager.Managers
     public class TagManager : BaseManager<mTag, TagRepository>
     {
         public TagManager() : base() { }
-        public TagManager(TagRepository repository, Func<mTag, bool> parentSearchPredicate) : base(repository)
-        {
-            _parentSearchPredicate = parentSearchPredicate;
-        }
+        public TagManager(TagRepository repository, Func<string, Func<mTag, bool>> parentMatch) : base(repository, parentMatch) { }
 
-        private Func<mTag, bool> _parentSearchPredicate;
-        protected override Func<mTag, bool> ParentSearchPredicate(string parentId)
-        {
-            return _parentSearchPredicate;
-        }
+        public override Func<string, Func<mTag, bool>> ParentMatch { get; set; }
 
         protected override mTag ComposeEntity(ref mTag tag)
         {

@@ -19,7 +19,8 @@ namespace HomeStock.Controllers
                 {
                     Manager = new OwnerManager()
                     {
-                        Repository = new OwnerRepository()
+                        Repository = new OwnerRepository(),
+                        ParentMatch = (pId) => (o => true)
                     },
                     Mapper = new OwnerMapping()
                 };

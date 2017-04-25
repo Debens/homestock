@@ -8,12 +8,9 @@ namespace HomeStockAPI.Managers
     public class HomeManager : BaseManager<mHome, HomeRepository>
     {
         public HomeManager() : base() { }
-        public HomeManager(HomeRepository repository) : base(repository) { }
+        public HomeManager(HomeRepository repository, Func<string, Func<mHome, bool>> parentMatch) : base(repository, parentMatch) { }
 
-        protected override Func<mHome, bool> ParentSearchPredicate(string parentId)
-        {
-            return (h => h.OwnerId == parentId);
-        }
+        public override Func<string, Func<mHome, bool>> ParentMatch { get; set; }
 
         protected override mHome ComposeEntity(ref mHome home)
         {
