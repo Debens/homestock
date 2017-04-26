@@ -19,7 +19,7 @@ namespace HomeStockLibrary.Core
             if (File.Exists(masterPagePhysicalPath))
                 MasterPageFile = masterPageVirtualPath;
             else
-                throw new InvalidOperationException("Cannot set MasterPageFile: file '" + masterPagePhysicalPath + "' does not exist");
+                throw new InvalidOperationException("Cannot set MasterPageFile: '" + masterPagePhysicalPath + "' does not exist");
         }
     }
 }

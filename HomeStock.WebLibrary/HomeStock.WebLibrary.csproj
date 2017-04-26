@@ -62,6 +62,7 @@
     <Content Include="JavaScript\External\carbonAd.js" />
     <Content Include="JavaScript\External\githubIcons.js" />
     <Content Include="JavaScript\External\jquery-3.1.1.js" />
+    <Content Include="JavaScript\External\jquery.mobile-1.5-alpha.js" />
     <Content Include="JavaScript\External\knockout-3.4.1.min.js" />
     <Content Include="JavaScript\External\menu.js" />
     <Content Include="JavaScript\External\menu.min.js" />

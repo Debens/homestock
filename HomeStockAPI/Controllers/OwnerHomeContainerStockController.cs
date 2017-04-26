@@ -27,38 +27,38 @@ namespace ContainerStock.Controllers
             }
         }
 
-        [Route("", Name = "PostStock")]
-        public IHttpActionResult Post(string ownerId, string homeId, string containerId, Stock stock)
-        {
-            stock.ContainerId = containerId;
-            return Ok(service.Create(stock));
-            //return CreatedAtRoute("GetStock", new { ownerId = stock.Container.Home.Owner.Id, homeId = stock.Container.Home.Id, containerId = stock.Container.Id, stockId = stock.Id }, stock);
-        }
+        //[Route("", Name = "PostStock")]
+        //public IHttpActionResult Post(string ownerId, string homeId, string containerId, Stock stock)
+        //{
+        //    stock.ContainerId = containerId;
+        //    return Ok(service.Create(stock));
+        //    //return CreatedAtRoute("GetStock", new { ownerId = stock.Container.Home.Owner.Id, homeId = stock.Container.Home.Id, containerId = stock.Container.Id, stockId = stock.Id }, stock);
+        //}
 
-        [Route("", Name = "GetAllStocks")]
-        public IHttpActionResult GetAll(string ownerId, string homeId, string containerId)
-        {
-            return Ok(service.GetAll(containerId));
-        }
+        //[Route("", Name = "GetAllStocks")]
+        //public IHttpActionResult GetAll(string ownerId, string homeId, string containerId)
+        //{
+        //    return Ok(service.GetAll(containerId));
+        //}
 
-        [Route("{stockId:length(40)}", Name = "GetStock")]
-        public IHttpActionResult Get(string ownerId, string homeId, string containerId, string stockId)
-        {
-            return Ok(service.Get(stockId));
-        }
+        //[Route("{stockId:length(40)}", Name = "GetStock")]
+        //public IHttpActionResult Get(string ownerId, string homeId, string containerId, string stockId)
+        //{
+        //    return Ok(service.Get(stockId));
+        //}
 
-        [Route("{stockId:length(40)}", Name = "PutStock")]
-        public IHttpActionResult Put(string ownerId, string homeId, string containerId, string stockId, Stock stock)
-        {
-            stock.Id = stockId;
-            stock.ContainerId = containerId;
-            return Ok(service.Update(stock));
-        }
+        //[Route("{stockId:length(40)}", Name = "PutStock")]
+        //public IHttpActionResult Put(string ownerId, string homeId, string containerId, string stockId, Stock stock)
+        //{
+        //    stock.Id = stockId;
+        //    stock.ContainerId = containerId;
+        //    return Ok(service.Update(stock));
+        //}
 
-        [Route("{stockId:length(40)}", Name = "DeleteStock")]
-        public void Delete(string ownerId, string homeId, string containerId, string stockId)
-        {
-            service.Delete(stockId);
-        }
+        //[Route("{stockId:length(40)}", Name = "DeleteStock")]
+        //public void Delete(string ownerId, string homeId, string containerId, string stockId)
+        //{
+        //    service.Delete(stockId);
+        //}
     }
 }

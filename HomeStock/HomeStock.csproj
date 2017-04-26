@@ -90,6 +90,8 @@
     <Content Include="Development\Data\Archive.aspx" />
     <Content Include="Development\Data\Worker.aspx" />
     <Content Include="Development\Views\Accordion.aspx" />
+    <Content Include="Development\Views\Navigation\EmptyPage.aspx" />
+    <Content Include="Development\Views\Navigation\TestPage.aspx" />
     <Content Include="packages.config" />
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
@@ -135,6 +137,20 @@
     </Compile>
     <Compile Include="Development\Views\Accordion.aspx.designer.cs">
       <DependentUpon>Accordion.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Development\Views\Navigation\EmptyPage.aspx.cs">
+      <DependentUpon>EmptyPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Development\Views\Navigation\EmptyPage.aspx.designer.cs">
+      <DependentUpon>EmptyPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Development\Views\Navigation\TestPage.aspx.cs">
+      <DependentUpon>TestPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Development\Views\Navigation\TestPage.aspx.designer.cs">
+      <DependentUpon>TestPage.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Site.Master.cs">

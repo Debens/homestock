@@ -2,10 +2,11 @@
 using System.Web.UI;
 using System;
 using HomeStockLibrary.Controls.Base.Attributes;
+using HomeStockLibrary.Controls.Base.Properties;
 
 namespace HomeStockLibrary.Controls.Base.Button
 {
-    public abstract class ButtonBase : WebControlBase, IButton
+    public abstract class ButtonBase : Link, IButton
     {
         public string Text { get; set; }
 

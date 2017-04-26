@@ -1,4 +1,5 @@
-﻿using HomeStockLibrary.Controls.Base;
+﻿using HomeStockLibrary.Configuration;
+using HomeStockLibrary.Controls.Base;
 using HomeStockLibrary.Controls.Resources.Core;
 using HomeStockLibrary.Core;
 using System;
@@ -64,10 +65,11 @@ namespace HomeStockLibrary.Controls.Resources
         private void RenderInclusionTag(HtmlTextWriter writer, string path, FileInclusionType type)
         {
             string tag = "";
+            string versionSuffix = "?ver=" + HomeStock.GetConfig().Version;
             switch(type)
             {
-                case FileInclusionType.Script: { tag = string.Format("<script type=\"text/javascript\" src=\"{0}\"></script>", path); } break;
-                case FileInclusionType.Style: { tag = string.Format("<link rel=\"stylesheet\" type=\"text/css\" href=\"{0}\">", path); } break;
+                case FileInclusionType.Script: { tag = string.Format("<script type=\"text/javascript\" src=\"{0}{1}\"></script>", path, versionSuffix); } break;
+                case FileInclusionType.Style: { tag = string.Format("<link rel=\"stylesheet\" type=\"text/css\" href=\"{0}{1}\">", path, versionSuffix); } break;
                 default: { throw new ArgumentException(string.Format("Cannot render inclusion tage for type {0}", type)); }
             }
             writer.WriteLine(tag);
