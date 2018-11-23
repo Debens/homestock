@@ -1,0 +1,28 @@
+@import '../../../resources/styles/breakpoints';
+
+.container {
+    width: 100%;
+}
+
+.link {
+    @include breakpoint(small only) {
+        margin-top: 8px;
+        margin-right: 0px;
+    }
+
+    margin-right: 12px;
+}
+
+.button {
+    &-container {
+        margin-top: 16px;
+
+        display: flex;
+        justify-content: flex-end;
+        flex-direction: row;
+
+        @include breakpoint(small only) {
+            flex-direction: column-reverse;
+        }
+    }
+}

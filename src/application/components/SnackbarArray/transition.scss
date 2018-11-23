@@ -1,0 +1,19 @@
+.enter {
+    transform: translateY(50vh);
+    transition: transform 400ms ease-in-out;
+
+    &-active {
+        transform: translateY(0%);
+        transition: transform 400ms ease-in-out;
+    }
+}
+
+.exit {
+    transform: translateY(0%);
+    transition: transform 400ms ease-in-out;
+
+    &-active {
+        transform: translateY(50vh);
+        transition: transform 400ms ease-in-out;
+    }
+}

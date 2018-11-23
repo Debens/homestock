@@ -1,0 +1,33 @@
+@import '../../resources/styles/colours';
+
+.link {
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-decoration: none;
+    color: $blue;
+    margin: auto;
+    padding: 12px;
+}
+
+.container {
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transition: all 0.4s ease;
+    border-radius: 4px;
+
+    &:hover:not(.disabled) {
+        background-color: $grey-light;
+    }
+
+    &:active:not(.disabled) {
+        background-color: $grey;
+    }
+}
+
+.disabled {
+    color: $grey-light;
+    background-color: transparent;
+}

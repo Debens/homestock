@@ -1,0 +1,57 @@
+@import '../../resources/styles/colours';
+@import '../../resources/styles/fonts';
+
+.container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    border-radius: 4px;
+    cursor: pointer;
+    box-shadow: 0px 2px 10px 4px rgba(0, 0, 0, 0.16);
+
+    &-basic {
+        background-color: $green;
+    }
+
+    &-error {
+        background-color: $red;
+    }
+}
+
+.text {
+    @include font(small);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    margin: 16px;
+
+    &-basic {
+        color: $grey;
+    }
+
+    &-error {
+        color: white;
+    }
+}
+
+.action {
+    margin: 8px;
+
+    &-error {
+        & > span {
+            color: white;
+        }
+    }
+
+    &-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+
+        flex-grow: 1;
+    }
+}

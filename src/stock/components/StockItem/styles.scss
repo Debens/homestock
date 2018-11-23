@@ -1,0 +1,69 @@
+@import '../../../resources/styles/fonts';
+@import '../../../resources/styles/colours';
+@import '../../../resources/styles/material';
+
+.container {
+    @include elevation(low, true);
+
+    display: flex;
+    flex-direction: row;
+    flex-grow: 1;
+
+    border-radius: 4px;
+
+    padding: 2px;
+
+    cursor: pointer;
+}
+
+.warning {
+    background-color: $orange;
+
+    & > * > span {
+        background-color: $orange-light;
+    }
+}
+
+.danger {
+    background-color: $red;
+
+    & > * > span {
+        color: white;
+        background-color: $red-light;
+    }
+}
+
+.safe {
+    background-color: $blue;
+
+    & > * > span {
+        background-color: $blue-light;
+    }
+}
+
+.text {
+    @include font(small);
+    margin-right: 8px;
+
+    padding: 8px;
+    margin: 4px;
+    background-color: $grey;
+    border-radius: 4px;
+
+    &-container {
+        display: flex;
+        flex-direction: row;
+        flex-grow: 1;
+    }
+}
+
+.controls {
+    display: flex;
+    flex-direction: row;
+
+    align-self: flex-end;
+}
+
+.expiry {
+    margin-left: auto;
+}

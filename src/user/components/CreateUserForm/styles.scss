@@ -1,0 +1,10 @@
+.action:nth-child(n) {
+    margin: auto;
+    margin-top: 12px;
+}
+
+.action-container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}

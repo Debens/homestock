@@ -1,0 +1,45 @@
+{
+    "globals": {
+        "verbose": true,
+        "ts-jest": {},
+        "window": true
+    },
+    "collectCoverageFrom": ["src/**/*.{ts,tsx}"],
+    "coverageDirectory": "<rootDir>/coverage",
+    "coveragePathIgnorePatterns": ["/node_modules/", "\\.d\\.ts$"],
+    "coverageThreshold": {
+        "global": {
+            "branches": 90,
+            "functions": 90,
+            "lines": 90,
+            "statements": 90
+        }
+    },
+    "setupFiles": [
+        "<rootDir>/test/scripts/polyfills.js",
+        "<rootDir>/test/scripts/setupEnzyme.js",
+        "jest-localstorage-mock"
+    ],
+    "testMatch": ["<rootDir>/src/**/?(*.)(spec|test).{ts,tsx}"],
+    "testEnvironment": "node",
+    "testURL": "http://localhost",
+    "transform": {
+        "^.+\\.(ts|tsx)$": "ts-jest",
+        "^.+\\.(js|jsx|mjs)$": "babel-jest",
+        "^.+\\.css$": "<rootDir>/test/scripts/cssTransform.js",
+        "^(?!.*\\.(js|jsx|mjs|css|json)$)": "<rootDir>/test/scripts/fileTransform.js"
+    },
+    "transformIgnorePatterns": ["[/\\\\]node_modules[/\\\\].+\\.(js|jsx|mjs)$"],
+    "moduleNameMapper": {
+        "^.+\\.module\\.css$": "identity-obj-proxy",
+        "^react$": "<rootDir>/node_modules/react",
+        "^react-dom$": "<rootDir>/node_modules/react-dom",
+        "^enzyme$": "<rootDir>/node_modules/enzyme",
+        "^enzyme-adapter-react-16$": "<rootDir>/node_modules/enzyme-adapter-react-16",
+        "^whatwg-fetch": "<rootDir>/node_modules/whatwg-fetch",
+        "^raf": "<rootDir>/node_modules/raf"
+    },
+    "moduleFileExtensions": ["mjs", "js", "json", "jsx", "node", "ts", "tsx"],
+    "setupTestFrameworkScriptFile": "./node_modules/jest-enzyme/lib/index.js",
+    "unmockedModulePathPatterns": ["react", "enzyme", "jest-enzyme"]
+}

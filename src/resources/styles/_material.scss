@@ -1,0 +1,38 @@
+$offsets: (
+    high: 14px,
+    medium: 10px,
+    low: 3px
+);
+
+$blurs: (
+    high: 28px,
+    medium: 20px,
+    low: 6px
+);
+
+$timings: (
+    high: 0.3s,
+    medium: 0.24s,
+    low: 0.18s
+);
+
+@mixin elevation($height, $pressable) {
+    transition: box-shadow map-get($timings, $height) cubic-bezier(0.25, 0.8, 0.25, 1);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+
+    &:hover {
+        box-shadow: 0 map-get($offsets, $height) map-get($blurs, $height)
+                rgba(0, 0, 0, 0.25),
+            0 map-get($offsets, $height) map-get($blurs, $height) rgba(0, 0, 0, 0.22);
+    }
+
+    @if $pressable == true {
+        &:active {
+            box-shadow: none;
+        }
+
+        &:hover {
+            cursor: pointer;
+        }
+    }
+}

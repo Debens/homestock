@@ -1,0 +1,17 @@
+@import 'colours';
+@import 'fonts';
+
+html,
+body,
+#root {
+    margin: 0;
+    height: 100%;
+    min-height: 100%;
+}
+
+input,
+button,
+submit {
+    border: none;
+    outline: none;
+}

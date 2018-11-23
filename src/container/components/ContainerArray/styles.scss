@@ -1,0 +1,23 @@
+@import '../../../resources/styles/colours';
+
+$spacing: 24px;
+
+.container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    padding: $spacing;
+    padding-bottom: 0px;
+}
+
+.spinner {
+    margin: auto;
+}
+
+.tile {
+    margin-left: $spacing / 2;
+    margin-right: $spacing / 2;
+    margin-bottom: $spacing;
+}

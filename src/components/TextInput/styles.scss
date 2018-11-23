@@ -1,0 +1,131 @@
+@import '../../resources/styles/colours';
+
+.input {
+    // Avoiding border
+    padding: 8px 8px 6px 8px;
+    height: 24px;
+    flex-grow: 1;
+    font-size: 16px;
+    font-weight: 500;
+    font-family: inherit;
+    border: 0;
+    border-radius: 0;
+    background: none;
+    -webkit-appearance: none;
+    color: #223254;
+    transition: all 0.4s ease;
+
+    &:not(:placeholder-shown) + span:not(.label-selected) {
+        transform: translateY(-28px) scale(0.75);
+    }
+
+    &:focus {
+        outline: none;
+    }
+}
+
+.container {
+    padding-top: 18px;
+}
+
+.wrapper {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    background-color: rgba(0, 0, 0, 0.1);
+    border-radius: 4px 4px 0 0;
+    transition: all 0.4s ease;
+
+    border-bottom: 2px inset transparent;
+
+    &-error {
+        border-bottom: 2px inset $red;
+    }
+
+    &-selected {
+        border-bottom: 2px inset $yellow !important;
+    }
+
+    &-valid {
+        border-bottom: 2px inset $blue;
+    }
+}
+
+.label {
+    position: absolute;
+    top: 12px;
+    left: 8px;
+    font-size: 14px;
+    font-weight: 500;
+    transform-origin: 0 0;
+    transition: all 0.2s ease;
+    pointer-events: none;
+
+    &-disabled {
+        color: grey;
+    }
+
+    &-error {
+        color: $red;
+    }
+
+    &-valid {
+        color: $blue;
+    }
+
+    &-selected {
+        transform: translateY(-28px) scale(0.75);
+
+        transform: translateY(-28px) translateX(12px) scale(0.75);
+        stroke: $yellow;
+        animation: elasticInput 0.4s ease forwards;
+    }
+}
+
+.icon-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-right: 8px;
+}
+
+.error {
+    color: $red;
+    font-size: 14px;
+    font-weight: 500;
+    margin-top: 8px;
+}
+
+.border {
+    position: absolute;
+    left: 0;
+    height: 2px;
+    right: 0;
+    background: darkslategray;
+    transition: all 0.2s ease;
+
+    &-error {
+        background: $red;
+    }
+}
+
+@-moz-keyframes elasticInput {
+    50% {
+        d: path('M2,2 C21,17 46,25 74,25 C102,25 118,25 120,25');
+    }
+}
+@-webkit-keyframes elasticInput {
+    50% {
+        d: path('M2,2 C21,17 46,25 74,25 C102,25 118,25 120,25');
+    }
+}
+@-o-keyframes elasticInput {
+    50% {
+        d: path('M2,2 C21,17 46,25 74,25 C102,25 118,25 120,25');
+    }
+}
+@keyframes elasticInput {
+    50% {
+        d: path('M2,2 C21,17 46,25 74,25 C102,25 118,25 120,25');
+    }
+}

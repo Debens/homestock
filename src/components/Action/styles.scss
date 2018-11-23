@@ -1,0 +1,31 @@
+.text {
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 1px;
+
+    color: #338e8b;
+    margin: auto;
+    padding: 8px;
+}
+
+.container {
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transition: all 0.4s ease;
+    border-radius: 4px;
+
+    &:hover:not(.disabled) {
+        background-color: lightgrey;
+    }
+
+    &:active:not(.disabled) {
+        background-color: grey;
+    }
+}
+
+.disabled {
+    color: lightgrey;
+    background-color: transparent;
+}

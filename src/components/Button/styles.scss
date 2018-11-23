@@ -1,0 +1,46 @@
+@import '../../resources/styles/colours';
+
+.button {
+    cursor: pointer;
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    background-color: $blue;
+    border-radius: 4px;
+    letter-spacing: 2px;
+
+    &:not(.disabled) {
+        box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.16);
+    }
+
+    &:hover:not(.disabled) {
+        background-color: $blue-mid;
+    }
+
+    &:active:not(.disabled) {
+        background-color: $blue-dark;
+        box-shadow: none;
+    }
+}
+
+span.text {
+    font-size: 16px;
+    padding: 8px;
+
+    &-disabled {
+        color: $grey-light;
+    }
+}
+
+.disabled {
+    background-color: $grey;
+}
+
+.spinner {
+    width: 18px;
+    height: 18px;
+}
+
+.hidden {
+    visibility: hidden;
+}
