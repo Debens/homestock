@@ -1,0 +1,59 @@
+fragment Home on Home {
+  __typename
+  id
+  name
+}
+
+fragment HomeOrError on HomeOrError {
+  __typename
+  ... on IError {
+    message
+  }
+  ... on Home {
+    ...Home
+    stores {
+      ...StoresOrError
+    }
+    inventory(expiresIn: "P7D", first: 3) {
+      ...InventoryOrError
+    }
+  }
+}
+
+query Homes {
+  viewer {
+    id
+    homes {
+      edges {
+        cursor
+        node {
+          ...Home
+        }
+      }
+    }
+  }
+}
+
+query Home($id: ID!) {
+  viewer {
+    id
+    homes {
+      byId(id: $id) {
+        ...HomeOrError
+      }
+    }
+  }
+}
+
+mutation NewHome($id: ID!, $name: String!) {
+  newHome(id: $id, name: $name) {
+    __typename
+    ... on Home {
+      id
+      name
+    }
+    ... on IError {
+      message
+    }
+  }
+}

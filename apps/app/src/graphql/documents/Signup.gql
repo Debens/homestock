@@ -1,0 +1,14 @@
+mutation Signup($email: String!, $password: String!) {
+  signup(email: $email, password: $password) {
+    __typename
+    ... on Verified {
+      tokens {
+        access
+        refresh
+      }
+    }
+    ... on IError {
+      message
+    }
+  }
+}

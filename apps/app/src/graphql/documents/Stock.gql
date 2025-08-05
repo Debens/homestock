@@ -1,0 +1,58 @@
+fragment Stock on Stock {
+  __typename
+  id
+  ingredient {
+    id
+    name
+  }
+  quantity
+  createdOn
+  expiresOn
+}
+
+fragment InventoryOrError on InventoryOrError {
+  __typename
+  ... on IError {
+    message
+  }
+  ... on Inventory {
+    edges {
+      cursor
+      node {
+        ...Stock
+      }
+    }
+  }
+}
+
+query Inventory($home: ID!) {
+  viewer {
+    id
+    homes {
+      byId(id: $home) {
+        __typename
+        ... on IError {
+          message
+        }
+        ... on Home {
+          id
+          inventory {
+            ...InventoryOrError
+          }
+        }
+      }
+    }
+  }
+}
+
+mutation NewStock($id: ID!, $store: ID!, $name: String!, $expiry: Date, $quantity: Int) {
+  newStockByNameOnly(id: $id, name: $name, store: $store, expiry: $expiry, quantity: $quantity) {
+    __typename
+    ... on Stock {
+      ...Stock
+    }
+    ... on IError {
+      message
+    }
+  }
+}

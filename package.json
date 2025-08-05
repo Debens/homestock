@@ -1,0 +1,18 @@
+{
+  "dependencies": {
+    "@biomejs/biome": "2.0.6"
+  },
+  "name": "@homestock/root",
+  "packageManager": "yarn@3.4.1",
+  "private": true,
+  "scripts": {
+    "eas-build-pre-install": "corepack enable && yarn set version 4"
+  },
+  "version": "0.0.1",
+  "workspaces": {
+    "packages": [
+      "apps/*",
+      "packages/*"
+    ]
+  }
+}

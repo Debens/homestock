@@ -1,0 +1,14 @@
+mutation RefreshSession($token: String!) {
+  refresh(token: $token) {
+    __typename
+    ... on Verified {
+      tokens {
+        access
+        refresh
+      }
+    }
+    ... on IError {
+      message
+    }
+  }
+}

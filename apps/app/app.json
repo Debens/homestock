@@ -1,0 +1,121 @@
+{
+  "expo": {
+    "android": {
+      "adaptiveIcon": {
+        "backgroundColor": "#ffffff",
+        "foregroundImage": "./assets/images/adaptive-icon.png"
+      },
+      "package": "com.debens.homestock"
+    },
+    "experiments": {
+      "typedRoutes": true
+    },
+    "extra": {
+      "eas": {
+        "projectId": "18c2af60-6542-4e4a-82f5-064ab2dff9c6"
+      },
+      "router": {
+        "origin": false
+      }
+    },
+    "icon": "./assets/images/icon.png",
+    "ios": {
+      "bundleIdentifier": "com.debens.homestock",
+      "supportsTablet": true
+    },
+    "name": "app",
+    "newArchEnabled": true,
+    "orientation": "portrait",
+    "owner": "debens",
+    "plugins": [
+      "expo-router",
+      [
+        "expo-splash-screen",
+        {
+          "backgroundColor": "#ffffff",
+          "image": "./assets/images/splash-icon.png",
+          "imageWidth": 200,
+          "resizeMode": "contain"
+        }
+      ],
+      [
+        "expo-font",
+        {
+          "fonts": [
+            "node_modules/@expo-google-fonts/inter/Inter_100Thin.ttf",
+            "node_modules/@expo-google-fonts/inter/Inter_200ExtraLight.ttf",
+            "node_modules/@expo-google-fonts/inter/Inter_300Light.ttf",
+            "node_modules/@expo-google-fonts/inter/Inter_400Regular.ttf",
+            "node_modules/@expo-google-fonts/inter/Inter_500Medium.ttf",
+            "node_modules/@expo-google-fonts/inter/Inter_600SemiBold.ttf",
+            "node_modules/@expo-google-fonts/inter/Inter_700Bold.ttf",
+            "node_modules/@expo-google-fonts/inter/Inter_800ExtraBold.ttf",
+            "node_modules/@expo-google-fonts/inter/Inter_900Black.ttf",
+            "node_modules/@expo-google-fonts/roboto/Roboto_100Thin.ttf",
+            "node_modules/@expo-google-fonts/roboto/Roboto_300Light.ttf",
+            "node_modules/@expo-google-fonts/roboto/Roboto_400Regular.ttf",
+            "node_modules/@expo-google-fonts/roboto/Roboto_500Medium.ttf",
+            "node_modules/@expo-google-fonts/roboto/Roboto_700Bold.ttf",
+            "node_modules/@expo-google-fonts/roboto/Roboto_900Black.ttf",
+            "node_modules/@expo-google-fonts/roboto-mono/RobotoMono_100Thin.ttf",
+            "node_modules/@expo-google-fonts/roboto-mono/RobotoMono_200ExtraLight.ttf",
+            "node_modules/@expo-google-fonts/roboto-mono/RobotoMono_300Light.ttf",
+            "node_modules/@expo-google-fonts/roboto-mono/RobotoMono_400Regular.ttf",
+            "node_modules/@expo-google-fonts/roboto-mono/RobotoMono_500Medium.ttf",
+            "node_modules/@expo-google-fonts/roboto-mono/RobotoMono_600SemiBold.ttf",
+            "node_modules/@expo-google-fonts/roboto-mono/RobotoMono_700Bold.ttf",
+            "node_modules/@expo-google-fonts/open-sans/OpenSans_300Light.ttf",
+            "node_modules/@expo-google-fonts/open-sans/OpenSans_400Regular.ttf",
+            "node_modules/@expo-google-fonts/open-sans/OpenSans_500Medium.ttf",
+            "node_modules/@expo-google-fonts/open-sans/OpenSans_600SemiBold.ttf",
+            "node_modules/@expo-google-fonts/open-sans/OpenSans_700Bold.ttf",
+            "node_modules/@expo-google-fonts/open-sans/OpenSans_800ExtraBold.ttf",
+            "node_modules/@expo-google-fonts/lato/Lato_100Thin.ttf",
+            "node_modules/@expo-google-fonts/lato/Lato_300Light.ttf",
+            "node_modules/@expo-google-fonts/lato/Lato_400Regular.ttf",
+            "node_modules/@expo-google-fonts/lato/Lato_700Bold.ttf",
+            "node_modules/@expo-google-fonts/lato/Lato_900Black.ttf",
+            "node_modules/@expo-google-fonts/poppins/Poppins_100Thin.ttf",
+            "node_modules/@expo-google-fonts/poppins/Poppins_200ExtraLight.ttf",
+            "node_modules/@expo-google-fonts/poppins/Poppins_300Light.ttf",
+            "node_modules/@expo-google-fonts/poppins/Poppins_400Regular.ttf",
+            "node_modules/@expo-google-fonts/poppins/Poppins_500Medium.ttf",
+            "node_modules/@expo-google-fonts/poppins/Poppins_600SemiBold.ttf",
+            "node_modules/@expo-google-fonts/poppins/Poppins_700Bold.ttf",
+            "node_modules/@expo-google-fonts/poppins/Poppins_800ExtraBold.ttf",
+            "node_modules/@expo-google-fonts/poppins/Poppins_900Black.ttf",
+            "node_modules/@expo-google-fonts/nunito/Nunito_200ExtraLight.ttf",
+            "node_modules/@expo-google-fonts/nunito/Nunito_300Light.ttf",
+            "node_modules/@expo-google-fonts/nunito/Nunito_400Regular.ttf",
+            "node_modules/@expo-google-fonts/nunito/Nunito_500Medium.ttf",
+            "node_modules/@expo-google-fonts/nunito/Nunito_600SemiBold.ttf",
+            "node_modules/@expo-google-fonts/nunito/Nunito_700Bold.ttf",
+            "node_modules/@expo-google-fonts/nunito/Nunito_800ExtraBold.ttf",
+            "node_modules/@expo-google-fonts/nunito/Nunito_900Black.ttf",
+            "node_modules/@expo-google-fonts/fira-code/FiraCode_300Light.ttf",
+            "node_modules/@expo-google-fonts/fira-code/FiraCode_400Regular.ttf",
+            "node_modules/@expo-google-fonts/fira-code/FiraCode_500Medium.ttf",
+            "node_modules/@expo-google-fonts/fira-code/FiraCode_600SemiBold.ttf",
+            "node_modules/@expo-google-fonts/fira-code/FiraCode_700Bold.ttf"
+          ]
+        }
+      ],
+      [
+        "expo-secure-store",
+        {
+          "configureAndroidBackup": true,
+          "faceIDPermission": "Allow $(PRODUCT_NAME) to access your Face ID biometric data."
+        }
+      ]
+    ],
+    "scheme": "homestock",
+    "slug": "homestock",
+    "userInterfaceStyle": "automatic",
+    "version": "1.0.0",
+    "web": {
+      "bundler": "metro",
+      "favicon": "./assets/images/favicon.png",
+      "output": "static"
+    }
+  }
+}

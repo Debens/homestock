@@ -1,0 +1,10 @@
+query HomePage($id: ID!) {
+  viewer {
+    id
+    homes {
+      byId(id: $id) {
+        ...HomeOrError
+      }
+    }
+  }
+}

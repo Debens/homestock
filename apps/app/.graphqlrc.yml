@@ -1,0 +1,23 @@
+projects:
+  default:
+    schema: 
+      - '../api/schema.graphql'
+    documents: './src/**/*.gql'
+    extensions:
+      codegen:
+        generates:
+          src/graphql/generated/fragments.ts:
+            plugins:
+              - fragment-matcher
+          src/graphql/generated/documents.ts:
+            config:
+              withHooks: true
+              enumsAsTypes: true
+              scalars:
+                Date: string
+                DateTime: string
+                Duration: string
+            plugins:
+              - typescript
+              - typescript-operations
+              - typescript-react-apollo

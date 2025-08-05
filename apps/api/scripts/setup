@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+
+brew install supabase/tap/supabase
+
+yarn
+
+supabase login
+
+./bootstrap

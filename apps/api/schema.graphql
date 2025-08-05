@@ -1,0 +1,162 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+type App {
+  version: String!
+}
+
+union AuthResult = GqlError | UnauthenticatedError | Verified
+
+"""
+A date string, such as 2007-12-03, compliant with the `full-date` format outlined in section 5.6 of the RFC 3339 profile of the ISO 8601 standard for representation of dates and times using the Gregorian calendar.
+"""
+scalar Date
+
+"""
+A date-time string at UTC, such as 2007-12-03T10:15:30Z, compliant with the `date-time` format outlined in section 5.6 of the RFC 3339 profile of the ISO 8601 standard for representation of dates and times using the Gregorian calendar.
+"""
+scalar DateTime
+
+"""ISO 8601 duration"""
+scalar Duration
+
+type GqlError implements IError {
+  message: String
+}
+
+type Home {
+  id: ID!
+  inventory(expiresIn: Duration, first: Int, home: ID): InventoryOrError!
+  name: String!
+  stores: StoresOrError!
+}
+
+type HomeEdge {
+  cursor: ID!
+  node: Home!
+}
+
+type HomeNotFoundError {
+  id: ID!
+  message: String!
+}
+
+union HomeOrError = GqlError | Home | HomeNotFoundError
+
+type Homes {
+  byId(id: ID!): HomeOrError!
+  edges: [HomeEdge!]!
+}
+
+interface IError {
+  message: String
+}
+
+type Ingredient {
+  id: ID!
+  name: String!
+}
+
+type IngredientEdge {
+  cursor: ID!
+  node: Ingredient!
+}
+
+union IngredientOrError = GqlError | Ingredient
+
+type Inventory {
+  edges: [StockEdge!]!
+}
+
+union InventoryOrError = GqlError | Inventory
+
+type Mutation {
+  login(email: String!, password: String!): AuthResult!
+  newHome(id: ID!, name: String!): HomeOrError!
+  newIngredient(id: ID!, name: String!): IngredientOrError!
+  newStock(expiry: Date, id: ID!, ingredient: ID!, quantity: Int, store: ID!): StockOrError!
+  newStockByNameOnly(expiry: Date, id: ID!, name: String!, quantity: Int, store: ID!): StockOrError!
+  newStore(home: ID!, id: ID!, name: String!): StoreOrError!
+  refresh(token: String!): AuthResult!
+  signup(email: String!, password: String!): AuthResult!
+}
+
+type Profile {
+  id: ID!
+  names: ProfileNames!
+  no: Int!
+}
+
+type ProfileEdge {
+  cursor: ID!
+  node: Profile!
+}
+
+type ProfileNames {
+  first: String!
+  full: String!
+  last: String!
+}
+
+type Query {
+  app: App!
+  viewer: Viewer!
+}
+
+type Stock {
+  createdBy: Profile!
+  createdOn: DateTime!
+  expiresOn: DateTime
+  id: ID!
+  ingredient: Ingredient!
+  quantity: Int!
+}
+
+type StockEdge {
+  cursor: ID!
+  node: Stock!
+}
+
+union StockOrError = GqlError | Stock
+
+type Store {
+  id: ID!
+  name: String!
+  stock: InventoryOrError!
+}
+
+type StoreEdge {
+  cursor: ID!
+  node: Store!
+}
+
+union StoreOrError = GqlError | Store
+
+type Stores {
+  edges: [StoreEdge!]!
+}
+
+union StoresOrError = GqlError | Stores
+
+type Tokens {
+  access: String!
+  refresh: String!
+}
+
+type UnauthenticatedError {
+  message: String!
+}
+
+type Verified {
+  tokens: Tokens!
+}
+
+type Viewer {
+  createdOn: DateTime!
+  email: String!
+  homes: Homes!
+  id: ID!
+  inventory(expiresIn: Duration, first: Int, home: ID): InventoryOrError!
+  profile: Profile
+}

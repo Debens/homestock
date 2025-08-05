@@ -1,0 +1,66 @@
+fragment Store on Store {
+  __typename
+  id
+  name
+}
+
+fragment StoresOrError on StoresOrError {
+  __typename
+  ... on IError {
+    message
+  }
+  ... on Stores {
+    edges {
+      cursor
+      node {
+        ...Store
+        stock {
+          ...InventoryOrError
+        }
+      }
+    }
+  }
+}
+
+query Stores($home: ID!) {
+  viewer {
+    id
+    homes {
+      byId(id: $home) {
+        __typename
+        ... on IError {
+          message
+        }
+        ... on Home {
+          id
+          stores {
+            __typename
+            ... on IError {
+              message
+            }
+            ... on Stores {
+              edges {
+                cursor
+                node {
+                  ...Store
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+mutation NewStore($id: ID!, $home: ID!, $name: String!) {
+  newStore(id: $id, home: $home, name: $name) {
+    __typename
+    ... on Store {
+      ...Store
+    }
+    ... on IError {
+      message
+    }
+  }
+}
